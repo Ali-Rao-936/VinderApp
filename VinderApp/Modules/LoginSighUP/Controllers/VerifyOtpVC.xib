@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Urbanist-Medium.ttf">
+            <string>Urbanist-Medium</string>
+        </array>
+        <array key="Urbanist-SemiBold.ttf">
+            <string>Urbanist-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyOtpVC" customModule="VinderApp" customModuleProvider="target">
+            <connections>
+                <outlet property="resendOtpBtn" destination="6r3-RA-6os" id="qHz-ot-nNh"/>
+                <outlet property="verifyOtpView" destination="AXl-fw-uGj" id="PvT-cc-PId"/>
+                <outlet property="view" destination="66w-ZU-8Fb" id="0Ig-0j-d0M"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="66w-ZU-8Fb">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXl-fw-uGj" customClass="OTPStackView" customModule="VinderApp" customModuleProvider="target">
+                    <rect key="frame" x="40" y="133" width="313" height="80"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="5TW-3y-qb0"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-CK-fEV" userLabel="HeaderView">
+                    <rect key="frame" x="28" y="59" width="337" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vz-9g-4Pr">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="aO9-yW-bXr"/>
+                            </constraints>
+                            <color key="tintColor" name="headingColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="backIcon"/>
+                            <connections>
+                                <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="y73-g6-P8y"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUp-wY-oOL" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
+                            <rect key="frame" x="53" y="11.666666666666671" width="139" height="21"/>
+                            <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                            <color key="textColor" name="headingColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="2vz-9g-4Pr" firstAttribute="top" secondItem="2h7-CK-fEV" secondAttribute="top" id="RSb-pG-wDT"/>
+                        <constraint firstItem="2vz-9g-4Pr" firstAttribute="leading" secondItem="2h7-CK-fEV" secondAttribute="leading" id="fVN-5s-1Nh"/>
+                        <constraint firstItem="iUp-wY-oOL" firstAttribute="centerY" secondItem="2vz-9g-4Pr" secondAttribute="centerY" id="i0Y-RN-QfI"/>
+                        <constraint firstItem="iUp-wY-oOL" firstAttribute="leading" secondItem="2vz-9g-4Pr" secondAttribute="trailing" constant="13" id="j0O-JJ-WNq"/>
+                        <constraint firstAttribute="height" constant="44" id="rWh-IE-wpw"/>
+                        <constraint firstAttribute="bottom" secondItem="2vz-9g-4Pr" secondAttribute="bottom" id="s7E-j4-kHd"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r3-RA-6os" customClass="UIButtonCustomClass" customModule="TicksNTravel" customModuleProvider="target">
+                    <rect key="frame" x="245" y="301.66666666666669" width="120" height="25"/>
+                    <color key="backgroundColor" name="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="q5g-8R-hob"/>
+                        <constraint firstAttribute="height" constant="25" id="uxT-Nd-0eV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Resend Otp">
+                        <color key="titleColor" name="primaryColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" name="primaryColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="resendOtpBtnAction:" destination="-1" eventType="touchUpInside" id="QvV-1U-yuy"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have sent verification code to your phone number and email. Please check out" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF9-9J-ttV" customClass="UILabelCustomClass" customModule="TicksNTravel" customModuleProvider="target">
+                    <rect key="frame" x="28" y="252.99999999999997" width="337" height="33.666666666666657"/>
+                    <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="14"/>
+                    <color key="textColor" name="subHeadingColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j74-eC-FzP" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
+                    <rect key="frame" x="17" y="356.66666666666669" width="359" height="60"/>
+                    <color key="backgroundColor" name="disableBtnColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="7ub-qg-JFr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Continue  " image="forwardArrowIcon">
+                        <color key="titleColor" name="whiteColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="whiteColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="continueBtnAction:" destination="-1" eventType="touchUpInside" id="BfG-3x-gMR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="wzl-aT-qXg"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wzl-aT-qXg" firstAttribute="trailing" secondItem="j74-eC-FzP" secondAttribute="trailing" constant="17" id="2b5-Hv-g6I"/>
+                <constraint firstItem="j74-eC-FzP" firstAttribute="leading" secondItem="wzl-aT-qXg" secondAttribute="leading" constant="17" id="5xo-by-TPp"/>
+                <constraint firstItem="2h7-CK-fEV" firstAttribute="leading" secondItem="wzl-aT-qXg" secondAttribute="leading" constant="28" id="78E-lq-91W"/>
+                <constraint firstItem="2h7-CK-fEV" firstAttribute="top" secondItem="wzl-aT-qXg" secondAttribute="top" id="AF0-b8-Qzl"/>
+                <constraint firstAttribute="trailing" secondItem="2h7-CK-fEV" secondAttribute="trailing" constant="28" id="Bft-tD-x3y"/>
+                <constraint firstItem="AXl-fw-uGj" firstAttribute="top" secondItem="2h7-CK-fEV" secondAttribute="bottom" constant="30" id="GiL-6s-tK2"/>
+                <constraint firstItem="CF9-9J-ttV" firstAttribute="leading" secondItem="wzl-aT-qXg" secondAttribute="leading" constant="28" id="H0K-xw-h8a"/>
+                <constraint firstItem="AXl-fw-uGj" firstAttribute="leading" secondItem="wzl-aT-qXg" secondAttribute="leading" constant="40" id="Owl-1H-jKV"/>
+                <constraint firstItem="j74-eC-FzP" firstAttribute="top" secondItem="CF9-9J-ttV" secondAttribute="bottom" constant="70" id="Vny-7Z-7Zw"/>
+                <constraint firstItem="wzl-aT-qXg" firstAttribute="trailing" secondItem="6r3-RA-6os" secondAttribute="trailing" constant="28" id="jIE-cc-gwK"/>
+                <constraint firstItem="wzl-aT-qXg" firstAttribute="trailing" secondItem="CF9-9J-ttV" secondAttribute="trailing" constant="28" id="m1m-Ur-gGE"/>
+                <constraint firstItem="CF9-9J-ttV" firstAttribute="top" secondItem="AXl-fw-uGj" secondAttribute="bottom" constant="40" id="m83-qU-k5V"/>
+                <constraint firstItem="wzl-aT-qXg" firstAttribute="trailing" secondItem="AXl-fw-uGj" secondAttribute="trailing" constant="40" id="r6n-Db-HvA"/>
+                <constraint firstItem="6r3-RA-6os" firstAttribute="top" secondItem="CF9-9J-ttV" secondAttribute="bottom" constant="15" id="wFm-II-dhl"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="65"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="6r3-RA-6os">
+            <size key="intrinsicContentSize" width="68" height="28"/>
+        </designable>
+        <designable name="CF9-9J-ttV">
+            <size key="intrinsicContentSize" width="502.33333333333331" height="17"/>
+        </designable>
+        <designable name="iUp-wY-oOL">
+            <size key="intrinsicContentSize" width="139" height="21.666666666666668"/>
+        </designable>
+        <designable name="j74-eC-FzP">
+            <size key="intrinsicContentSize" width="105" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="backIcon" width="24" height="24"/>
+        <image name="forwardArrowIcon" width="24" height="24"/>
+        <namedColor name="disableBtnColor">
+            <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="headingColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.18799999356269836" green="0.54900002479553223" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subHeadingColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

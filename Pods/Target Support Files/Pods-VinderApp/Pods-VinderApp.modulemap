@@ -1,0 +1,6 @@
+framework module Pods_VinderApp {
+  umbrella header "Pods-VinderApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

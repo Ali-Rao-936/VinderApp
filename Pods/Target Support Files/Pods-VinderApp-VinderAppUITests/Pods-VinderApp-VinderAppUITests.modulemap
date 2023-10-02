@@ -1,0 +1,6 @@
+framework module Pods_VinderApp_VinderAppUITests {
+  umbrella header "Pods-VinderApp-VinderAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

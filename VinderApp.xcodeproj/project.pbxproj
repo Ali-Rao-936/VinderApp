@@ -1,0 +1,1474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		173770E2B0523D7AA49FEE85 /* Pods_VinderApp_VinderAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2BF28F82135191EC4A3203 /* Pods_VinderApp_VinderAppUITests.framework */; };
+		5170AED2F998EBB5D981B34E /* Pods_VinderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B5E2CF616BA8E1276F00E6 /* Pods_VinderApp.framework */; };
+		59FB0B8AF8D30B5A557806CB /* Pods_VinderAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8C81B75EE05821F21421D6 /* Pods_VinderAppTests.framework */; };
+		6A0AEE952ABC5FC4005EEABA /* EventsVCTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0AEE942ABC5FC4005EEABA /* EventsVCTableViewHeader.swift */; };
+		6A0AEE972ABC5FCB005EEABA /* EventsVCTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0AEE962ABC5FCB005EEABA /* EventsVCTableViewHeader.xib */; };
+		6A0AEE9A2ABC7911005EEABA /* MyEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0AEE982ABC7911005EEABA /* MyEventsVC.swift */; };
+		6A0AEE9B2ABC7911005EEABA /* MyEventsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0AEE992ABC7911005EEABA /* MyEventsVC.xib */; };
+		6A0AEE9E2ABC8668005EEABA /* MyMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0AEE9C2ABC8668005EEABA /* MyMatchVC.swift */; };
+		6A0AEE9F2ABC8668005EEABA /* MyMatchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0AEE9D2ABC8668005EEABA /* MyMatchVC.xib */; };
+		6A0AEEA32ABC8872005EEABA /* MatchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0AEEA12ABC8872005EEABA /* MatchesCollectionViewCell.swift */; };
+		6A0AEEA42ABC8872005EEABA /* MatchesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0AEEA22ABC8872005EEABA /* MatchesCollectionViewCell.xib */; };
+		6A5D07F32ACAABC80012771F /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D07F22ACAABC80012771F /* EventsViewModel.swift */; };
+		6A9016182ABAC68E0072ACF2 /* ChooseGenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9016162ABAC68E0072ACF2 /* ChooseGenderVC.swift */; };
+		6A9016192ABAC68E0072ACF2 /* ChooseGenderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9016172ABAC68E0072ACF2 /* ChooseGenderVC.xib */; };
+		6A90161C2ABACC240072ACF2 /* InterestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90161A2ABACC240072ACF2 /* InterestsCollectionViewCell.swift */; };
+		6A90161D2ABACC240072ACF2 /* InterestsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A90161B2ABACC240072ACF2 /* InterestsCollectionViewCell.xib */; };
+		6A9016202ABAD6F60072ACF2 /* StaticContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90161E2ABAD6F60072ACF2 /* StaticContentVC.swift */; };
+		6A9016212ABAD6F60072ACF2 /* StaticContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A90161F2ABAD6F60072ACF2 /* StaticContentVC.xib */; };
+		6A9016242ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9016222ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.swift */; };
+		6A9016252ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9016232ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.xib */; };
+		6A9016292ABADADD0072ACF2 /* ChooseLanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9016272ABADADD0072ACF2 /* ChooseLanguageTableViewCell.swift */; };
+		6A90162A2ABADADD0072ACF2 /* ChooseLanguageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9016282ABADADD0072ACF2 /* ChooseLanguageTableViewCell.xib */; };
+		6A90162D2ABADAEC0072ACF2 /* AppSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90162B2ABADAEC0072ACF2 /* AppSettingsTableViewCell.swift */; };
+		6A90162E2ABADAEC0072ACF2 /* AppSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A90162C2ABADAEC0072ACF2 /* AppSettingsTableViewCell.xib */; };
+		6A9016352ABB02DB0072ACF2 /* VinderUserInfoTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9016342ABB02DB0072ACF2 /* VinderUserInfoTableViewHeader.swift */; };
+		6A9016372ABB02E90072ACF2 /* VinderUserInfoTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9016362ABB02E90072ACF2 /* VinderUserInfoTableViewHeader.xib */; };
+		6A90163A2ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9016382ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.swift */; };
+		6A90163B2ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9016392ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.xib */; };
+		6A90A2E92AC2C96A00317CE9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90A2E82AC2C96A00317CE9 /* Extensions.swift */; };
+		6A90A2EB2AC2DD1000317CE9 /* UITextViewCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90A2EA2AC2DD1000317CE9 /* UITextViewCustomClass.swift */; };
+		6A90A2EE2AC2DDD600317CE9 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90A2EC2AC2DDD600317CE9 /* TagsCollectionViewCell.swift */; };
+		6A90A2EF2AC2DDD600317CE9 /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A90A2ED2AC2DDD600317CE9 /* TagsCollectionViewCell.xib */; };
+		6A93EB322AB9DB6200EC9310 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93EB312AB9DB6200EC9310 /* LoginVC.swift */; };
+		6A93EB342AB9DB7600EC9310 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93EB332AB9DB7600EC9310 /* ForgotPasswordVC.swift */; };
+		6A96D8252ABD754E0041CA04 /* UserDefaultsToStoreUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A96D8242ABD754E0041CA04 /* UserDefaultsToStoreUserInfo.swift */; };
+		6A96D8282ABD76B70041CA04 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A96D8272ABD76B70041CA04 /* LoginResponseModel.swift */; };
+		6A96D82B2ABDB3B70041CA04 /* InviteFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A96D8292ABDB3B70041CA04 /* InviteFriendsVC.swift */; };
+		6A96D82C2ABDB3B70041CA04 /* InviteFriendsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A96D82A2ABDB3B70041CA04 /* InviteFriendsVC.xib */; };
+		6A9867992AC5A05A00F453DB /* ExploreUserWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9867982AC5A05A00F453DB /* ExploreUserWebServices.swift */; };
+		6A98679B2AC5A77400F453DB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98679A2AC5A77400F453DB /* HomeViewModel.swift */; };
+		6A98679F2AC5BF7500F453DB /* ExploreEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98679D2AC5BF7500F453DB /* ExploreEventsVC.swift */; };
+		6A9867A02AC5BF7500F453DB /* ExploreEventsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A98679E2AC5BF7500F453DB /* ExploreEventsVC.xib */; };
+		6A9B123F2ABECC4600D6FF12 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B123E2ABECC4600D6FF12 /* AuthViewModel.swift */; };
+		6A9B12412ABED18E00D6FF12 /* BaseWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B12402ABED18E00D6FF12 /* BaseWebServices.swift */; };
+		6A9B12432ABED1A100D6FF12 /* AuthWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B12422ABED1A100D6FF12 /* AuthWebServices.swift */; };
+		6A9B12452ABEF51E00D6FF12 /* AuthRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B12442ABEF51E00D6FF12 /* AuthRequestModel.swift */; };
+		6A9B12472ABEFB5B00D6FF12 /* StringsForCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B12462ABEFB5B00D6FF12 /* StringsForCode.swift */; };
+		6A9B12492ABF16C100D6FF12 /* ProfileAndSettingsWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B12482ABF16C100D6FF12 /* ProfileAndSettingsWebServices.swift */; };
+		6A9B124C2ABF20A400D6FF12 /* UpdatePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B124A2ABF20A400D6FF12 /* UpdatePasswordVC.swift */; };
+		6A9B124D2ABF20A400D6FF12 /* UpdatePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9B124B2ABF20A400D6FF12 /* UpdatePasswordVC.xib */; };
+		6A9E60F72AC156A0005F1733 /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E60F62AC156A0005F1733 /* BaseNavigation.swift */; };
+		6A9E60FA2AC15711005F1733 /* ExploreUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E60F82AC15711005F1733 /* ExploreUserVC.swift */; };
+		6A9E60FB2AC15711005F1733 /* ExploreUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9E60F92AC15711005F1733 /* ExploreUserVC.xib */; };
+		6A9E60FD2AC159C3005F1733 /* OtpStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E60FC2AC159C3005F1733 /* OtpStackView.swift */; };
+		6A9E61012AC1A34D005F1733 /* ProfileAndSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E61002AC1A34D005F1733 /* ProfileAndSettingsViewModel.swift */; };
+		6A9E61032AC1BDD7005F1733 /* EventsWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E61022AC1BDD7005F1733 /* EventsWebServices.swift */; };
+		6A9E61052AC1C1C7005F1733 /* EventsRequestResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E61042AC1C1C7005F1733 /* EventsRequestResponseModel.swift */; };
+		6A9E61072AC1CA5A005F1733 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E61062AC1CA5A005F1733 /* OnboardingVC.swift */; };
+		6AA9A1E22AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9A1E02AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift */; };
+		6AA9A1E32AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA9A1E12AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib */; };
+		6AAA32502ABC4F4800F65DB9 /* EventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA324E2ABC4F4800F65DB9 /* EventsCollectionViewCell.swift */; };
+		6AAA32512ABC4F4800F65DB9 /* EventsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AAA324F2ABC4F4800F65DB9 /* EventsCollectionViewCell.xib */; };
+		6AAA32542ABC4F6F00F65DB9 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA32522ABC4F6F00F65DB9 /* EventsTableViewCell.swift */; };
+		6AAA32552ABC4F6F00F65DB9 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AAA32532ABC4F6F00F65DB9 /* EventsTableViewCell.xib */; };
+		6AAA32582ABC4F9600F65DB9 /* ExploreEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA32562ABC4F9600F65DB9 /* ExploreEventsTableViewCell.swift */; };
+		6AAA32592ABC4F9600F65DB9 /* ExploreEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AAA32572ABC4F9600F65DB9 /* ExploreEventsTableViewCell.xib */; };
+		6ACA30FC2AB9A4FA0022EF21 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA30FA2AB9A4FA0022EF21 /* HomeVC.swift */; };
+		6ACA31002AB9A66C0022EF21 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA30FF2AB9A66C0022EF21 /* InitialVC.swift */; };
+		6ACA31022AB9A67F0022EF21 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31012AB9A67F0022EF21 /* TabBarVC.swift */; };
+		6ACA31052AB9A6C80022EF21 /* MainChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31032AB9A6C80022EF21 /* MainChatVC.swift */; };
+		6ACA31062AB9A6C80022EF21 /* MainChatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31042AB9A6C80022EF21 /* MainChatVC.xib */; };
+		6ACA31092AB9A6D40022EF21 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31072AB9A6D40022EF21 /* EventsVC.swift */; };
+		6ACA310E2AB9A73F0022EF21 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA310C2AB9A73F0022EF21 /* ProfileVC.swift */; };
+		6ACA310F2AB9A73F0022EF21 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA310D2AB9A73F0022EF21 /* ProfileVC.xib */; };
+		6ACA31122AB9A7AD0022EF21 /* ChooseInterestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31102AB9A7AD0022EF21 /* ChooseInterestsVC.swift */; };
+		6ACA31132AB9A7AD0022EF21 /* ChooseInterestsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31112AB9A7AD0022EF21 /* ChooseInterestsVC.xib */; };
+		6ACA31172AB9A7EA0022EF21 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31152AB9A7EA0022EF21 /* CreateAccountVC.swift */; };
+		6ACA311B2AB9A8030022EF21 /* VerifyOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31192AB9A8030022EF21 /* VerifyOtpVC.swift */; };
+		6ACA311C2AB9A8030022EF21 /* VerifyOtpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA311A2AB9A8030022EF21 /* VerifyOtpVC.xib */; };
+		6ACA31242AB9A89C0022EF21 /* CompleteProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31222AB9A89C0022EF21 /* CompleteProfileVC.swift */; };
+		6ACA31252AB9A89C0022EF21 /* CompleteProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31232AB9A89C0022EF21 /* CompleteProfileVC.xib */; };
+		6ACA31282AB9AA4B0022EF21 /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31262AB9AA4B0022EF21 /* EventDetailsVC.swift */; };
+		6ACA31292AB9AA4B0022EF21 /* EventDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31272AB9AA4B0022EF21 /* EventDetailsVC.xib */; };
+		6ACA312C2AB9AA5E0022EF21 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA312A2AB9AA5E0022EF21 /* CreateEventVC.swift */; };
+		6ACA312D2AB9AA5E0022EF21 /* CreateEventVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA312B2AB9AA5E0022EF21 /* CreateEventVC.xib */; };
+		6ACA31302AB9AA750022EF21 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */; };
+		6ACA31312AB9AA750022EF21 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA312F2AB9AA750022EF21 /* SettingsVC.xib */; };
+		6ACA31342AB9AD2A0022EF21 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */; };
+		6ACA31352AB9AD2A0022EF21 /* ContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */; };
+		6ACA31382AB9AD390022EF21 /* AppSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */; };
+		6ACA31392AB9AD390022EF21 /* AppSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31372AB9AD390022EF21 /* AppSettingsVC.xib */; };
+		6ACA313E2AB9AD8B0022EF21 /* OtherUserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA313C2AB9AD8B0022EF21 /* OtherUserProfileVC.swift */; };
+		6ACA313F2AB9AD8B0022EF21 /* OtherUserProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA313D2AB9AD8B0022EF21 /* OtherUserProfileVC.xib */; };
+		6ACA31422AB9ADF90022EF21 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31402AB9ADF80022EF21 /* ReportVC.swift */; };
+		6ACA31432AB9ADF90022EF21 /* ReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31412AB9ADF80022EF21 /* ReportVC.xib */; };
+		6ACA318E2AB9AEDB0022EF21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31772AB9AEDB0022EF21 /* Constants.swift */; };
+		6ACA318F2AB9AEDB0022EF21 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31782AB9AEDB0022EF21 /* Strings.swift */; };
+		6ACA31902AB9AEDB0022EF21 /* CommonFxns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31792AB9AEDB0022EF21 /* CommonFxns.swift */; };
+		6ACA31912AB9AEDB0022EF21 /* UITextFieldCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA317B2AB9AEDB0022EF21 /* UITextFieldCustomClass.swift */; };
+		6ACA31922AB9AEDB0022EF21 /* UILabelCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA317C2AB9AEDB0022EF21 /* UILabelCustomClass.swift */; };
+		6ACA31932AB9AEDB0022EF21 /* UIButtonCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA317D2AB9AEDB0022EF21 /* UIButtonCustomClass.swift */; };
+		6ACA31942AB9AEDB0022EF21 /* UIViewCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA317E2AB9AEDB0022EF21 /* UIViewCustomClass.swift */; };
+		6ACA31952AB9AEDB0022EF21 /* UIImageViewCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA317F2AB9AEDB0022EF21 /* UIImageViewCustomClass.swift */; };
+		6ACA31962AB9AEDB0022EF21 /* UITextViewFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31812AB9AEDB0022EF21 /* UITextViewFontSize.swift */; };
+		6ACA31972AB9AEDB0022EF21 /* UITextFieldFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31822AB9AEDB0022EF21 /* UITextFieldFontSize.swift */; };
+		6ACA31982AB9AEDB0022EF21 /* UIButtonFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31832AB9AEDB0022EF21 /* UIButtonFontSize.swift */; };
+		6ACA31992AB9AEDB0022EF21 /* UILabelFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31842AB9AEDB0022EF21 /* UILabelFontSize.swift */; };
+		6ACA31B42AB9C1620022EF21 /* Urbanist-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31B22AB9B0A30022EF21 /* Urbanist-Black.ttf */; };
+		6ACA31B52AB9C1620022EF21 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31A22AB9B0A30022EF21 /* Urbanist-Bold.ttf */; };
+		6ACA31B62AB9C1620022EF21 /* Urbanist-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31A62AB9B0A30022EF21 /* Urbanist-ExtraBold.ttf */; };
+		6ACA31B72AB9C1620022EF21 /* Urbanist-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31B32AB9B0A30022EF21 /* Urbanist-ExtraLightItalic.ttf */; };
+		6ACA31B82AB9C1620022EF21 /* Urbanist-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31A42AB9B0A30022EF21 /* Urbanist-Italic.ttf */; };
+		6ACA31B92AB9C1620022EF21 /* Urbanist-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31AA2AB9B0A30022EF21 /* Urbanist-Light.ttf */; };
+		6ACA31BA2AB9C1620022EF21 /* Urbanist-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31A82AB9B0A30022EF21 /* Urbanist-Medium.ttf */; };
+		6ACA31BB2AB9C1620022EF21 /* Urbanist-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31AB2AB9B0A30022EF21 /* Urbanist-MediumItalic.ttf */; };
+		6ACA31BC2AB9C1620022EF21 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31A72AB9B0A30022EF21 /* Urbanist-Regular.ttf */; };
+		6ACA31BD2AB9C1620022EF21 /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31AD2AB9B0A30022EF21 /* Urbanist-SemiBold.ttf */; };
+		6ACA31BE2AB9C1620022EF21 /* Urbanist-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31A92AB9B0A30022EF21 /* Urbanist-Thin.ttf */; };
+		6AD45C392AB97C07000E9A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C382AB97C07000E9A6C /* AppDelegate.swift */; };
+		6AD45C3B2AB97C07000E9A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C3A2AB97C07000E9A6C /* SceneDelegate.swift */; };
+		6AD45C3D2AB97C07000E9A6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C3C2AB97C07000E9A6C /* ViewController.swift */; };
+		6AD45C402AB97C07000E9A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD45C3E2AB97C07000E9A6C /* Main.storyboard */; };
+		6AD45C432AB97C07000E9A6C /* VinderApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C412AB97C07000E9A6C /* VinderApp.xcdatamodeld */; };
+		6AD45C452AB97C08000E9A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD45C442AB97C08000E9A6C /* Assets.xcassets */; };
+		6AD45C482AB97C08000E9A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD45C462AB97C08000E9A6C /* LaunchScreen.storyboard */; };
+		6AD45C532AB97C08000E9A6C /* VinderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C522AB97C08000E9A6C /* VinderAppTests.swift */; };
+		6AD45C5D2AB97C08000E9A6C /* VinderAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C5C2AB97C08000E9A6C /* VinderAppUITests.swift */; };
+		6AD45C5F2AB97C08000E9A6C /* VinderAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C5E2AB97C08000E9A6C /* VinderAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AD45C4F2AB97C08000E9A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AD45C2D2AB97C07000E9A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AD45C342AB97C07000E9A6C;
+			remoteInfo = VinderApp;
+		};
+		6AD45C592AB97C08000E9A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AD45C2D2AB97C07000E9A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AD45C342AB97C07000E9A6C;
+			remoteInfo = VinderApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09524A1E277C99C2F2A67E52 /* Pods-VinderAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderAppTests.release.xcconfig"; path = "Target Support Files/Pods-VinderAppTests/Pods-VinderAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		0D44C462462BD98E02975384 /* Pods-VinderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderApp.release.xcconfig"; path = "Target Support Files/Pods-VinderApp/Pods-VinderApp.release.xcconfig"; sourceTree = "<group>"; };
+		163619C8518D130CFA183541 /* Pods-VinderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderApp.debug.xcconfig"; path = "Target Support Files/Pods-VinderApp/Pods-VinderApp.debug.xcconfig"; sourceTree = "<group>"; };
+		404806FFE98030E64BE8934C /* Pods-VinderApp-VinderAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderApp-VinderAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-VinderApp-VinderAppUITests/Pods-VinderApp-VinderAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F8C81B75EE05821F21421D6 /* Pods_VinderAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A0AEE942ABC5FC4005EEABA /* EventsVCTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVCTableViewHeader.swift; sourceTree = "<group>"; };
+		6A0AEE962ABC5FCB005EEABA /* EventsVCTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsVCTableViewHeader.xib; sourceTree = "<group>"; };
+		6A0AEE982ABC7911005EEABA /* MyEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsVC.swift; sourceTree = "<group>"; };
+		6A0AEE992ABC7911005EEABA /* MyEventsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventsVC.xib; sourceTree = "<group>"; };
+		6A0AEE9C2ABC8668005EEABA /* MyMatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMatchVC.swift; sourceTree = "<group>"; };
+		6A0AEE9D2ABC8668005EEABA /* MyMatchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMatchVC.xib; sourceTree = "<group>"; };
+		6A0AEEA12ABC8872005EEABA /* MatchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A0AEEA22ABC8872005EEABA /* MatchesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchesCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A5D07F22ACAABC80012771F /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		6A9016162ABAC68E0072ACF2 /* ChooseGenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGenderVC.swift; sourceTree = "<group>"; };
+		6A9016172ABAC68E0072ACF2 /* ChooseGenderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseGenderVC.xib; sourceTree = "<group>"; };
+		6A90161A2ABACC240072ACF2 /* InterestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A90161B2ABACC240072ACF2 /* InterestsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestsCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A90161E2ABAD6F60072ACF2 /* StaticContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticContentVC.swift; sourceTree = "<group>"; };
+		6A90161F2ABAD6F60072ACF2 /* StaticContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaticContentVC.xib; sourceTree = "<group>"; };
+		6A9016222ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBasicProfileInfoVC.swift; sourceTree = "<group>"; };
+		6A9016232ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateBasicProfileInfoVC.xib; sourceTree = "<group>"; };
+		6A9016272ABADADD0072ACF2 /* ChooseLanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageTableViewCell.swift; sourceTree = "<group>"; };
+		6A9016282ABADADD0072ACF2 /* ChooseLanguageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseLanguageTableViewCell.xib; sourceTree = "<group>"; };
+		6A90162B2ABADAEC0072ACF2 /* AppSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		6A90162C2ABADAEC0072ACF2 /* AppSettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsTableViewCell.xib; sourceTree = "<group>"; };
+		6A9016342ABB02DB0072ACF2 /* VinderUserInfoTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderUserInfoTableViewHeader.swift; sourceTree = "<group>"; };
+		6A9016362ABB02E90072ACF2 /* VinderUserInfoTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VinderUserInfoTableViewHeader.xib; sourceTree = "<group>"; };
+		6A9016382ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderUserAboutInfoTableViewCell.swift; sourceTree = "<group>"; };
+		6A9016392ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VinderUserAboutInfoTableViewCell.xib; sourceTree = "<group>"; };
+		6A90A2E82AC2C96A00317CE9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6A90A2EA2AC2DD1000317CE9 /* UITextViewCustomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewCustomClass.swift; sourceTree = "<group>"; };
+		6A90A2EC2AC2DDD600317CE9 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A90A2ED2AC2DDD600317CE9 /* TagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A93EB312AB9DB6200EC9310 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		6A93EB332AB9DB7600EC9310 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		6A96D8242ABD754E0041CA04 /* UserDefaultsToStoreUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsToStoreUserInfo.swift; sourceTree = "<group>"; };
+		6A96D8272ABD76B70041CA04 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		6A96D8292ABDB3B70041CA04 /* InviteFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsVC.swift; sourceTree = "<group>"; };
+		6A96D82A2ABDB3B70041CA04 /* InviteFriendsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteFriendsVC.xib; sourceTree = "<group>"; };
+		6A9867982AC5A05A00F453DB /* ExploreUserWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserWebServices.swift; sourceTree = "<group>"; };
+		6A98679A2AC5A77400F453DB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6A98679D2AC5BF7500F453DB /* ExploreEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEventsVC.swift; sourceTree = "<group>"; };
+		6A98679E2AC5BF7500F453DB /* ExploreEventsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreEventsVC.xib; sourceTree = "<group>"; };
+		6A9B123E2ABECC4600D6FF12 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		6A9B12402ABED18E00D6FF12 /* BaseWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebServices.swift; sourceTree = "<group>"; };
+		6A9B12422ABED1A100D6FF12 /* AuthWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebServices.swift; sourceTree = "<group>"; };
+		6A9B12442ABEF51E00D6FF12 /* AuthRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestModel.swift; sourceTree = "<group>"; };
+		6A9B12462ABEFB5B00D6FF12 /* StringsForCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsForCode.swift; sourceTree = "<group>"; };
+		6A9B12482ABF16C100D6FF12 /* ProfileAndSettingsWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAndSettingsWebServices.swift; sourceTree = "<group>"; };
+		6A9B124A2ABF20A400D6FF12 /* UpdatePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordVC.swift; sourceTree = "<group>"; };
+		6A9B124B2ABF20A400D6FF12 /* UpdatePasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePasswordVC.xib; sourceTree = "<group>"; };
+		6A9E60F62AC156A0005F1733 /* BaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
+		6A9E60F82AC15711005F1733 /* ExploreUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserVC.swift; sourceTree = "<group>"; };
+		6A9E60F92AC15711005F1733 /* ExploreUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreUserVC.xib; sourceTree = "<group>"; };
+		6A9E60FC2AC159C3005F1733 /* OtpStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpStackView.swift; sourceTree = "<group>"; };
+		6A9E61002AC1A34D005F1733 /* ProfileAndSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAndSettingsViewModel.swift; sourceTree = "<group>"; };
+		6A9E61022AC1BDD7005F1733 /* EventsWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsWebServices.swift; sourceTree = "<group>"; };
+		6A9E61042AC1C1C7005F1733 /* EventsRequestResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRequestResponseModel.swift; sourceTree = "<group>"; };
+		6A9E61062AC1CA5A005F1733 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		6AA9A1E02AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AA9A1E12AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventImagesCollectionViewCell.xib; sourceTree = "<group>"; };
+		6AAA324E2ABC4F4800F65DB9 /* EventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AAA324F2ABC4F4800F65DB9 /* EventsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsCollectionViewCell.xib; sourceTree = "<group>"; };
+		6AAA32522ABC4F6F00F65DB9 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		6AAA32532ABC4F6F00F65DB9 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		6AAA32562ABC4F9600F65DB9 /* ExploreEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEventsTableViewCell.swift; sourceTree = "<group>"; };
+		6AAA32572ABC4F9600F65DB9 /* ExploreEventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreEventsTableViewCell.xib; sourceTree = "<group>"; };
+		6ACA30FA2AB9A4FA0022EF21 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		6ACA30FF2AB9A66C0022EF21 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
+		6ACA31012AB9A67F0022EF21 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		6ACA31032AB9A6C80022EF21 /* MainChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatVC.swift; sourceTree = "<group>"; };
+		6ACA31042AB9A6C80022EF21 /* MainChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChatVC.xib; sourceTree = "<group>"; };
+		6ACA31072AB9A6D40022EF21 /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
+		6ACA310C2AB9A73F0022EF21 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		6ACA310D2AB9A73F0022EF21 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		6ACA31102AB9A7AD0022EF21 /* ChooseInterestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseInterestsVC.swift; sourceTree = "<group>"; };
+		6ACA31112AB9A7AD0022EF21 /* ChooseInterestsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseInterestsVC.xib; sourceTree = "<group>"; };
+		6ACA31152AB9A7EA0022EF21 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		6ACA31192AB9A8030022EF21 /* VerifyOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpVC.swift; sourceTree = "<group>"; };
+		6ACA311A2AB9A8030022EF21 /* VerifyOtpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyOtpVC.xib; sourceTree = "<group>"; };
+		6ACA31222AB9A89C0022EF21 /* CompleteProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfileVC.swift; sourceTree = "<group>"; };
+		6ACA31232AB9A89C0022EF21 /* CompleteProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompleteProfileVC.xib; sourceTree = "<group>"; };
+		6ACA31262AB9AA4B0022EF21 /* EventDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
+		6ACA31272AB9AA4B0022EF21 /* EventDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsVC.xib; sourceTree = "<group>"; };
+		6ACA312A2AB9AA5E0022EF21 /* CreateEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
+		6ACA312B2AB9AA5E0022EF21 /* CreateEventVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventVC.xib; sourceTree = "<group>"; };
+		6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		6ACA312F2AB9AA750022EF21 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
+		6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentVC.xib; sourceTree = "<group>"; };
+		6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsVC.swift; sourceTree = "<group>"; };
+		6ACA31372AB9AD390022EF21 /* AppSettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsVC.xib; sourceTree = "<group>"; };
+		6ACA313C2AB9AD8B0022EF21 /* OtherUserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileVC.swift; sourceTree = "<group>"; };
+		6ACA313D2AB9AD8B0022EF21 /* OtherUserProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherUserProfileVC.xib; sourceTree = "<group>"; };
+		6ACA31402AB9ADF80022EF21 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		6ACA31412AB9ADF80022EF21 /* ReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportVC.xib; sourceTree = "<group>"; };
+		6ACA31772AB9AEDB0022EF21 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6ACA31782AB9AEDB0022EF21 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		6ACA31792AB9AEDB0022EF21 /* CommonFxns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFxns.swift; sourceTree = "<group>"; };
+		6ACA317B2AB9AEDB0022EF21 /* UITextFieldCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldCustomClass.swift; sourceTree = "<group>"; };
+		6ACA317C2AB9AEDB0022EF21 /* UILabelCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelCustomClass.swift; sourceTree = "<group>"; };
+		6ACA317D2AB9AEDB0022EF21 /* UIButtonCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonCustomClass.swift; sourceTree = "<group>"; };
+		6ACA317E2AB9AEDB0022EF21 /* UIViewCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCustomClass.swift; sourceTree = "<group>"; };
+		6ACA317F2AB9AEDB0022EF21 /* UIImageViewCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewCustomClass.swift; sourceTree = "<group>"; };
+		6ACA31812AB9AEDB0022EF21 /* UITextViewFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewFontSize.swift; sourceTree = "<group>"; };
+		6ACA31822AB9AEDB0022EF21 /* UITextFieldFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldFontSize.swift; sourceTree = "<group>"; };
+		6ACA31832AB9AEDB0022EF21 /* UIButtonFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonFontSize.swift; sourceTree = "<group>"; };
+		6ACA31842AB9AEDB0022EF21 /* UILabelFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelFontSize.swift; sourceTree = "<group>"; };
+		6ACA31A22AB9B0A30022EF21 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
+		6ACA31A42AB9B0A30022EF21 /* Urbanist-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic.ttf"; sourceTree = "<group>"; };
+		6ACA31A62AB9B0A30022EF21 /* Urbanist-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-ExtraBold.ttf"; sourceTree = "<group>"; };
+		6ACA31A72AB9B0A30022EF21 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
+		6ACA31A82AB9B0A30022EF21 /* Urbanist-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Medium.ttf"; sourceTree = "<group>"; };
+		6ACA31A92AB9B0A30022EF21 /* Urbanist-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Thin.ttf"; sourceTree = "<group>"; };
+		6ACA31AA2AB9B0A30022EF21 /* Urbanist-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Light.ttf"; sourceTree = "<group>"; };
+		6ACA31AB2AB9B0A30022EF21 /* Urbanist-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6ACA31AD2AB9B0A30022EF21 /* Urbanist-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-SemiBold.ttf"; sourceTree = "<group>"; };
+		6ACA31B22AB9B0A30022EF21 /* Urbanist-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Black.ttf"; sourceTree = "<group>"; };
+		6ACA31B32AB9B0A30022EF21 /* Urbanist-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		6AD45C352AB97C07000E9A6C /* VinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD45C382AB97C07000E9A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6AD45C3A2AB97C07000E9A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6AD45C3C2AB97C07000E9A6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6AD45C3F2AB97C07000E9A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AD45C422AB97C07000E9A6C /* VinderApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VinderApp.xcdatamodel; sourceTree = "<group>"; };
+		6AD45C442AB97C08000E9A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6AD45C472AB97C08000E9A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6AD45C492AB97C08000E9A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD45C4E2AB97C08000E9A6C /* VinderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD45C522AB97C08000E9A6C /* VinderAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderAppTests.swift; sourceTree = "<group>"; };
+		6AD45C582AB97C08000E9A6C /* VinderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD45C5C2AB97C08000E9A6C /* VinderAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderAppUITests.swift; sourceTree = "<group>"; };
+		6AD45C5E2AB97C08000E9A6C /* VinderAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C2BF28F82135191EC4A3203 /* Pods_VinderApp_VinderAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderApp_VinderAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B5E2CF616BA8E1276F00E6 /* Pods_VinderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF0F84A2A1C444F1F2797B9 /* Pods-VinderApp-VinderAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderApp-VinderAppUITests.release.xcconfig"; path = "Target Support Files/Pods-VinderApp-VinderAppUITests/Pods-VinderApp-VinderAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D53BA71463A086AA198B2FD1 /* Pods-VinderAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderAppTests.debug.xcconfig"; path = "Target Support Files/Pods-VinderAppTests/Pods-VinderAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AD45C322AB97C07000E9A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5170AED2F998EBB5D981B34E /* Pods_VinderApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD45C4B2AB97C08000E9A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FB0B8AF8D30B5A557806CB /* Pods_VinderAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD45C552AB97C08000E9A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173770E2B0523D7AA49FEE85 /* Pods_VinderApp_VinderAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		483D04756C003E00070FF51A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				163619C8518D130CFA183541 /* Pods-VinderApp.debug.xcconfig */,
+				0D44C462462BD98E02975384 /* Pods-VinderApp.release.xcconfig */,
+				404806FFE98030E64BE8934C /* Pods-VinderApp-VinderAppUITests.debug.xcconfig */,
+				CDF0F84A2A1C444F1F2797B9 /* Pods-VinderApp-VinderAppUITests.release.xcconfig */,
+				D53BA71463A086AA198B2FD1 /* Pods-VinderAppTests.debug.xcconfig */,
+				09524A1E277C99C2F2A67E52 /* Pods-VinderAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A0AEEA02ABC883A005EEABA /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				6A0AEEA12ABC8872005EEABA /* MatchesCollectionViewCell.swift */,
+				6A0AEEA22ABC8872005EEABA /* MatchesCollectionViewCell.xib */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		6A5D07F12ACAABA10012771F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A5D07F22ACAABC80012771F /* EventsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6A9016262ABADAC60072ACF2 /* ProfileAndSettings */ = {
+			isa = PBXGroup;
+			children = (
+				6A9016272ABADADD0072ACF2 /* ChooseLanguageTableViewCell.swift */,
+				6A9016282ABADADD0072ACF2 /* ChooseLanguageTableViewCell.xib */,
+				6A90162B2ABADAEC0072ACF2 /* AppSettingsTableViewCell.swift */,
+				6A90162C2ABADAEC0072ACF2 /* AppSettingsTableViewCell.xib */,
+			);
+			path = ProfileAndSettings;
+			sourceTree = "<group>";
+		};
+		6A90162F2ABAFD000072ACF2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6A9016342ABB02DB0072ACF2 /* VinderUserInfoTableViewHeader.swift */,
+				6A9016362ABB02E90072ACF2 /* VinderUserInfoTableViewHeader.xib */,
+				6A9016382ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.swift */,
+				6A9016392ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6A93EB302AB9DB4900EC9310 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6A93EB312AB9DB6200EC9310 /* LoginVC.swift */,
+				6A93EB332AB9DB7600EC9310 /* ForgotPasswordVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6A96D8262ABD76910041CA04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A96D8272ABD76B70041CA04 /* LoginResponseModel.swift */,
+				6A9B12442ABEF51E00D6FF12 /* AuthRequestModel.swift */,
+				6A9E61042AC1C1C7005F1733 /* EventsRequestResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A98679C2AC5A7DF00F453DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A98679A2AC5A77400F453DB /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6A9B123C2ABECC2200D6FF12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A9B123E2ABECC4600D6FF12 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6A9B123D2ABECC2D00D6FF12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA31192AB9A8030022EF21 /* VerifyOtpVC.swift */,
+				6ACA311A2AB9A8030022EF21 /* VerifyOtpVC.xib */,
+				6ACA30FF2AB9A66C0022EF21 /* InitialVC.swift */,
+				6ACA31012AB9A67F0022EF21 /* TabBarVC.swift */,
+				6A93EB302AB9DB4900EC9310 /* Login */,
+				6ACA31142AB9A7CD0022EF21 /* SignUp */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6A9E60F52AC1566D005F1733 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6A96D8242ABD754E0041CA04 /* UserDefaultsToStoreUserInfo.swift */,
+				6A9E60F62AC156A0005F1733 /* BaseNavigation.swift */,
+				6A9E60FC2AC159C3005F1733 /* OtpStackView.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6A9E60FE2AC1A333005F1733 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA310C2AB9A73F0022EF21 /* ProfileVC.swift */,
+				6ACA310D2AB9A73F0022EF21 /* ProfileVC.xib */,
+				6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */,
+				6ACA312F2AB9AA750022EF21 /* SettingsVC.xib */,
+				6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */,
+				6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */,
+				6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */,
+				6ACA31372AB9AD390022EF21 /* AppSettingsVC.xib */,
+				6ACA313C2AB9AD8B0022EF21 /* OtherUserProfileVC.swift */,
+				6ACA313D2AB9AD8B0022EF21 /* OtherUserProfileVC.xib */,
+				6ACA31402AB9ADF80022EF21 /* ReportVC.swift */,
+				6ACA31412AB9ADF80022EF21 /* ReportVC.xib */,
+				6A90161E2ABAD6F60072ACF2 /* StaticContentVC.swift */,
+				6A90161F2ABAD6F60072ACF2 /* StaticContentVC.xib */,
+				6A9016222ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.swift */,
+				6A9016232ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.xib */,
+				6A9B124A2ABF20A400D6FF12 /* UpdatePasswordVC.swift */,
+				6A9B124B2ABF20A400D6FF12 /* UpdatePasswordVC.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6A9E60FF2AC1A33B005F1733 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A9E61002AC1A34D005F1733 /* ProfileAndSettingsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		6AAA324D2ABC4F2C00F65DB9 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				6AAA324E2ABC4F4800F65DB9 /* EventsCollectionViewCell.swift */,
+				6AAA324F2ABC4F4800F65DB9 /* EventsCollectionViewCell.xib */,
+				6AAA32522ABC4F6F00F65DB9 /* EventsTableViewCell.swift */,
+				6AAA32532ABC4F6F00F65DB9 /* EventsTableViewCell.xib */,
+				6AAA32562ABC4F9600F65DB9 /* ExploreEventsTableViewCell.swift */,
+				6AAA32572ABC4F9600F65DB9 /* ExploreEventsTableViewCell.xib */,
+				6A0AEE942ABC5FC4005EEABA /* EventsVCTableViewHeader.swift */,
+				6A0AEE962ABC5FCB005EEABA /* EventsVCTableViewHeader.xib */,
+				6A90A2EC2AC2DDD600317CE9 /* TagsCollectionViewCell.swift */,
+				6A90A2ED2AC2DDD600317CE9 /* TagsCollectionViewCell.xib */,
+				6AA9A1E02AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift */,
+				6AA9A1E12AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		6ACA30F52AB9A4B90022EF21 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6A9B12402ABED18E00D6FF12 /* BaseWebServices.swift */,
+				6A9B12422ABED1A100D6FF12 /* AuthWebServices.swift */,
+				6A9B12482ABF16C100D6FF12 /* ProfileAndSettingsWebServices.swift */,
+				6A9E61022AC1BDD7005F1733 /* EventsWebServices.swift */,
+				6A9867982AC5A05A00F453DB /* ExploreUserWebServices.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6ACA30F62AB9A4C40022EF21 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6A98679C2AC5A7DF00F453DB /* ViewModel */,
+				6ACA30FA2AB9A4FA0022EF21 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6ACA30F72AB9A4D30022EF21 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA31032AB9A6C80022EF21 /* MainChatVC.swift */,
+				6ACA31042AB9A6C80022EF21 /* MainChatVC.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		6ACA30F82AB9A4DA0022EF21 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				6A9E60F82AC15711005F1733 /* ExploreUserVC.swift */,
+				6A9E60F92AC15711005F1733 /* ExploreUserVC.xib */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		6ACA30F92AB9A4E10022EF21 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				6A5D07F12ACAABA10012771F /* ViewModel */,
+				6ACA31072AB9A6D40022EF21 /* EventsVC.swift */,
+				6ACA31262AB9AA4B0022EF21 /* EventDetailsVC.swift */,
+				6ACA31272AB9AA4B0022EF21 /* EventDetailsVC.xib */,
+				6ACA312A2AB9AA5E0022EF21 /* CreateEventVC.swift */,
+				6ACA312B2AB9AA5E0022EF21 /* CreateEventVC.xib */,
+				6A0AEE982ABC7911005EEABA /* MyEventsVC.swift */,
+				6A0AEE992ABC7911005EEABA /* MyEventsVC.xib */,
+				6A0AEE9C2ABC8668005EEABA /* MyMatchVC.swift */,
+				6A0AEE9D2ABC8668005EEABA /* MyMatchVC.xib */,
+				6A96D8292ABDB3B70041CA04 /* InviteFriendsVC.swift */,
+				6A96D82A2ABDB3B70041CA04 /* InviteFriendsVC.xib */,
+				6A98679D2AC5BF7500F453DB /* ExploreEventsVC.swift */,
+				6A98679E2AC5BF7500F453DB /* ExploreEventsVC.xib */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		6ACA30FE2AB9A50C0022EF21 /* LoginSighUP */ = {
+			isa = PBXGroup;
+			children = (
+				6A9B123D2ABECC2D00D6FF12 /* Controllers */,
+				6A9B123C2ABECC2200D6FF12 /* ViewModel */,
+			);
+			path = LoginSighUP;
+			sourceTree = "<group>";
+		};
+		6ACA310B2AB9A72B0022EF21 /* ProfileAndSettings */ = {
+			isa = PBXGroup;
+			children = (
+				6A9E60FF2AC1A33B005F1733 /* viewModel */,
+				6A9E60FE2AC1A333005F1733 /* Controllers */,
+			);
+			path = ProfileAndSettings;
+			sourceTree = "<group>";
+		};
+		6ACA31142AB9A7CD0022EF21 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA31152AB9A7EA0022EF21 /* CreateAccountVC.swift */,
+				6A9016162ABAC68E0072ACF2 /* ChooseGenderVC.swift */,
+				6A9016172ABAC68E0072ACF2 /* ChooseGenderVC.xib */,
+				6ACA31102AB9A7AD0022EF21 /* ChooseInterestsVC.swift */,
+				6ACA31112AB9A7AD0022EF21 /* ChooseInterestsVC.xib */,
+				6ACA31222AB9A89C0022EF21 /* CompleteProfileVC.swift */,
+				6ACA31232AB9A89C0022EF21 /* CompleteProfileVC.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		6ACA311D2AB9A8140022EF21 /* Initials */ = {
+			isa = PBXGroup;
+			children = (
+				6A9E61062AC1CA5A005F1733 /* OnboardingVC.swift */,
+			);
+			path = Initials;
+			sourceTree = "<group>";
+		};
+		6ACA31442AB9AE170022EF21 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA31452AB9AE2B0022EF21 /* Fonts */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		6ACA31452AB9AE2B0022EF21 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA31B22AB9B0A30022EF21 /* Urbanist-Black.ttf */,
+				6ACA31A22AB9B0A30022EF21 /* Urbanist-Bold.ttf */,
+				6ACA31A62AB9B0A30022EF21 /* Urbanist-ExtraBold.ttf */,
+				6ACA31B32AB9B0A30022EF21 /* Urbanist-ExtraLightItalic.ttf */,
+				6ACA31A42AB9B0A30022EF21 /* Urbanist-Italic.ttf */,
+				6ACA31AA2AB9B0A30022EF21 /* Urbanist-Light.ttf */,
+				6ACA31A82AB9B0A30022EF21 /* Urbanist-Medium.ttf */,
+				6ACA31AB2AB9B0A30022EF21 /* Urbanist-MediumItalic.ttf */,
+				6ACA31A72AB9B0A30022EF21 /* Urbanist-Regular.ttf */,
+				6ACA31AD2AB9B0A30022EF21 /* Urbanist-SemiBold.ttf */,
+				6ACA31A92AB9B0A30022EF21 /* Urbanist-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6ACA31752AB9AEDB0022EF21 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6A9E60F52AC1566D005F1733 /* Others */,
+				6ACA31762AB9AEDB0022EF21 /* CommonFiles */,
+				6ACA317A2AB9AEDB0022EF21 /* UIObjectsFontSizeClasses */,
+				6ACA31802AB9AEDB0022EF21 /* LiveRenderingClasses */,
+				6ACA31852AB9AEDB0022EF21 /* CustomCellClasses */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		6ACA31762AB9AEDB0022EF21 /* CommonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA31772AB9AEDB0022EF21 /* Constants.swift */,
+				6ACA31782AB9AEDB0022EF21 /* Strings.swift */,
+				6ACA31792AB9AEDB0022EF21 /* CommonFxns.swift */,
+				6A9B12462ABEFB5B00D6FF12 /* StringsForCode.swift */,
+				6A90A2E82AC2C96A00317CE9 /* Extensions.swift */,
+			);
+			path = CommonFiles;
+			sourceTree = "<group>";
+		};
+		6ACA317A2AB9AEDB0022EF21 /* UIObjectsFontSizeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA317B2AB9AEDB0022EF21 /* UITextFieldCustomClass.swift */,
+				6ACA317C2AB9AEDB0022EF21 /* UILabelCustomClass.swift */,
+				6ACA317D2AB9AEDB0022EF21 /* UIButtonCustomClass.swift */,
+				6ACA317E2AB9AEDB0022EF21 /* UIViewCustomClass.swift */,
+				6ACA317F2AB9AEDB0022EF21 /* UIImageViewCustomClass.swift */,
+				6A90A2EA2AC2DD1000317CE9 /* UITextViewCustomClass.swift */,
+			);
+			path = UIObjectsFontSizeClasses;
+			sourceTree = "<group>";
+		};
+		6ACA31802AB9AEDB0022EF21 /* LiveRenderingClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA31812AB9AEDB0022EF21 /* UITextViewFontSize.swift */,
+				6ACA31822AB9AEDB0022EF21 /* UITextFieldFontSize.swift */,
+				6ACA31832AB9AEDB0022EF21 /* UIButtonFontSize.swift */,
+				6ACA31842AB9AEDB0022EF21 /* UILabelFontSize.swift */,
+			);
+			path = LiveRenderingClasses;
+			sourceTree = "<group>";
+		};
+		6ACA31852AB9AEDB0022EF21 /* CustomCellClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6A0AEEA02ABC883A005EEABA /* Group */,
+				6AAA324D2ABC4F2C00F65DB9 /* Events */,
+				6A90162F2ABAFD000072ACF2 /* Home */,
+				6A9016262ABADAC60072ACF2 /* ProfileAndSettings */,
+				6A90161A2ABACC240072ACF2 /* InterestsCollectionViewCell.swift */,
+				6A90161B2ABACC240072ACF2 /* InterestsCollectionViewCell.xib */,
+			);
+			path = CustomCellClasses;
+			sourceTree = "<group>";
+		};
+		6AD45C2C2AB97C07000E9A6C = {
+			isa = PBXGroup;
+			children = (
+				6AD45C372AB97C07000E9A6C /* VinderApp */,
+				6AD45C512AB97C08000E9A6C /* VinderAppTests */,
+				6AD45C5B2AB97C08000E9A6C /* VinderAppUITests */,
+				6AD45C362AB97C07000E9A6C /* Products */,
+				483D04756C003E00070FF51A /* Pods */,
+				8C2B8A159A0BE1F1F8D1B79E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6AD45C362AB97C07000E9A6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AD45C352AB97C07000E9A6C /* VinderApp.app */,
+				6AD45C4E2AB97C08000E9A6C /* VinderAppTests.xctest */,
+				6AD45C582AB97C08000E9A6C /* VinderAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AD45C372AB97C07000E9A6C /* VinderApp */ = {
+			isa = PBXGroup;
+			children = (
+				6A96D8262ABD76910041CA04 /* Model */,
+				6ACA31442AB9AE170022EF21 /* SupportingFiles */,
+				6ACA31752AB9AEDB0022EF21 /* HelperClasses */,
+				6ACA30F52AB9A4B90022EF21 /* Networking */,
+				6AD45C6B2AB97D6F000E9A6C /* Modules */,
+				6AD45C382AB97C07000E9A6C /* AppDelegate.swift */,
+				6AD45C3A2AB97C07000E9A6C /* SceneDelegate.swift */,
+				6AD45C3C2AB97C07000E9A6C /* ViewController.swift */,
+				6AD45C3E2AB97C07000E9A6C /* Main.storyboard */,
+				6AD45C442AB97C08000E9A6C /* Assets.xcassets */,
+				6AD45C462AB97C08000E9A6C /* LaunchScreen.storyboard */,
+				6AD45C492AB97C08000E9A6C /* Info.plist */,
+				6AD45C412AB97C07000E9A6C /* VinderApp.xcdatamodeld */,
+			);
+			path = VinderApp;
+			sourceTree = "<group>";
+		};
+		6AD45C512AB97C08000E9A6C /* VinderAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AD45C522AB97C08000E9A6C /* VinderAppTests.swift */,
+			);
+			path = VinderAppTests;
+			sourceTree = "<group>";
+		};
+		6AD45C5B2AB97C08000E9A6C /* VinderAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6AD45C5C2AB97C08000E9A6C /* VinderAppUITests.swift */,
+				6AD45C5E2AB97C08000E9A6C /* VinderAppUITestsLaunchTests.swift */,
+			);
+			path = VinderAppUITests;
+			sourceTree = "<group>";
+		};
+		6AD45C6B2AB97D6F000E9A6C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA311D2AB9A8140022EF21 /* Initials */,
+				6ACA310B2AB9A72B0022EF21 /* ProfileAndSettings */,
+				6ACA30FE2AB9A50C0022EF21 /* LoginSighUP */,
+				6ACA30F92AB9A4E10022EF21 /* Events */,
+				6ACA30F82AB9A4DA0022EF21 /* Explore */,
+				6ACA30F72AB9A4D30022EF21 /* Chat */,
+				6ACA30F62AB9A4C40022EF21 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8C2B8A159A0BE1F1F8D1B79E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97B5E2CF616BA8E1276F00E6 /* Pods_VinderApp.framework */,
+				8C2BF28F82135191EC4A3203 /* Pods_VinderApp_VinderAppUITests.framework */,
+				5F8C81B75EE05821F21421D6 /* Pods_VinderAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AD45C342AB97C07000E9A6C /* VinderApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD45C622AB97C08000E9A6C /* Build configuration list for PBXNativeTarget "VinderApp" */;
+			buildPhases = (
+				3C4B0D81FD2110511D80BBC9 /* [CP] Check Pods Manifest.lock */,
+				6AD45C312AB97C07000E9A6C /* Sources */,
+				6AD45C322AB97C07000E9A6C /* Frameworks */,
+				6AD45C332AB97C07000E9A6C /* Resources */,
+				1AB19567E3AE8B42EF82D225 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VinderApp;
+			productName = VinderApp;
+			productReference = 6AD45C352AB97C07000E9A6C /* VinderApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AD45C4D2AB97C08000E9A6C /* VinderAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD45C652AB97C08000E9A6C /* Build configuration list for PBXNativeTarget "VinderAppTests" */;
+			buildPhases = (
+				104CA27F28C6CDFE98442DAD /* [CP] Check Pods Manifest.lock */,
+				6AD45C4A2AB97C08000E9A6C /* Sources */,
+				6AD45C4B2AB97C08000E9A6C /* Frameworks */,
+				6AD45C4C2AB97C08000E9A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AD45C502AB97C08000E9A6C /* PBXTargetDependency */,
+			);
+			name = VinderAppTests;
+			productName = VinderAppTests;
+			productReference = 6AD45C4E2AB97C08000E9A6C /* VinderAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6AD45C572AB97C08000E9A6C /* VinderAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD45C682AB97C08000E9A6C /* Build configuration list for PBXNativeTarget "VinderAppUITests" */;
+			buildPhases = (
+				E7302FFE1D6947532B0EF282 /* [CP] Check Pods Manifest.lock */,
+				6AD45C542AB97C08000E9A6C /* Sources */,
+				6AD45C552AB97C08000E9A6C /* Frameworks */,
+				6AD45C562AB97C08000E9A6C /* Resources */,
+				271F2829581BE68309AEE5A1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AD45C5A2AB97C08000E9A6C /* PBXTargetDependency */,
+			);
+			name = VinderAppUITests;
+			productName = VinderAppUITests;
+			productReference = 6AD45C582AB97C08000E9A6C /* VinderAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AD45C2D2AB97C07000E9A6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6AD45C342AB97C07000E9A6C = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					6AD45C4D2AB97C08000E9A6C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 6AD45C342AB97C07000E9A6C;
+					};
+					6AD45C572AB97C08000E9A6C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 6AD45C342AB97C07000E9A6C;
+					};
+				};
+			};
+			buildConfigurationList = 6AD45C302AB97C07000E9A6C /* Build configuration list for PBXProject "VinderApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AD45C2C2AB97C07000E9A6C;
+			productRefGroup = 6AD45C362AB97C07000E9A6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AD45C342AB97C07000E9A6C /* VinderApp */,
+				6AD45C4D2AB97C08000E9A6C /* VinderAppTests */,
+				6AD45C572AB97C08000E9A6C /* VinderAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AD45C332AB97C07000E9A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AAA32552ABC4F6F00F65DB9 /* EventsTableViewCell.xib in Resources */,
+				6A90A2EF2AC2DDD600317CE9 /* TagsCollectionViewCell.xib in Resources */,
+				6A9016212ABAD6F60072ACF2 /* StaticContentVC.xib in Resources */,
+				6A0AEEA42ABC8872005EEABA /* MatchesCollectionViewCell.xib in Resources */,
+				6A0AEE9B2ABC7911005EEABA /* MyEventsVC.xib in Resources */,
+				6A90163B2ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.xib in Resources */,
+				6ACA31B42AB9C1620022EF21 /* Urbanist-Black.ttf in Resources */,
+				6A90162A2ABADADD0072ACF2 /* ChooseLanguageTableViewCell.xib in Resources */,
+				6AAA32512ABC4F4800F65DB9 /* EventsCollectionViewCell.xib in Resources */,
+				6ACA31B52AB9C1620022EF21 /* Urbanist-Bold.ttf in Resources */,
+				6ACA31B62AB9C1620022EF21 /* Urbanist-ExtraBold.ttf in Resources */,
+				6ACA31B72AB9C1620022EF21 /* Urbanist-ExtraLightItalic.ttf in Resources */,
+				6ACA31B82AB9C1620022EF21 /* Urbanist-Italic.ttf in Resources */,
+				6ACA31B92AB9C1620022EF21 /* Urbanist-Light.ttf in Resources */,
+				6A9B124D2ABF20A400D6FF12 /* UpdatePasswordVC.xib in Resources */,
+				6ACA31BA2AB9C1620022EF21 /* Urbanist-Medium.ttf in Resources */,
+				6ACA31BB2AB9C1620022EF21 /* Urbanist-MediumItalic.ttf in Resources */,
+				6ACA31BC2AB9C1620022EF21 /* Urbanist-Regular.ttf in Resources */,
+				6ACA31BD2AB9C1620022EF21 /* Urbanist-SemiBold.ttf in Resources */,
+				6ACA31BE2AB9C1620022EF21 /* Urbanist-Thin.ttf in Resources */,
+				6ACA313F2AB9AD8B0022EF21 /* OtherUserProfileVC.xib in Resources */,
+				6A9016192ABAC68E0072ACF2 /* ChooseGenderVC.xib in Resources */,
+				6A9016252ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.xib in Resources */,
+				6A9016372ABB02E90072ACF2 /* VinderUserInfoTableViewHeader.xib in Resources */,
+				6A0AEE9F2ABC8668005EEABA /* MyMatchVC.xib in Resources */,
+				6A9E60FB2AC15711005F1733 /* ExploreUserVC.xib in Resources */,
+				6ACA31252AB9A89C0022EF21 /* CompleteProfileVC.xib in Resources */,
+				6ACA31432AB9ADF90022EF21 /* ReportVC.xib in Resources */,
+				6ACA31352AB9AD2A0022EF21 /* ContentVC.xib in Resources */,
+				6AA9A1E32AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib in Resources */,
+				6AD45C482AB97C08000E9A6C /* LaunchScreen.storyboard in Resources */,
+				6A0AEE972ABC5FCB005EEABA /* EventsVCTableViewHeader.xib in Resources */,
+				6ACA31132AB9A7AD0022EF21 /* ChooseInterestsVC.xib in Resources */,
+				6A9867A02AC5BF7500F453DB /* ExploreEventsVC.xib in Resources */,
+				6ACA31062AB9A6C80022EF21 /* MainChatVC.xib in Resources */,
+				6A90162E2ABADAEC0072ACF2 /* AppSettingsTableViewCell.xib in Resources */,
+				6A96D82C2ABDB3B70041CA04 /* InviteFriendsVC.xib in Resources */,
+				6ACA311C2AB9A8030022EF21 /* VerifyOtpVC.xib in Resources */,
+				6ACA31292AB9AA4B0022EF21 /* EventDetailsVC.xib in Resources */,
+				6A90161D2ABACC240072ACF2 /* InterestsCollectionViewCell.xib in Resources */,
+				6ACA31392AB9AD390022EF21 /* AppSettingsVC.xib in Resources */,
+				6ACA31312AB9AA750022EF21 /* SettingsVC.xib in Resources */,
+				6AD45C452AB97C08000E9A6C /* Assets.xcassets in Resources */,
+				6ACA310F2AB9A73F0022EF21 /* ProfileVC.xib in Resources */,
+				6AD45C402AB97C07000E9A6C /* Main.storyboard in Resources */,
+				6AAA32592ABC4F9600F65DB9 /* ExploreEventsTableViewCell.xib in Resources */,
+				6ACA312D2AB9AA5E0022EF21 /* CreateEventVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD45C4C2AB97C08000E9A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD45C562AB97C08000E9A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		104CA27F28C6CDFE98442DAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VinderAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1AB19567E3AE8B42EF82D225 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VinderApp/Pods-VinderApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VinderApp/Pods-VinderApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VinderApp/Pods-VinderApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		271F2829581BE68309AEE5A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VinderApp-VinderAppUITests/Pods-VinderApp-VinderAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VinderApp-VinderAppUITests/Pods-VinderApp-VinderAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VinderApp-VinderAppUITests/Pods-VinderApp-VinderAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C4B0D81FD2110511D80BBC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VinderApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7302FFE1D6947532B0EF282 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VinderApp-VinderAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AD45C312AB97C07000E9A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ACA31282AB9AA4B0022EF21 /* EventDetailsVC.swift in Sources */,
+				6ACA31902AB9AEDB0022EF21 /* CommonFxns.swift in Sources */,
+				6A0AEEA32ABC8872005EEABA /* MatchesCollectionViewCell.swift in Sources */,
+				6ACA310E2AB9A73F0022EF21 /* ProfileVC.swift in Sources */,
+				6A9016202ABAD6F60072ACF2 /* StaticContentVC.swift in Sources */,
+				6A9E60FA2AC15711005F1733 /* ExploreUserVC.swift in Sources */,
+				6A90A2EE2AC2DDD600317CE9 /* TagsCollectionViewCell.swift in Sources */,
+				6ACA31022AB9A67F0022EF21 /* TabBarVC.swift in Sources */,
+				6ACA31992AB9AEDB0022EF21 /* UILabelFontSize.swift in Sources */,
+				6A9E61072AC1CA5A005F1733 /* OnboardingVC.swift in Sources */,
+				6ACA31172AB9A7EA0022EF21 /* CreateAccountVC.swift in Sources */,
+				6AAA32542ABC4F6F00F65DB9 /* EventsTableViewCell.swift in Sources */,
+				6A96D82B2ABDB3B70041CA04 /* InviteFriendsVC.swift in Sources */,
+				6ACA31922AB9AEDB0022EF21 /* UILabelCustomClass.swift in Sources */,
+				6A9B12472ABEFB5B00D6FF12 /* StringsForCode.swift in Sources */,
+				6A9E60FD2AC159C3005F1733 /* OtpStackView.swift in Sources */,
+				6ACA31052AB9A6C80022EF21 /* MainChatVC.swift in Sources */,
+				6ACA31382AB9AD390022EF21 /* AppSettingsVC.swift in Sources */,
+				6A90163A2ABB03560072ACF2 /* VinderUserAboutInfoTableViewCell.swift in Sources */,
+				6A98679B2AC5A77400F453DB /* HomeViewModel.swift in Sources */,
+				6ACA318E2AB9AEDB0022EF21 /* Constants.swift in Sources */,
+				6A9B12452ABEF51E00D6FF12 /* AuthRequestModel.swift in Sources */,
+				6ACA311B2AB9A8030022EF21 /* VerifyOtpVC.swift in Sources */,
+				6AAA32502ABC4F4800F65DB9 /* EventsCollectionViewCell.swift in Sources */,
+				6A9E61032AC1BDD7005F1733 /* EventsWebServices.swift in Sources */,
+				6AD45C3D2AB97C07000E9A6C /* ViewController.swift in Sources */,
+				6A93EB342AB9DB7600EC9310 /* ForgotPasswordVC.swift in Sources */,
+				6ACA30FC2AB9A4FA0022EF21 /* HomeVC.swift in Sources */,
+				6ACA318F2AB9AEDB0022EF21 /* Strings.swift in Sources */,
+				6ACA31972AB9AEDB0022EF21 /* UITextFieldFontSize.swift in Sources */,
+				6A9B124C2ABF20A400D6FF12 /* UpdatePasswordVC.swift in Sources */,
+				6AD45C392AB97C07000E9A6C /* AppDelegate.swift in Sources */,
+				6ACA31242AB9A89C0022EF21 /* CompleteProfileVC.swift in Sources */,
+				6A9E61052AC1C1C7005F1733 /* EventsRequestResponseModel.swift in Sources */,
+				6A0AEE952ABC5FC4005EEABA /* EventsVCTableViewHeader.swift in Sources */,
+				6A96D8282ABD76B70041CA04 /* LoginResponseModel.swift in Sources */,
+				6ACA31982AB9AEDB0022EF21 /* UIButtonFontSize.swift in Sources */,
+				6A90162D2ABADAEC0072ACF2 /* AppSettingsTableViewCell.swift in Sources */,
+				6A9016242ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.swift in Sources */,
+				6A90A2EB2AC2DD1000317CE9 /* UITextViewCustomClass.swift in Sources */,
+				6ACA31092AB9A6D40022EF21 /* EventsVC.swift in Sources */,
+				6ACA31002AB9A66C0022EF21 /* InitialVC.swift in Sources */,
+				6A9016352ABB02DB0072ACF2 /* VinderUserInfoTableViewHeader.swift in Sources */,
+				6A9E61012AC1A34D005F1733 /* ProfileAndSettingsViewModel.swift in Sources */,
+				6ACA313E2AB9AD8B0022EF21 /* OtherUserProfileVC.swift in Sources */,
+				6A5D07F32ACAABC80012771F /* EventsViewModel.swift in Sources */,
+				6A9E60F72AC156A0005F1733 /* BaseNavigation.swift in Sources */,
+				6ACA312C2AB9AA5E0022EF21 /* CreateEventVC.swift in Sources */,
+				6AD45C3B2AB97C07000E9A6C /* SceneDelegate.swift in Sources */,
+				6ACA31422AB9ADF90022EF21 /* ReportVC.swift in Sources */,
+				6A90A2E92AC2C96A00317CE9 /* Extensions.swift in Sources */,
+				6A0AEE9A2ABC7911005EEABA /* MyEventsVC.swift in Sources */,
+				6A9B12492ABF16C100D6FF12 /* ProfileAndSettingsWebServices.swift in Sources */,
+				6A9016182ABAC68E0072ACF2 /* ChooseGenderVC.swift in Sources */,
+				6AD45C432AB97C07000E9A6C /* VinderApp.xcdatamodeld in Sources */,
+				6A0AEE9E2ABC8668005EEABA /* MyMatchVC.swift in Sources */,
+				6ACA31962AB9AEDB0022EF21 /* UITextViewFontSize.swift in Sources */,
+				6A98679F2AC5BF7500F453DB /* ExploreEventsVC.swift in Sources */,
+				6A9B12412ABED18E00D6FF12 /* BaseWebServices.swift in Sources */,
+				6ACA31912AB9AEDB0022EF21 /* UITextFieldCustomClass.swift in Sources */,
+				6AA9A1E22AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift in Sources */,
+				6ACA31942AB9AEDB0022EF21 /* UIViewCustomClass.swift in Sources */,
+				6A96D8252ABD754E0041CA04 /* UserDefaultsToStoreUserInfo.swift in Sources */,
+				6AAA32582ABC4F9600F65DB9 /* ExploreEventsTableViewCell.swift in Sources */,
+				6ACA31122AB9A7AD0022EF21 /* ChooseInterestsVC.swift in Sources */,
+				6ACA31342AB9AD2A0022EF21 /* ContentVC.swift in Sources */,
+				6A90161C2ABACC240072ACF2 /* InterestsCollectionViewCell.swift in Sources */,
+				6A93EB322AB9DB6200EC9310 /* LoginVC.swift in Sources */,
+				6ACA31302AB9AA750022EF21 /* SettingsVC.swift in Sources */,
+				6A9B12432ABED1A100D6FF12 /* AuthWebServices.swift in Sources */,
+				6A9B123F2ABECC4600D6FF12 /* AuthViewModel.swift in Sources */,
+				6ACA31952AB9AEDB0022EF21 /* UIImageViewCustomClass.swift in Sources */,
+				6ACA31932AB9AEDB0022EF21 /* UIButtonCustomClass.swift in Sources */,
+				6A9016292ABADADD0072ACF2 /* ChooseLanguageTableViewCell.swift in Sources */,
+				6A9867992AC5A05A00F453DB /* ExploreUserWebServices.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD45C4A2AB97C08000E9A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD45C532AB97C08000E9A6C /* VinderAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD45C542AB97C08000E9A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD45C5F2AB97C08000E9A6C /* VinderAppUITestsLaunchTests.swift in Sources */,
+				6AD45C5D2AB97C08000E9A6C /* VinderAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AD45C502AB97C08000E9A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AD45C342AB97C07000E9A6C /* VinderApp */;
+			targetProxy = 6AD45C4F2AB97C08000E9A6C /* PBXContainerItemProxy */;
+		};
+		6AD45C5A2AB97C08000E9A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AD45C342AB97C07000E9A6C /* VinderApp */;
+			targetProxy = 6AD45C592AB97C08000E9A6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6AD45C3E2AB97C07000E9A6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD45C3F2AB97C07000E9A6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AD45C462AB97C08000E9A6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD45C472AB97C08000E9A6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AD45C602AB97C08000E9A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6AD45C612AB97C08000E9A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AD45C632AB97C08000E9A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 163619C8518D130CFA183541 /* Pods-VinderApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VinderApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.vinder.VinderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AD45C642AB97C08000E9A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D44C462462BD98E02975384 /* Pods-VinderApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VinderApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.vinder.VinderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6AD45C662AB97C08000E9A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D53BA71463A086AA198B2FD1 /* Pods-VinderAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.vinder.VinderAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VinderApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VinderApp";
+			};
+			name = Debug;
+		};
+		6AD45C672AB97C08000E9A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09524A1E277C99C2F2A67E52 /* Pods-VinderAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.vinder.VinderAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VinderApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VinderApp";
+			};
+			name = Release;
+		};
+		6AD45C692AB97C08000E9A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 404806FFE98030E64BE8934C /* Pods-VinderApp-VinderAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.vinder.VinderAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VinderApp;
+			};
+			name = Debug;
+		};
+		6AD45C6A2AB97C08000E9A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF0F84A2A1C444F1F2797B9 /* Pods-VinderApp-VinderAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.vinder.VinderAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VinderApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AD45C302AB97C07000E9A6C /* Build configuration list for PBXProject "VinderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD45C602AB97C08000E9A6C /* Debug */,
+				6AD45C612AB97C08000E9A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD45C622AB97C08000E9A6C /* Build configuration list for PBXNativeTarget "VinderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD45C632AB97C08000E9A6C /* Debug */,
+				6AD45C642AB97C08000E9A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD45C652AB97C08000E9A6C /* Build configuration list for PBXNativeTarget "VinderAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD45C662AB97C08000E9A6C /* Debug */,
+				6AD45C672AB97C08000E9A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD45C682AB97C08000E9A6C /* Build configuration list for PBXNativeTarget "VinderAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD45C692AB97C08000E9A6C /* Debug */,
+				6AD45C6A2AB97C08000E9A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6AD45C412AB97C07000E9A6C /* VinderApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6AD45C422AB97C07000E9A6C /* VinderApp.xcdatamodel */,
+			);
+			currentVersion = 6AD45C422AB97C07000E9A6C /* VinderApp.xcdatamodel */;
+			path = VinderApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6AD45C2D2AB97C07000E9A6C /* Project object */;
+}

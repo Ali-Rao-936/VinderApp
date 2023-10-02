@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Urbanist-Medium.ttf">
+            <string>Urbanist-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="KGk-i7-Jjw" customClass="AppSettingsTableViewCell" customModule="VinderApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="391" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6F-Un-IHr" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
+                        <rect key="frame" x="42" y="0.0" width="329" height="58"/>
+                        <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="16"/>
+                        <color key="textColor" name="headingColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fowardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qfD-8m-2jw">
+                        <rect key="frame" x="371" y="17" width="20" height="24"/>
+                        <color key="tintColor" name="subHeadingColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Tpa-NI-N2d"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2fD-NA-bpA">
+                        <rect key="frame" x="2" y="15" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="BK8-9Q-56l"/>
+                            <constraint firstAttribute="width" constant="28" id="Io1-T5-hXh"/>
+                        </constraints>
+                    </imageView>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARX-Lb-xgF">
+                        <rect key="frame" x="337" y="13.666666666666664" width="51" height="31"/>
+                        <color key="onTintColor" name="primaryColor"/>
+                        <connections>
+                            <action selector="switchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="45C-f9-Yye"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <color key="backgroundColor" name="lightGrayColor"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Y6F-Un-IHr" secondAttribute="bottom" id="5kH-Fp-N0Z"/>
+                    <constraint firstAttribute="trailing" secondItem="ARX-Lb-xgF" secondAttribute="trailing" constant="5" id="688-KC-XNL"/>
+                    <constraint firstItem="Y6F-Un-IHr" firstAttribute="leading" secondItem="2fD-NA-bpA" secondAttribute="trailing" constant="12" id="8lf-xF-xuv"/>
+                    <constraint firstItem="qfD-8m-2jw" firstAttribute="leading" secondItem="Y6F-Un-IHr" secondAttribute="trailing" id="EsB-Tx-G7X"/>
+                    <constraint firstItem="qfD-8m-2jw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Goe-ZQ-huU"/>
+                    <constraint firstItem="2fD-NA-bpA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="PvA-gi-aIz"/>
+                    <constraint firstItem="ARX-Lb-xgF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ax4-sk-3fM"/>
+                    <constraint firstItem="Y6F-Un-IHr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dt2-x4-Bfh"/>
+                    <constraint firstItem="2fD-NA-bpA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="feR-bz-VD3"/>
+                    <constraint firstAttribute="trailing" secondItem="qfD-8m-2jw" secondAttribute="trailing" id="gha-Uq-BAy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="forwardImgView" destination="qfD-8m-2jw" id="3k0-aA-Lb5"/>
+                <outlet property="permissionSwitch" destination="ARX-Lb-xgF" id="Xdf-55-Vf7"/>
+                <outlet property="titleImgView" destination="2fD-NA-bpA" id="Zpm-4Y-LR2"/>
+                <outlet property="titleLbl" destination="Y6F-Un-IHr" id="1ri-tj-j5X"/>
+            </connections>
+            <point key="canvasLocation" x="180.91603053435114" y="-6.3380281690140849"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="Y6F-Un-IHr">
+            <size key="intrinsicContentSize" width="127.33333333333333" height="19.333333333333332"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="fowardIcon" width="24" height="24"/>
+        <image name="termsIcon" width="28" height="28"/>
+        <namedColor name="headingColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrayColor">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.18799999356269836" green="0.54900002479553223" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subHeadingColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
