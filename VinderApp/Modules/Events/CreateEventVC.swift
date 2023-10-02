@@ -14,7 +14,11 @@ class CreateEventVC: UIViewController, TagsCollectionViewCellProtocol {
     @IBOutlet weak var sportsCategoryCollectionView: UICollectionView!
 //    var selectedIndexRow = Int()
     @IBOutlet weak var eventTitleTextField: UITextFieldCustomClass!
-    
+    @IBOutlet weak var startEventDateTextField: UITextFieldCustomClass!
+    @IBOutlet weak var endEventDateTextField: UITextFieldCustomClass!
+    @IBOutlet weak var startEventTimeTextField: UITextFieldCustomClass!
+    @IBOutlet weak var endEventTimeTextField: UITextFieldCustomClass!
+
     @IBOutlet weak var eventDescTxtView: UITextView!
     
     let viewModel = EventsViewModel(apiService: EventsWebServices())
@@ -33,7 +37,147 @@ class CreateEventVC: UIViewController, TagsCollectionViewCellProtocol {
     func initialSetup(){
         // Register tableView cells
         self.sportsCategoryCollectionView.register(TagsCollectionViewCell.nib(), forCellWithReuseIdentifier: TagsCollectionViewCell.identifier)
+        
+        self.startEventDateTextField.datePicker(target: self,
+                                  doneAction: #selector(doneAction1),
+                                  cancelAction: #selector(cancelAction),
+                                                datePickerMode: .date)
+        self.startEventTimeTextField.datePicker(target: self,
+                                                doneAction: #selector(doneAction2),
+                                  cancelAction: #selector(cancelAction),
+                                                datePickerMode: .time)
+        
+        
+        self.endEventDateTextField.datePicker(target: self,
+                                  doneAction: #selector(doneAction3),
+                                  cancelAction: #selector(cancelAction),
+                                                datePickerMode: .date)
+        
+        self.endEventTimeTextField.datePicker(target: self,
+                                  doneAction: #selector(doneAction4),
+                                  cancelAction: #selector(cancelAction),
+                                                datePickerMode: .time)
+        
     }
+    
+    
+    // MARK: - Date Picker Actions
+    
+    @objc
+    func cancelAction() {
+        self.view.resignFirstResponder()
+    }
+
+    
+    @objc
+    func doneAction1(textField: UITextField) { // 2023-10-15 , // 03:30:00
+        if let datePickerView = self.startEventDateTextField.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateString = dateFormatter.string(from: datePickerView.date)
+            self.startEventDateTextField.text = dateString
+            
+            print(datePickerView.date)
+            print(dateString)
+            
+            self.startEventDateTextField.resignFirstResponder()
+            
+        }
+    }
+    
+    @objc
+    func doneAction2(textField: UITextField) { // 2023-10-15 , // 03:30:00
+        if let datePickerView = self.startEventTimeTextField.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh:mm:ss"//"yyyy-MM-dd"
+            let dateString = dateFormatter.string(from: datePickerView.date)
+            self.startEventTimeTextField.text = dateString
+            
+            print(datePickerView.date)
+            print(dateString)
+            
+            self.startEventTimeTextField.resignFirstResponder()
+            
+        }
+    }
+    
+    @objc
+    func doneAction3(textField: UITextField) { // 2023-10-15 , // 03:30:00
+        if let datePickerView = self.endEventDateTextField.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateString = dateFormatter.string(from: datePickerView.date)
+            self.endEventDateTextField.text = dateString
+            
+            print(datePickerView.date)
+            print(dateString)
+            
+            self.endEventDateTextField.resignFirstResponder()
+            
+        }
+    }
+    
+    @objc
+    func doneAction4(textField: UITextField) { // 2023-10-15 , // 03:30:00
+        if let datePickerView = self.endEventTimeTextField.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh:mm:ss"//yyyy-MM-dd
+            let dateString = dateFormatter.string(from: datePickerView.date)
+            self.endEventTimeTextField.text = dateString
+            
+            print(datePickerView.date)
+            print(dateString)
+            
+            self.endEventTimeTextField.resignFirstResponder()
+            
+        }
+    }
+    
+    
+    @objc
+//    func doneAction(textField: UITextField) { // 2023-10-15 , // 03:30:00
+//        if let datePickerView = self.startEventDateTextField.inputView as? UIDatePicker {
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "yyyy-MM-dd"
+//            let dateString = dateFormatter.string(from: datePickerView.date)
+//            self.startEventDateTextField.text = dateString
+//
+//            print(datePickerView.date)
+//            print(dateString)
+//
+//            self.startEventDateTextField.resignFirstResponder()
+//        } else if let datePickerView = self.startEventTimeTextField.inputView as? UIDatePicker {
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "hh:mm:ss"
+//            let dateString = dateFormatter.string(from: datePickerView.date)
+//            self.startEventTimeTextField.text = dateString
+//
+//            print(datePickerView.date)
+//            print(dateString)
+//
+//            self.startEventTimeTextField.resignFirstResponder()
+//        } else if let datePickerView = self.endEventDateTextField.inputView as? UIDatePicker {
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "yyyy-MM-dd"
+//            let dateString = dateFormatter.string(from: datePickerView.date)
+//            self.endEventDateTextField.text = dateString
+//
+//            print(datePickerView.date)
+//            print(dateString)
+//
+//            self.startEventDateTextField.resignFirstResponder()
+//        } else if let datePickerView = self.endEventTimeTextField.inputView as? UIDatePicker {
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "hh:mm:ss"
+//            let dateString = dateFormatter.string(from: datePickerView.date)
+//            self.endEventTimeTextField.text = dateString
+//
+//            print(datePickerView.date)
+//            print(dateString)
+//
+//            self.startEventDateTextField.resignFirstResponder()
+//        }
+//    }
     
     // MARK: - Button Actions
     
@@ -45,14 +189,17 @@ class CreateEventVC: UIViewController, TagsCollectionViewCellProtocol {
         let name = CommonFxns.trimString(string: self.eventTitleTextField.text ?? emptyStr)
         let desc = CommonFxns.trimString(string: self.eventDescTxtView.text ?? emptyStr)
         let address = String()
-        let date = String()
-        let time = String()
+        let startDate = self.startEventDateTextField.text ?? emptyStr
+        let time = self.startEventTimeTextField.text ?? emptyStr
         let latitude = String()
         let longitude = String()
         let invitees = [Int]()
-        
-        let dict = CreateEventRequest(name: name, description: desc, address: address, date: date, time: time, isPaid: 0, latitude: latitude, longitude: longitude, invitees: []).toDictionary()
-        self.createEvent(dict: dict, subUrl: "user/events/add")
+        if !name.isEmpty && !desc.isEmpty && !startDate.isEmpty && !time.isEmpty{
+            CommonFxns.showAlert(self, message: AlertMessages.ALL_DATA_REQUIRED, title: AlertMessages.ALERT_TITLE)
+        }else{
+            let dict = CreateEventRequest(name: name, description: desc, address: address, date: startDate, time: time, isPaid: 0, latitude: latitude, longitude: longitude, invitees: []).toDictionary()
+            self.createEvent(dict: dict, subUrl: "user/events/add")
+        }
     }
     
     @IBAction func addEventImgBtnAction(_ sender: Any) {
