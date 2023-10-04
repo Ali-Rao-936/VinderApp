@@ -48,6 +48,13 @@ class AuthViewModel {
         }
     }
     
+    private var getHomeAPIResponse: [String: Any]? {
+        didSet {
+            guard let g = getHomeAPIResponse else { return }
+            self.didFinishFetch?(g)
+        }
+    }
+    
     private var verifyOtpResponse: [String: Any]? {
         didSet {
             guard let v = verifyOtpResponse else { return }
@@ -188,6 +195,27 @@ class AuthViewModel {
                 print("tempData....", tempData)
                 if let response = tempData["response"] as? [String: Any]{
                     self.updatePasswordResponse = response["data"] as? [String : AnyObject]
+                }
+            } else {
+                self.showAlertClosure?(error.description)
+                print("error description....", error.description)
+            }
+        })
+    }
+    
+    func getAPI(url: String) {
+    
+        print("getAPI....")
+        self.apiService?.getAPI(url: url, completion: { data, succeeded, error in
+            if succeeded {
+                print("succeeded....", succeeded)
+                guard let tempData = data else{
+                    self.showAlertClosure?(error.description)
+                    return
+                }
+                print("tempData....", tempData)
+                if let response = tempData["response"] as? [String: Any]{
+                    self.getHomeAPIResponse = response["data"] as? [String : AnyObject]
                 }
             } else {
                 self.showAlertClosure?(error.description)

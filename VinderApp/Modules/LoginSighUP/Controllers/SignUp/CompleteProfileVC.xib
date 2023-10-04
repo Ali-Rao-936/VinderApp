@@ -21,8 +21,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompleteProfileVC" customModule="VinderApp" customModuleProvider="target">
             <connections>
                 <outlet property="chooseGoal1Btn" destination="SN3-dz-FyG" id="rpT-wr-quj"/>
+                <outlet property="chooseGoal1Lbl" destination="NII-gX-fdk" id="8LE-pb-QxC"/>
                 <outlet property="chooseGoal2Btn" destination="5ez-1p-liP" id="enI-bT-n2M"/>
-                <outlet property="countryLbl" destination="47a-vS-TnI" id="vef-JB-aIq"/>
+                <outlet property="chooseGoal2Lbl" destination="aQJ-8I-fJ5" id="b6b-vJ-bdw"/>
+                <outlet property="countryTxtField" destination="qyg-eN-frE" id="ptd-bL-XMy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -67,6 +69,7 @@ EFlvdXIgZ29hbHM/A
                                 <constraint firstAttribute="height" constant="60" id="yGi-n2-oql"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                            <color key="tintColor" name="whiteColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Save  " image="forwardArrowIcon" backgroundImage="btnBgImg">
                                 <color key="titleColor" name="whiteColor"/>
@@ -174,32 +177,30 @@ EFlvdXIgZ29hbHM/A
                                     <rect key="frame" x="313" y="13" width="24" height="24"/>
                                     <color key="tintColor" name="disableBtnColor"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47a-vS-TnI">
-                                    <rect key="frame" x="52.000000000000007" y="15.333333333333369" width="110.66666666666669" height="19.333333333333329"/>
-                                    <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="16"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qyg-eN-frE" customClass="UITextFieldCustomClass" customModule="VinderApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
                                     <color key="textColor" name="headingColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHj-E1-7hN">
-                                    <rect key="frame" x="20" y="0.0" width="337" height="50"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="tickIcon"/>
+                                    <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="horizontalInset">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="chooseCountryBtnAction:" destination="-1" eventType="touchUpInside" id="VPa-U3-jkZ"/>
+                                        <outlet property="delegate" destination="-1" id="92B-95-0k9"/>
                                     </connections>
-                                </button>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" name="textFieldBgColor"/>
                             <constraints>
-                                <constraint firstItem="IHj-E1-7hN" firstAttribute="leading" secondItem="8aP-je-Jqa" secondAttribute="leading" constant="20" id="DtD-iY-ekE"/>
-                                <constraint firstAttribute="bottom" secondItem="IHj-E1-7hN" secondAttribute="bottom" id="Fci-3P-tq3"/>
-                                <constraint firstItem="47a-vS-TnI" firstAttribute="centerY" secondItem="8aP-je-Jqa" secondAttribute="centerY" id="NpG-GV-v6Q"/>
-                                <constraint firstItem="47a-vS-TnI" firstAttribute="leading" secondItem="8aP-je-Jqa" secondAttribute="leading" constant="52" id="OZA-M0-XXM"/>
-                                <constraint firstAttribute="trailing" secondItem="IHj-E1-7hN" secondAttribute="trailing" id="PXB-NZ-PHK"/>
+                                <constraint firstAttribute="bottom" secondItem="qyg-eN-frE" secondAttribute="bottom" id="0mH-Cf-CQe"/>
+                                <constraint firstItem="BLa-D6-9Pp" firstAttribute="leading" secondItem="qyg-eN-frE" secondAttribute="trailing" id="NCB-Ti-uPm"/>
                                 <constraint firstAttribute="height" constant="50" id="Sy7-nU-bKk"/>
+                                <constraint firstItem="qyg-eN-frE" firstAttribute="leading" secondItem="8aP-je-Jqa" secondAttribute="leading" id="Z7k-1c-dmj"/>
                                 <constraint firstAttribute="trailing" secondItem="BLa-D6-9Pp" secondAttribute="trailing" constant="20" id="ZYY-5h-nHr"/>
                                 <constraint firstItem="BLa-D6-9Pp" firstAttribute="centerY" secondItem="8aP-je-Jqa" secondAttribute="centerY" id="iUQ-sa-pW5"/>
-                                <constraint firstItem="IHj-E1-7hN" firstAttribute="top" secondItem="8aP-je-Jqa" secondAttribute="top" id="lWS-BI-6tp"/>
+                                <constraint firstItem="qyg-eN-frE" firstAttribute="top" secondItem="8aP-je-Jqa" secondAttribute="top" id="wNc-ZK-ndg"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -251,7 +252,6 @@ EFlvdXIgZ29hbHM/A
         <image name="forwardArrowIcon" width="24" height="24"/>
         <image name="selectedRadioIcon" width="20" height="20"/>
         <image name="setUpProfileBgImg" width="375" height="145"/>
-        <image name="tickIcon" width="20" height="20"/>
         <image name="unselectedRadioIcon" width="20" height="20"/>
         <namedColor name="disableBtnColor">
             <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

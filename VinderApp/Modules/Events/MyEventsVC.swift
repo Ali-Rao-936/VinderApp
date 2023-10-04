@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyEventsVC: UIViewController, EventsCollectionViewCellprotocol {
+class MyEventsVC: UIViewController {
 
     // MARK: - Outlets & Properties
     
@@ -62,23 +62,23 @@ class MyEventsVC: UIViewController, EventsCollectionViewCellprotocol {
     }
     
     // Actions
-    
-    func joinBtnSelected(cell: EventsCollectionViewCell) {
-        print("joinBtnSelected....")
-        
-        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-        otherVCObj.isJoinEvent = true
-        self.navigationController?.pushViewController(otherVCObj, animated: true)
-    }
-    
-    func viewBtnSelected(cell: EventsCollectionViewCell) {
-        print("View Btn Sleected....")
-        
-        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-        otherVCObj.isJoinEvent = false
-        self.navigationController?.pushViewController(otherVCObj, animated: true)
-
-    }
+//
+//    func joinBtnSelected(cell: EventsCollectionViewCell) {
+//        print("joinBtnSelected....")
+//
+//        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
+//        otherVCObj.eventType = eventType.joinEvent.rawValue
+//        self.navigationController?.pushViewController(otherVCObj, animated: true)
+//    }
+//
+//    func viewBtnSelected(cell: EventsCollectionViewCell) {
+//        print("View Btn Sleected....")
+//
+//        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
+//        otherVCObj.eventType = eventType.alreadyJoined.rawValue
+//        self.navigationController?.pushViewController(otherVCObj, animated: true)
+//
+//    }
     
     // MARK: - Networking
         
@@ -150,7 +150,7 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         guard let listCell = self.myEventsCollectionView.dequeueReusableCell(withReuseIdentifier: EventsCollectionViewCell.identifier, for: indexPath) as? EventsCollectionViewCell else{
             return cell
         }
-        listCell.delegate = self
+//        listCell.delegate = self
 
         listCell.joinBtn.isHidden = true
         listCell.viewBtn.isHidden = false
@@ -180,9 +180,7 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
         otherVCObj.selectedEventId = selectedEventId ?? zero
         
-        
-        
-        otherVCObj.isJoinEvent = false
+        otherVCObj.eventType = eventType.alreadyJoined.rawValue
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     

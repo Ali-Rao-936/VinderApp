@@ -56,7 +56,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya4-C6-OfG" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                            <rect key="frame" x="53" y="11.5" width="51" height="21"/>
+                            <rect key="frame" x="53" y="11" width="50" height="22"/>
                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
                             <color key="textColor" name="whiteColor"/>
                             <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-oF-FjM">
-                    <rect key="frame" x="17" y="273" width="380" height="579"/>
+                    <rect key="frame" x="17" y="274" width="380" height="578"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWT-2b-yBw">
                             <rect key="frame" x="0.0" y="0.0" width="380" height="338"/>
@@ -295,7 +295,7 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="18m-Y6-A6e"/>
                 </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4Q-kU-yO6" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                    <rect key="frame" x="149" y="212.5" width="116.5" height="28"/>
+                    <rect key="frame" x="149" y="212.5" width="116.5" height="29"/>
                     <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="24"/>
                     <color key="textColor" name="headingColor"/>
                     <nil key="highlightedColor"/>
@@ -336,13 +336,13 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-2q-3yb" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                    <rect key="frame" x="191" y="245.5" width="54.5" height="17"/>
+                    <rect key="frame" x="192.5" y="246.5" width="52" height="17"/>
                     <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="14"/>
                     <color key="textColor" name="disableBtnColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GD7-dv-3LD">
-                    <rect key="frame" x="171" y="245" width="15" height="18"/>
+                    <rect key="frame" x="172.5" y="246" width="15" height="18"/>
                     <color key="tintColor" name="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="15" id="6Ux-dL-28n"/>
@@ -383,25 +383,28 @@
             <size key="intrinsicContentSize" width="340" height="431"/>
         </designable>
         <designable name="3Fe-2q-3yb">
-            <size key="intrinsicContentSize" width="54.5" height="16.5"/>
+            <size key="intrinsicContentSize" width="52" height="17"/>
         </designable>
         <designable name="BxD-pw-U7L">
-            <size key="intrinsicContentSize" width="218" height="19"/>
+            <size key="intrinsicContentSize" width="208" height="19.5"/>
         </designable>
         <designable name="FwZ-7X-4Ss">
-            <size key="intrinsicContentSize" width="8.5" height="17.5"/>
+            <size key="intrinsicContentSize" width="9.5" height="18"/>
         </designable>
         <designable name="NEF-cz-CP9">
-            <size key="intrinsicContentSize" width="77" height="23.5"/>
+            <size key="intrinsicContentSize" width="76" height="24"/>
+        </designable>
+        <designable name="Ro9-L3-9gn">
+            <size key="intrinsicContentSize" width="360" height="32"/>
         </designable>
         <designable name="diD-FS-No8">
-            <size key="intrinsicContentSize" width="54" height="23.5"/>
+            <size key="intrinsicContentSize" width="55" height="24"/>
         </designable>
         <designable name="q4Q-kU-yO6">
-            <size key="intrinsicContentSize" width="116.5" height="28"/>
+            <size key="intrinsicContentSize" width="116.5" height="29"/>
         </designable>
         <designable name="ya4-C6-OfG">
-            <size key="intrinsicContentSize" width="51" height="21"/>
+            <size key="intrinsicContentSize" width="50" height="22"/>
         </designable>
     </designables>
     <resources>

@@ -92,57 +92,10 @@
             filePath = "VinderApp/Modules/LoginSighUP/Controllers/SignUp/ChooseInterestsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "updateProfileInfo(params:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "28BF77EB-11DC-42E4-BA78-F5C9BBC161B7 - 9e645b49ed1d64e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; () in VinderApp.ChooseInterestsVC.updateProfileInfo(params: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
-                  moduleName = "VinderApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/LoginSighUP/Controllers/SignUp/ChooseInterestsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "28BF77EB-11DC-42E4-BA78-F5C9BBC161B7 - 9e645b49ed1d64e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; () in VinderApp.ChooseInterestsVC.updateProfileInfo(params: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
-                  moduleName = "VinderApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/LoginSighUP/Controllers/SignUp/ChooseInterestsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "28BF77EB-11DC-42E4-BA78-F5C9BBC161B7 - 9e645b49ed1d64e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; () in VinderApp.ChooseInterestsVC.updateProfileInfo(params: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
-                  moduleName = "VinderApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/LoginSighUP/Controllers/SignUp/ChooseInterestsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -157,8 +110,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "joinBtnSelected(cell:)"
-            landmarkType = "7">
+            landmarkName = "MyEventsVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -173,8 +126,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
             endingLineNumber = "75"
-            landmarkName = "viewBtnSelected(cell:)"
-            landmarkType = "7">
+            landmarkName = "MyEventsVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -187,8 +140,8 @@
             filePath = "VinderApp/HelperClasses/CustomCellClasses/Events/EventsCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "viewBtnSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -221,6 +174,36 @@
                   startingLineNumber = "49"
                   endingLineNumber = "49"
                   offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "FB2C45BA-42D7-4735-9D0D-2B5F7AB7F189 - 93bb5da8693bb1a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.EventsCollectionViewCell.viewBtnSelected(Any) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/HelperClasses/CustomCellClasses/Events/EventsCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "FB2C45BA-42D7-4735-9D0D-2B5F7AB7F189 - 93bb5da8693bb186"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.EventsCollectionViewCell.viewBtnSelected(Any) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/HelperClasses/CustomCellClasses/Events/EventsCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -271,6 +254,341 @@
             endingLineNumber = "170"
             landmarkName = "CreateEventVC"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "233D4AFB-459D-499D-A55E-5F4F8A2616C6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/Explore/MapViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "mapViewSetup()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "233D4AFB-459D-499D-A55E-5F4F8A2616C6 - cd8db0be2c9bcf5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.MapViewVC.mapViewSetup() -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/Explore/MapViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "233D4AFB-459D-499D-A55E-5F4F8A2616C6 - cd8db0be2c9bcd28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.MapViewVC.mapViewSetup() -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/Explore/MapViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66904FF3-A872-434E-986B-53CD383015D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/Explore/MapViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "66904FF3-A872-434E-986B-53CD383015D3 - c973298d29749ec3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.MapViewVC.locationManager(_: __C.CLLocationManager, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/Explore/MapViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "66904FF3-A872-434E-986B-53CD383015D3 - c973298d29749ec3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.MapViewVC.locationManager(_: __C.CLLocationManager, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/Explore/MapViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "66904FF3-A872-434E-986B-53CD383015D3 - c973298d29749ec3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.MapViewVC.locationManager(_: __C.CLLocationManager, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/Explore/MapViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E8DA412-CD10-44C1-A1A4-1D1E82888B1F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/HelperClasses/CustomCellClasses/Events/EventsCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "joinBtnSelected(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3E8DA412-CD10-44C1-A1A4-1D1E82888B1F - 5c0ac118257fb0ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.EventsCollectionViewCell.joinBtnSelected(Any) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/HelperClasses/CustomCellClasses/Events/EventsCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "3E8DA412-CD10-44C1-A1A4-1D1E82888B1F - 5c0ac118257fb028"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.EventsCollectionViewCell.joinBtnSelected(Any) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/HelperClasses/CustomCellClasses/Events/EventsCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3653AFB4-79E6-47BE-A592-025DF68389F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/Events/EventDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC0EA893-CC33-4C2A-8926-61183D76A3B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/LoginSighUP/Controllers/SignUp/CompleteProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "updateUserProfile(params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C14A4442-E1E0-4D25-84A4-B0D77FF874F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/LoginSighUP/Controllers/SignUp/CompleteProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "updateUserProfile(params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D12C69C-EAAF-48A3-9291-1F58E8CEC9DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Networking/ProfileAndSettingsWebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "updateProfileAPI(parameters:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D12C69C-EAAF-48A3-9291-1F58E8CEC9DD - 6a991f9eae9fddc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.ProfileAndSettingsWebServices.updateProfileAPI(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Networking/ProfileAndSettingsWebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "7D12C69C-EAAF-48A3-9291-1F58E8CEC9DD - db41788ea2984fd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in VinderApp.ProfileAndSettingsWebServices.updateProfileAPI(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Networking/ProfileAndSettingsWebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1BF66AB-BFB0-422D-9A69-ADCA24B8146E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/LoginSighUP/Controllers/SignUp/CompleteProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "didTapDone()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4ECAA2D-43CF-49C2-AD19-686986B60670"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/LoginSighUP/Controllers/SignUp/CompleteProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "initialSetup()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4ECAA2D-43CF-49C2-AD19-686986B60670 - 69a6621564a9833d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.CompleteProfileVC.initialSetup() -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/LoginSighUP/Controllers/SignUp/CompleteProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "900">
+               </Location>
+               <Location
+                  uuid = "A4ECAA2D-43CF-49C2-AD19-686986B60670 - 69a6621564a98363"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VinderApp.CompleteProfileVC.initialSetup() -&gt; ()"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iosdev/Documents/WorkPlace/Projects/APPSTORE/VinderApp/VinderApp/Modules/LoginSighUP/Controllers/SignUp/CompleteProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "900">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90C8C851-E5F2-46B7-B679-043400F35445"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/Modules/LoginSighUP/Controllers/SignUp/CompleteProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "saveBtnAction(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

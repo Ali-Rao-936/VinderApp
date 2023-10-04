@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol, ExploreEventsTableViewCellProtocol {
+class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
 
     // MARK: - Outlets & Properties
     
@@ -66,15 +66,14 @@ class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol, ExploreEvents
     
     func joinBtnSleceted(cell: ExploreEventsTableViewCell) {
         print("Joiiin btn ...")
-        
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-        otherVCObj.isJoinEvent = true
+        otherVCObj.eventType = eventType.joinEvent.rawValue
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     
     func viewBtnSleceted(cell: ExploreEventsTableViewCell) {
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-        otherVCObj.isJoinEvent = false
+        otherVCObj.eventType = eventType.alreadyJoined.rawValue
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
         

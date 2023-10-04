@@ -7,10 +7,10 @@
 
 import UIKit
 
-protocol EventsCollectionViewCellprotocol {
-    func joinBtnSelected(cell: EventsCollectionViewCell)
-    func viewBtnSelected(cell: EventsCollectionViewCell)
-}
+//protocol EventsCollectionViewCellprotocol {
+//    func joinBtnSelected(cell: EventsCollectionViewCell)
+//    func viewBtnSelected(cell: EventsCollectionViewCell)
+//}
 
 class EventsCollectionViewCell: UICollectionViewCell {
     
@@ -29,7 +29,7 @@ class EventsCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib{
         return UINib(nibName: "EventsCollectionViewCell", bundle: nil)
     }
-    var delegate: EventsCollectionViewCellprotocol?
+//    var delegate: EventsCollectionViewCellprotocol?
 
     // MARK: - Methods
     
@@ -41,12 +41,14 @@ class EventsCollectionViewCell: UICollectionViewCell {
     // MARK: - Button Actions
     
     @IBAction func joinBtnSelected(_ sender: Any) {
-        self.delegate?.joinBtnSelected(cell: self)
+//
+//        print("joinBtnSelected.....")
+//        self.delegate?.joinBtnSelected(cell: self)
     }
     
     @IBAction func viewBtnSelected(_ sender: Any) {
-        print("viewBtnSelected...")
-        self.delegate?.viewBtnSelected(cell: self)
+//        print("viewBtnSelected...")
+//        self.delegate?.viewBtnSelected(cell: self)
     }
 
 }

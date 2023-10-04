@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if userDefault.value(forKey: USER_DEFAULT_firstTimeInstallApp_Key) as? Bool ?? false{
             self.navigateToRightScreen()
+            
         }else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let MainView = (storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.onboardingVC.rawValue) as? OnboardingVC
@@ -29,14 +30,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func navigateToRightScreen(){
         
-        let authToken: String = userDefault.value(forKey: USER_DEFAULT_token_Key) as? String ?? emptyStr
-        
-        print("auth token...", authToken)
-        if authToken != emptyStr{
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let MainView = (storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.tabBarVC.rawValue) as? TabBarVC)!
-            let navController = UINavigationController.init(rootViewController: MainView)
-            self.window?.rootViewController = navController
+        if let authToken: String = userDefault.value(forKey: USER_DEFAULT_token_Key) as? String{
+            print("auth token...", authToken)
+            if authToken != emptyStr{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let MainView = (storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.tabBarVC.rawValue) as? TabBarVC)!
+                let navController = UINavigationController.init(rootViewController: MainView)
+                self.window?.rootViewController = navController
+            }else{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let MainView = (storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as? InitialVC)!
+                let navController = UINavigationController.init(rootViewController: MainView)
+                self.window?.rootViewController = navController
+            }
         }else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let MainView = (storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as? InitialVC)!

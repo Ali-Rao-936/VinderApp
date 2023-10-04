@@ -44,7 +44,7 @@ class EventsTableViewCell: UITableViewCell {
     // MARK: - Button Actions
     
     @IBAction func joinBtnSelected(_ sender: Any) {
-        self.delegate?.joinBtnSelected(cell: self)
+//        self.delegate?.joinBtnSelected(cell: self)
     }
     
 }

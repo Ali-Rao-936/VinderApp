@@ -193,7 +193,7 @@
                                                     <color key="backgroundColor" name="textFieldBgColor"/>
                                                     <color key="textColor" name="headingColor"/>
                                                     <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="horizontalInset">
                                                             <real key="value" value="20"/>
@@ -507,7 +507,7 @@
             <size key="intrinsicContentSize" width="54.333333333333336" height="19.333333333333332"/>
         </designable>
         <designable name="MAc-0K-iOY">
-            <size key="intrinsicContentSize" width="130" height="21"/>
+            <size key="intrinsicContentSize" width="170" height="21"/>
         </designable>
         <designable name="Wde-sh-xvj">
             <size key="intrinsicContentSize" width="76.333333333333329" height="21.666666666666668"/>
@@ -522,25 +522,25 @@
             <size key="intrinsicContentSize" width="55.333333333333336" height="20.666666666666668"/>
         </designable>
         <designable name="fo0-HH-2Tu">
-            <size key="intrinsicContentSize" width="104.66666666666667" height="21"/>
+            <size key="intrinsicContentSize" width="145" height="21"/>
         </designable>
         <designable name="gA4-do-ZnM">
             <size key="intrinsicContentSize" width="70" height="19.333333333333332"/>
         </designable>
         <designable name="kqD-lI-7QM">
-            <size key="intrinsicContentSize" width="110.66666666666667" height="21"/>
+            <size key="intrinsicContentSize" width="151" height="21"/>
         </designable>
         <designable name="mS4-Ap-OpV">
             <size key="intrinsicContentSize" width="38.333333333333336" height="20.666666666666668"/>
         </designable>
         <designable name="qBl-lh-ygI">
-            <size key="intrinsicContentSize" width="38.666666666666664" height="21"/>
+            <size key="intrinsicContentSize" width="78.666666666666671" height="21"/>
         </designable>
         <designable name="tNv-QR-OJu">
             <size key="intrinsicContentSize" width="39.666666666666664" height="19.333333333333332"/>
         </designable>
         <designable name="y6u-qG-7B6">
-            <size key="intrinsicContentSize" width="69" height="21"/>
+            <size key="intrinsicContentSize" width="109" height="21"/>
         </designable>
     </designables>
     <resources>

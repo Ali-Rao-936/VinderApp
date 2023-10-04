@@ -45,10 +45,20 @@ class BaseWebService: NSObject {
                             }else{
                                 // Show alert on window level
                                 if let errorObj = value["error"] as? [String:Any]{
-                                    let error = errorObj["messages"] as? [String]
-                                    print("error...", error?[0])
-                                    
-                                    CommonFxns.showAlertOnWindowlevel(message: error?[0] ?? emptyStr, title: AlertMessages.ERROR_TITLE)
+                                    if let error = errorObj["messages"] as? [String]{
+                                        print("error...", error)
+                                        
+                                        CommonFxns.showAlertOnWindowlevel(message: error[0] , title: AlertMessages.ERROR_TITLE)
+                                    }else if let error = errorObj["messages"] as? NSDictionary{
+                                        print(error.allValues.first ?? "")
+                                        if let errStr = error.allValues.first as? [String]{
+                                            CommonFxns.showAlertOnWindowlevel(message: errStr[0], title: AlertMessages.ERROR_TITLE)
+                                        }else{
+                                            CommonFxns.showAlertOnWindowlevel(message: "Incompatible information", title: AlertMessages.ERROR_TITLE)
+                                        }
+                                    }else{
+                                        CommonFxns.showAlertOnWindowlevel(message: "Incompatible information", title: AlertMessages.ERROR_TITLE)
+                                    }
                                 }
                                 CommonFxns.dismissProgress()
                             }

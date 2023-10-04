@@ -156,17 +156,22 @@ class CommonFxns: NSObject {
     
     class func logOutAndPopToInitialVC(){
         
-  
+        
+        if let bundleID = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundleID)
+        }
+        
         userDefault.removeObject(forKey: USER_DEFAULT_userInfo_Key)
         userDefault.removeObject(forKey: USER_DEFAULT_token_Key)
         userDefault.synchronize()
-
+        
         let storyboard = UIStoryboard(name:enumStoryBoard.main.rawValue, bundle: nil)
         let loginViewController = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as! InitialVC
 
         guard let window = UIApplication.shared.windows.first else {
             return
         }
+        
 
         if let rootViewController = window.rootViewController {
             rootViewController.children.forEach {
@@ -210,6 +215,18 @@ class CommonFxns: NSObject {
         }
         return JSON()
     }
+    
+    class func changeDateToFormat(date:String, format: String, currentFormat: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = currentFormat
+        let date = dateFormatter.date(from: date) ?? Date()
+        
+        dateFormatter.dateFormat = format
+        
+        return dateFormatter.string(from: date)
+    }
+    
+    
     
     // Show activity Indicator
     class func showProgress()->Void{

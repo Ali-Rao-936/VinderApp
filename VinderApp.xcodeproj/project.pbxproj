@@ -65,6 +65,10 @@
 		6A9E61032AC1BDD7005F1733 /* EventsWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E61022AC1BDD7005F1733 /* EventsWebServices.swift */; };
 		6A9E61052AC1C1C7005F1733 /* EventsRequestResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E61042AC1C1C7005F1733 /* EventsRequestResponseModel.swift */; };
 		6A9E61072AC1CA5A005F1733 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E61062AC1CA5A005F1733 /* OnboardingVC.swift */; };
+		6A9F81A52ACD408600D48085 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9F81A32ACD408600D48085 /* MapViewVC.swift */; };
+		6A9F81A62ACD408600D48085 /* MapViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9F81A42ACD408600D48085 /* MapViewVC.xib */; };
+		6A9F81A82ACD8A5300D48085 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9F81A72ACD8A5300D48085 /* PickerView.swift */; };
+		6A9F81AA2ACD8B9600D48085 /* OtherResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9F81A92ACD8B9600D48085 /* OtherResponseModels.swift */; };
 		6AA9A1E22AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9A1E02AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift */; };
 		6AA9A1E32AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA9A1E12AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib */; };
 		6AAA32502ABC4F4800F65DB9 /* EventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA324E2ABC4F4800F65DB9 /* EventsCollectionViewCell.swift */; };
@@ -215,6 +219,10 @@
 		6A9E61022AC1BDD7005F1733 /* EventsWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsWebServices.swift; sourceTree = "<group>"; };
 		6A9E61042AC1C1C7005F1733 /* EventsRequestResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRequestResponseModel.swift; sourceTree = "<group>"; };
 		6A9E61062AC1CA5A005F1733 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		6A9F81A32ACD408600D48085 /* MapViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
+		6A9F81A42ACD408600D48085 /* MapViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewVC.xib; sourceTree = "<group>"; };
+		6A9F81A72ACD8A5300D48085 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		6A9F81A92ACD8B9600D48085 /* OtherResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherResponseModels.swift; sourceTree = "<group>"; };
 		6AA9A1E02AC83B7300EBDD03 /* EventImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AA9A1E12AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventImagesCollectionViewCell.xib; sourceTree = "<group>"; };
 		6AAA324E2ABC4F4800F65DB9 /* EventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -390,6 +398,7 @@
 				6A96D8272ABD76B70041CA04 /* LoginResponseModel.swift */,
 				6A9B12442ABEF51E00D6FF12 /* AuthRequestModel.swift */,
 				6A9E61042AC1C1C7005F1733 /* EventsRequestResponseModel.swift */,
+				6A9F81A92ACD8B9600D48085 /* OtherResponseModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -429,6 +438,7 @@
 				6A96D8242ABD754E0041CA04 /* UserDefaultsToStoreUserInfo.swift */,
 				6A9E60F62AC156A0005F1733 /* BaseNavigation.swift */,
 				6A9E60FC2AC159C3005F1733 /* OtpStackView.swift */,
+				6A9F81A72ACD8A5300D48085 /* PickerView.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -520,6 +530,8 @@
 			children = (
 				6A9E60F82AC15711005F1733 /* ExploreUserVC.swift */,
 				6A9E60F92AC15711005F1733 /* ExploreUserVC.xib */,
+				6A9F81A32ACD408600D48085 /* MapViewVC.swift */,
+				6A9F81A42ACD408600D48085 /* MapViewVC.xib */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -880,6 +892,7 @@
 				6ACA31B92AB9C1620022EF21 /* Urbanist-Light.ttf in Resources */,
 				6A9B124D2ABF20A400D6FF12 /* UpdatePasswordVC.xib in Resources */,
 				6ACA31BA2AB9C1620022EF21 /* Urbanist-Medium.ttf in Resources */,
+				6A9F81A62ACD408600D48085 /* MapViewVC.xib in Resources */,
 				6ACA31BB2AB9C1620022EF21 /* Urbanist-MediumItalic.ttf in Resources */,
 				6ACA31BC2AB9C1620022EF21 /* Urbanist-Regular.ttf in Resources */,
 				6ACA31BD2AB9C1620022EF21 /* Urbanist-SemiBold.ttf in Resources */,
@@ -1043,6 +1056,7 @@
 				6A0AEEA32ABC8872005EEABA /* MatchesCollectionViewCell.swift in Sources */,
 				6ACA310E2AB9A73F0022EF21 /* ProfileVC.swift in Sources */,
 				6A9016202ABAD6F60072ACF2 /* StaticContentVC.swift in Sources */,
+				6A9F81A82ACD8A5300D48085 /* PickerView.swift in Sources */,
 				6A9E60FA2AC15711005F1733 /* ExploreUserVC.swift in Sources */,
 				6A90A2EE2AC2DDD600317CE9 /* TagsCollectionViewCell.swift in Sources */,
 				6ACA31022AB9A67F0022EF21 /* TabBarVC.swift in Sources */,
@@ -1068,6 +1082,7 @@
 				6ACA30FC2AB9A4FA0022EF21 /* HomeVC.swift in Sources */,
 				6ACA318F2AB9AEDB0022EF21 /* Strings.swift in Sources */,
 				6ACA31972AB9AEDB0022EF21 /* UITextFieldFontSize.swift in Sources */,
+				6A9F81AA2ACD8B9600D48085 /* OtherResponseModels.swift in Sources */,
 				6A9B124C2ABF20A400D6FF12 /* UpdatePasswordVC.swift in Sources */,
 				6AD45C392AB97C07000E9A6C /* AppDelegate.swift in Sources */,
 				6ACA31242AB9A89C0022EF21 /* CompleteProfileVC.swift in Sources */,
@@ -1110,6 +1125,7 @@
 				6A9B12432ABED1A100D6FF12 /* AuthWebServices.swift in Sources */,
 				6A9B123F2ABECC4600D6FF12 /* AuthViewModel.swift in Sources */,
 				6ACA31952AB9AEDB0022EF21 /* UIImageViewCustomClass.swift in Sources */,
+				6A9F81A52ACD408600D48085 /* MapViewVC.swift in Sources */,
 				6ACA31932AB9AEDB0022EF21 /* UIButtonCustomClass.swift in Sources */,
 				6A9016292ABADADD0072ACF2 /* ChooseLanguageTableViewCell.swift in Sources */,
 				6A9867992AC5A05A00F453DB /* ExploreUserWebServices.swift in Sources */,
@@ -1290,6 +1306,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BZHB7D5S45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1319,6 +1336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BZHB7D5S45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

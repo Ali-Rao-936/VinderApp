@@ -93,7 +93,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallDefaultUserProfileImg" translatesAutoresizingMaskIntoConstraints="NO" id="43y-IU-FH6" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                <rect key="frame" x="104" y="181.33333333333334" width="24" height="24"/>
+                                <rect key="frame" x="101.33333333333333" y="181.33333333333334" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="Wiy-Fc-z9h"/>
                                     <constraint firstAttribute="height" constant="24" id="Xb2-a2-4Ya"/>
@@ -109,35 +109,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="joined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wa-kf-5Ly">
-                                <rect key="frame" x="134" y="186" width="32.666666666666657" height="14"/>
+                                <rect key="frame" x="131.33333333333334" y="186" width="31.666666666666657" height="14"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="12"/>
                                 <color key="textColor" name="disableBtnColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-3A-Hj1" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                <rect key="frame" x="319" y="158" width="60" height="30"/>
-                                <color key="backgroundColor" name="headingColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KaT-vp-Bet"/>
-                                    <constraint firstAttribute="width" constant="60" id="SqG-Ki-gpC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="12"/>
-                                <color key="tintColor" name="whiteColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Join" image="forwardArrowIcon">
-                                    <color key="titleColor" name="whiteColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="joinBtnSelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ylz-OY-cLt"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roz-rF-wnD" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                <rect key="frame" x="319" y="158" width="60" height="30"/>
+                                <rect key="frame" x="320" y="153" width="60" height="30"/>
                                 <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="uv9-ni-Csd"/>
@@ -161,7 +139,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewBtnSelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Jvh-2c-jm6"/>
+                                    <action selector="viewBtnSelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="9yc-mn-Qr7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-3A-Hj1" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
+                                <rect key="frame" x="320" y="153" width="60" height="30"/>
+                                <color key="backgroundColor" name="headingColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KaT-vp-Bet"/>
+                                    <constraint firstAttribute="width" constant="60" id="SqG-Ki-gpC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="12"/>
+                                <color key="tintColor" name="whiteColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Join" image="forwardArrowIcon">
+                                    <color key="titleColor" name="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="joinBtnSelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dT3-dS-Vm3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRb-3e-A9Z">
@@ -223,9 +223,10 @@
                             <constraint firstItem="Omx-jD-Spo" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" id="1K7-Y0-SnB"/>
                             <constraint firstItem="6wa-kf-5Ly" firstAttribute="centerY" secondItem="Xm3-mY-CV6" secondAttribute="centerY" id="7u7-xI-Xtb"/>
                             <constraint firstItem="i0R-mN-KOQ" firstAttribute="top" secondItem="UWB-Fp-gKO" secondAttribute="top" id="Buv-Sb-Iph"/>
-                            <constraint firstItem="Obe-3A-Hj1" firstAttribute="top" secondItem="MMy-JS-4Nt" secondAttribute="bottom" constant="20" id="DR5-wB-2Ze"/>
+                            <constraint firstItem="Obe-3A-Hj1" firstAttribute="top" secondItem="MMy-JS-4Nt" secondAttribute="bottom" constant="15" id="DR5-wB-2Ze"/>
                             <constraint firstItem="roz-rF-wnD" firstAttribute="top" secondItem="Obe-3A-Hj1" secondAttribute="top" id="G9w-Wx-M0y"/>
                             <constraint firstItem="MMy-JS-4Nt" firstAttribute="top" secondItem="UWB-Fp-gKO" secondAttribute="top" id="JnT-wQ-AXL"/>
+                            <constraint firstItem="43y-IU-FH6" firstAttribute="leading" secondItem="LhD-5D-xmn" secondAttribute="leading" constant="15" id="OMR-qf-kOX"/>
                             <constraint firstItem="roz-rF-wnD" firstAttribute="leading" secondItem="Obe-3A-Hj1" secondAttribute="leading" id="Qm1-vN-Xtx"/>
                             <constraint firstItem="MMy-JS-4Nt" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" id="R32-H2-0cO"/>
                             <constraint firstItem="Ccm-ih-Fps" firstAttribute="top" secondItem="xH2-yX-Hz2" secondAttribute="bottom" constant="8" id="UYU-Gu-xDQ"/>
@@ -235,19 +236,18 @@
                             <constraint firstItem="LhD-5D-xmn" firstAttribute="top" secondItem="Ccm-ih-Fps" secondAttribute="top" id="etu-be-Ca0"/>
                             <constraint firstItem="6wa-kf-5Ly" firstAttribute="leading" secondItem="43y-IU-FH6" secondAttribute="trailing" constant="6" id="fQh-Fz-poF"/>
                             <constraint firstItem="Omx-jD-Spo" firstAttribute="bottom" secondItem="MMy-JS-4Nt" secondAttribute="bottom" constant="1" id="gJI-OG-she"/>
+                            <constraint firstItem="LhD-5D-xmn" firstAttribute="leading" secondItem="Ccm-ih-Fps" secondAttribute="leading" constant="15" id="gQE-84-saj"/>
                             <constraint firstItem="YRb-3e-A9Z" firstAttribute="top" secondItem="xH2-yX-Hz2" secondAttribute="bottom" constant="11" id="gwA-7t-Vs5"/>
                             <constraint firstAttribute="trailing" secondItem="MMy-JS-4Nt" secondAttribute="trailing" id="hu2-vD-7MS"/>
                             <constraint firstItem="awv-Zb-jfT" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" constant="8" id="iUs-kt-7qk"/>
                             <constraint firstItem="Xm3-mY-CV6" firstAttribute="leading" secondItem="YRb-3e-A9Z" secondAttribute="trailing" constant="4" id="iuN-9a-Jd6"/>
                             <constraint firstItem="Xm3-mY-CV6" firstAttribute="centerY" secondItem="YRb-3e-A9Z" secondAttribute="centerY" id="jqg-No-wIL"/>
-                            <constraint firstAttribute="trailing" secondItem="Obe-3A-Hj1" secondAttribute="trailing" constant="14" id="kda-MC-v8B"/>
+                            <constraint firstAttribute="trailing" secondItem="Obe-3A-Hj1" secondAttribute="trailing" constant="13" id="kda-MC-v8B"/>
                             <constraint firstItem="i0R-mN-KOQ" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" id="liy-F5-QCc"/>
-                            <constraint firstItem="LhD-5D-xmn" firstAttribute="centerX" secondItem="Ccm-ih-Fps" secondAttribute="centerX" multiplier="1.18" id="ljX-sc-StJ"/>
                             <constraint firstAttribute="bottom" secondItem="i0R-mN-KOQ" secondAttribute="bottom" id="nq7-7P-KXQ"/>
                             <constraint firstAttribute="trailing" secondItem="Omx-jD-Spo" secondAttribute="trailing" id="o7X-w9-EbW"/>
                             <constraint firstItem="roz-rF-wnD" firstAttribute="bottom" secondItem="Obe-3A-Hj1" secondAttribute="bottom" id="osr-TN-kKF"/>
                             <constraint firstItem="xH2-yX-Hz2" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" constant="8" id="pJK-pi-Knx"/>
-                            <constraint firstItem="43y-IU-FH6" firstAttribute="centerX" secondItem="LhD-5D-xmn" secondAttribute="centerX" multiplier="1.18" id="puF-BV-ntW"/>
                             <constraint firstAttribute="trailing" secondItem="i0R-mN-KOQ" secondAttribute="trailing" id="rcO-ID-HD8"/>
                             <constraint firstItem="43y-IU-FH6" firstAttribute="top" secondItem="LhD-5D-xmn" secondAttribute="top" id="tPT-F4-3D3"/>
                             <constraint firstAttribute="trailing" secondItem="xH2-yX-Hz2" secondAttribute="trailing" constant="8" id="uKI-uY-BF8"/>

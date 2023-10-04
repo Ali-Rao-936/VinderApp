@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, EventsVCTableViewHeaderProtocol, EventsTableViewCellProtocol {
+class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, EventsVCTableViewHeaderProtocol {
 
     // MARK: - Outlets & Properties
     
@@ -18,6 +18,7 @@ class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, Eve
     let eventsHeadingsList = ["Hot events", "More events"]
     
     let viewModel = EventsViewModel(apiService: EventsWebServices())
+    var firstTime = true
 
     // MARK: - View life cycle
 
@@ -26,6 +27,8 @@ class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, Eve
 
         // Initial Setup
         self.initialSetup()
+        
+        self.getEventsList()
     }
     
     // MARK: - Methods
@@ -55,20 +58,29 @@ class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, Eve
     }
     
     // Actions
-    func joinBtnSleceted(cell: ExploreEventsTableViewCell) {
-        print(" explore event joinBtnSleceted....", viewBtnSleceted)
-    }
-    
-    func viewBtnSleceted(cell: ExploreEventsTableViewCell) {
-        print("viewBtnSleceted....", viewBtnSleceted)
-    }
-    
-    func joinBtnSelected(cell: EventsTableViewCell) {
+    func joinBtnSleceted(cell: ExploreEventsTableViewCell, row: Int) {
         print("Join btn sleceted event table view cell....")
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-        otherVCObj.isJoinEvent = true
+        otherVCObj.eventType = eventType.joinEvent.rawValue
+        otherVCObj.selectedEventId = self.hotEventsArr[row].eventId ?? 0
         self.navigationController?.pushViewController(otherVCObj, animated: true)
+
     }
+
+    func viewBtnSleceted(cell: ExploreEventsTableViewCell, row: Int) {
+        print("viewBtnSleceted....", viewBtnSleceted)
+    }
+//
+//    func joinBtnSelected(cell: EventsTableViewCell) {
+//        print("Join btn sleceted event table view cell....")
+//        if let indexPath = self.eventsListTableView.indexPath(for: cell)?.row{
+//            let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
+//            otherVCObj.eventType = eventType.joinEvent.rawValue
+//            otherVCObj.selectedEventId = self.allEventsArr[indexPath].eventId ?? 0
+//            self.navigationController?.pushViewController(otherVCObj, animated: true)
+//        }
+//
+//    }
         
     func createEventBtnSelected(header: EventsVCTableViewHeader) {
         print("Create btn of header...")
@@ -81,7 +93,7 @@ class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, Eve
     private func getEventsList() {
         self.activityIndicatorStart()
 
-        viewModel.getEventsList(subUrl: "")
+        viewModel.getEventsList(subUrl: enumForAPIsEndPoints.eventsList.rawValue)
  
         viewModel.showAlertClosure = {
             msg in
@@ -91,11 +103,12 @@ class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, Eve
     
         viewModel.didFinishFetchforList = { data in
         
+            print("data...", data)
             var eventsList = [EventModel]()
             for item in data {
                 let event = EventModel(with: item)
                 eventsList.append(event)
-                print(event.name ?? emptyStr)
+                print("name....", event.name ?? emptyStr)
             }
 
             self.hotEventsArr = eventsList
@@ -146,7 +159,6 @@ extension ExploreEventsVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.eventsHeadingsList.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
@@ -155,6 +167,12 @@ extension ExploreEventsVC: UITableViewDelegate, UITableViewDataSource {
             guard  let hotEventsCell = self.eventsListTableView.dequeueReusableCell(withIdentifier: ExploreEventsTableViewCell.identifier , for: indexPath) as? ExploreEventsTableViewCell else {
                 return cell
             }
+            if firstTime && self.hotEventsArr.count > 0{
+                hotEventsCell.hotEventsCollectionViewCell.reloadData()
+                hotEventsCell.configCell(events: hotEventsArr)
+                firstTime = false
+            }
+
             hotEventsCell.delegate = self
             return hotEventsCell
             
@@ -162,12 +180,21 @@ extension ExploreEventsVC: UITableViewDelegate, UITableViewDataSource {
             guard  let allEventsCell = self.eventsListTableView.dequeueReusableCell(withIdentifier: EventsTableViewCell.identifier , for: indexPath) as? EventsTableViewCell else {
                 return cell
             }
-            allEventsCell.delegate = self
+//            allEventsCell.delegate = self
             
             let dict = self.allEventsArr[indexPath.row]
             allEventsCell.eventNameLbl.text = dict.name
             allEventsCell.eventCreatedByUserLbl.text = String(dict.userId ?? zero)
+            allEventsCell.noOfPeopleJoinedLbl.text = "\(dict.attendeesCount) People joined"
+            allEventsCell.eventCreatedByUserLbl.text = dict.creator.name ?? emptyStr
+            // 2023-10-26
+            let date = CommonFxns.changeDateToFormat(date: dict.date ?? emptyStr, format: "dd MMM", currentFormat: "yyyy-mm-dd")
+            print(date)
+            allEventsCell.dateTimeLbl.text = "\(date), \(dict.time ?? emptyStr)"
             
+            let imgrUrl = dict.bannerImage?.threeX ?? emptyStr
+            allEventsCell.eventImgView.sd_setImage(with: URL(string: imgrUrl), placeholderImage:UIImage(named: "defaultEventImg"), options: .allowInvalidSSLCertificates, completed: nil)
+
             return allEventsCell
         }
     }
@@ -197,7 +224,10 @@ extension ExploreEventsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
+        otherVCObj.eventType = eventType.joinEvent.rawValue
+        otherVCObj.selectedEventId = self.allEventsArr[indexPath.row].eventId ?? 0
+        self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     
 }

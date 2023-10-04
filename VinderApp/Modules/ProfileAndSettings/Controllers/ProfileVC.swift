@@ -25,7 +25,6 @@ class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,6 +105,7 @@ class ProfileVC: UIViewController {
 
     @IBAction func editInterestsBtnAction(_ sender: Any) {
         let otherVCObj = ChooseInterestsVC(nibName: enumViewControllerIdentifier.chooseInterestsVC.rawValue, bundle: nil)
+        otherVCObj.comingFromCompleteProfileVC = false
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     

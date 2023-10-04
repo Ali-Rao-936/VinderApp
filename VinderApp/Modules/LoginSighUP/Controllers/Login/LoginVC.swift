@@ -29,9 +29,42 @@ class LoginVC: UIViewController {
     
     func initialSetup(){
         hideKeyboardWhenTappedAround() // Hide keyboard
+        
+        self.addKeyboardobserversOnScreen() // add key board observers
+
         self.navigationController?.navigationBar.isHidden = true // hide Default navigation
     }
     
+    func addKeyboardobserversOnScreen(){
+        // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+
+        // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    // MARK: - Keyboard notifications methods
+    
+    // Method to show keyboard
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        guard ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil else {
+           // if keyboard size is not available for some reason, dont do anything
+           return
+        }
+      // move the root view up by the distance of keyboard height
+      self.view.frame.origin.y = 0 - 100 // keyboardSize.height
+    }
+    
+    // Method to hide keyboard
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+      // move back the root view origin to zero
+      self.view.frame.origin.y = 0
+    }
+    
+    // MARK: - Others
+
     func verifyOtp(authToken: String){
         let otherVCObj = VerifyOtpVC(nibName: enumViewControllerIdentifier.verifyOtpVC.rawValue, bundle: nil)
         otherVCObj.authToken = authToken
@@ -122,4 +155,38 @@ class LoginVC: UIViewController {
        CommonFxns.dismissProgress()
     }
     
+}
+
+extension LoginVC: UITextFieldDelegate{
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        if let text = textField.text,
+           let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange,with: string)
+
+            switch textField {
+            case self.passwordTextField:
+                if updatedText.count > generalTextFieldLength {
+                    return false
+                }
+                break
+            default:
+                if updatedText.count > emailTextFieldLength {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.emailTextField:
+            self.passwordTextField.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
+    }
 }

@@ -9,8 +9,9 @@ import Foundation
 
 struct CreateEventRequest{
     var name: String?
-    var latitude: String?
-    var longitude : String?
+    var locationId: Int?
+    var latitude: Double?
+    var longitude : Double?
     var date : String?
     var time : String?
 //    var banner : String?
@@ -19,12 +20,13 @@ struct CreateEventRequest{
     var invitees : [Int]?
     var description : String?
 
-    init(name: String?,description: String, address: String, date: String, time: String, isPaid: Int, latitude: String?, longitude: String?, invitees : [Int] ){
+    init(name: String?,description: String, locationId: Int, address: String, date: String, time: String, isPaid: Int, latitude: Double?, longitude: Double?, invitees : [Int] ){
         self.name = name
         self.description = description
         self.address = address
         self.date = date
         self.time = time
+        self.locationId = locationId
         self.isPaid = isPaid
         self.address = address
         self.invitees = invitees
@@ -38,9 +40,10 @@ struct CreateEventRequest{
                                  "address": address ?? emptyStr,
                                  "is_paid": isPaid ?? zero,
                                  "date": date ?? emptyStr,
+                                 "location_id": locationId,
                                  "time_column": time ?? emptyStr,
-                                 "latitude": latitude ?? emptyStr,
-                                 "longitude": longitude ?? emptyStr,
+                                 "latitude": latitude ?? 0.0,
+                                 "longitude": longitude ?? 0.0,
                                  "invitee": invitees ?? []]
         return dict
     }
@@ -94,8 +97,12 @@ struct EventModel: Codable {
     let name: String? // 14
     let attending: Bool? // 14
     let invited: Bool? // 14
-
-    init(eventId: Int, userId: Int, locationId: Int, address: String, latitude: Double, longitude: Double, isPaid: String, date: String, time: String, isPublished: String, bannerImage: ImageUrls, description: String, name: String, attending: Bool, invited: Bool){
+    let interestId : Int
+    let price: String
+    let attendeesCount: Int
+    let creator : UserModel
+    
+    init(eventId: Int, userId: Int, locationId: Int, address: String, latitude: Double, longitude: Double, isPaid: String, date: String, time: String, isPublished: String, bannerImage: ImageUrls, description: String, name: String, attending: Bool, invited: Bool, interestId: Int, price: String, attendeesCount: Int, creator: UserModel){
         self.eventId = eventId
         self.userId = userId
         self.locationId = locationId
@@ -111,6 +118,10 @@ struct EventModel: Codable {
         self.name = name
         self.invited = invited
         self.attending = attending
+        self.interestId = interestId
+        self.price = price
+        self.attendeesCount = attendeesCount
+        self.creator = creator
     }
 
     init(with data: [String: Any]?) {
@@ -130,6 +141,12 @@ struct EventModel: Codable {
         self.attending = data?["attending"] as? Bool ?? false
         let urls = ImageUrls(with: data?["banner_image"] as? [String:Any])
         self.bannerImage = urls
+        self.interestId = data?["interest_id"] as? Int ?? zero// interest_id
+        self.price = data?["price"] as? String ?? emptyStr
+        self.attendeesCount = data?["attendees_count"] as? Int ?? 0
+        
+        let user = UserModel(with: data?["creator"] as? [String: Any])
+        self.creator = user
     }
     
     func toAnyObject() -> Any {
@@ -148,8 +165,54 @@ struct EventModel: Codable {
             "time_column": time ?? emptyStr,
             "attending" : attending ?? false,
             "invited" : invited ?? false,
-            "banner_image": bannerImage ?? [:]
+            "banner_image": bannerImage ?? [:],
+            "interest_id" : interestId ?? 0,
+            "price" : price ?? "",
+            "attendees_count" : attendeesCount ?? 0,
+            "creator" : creator
         ] as [String : Any]
     }
 }
 
+//"id": 15,
+// "user_id": 36,
+// "name": "we're we're",
+// "description": "eerie we’re erwew",
+// "location_id": 1,
+// "address": "testeteuywqt",
+// "latitude": 40,
+// "longitude": 89,
+// "banner": null,
+// "is_paid": "0",
+// "date": "2023-10-26",
+// "time_column": "10:20:00",
+// "is_published": "1",
+// "created_at": "2023-10-04 06:23:33",
+// "updated_at": "2023-10-04 06:23:33",
+// "interest_id": 0,
+// "price": "0.00",
+// "event_start_time_utc": null,
+// "banner_image": {
+//     "2x": "https://45.76.178.21:5070/assets/images/placeholder.png",
+//     "3x": "https://45.76.178.21:5070/assets/images/placeholder.png",
+//     "1x": "https://45.76.178.21:5070/assets/images/placeholder.png"
+// },
+// "attendees_count": 0,
+// "creator": {
+//     "id": 36,
+//     "name": "5555555ewrw",
+//     "email": "5@mailinator.com",
+//     "age": null,
+//     "gender": "",
+//     "level": null,
+//     "profile_img": null,
+//     "preffered_language": null,
+//     "block": 0,
+//     "login_via": null,
+//     "deleted": null,
+//     "signup_via": "email",
+//     "image_urls": {
+//         "2x": "https://45.76.178.21:5070/assets/images/placeholder.png",
+//         "3x": "https://45.76.178.21:5070/assets/images/placeholder.png",
+//         "1x": "https://45.76.178.21:5070/assets/images/placeholder.png"
+//     }

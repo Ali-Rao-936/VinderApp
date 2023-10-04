@@ -17,9 +17,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseGenderVC" customModule="VinderApp" customModuleProvider="target">
             <connections>
-                <outlet property="femaleBgView" destination="SVy-S5-III" id="lnr-lb-ROd"/>
+                <outlet property="femaleBgView" destination="zIz-2x-IOG" id="CUq-tQ-Oqq"/>
                 <outlet property="femaleLbl" destination="9MX-oR-xwf" id="mcJ-Fx-fOy"/>
-                <outlet property="maleBgView" destination="CEV-pw-3nb" id="FzO-rz-Z3Y"/>
+                <outlet property="maleBgView" destination="9x2-61-uE8" id="UkC-Tx-d2K"/>
                 <outlet property="maleLbl" destination="eki-8X-tKZ" id="xwY-2c-aKj"/>
                 <outlet property="view" destination="Ng8-Up-XFq" id="bTm-N3-4Oi"/>
             </connections>
@@ -54,7 +54,7 @@
                             <color key="textColor" name="headingColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9x2-61-uE8" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9x2-61-uE8" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
                             <rect key="frame" x="38" y="74.999999999999972" width="148.66666666666666" height="137"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maleImg" translatesAutoresizingMaskIntoConstraints="NO" id="Yla-ej-601">
@@ -69,13 +69,14 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEV-pw-3nb">
                                     <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="137"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="chooseGenderBtnAction:" destination="-1" eventType="touchUpInside" id="9fk-cU-XH3"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="CEV-pw-3nb" firstAttribute="leading" secondItem="9x2-61-uE8" secondAttribute="leading" id="2Kf-r6-We8"/>
                                 <constraint firstItem="Yla-ej-601" firstAttribute="top" secondItem="9x2-61-uE8" secondAttribute="top" constant="12" id="41d-Tk-gmu"/>
@@ -103,7 +104,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIz-2x-IOG" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIz-2x-IOG" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
                             <rect key="frame" x="206.66666666666663" y="74.999999999999972" width="148.33333333333337" height="137"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="femaleImg" translatesAutoresizingMaskIntoConstraints="NO" id="cFF-l6-Bgx">
@@ -112,6 +113,7 @@
                                 </imageView>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVy-S5-III">
                                     <rect key="frame" x="0.0" y="0.0" width="148.33333333333334" height="137"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="chooseGenderBtnAction:" destination="-1" eventType="touchUpInside" id="PHw-pZ-pY7"/>
@@ -124,7 +126,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="9MX-oR-xwf" secondAttribute="bottom" constant="12" id="4Ff-7s-tlS"/>
                                 <constraint firstItem="9MX-oR-xwf" firstAttribute="leading" secondItem="zIz-2x-IOG" secondAttribute="leading" id="8oj-nx-jn1"/>
@@ -161,6 +163,7 @@
                                 <constraint firstAttribute="width" constant="118" id="cgZ-Wj-Ajg"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                            <color key="tintColor" name="whiteColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Next  " image="forwardArrowIcon" backgroundImage="btnBgImg">
                                 <color key="titleColor" name="whiteColor"/>

@@ -21,6 +21,7 @@ let profileUpdateSuccess = "Your profile has been updated successfully."
 let passwordUpdateSuccess = "Your account password is updated successfully. please logout and login again."
 
 let locationStr = "Location"
+let addEventSuccess = "Event has been created successfully"
 
 struct AlertMessages {
     
@@ -35,6 +36,8 @@ struct AlertMessages {
     static let ALL_DATA_REQUIRED = "Please enter all the required details."
     static let INVALID_EMAIL = "Please enter a valid Email."
     static let INVALID_PASSWORD = "Please enter a valid Password."
+    static let PASSWORD_MISMATCH = "Password is not matched."
+
     static let LOGOUT_USER = "Are you sure you want to logout?"
     static let DELETE_ACCOUNT = "Are you sure you want to Delete your account?"
     static let PROFILE_INFO_UPDATED = "Your profile info has been updated successfully!"
@@ -43,9 +46,10 @@ struct AlertMessages {
 }
 
 enum gender: String {
-    case male = "Male"
-    case female = "Female"
+    case male = "male"
+    case female = "female"
 }
+
 
 enum enumForSettingsTitles: String {
     

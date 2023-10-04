@@ -185,24 +185,36 @@ class CreateEventVC: UIViewController, TagsCollectionViewCellProtocol {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func inviteFriendsBtnAction(_ sender: Any) {
+        print("inviteFriendsBtnAction...")
+        let otherVCObj = InviteFriendsVC(nibName: enumViewControllerIdentifier.inviteFriendsVC.rawValue, bundle: nil)
+        self.navigationController?.pushViewController(otherVCObj, animated: true)
+    }
+    
     @IBAction func createEventBtnAction(_ sender: Any) {
         let name = CommonFxns.trimString(string: self.eventTitleTextField.text ?? emptyStr)
         let desc = CommonFxns.trimString(string: self.eventDescTxtView.text ?? emptyStr)
         let address = String()
         let startDate = self.startEventDateTextField.text ?? emptyStr
         let time = self.startEventTimeTextField.text ?? emptyStr
-        let latitude = String()
-        let longitude = String()
+        let latitude = Double()//40.000//String()
+        let longitude = Double()// 89.00 //String()
         let invitees = [Int]()
-        if !name.isEmpty && !desc.isEmpty && !startDate.isEmpty && !time.isEmpty{
+        let locationId = 1
+        let isPaid = 0 // By default free
+        if name.isEmpty || desc.isEmpty || startDate.isEmpty || time.isEmpty{
             CommonFxns.showAlert(self, message: AlertMessages.ALL_DATA_REQUIRED, title: AlertMessages.ALERT_TITLE)
         }else{
-            let dict = CreateEventRequest(name: name, description: desc, address: address, date: startDate, time: time, isPaid: 0, latitude: latitude, longitude: longitude, invitees: []).toDictionary()
-            self.createEvent(dict: dict, subUrl: "user/events/add")
+            let dict = CreateEventRequest(name: name, description: desc, locationId: locationId, address: address, date: startDate, time: time, isPaid: isPaid, latitude: latitude, longitude: longitude, invitees: []).toDictionary()
+            
+            print("dict...", dict)
+            self.createEvent(dict: dict, subUrl: enumForAPIsEndPoints.createEvent.rawValue)
         }
     }
     
     @IBAction func addEventImgBtnAction(_ sender: Any) {
+        
+        print("addEventImgBtnAction")
     }
     
     @IBAction func turnOnReminderValueChanged(_ sender: Any) {
@@ -230,6 +242,14 @@ class CreateEventVC: UIViewController, TagsCollectionViewCellProtocol {
     }
     @IBAction func chooseCountryBtnAction(_ sender: Any) {
     }
+    
+    @IBAction func chooseAddressBtnAction(_ sender: Any) {
+        
+        let otherVCObj = MapViewVC(nibName: enumViewControllerIdentifier.mapViewVC.rawValue, bundle: nil)
+        self.navigationController?.pushViewController(otherVCObj, animated: true)
+    }
+    
+    // MapViewVC
     @IBAction func eventCreatedBtnAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -250,7 +270,9 @@ class CreateEventVC: UIViewController, TagsCollectionViewCellProtocol {
         viewModel.didFinishFetch = { data in
         
             print("data...", data)
-            self.navigationController?.popViewController(animated: true)
+            CommonFxns.showConfirmationAlert(title: successStr, message: addEventSuccess, cancel: false, vc: self) {
+                self.navigationController?.popViewController(animated: true)
+            }
             self.activityIndicatorStop()
         }
     }

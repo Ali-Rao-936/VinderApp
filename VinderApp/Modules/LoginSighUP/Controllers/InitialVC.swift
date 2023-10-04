@@ -45,7 +45,11 @@ class InitialVC: UIViewController {
     }
     
     @IBAction func createAccountBtnAction(_ sender: Any) {
-
+//
+//        let otherVCObj = CompleteProfileVC(nibName: enumViewControllerIdentifier.completeProfileVC.rawValue, bundle: nil)
+//        self.navigationController?.pushViewController(otherVCObj, animated: true)
+//        
+//        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let signUpVcObj = mainStoryboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.createAccountVC.rawValue) as! CreateAccountVC
         self.navigationController?.pushViewController(signUpVcObj, animated: true)

@@ -16,13 +16,46 @@ class TabBarVC: UITabBarController,UITabBarControllerDelegate {
           super.viewDidLoad()
 
         tabBarController?.tabBar.tintColor = UIColor.white
-//        tabBar.unselectedItemTintColor = primaryColor
-        tabBar.tintColor = UIColor.systemYellow
-//        tabBar.selectedImageTintColor = UIColor.systemYellow
-        
-//        UITabBar.appearance().selectedItem
-        UITabBar.appearance().unselectedItemTintColor  = UIColor.white
+        tabBar.unselectedItemTintColor = UIColor.white
+        tabBar.selectedImageTintColor = UIColor.systemYellow
         tabBar.backgroundColor = primaryColor
+        tabBar.isTranslucent = true
+        tabBar.tintColor = UIColor.yellow
+
+         let tabBarAppearance = UITabBarAppearance()
+         tabBarAppearance.configureWithTransparentBackground()
+        tabBarAppearance.backgroundColor = primaryColor
+//        tabBarAppearance.
+        tabBarAppearance.selectionIndicatorTintColor = UIColor.systemYellow
+//        tabBarAppearance.
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        tabBar.backgroundColor = primaryColor
+        
+        
+//
+//         let tabBarAppearance = UITabBarAppearance()
+////         tabBarAppearance.configureWithOpaqueBackground()
+//         tabBarAppearance.backgroundColor = primaryColor
+//
+//        if #available(iOS 15.0, *) {
+//            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//         UITabBar.appearance().standardAppearance = tabBarAppearance
+//        tabBar.unselectedItemTintColor = UIColor.white
+////        tabBar.unselectedItemTintColor = UIColor.red
+//        tabBarController?.tabBar.unselectedItemTintColor = UIColor.white
+//
+//        tabBar.isTranslucent = false
+//        UITabBar.appearance().barTintColor = UIColor.white
+////        UITabBar.appearance().tintColor = UIColor.red
+//        UITabBar.appearance().unselectedItemTintColor = .white
+        
+        
+        
+        
+        
 //        tabBar.inputView?.heightAnchor = 70
 //        tabBar.inputView?.layer.cornerRadius = 30
 //        tabBar.backgroundImage = UIImage(named: "tabBgImg")

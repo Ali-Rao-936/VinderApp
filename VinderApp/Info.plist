@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIUserInterfaceStyle</key>
+	<string>light</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Vinder App is using location for better searches.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Vinder App is using location for better searches.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Urbanist-Thin.ttf</string>

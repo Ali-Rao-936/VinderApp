@@ -91,3 +91,38 @@ class UpdatePasswordVC: UIViewController {
 
 
 }
+
+
+extension UpdatePasswordVC: UITextFieldDelegate{
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        if let text = textField.text,
+           let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange,with: string)
+
+            switch textField {
+            case self.oldPasswordTextField: if updatedText.count > generalTextFieldLength {return false}
+                break
+            case self.newPasswordTextField: if updatedText.count > generalTextFieldLength {return false}
+                break
+            case self.confirmNewPasswordTextField: if updatedText.count > generalTextFieldLength {return false}
+                break
+            default: if updatedText.count > generalTextFieldLength {return false}
+            }
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+            
+        case self.oldPasswordTextField: self.newPasswordTextField.becomeFirstResponder()
+        case self.newPasswordTextField: self.confirmNewPasswordTextField.becomeFirstResponder()
+ 
+        default: textField.resignFirstResponder()
+        }
+        return false
+    }
+    
+}

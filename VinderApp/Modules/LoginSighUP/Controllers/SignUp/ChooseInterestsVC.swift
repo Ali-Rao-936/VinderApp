@@ -17,6 +17,7 @@ class ChooseInterestsVC: UIViewController {
     let viewModel = ProfileAndSettingsViewModel(apiService: ProfileAndSettingsWebServices())
     
     var selectedIds = [Int]()
+    var comingFromCompleteProfileVC = false
     
     // MARK: - View life cycle
 
@@ -62,8 +63,6 @@ class ChooseInterestsVC: UIViewController {
         
                 dict["sport_id[\(i)]"] = self.selectedIds[i]
             }
-            
-            
             self.updateProfileInfo(params: dict)
         }else{
             CommonFxns.showAlert(self, message: AlertMessages.CHOOSE_INTERESTS, title: AlertMessages.ERROR_TITLE)
@@ -141,6 +140,14 @@ class ChooseInterestsVC: UIViewController {
         viewModel.didFinishFetch = { data in
             self.activityIndicatorStop()
             print("data...", data)
+            
+            if !self.comingFromCompleteProfileVC{
+                self.navigationController?.popViewController(animated: true)
+            }else{
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let signUpVcObj = mainStoryboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.tabBarVC.rawValue) as! TabBarVC
+                self.navigationController?.pushViewController(signUpVcObj, animated: true)
+            }
 //
 //            if let sportsInterests = data["sports_interest"] as? [[String:Any]]{
 //                var sports = [[String:Any]]()
@@ -155,7 +162,6 @@ class ChooseInterestsVC: UIViewController {
 //            let user = UserModel(with: data)
 //            self.updateUserInfoLocally(user: user)
             
-            self.navigationController?.popViewController(animated: true)
         }
     }
 

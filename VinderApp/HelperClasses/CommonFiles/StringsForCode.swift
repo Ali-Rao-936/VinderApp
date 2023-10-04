@@ -75,6 +75,8 @@ enum enumViewControllerIdentifier: String {
     case exploreEventsVC = "ExploreEventsVC"
     case myEventsVC = "MyEventsVC"
     case createEventVC = "CreateEventVC"
+    case inviteFriendsVC = "InviteFriendsVC"
+    case mapViewVC = "MapViewVC"
 
     case initialVC = "InitialVC"
 }
@@ -82,6 +84,12 @@ enum enumViewControllerIdentifier: String {
 enum enumForCodingKeys: String {
     case status = "status"
 }
+
+enum enumForLoginPurpose: String {
+    case makeNewFriends = "makefriends"
+    case explore = "explore"
+}
+
 // eventsTableView
 enum enumForAPIsEndPoints: String {
     case login = "login"
@@ -100,6 +108,7 @@ enum enumForAPIsEndPoints: String {
 
     case deleteAccount = "delete/account"
     
+    case homeAPI = "home"
     // Interest
 //    case removeInterest = "/user/sports/interest/create"
     case getUserInterestsList = "user/sports/interest/list"
@@ -108,7 +117,8 @@ enum enumForAPIsEndPoints: String {
     // Events
     case createEvent = "user/events/add"
     case joinEvent = "user/events/join"
-
+    case eventsList = "event/list"
+    
     // User Actions
     case likeUser = "user/like"
     case myMatch = "user/mymatch/list" //?latitude=25.10472711211466&longitude=55.148879593356746&radius=60"

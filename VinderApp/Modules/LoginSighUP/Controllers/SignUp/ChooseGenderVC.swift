@@ -39,6 +39,7 @@ class ChooseGenderVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
     @IBAction func nextBtnAction(_ sender: Any) {
         if !selectedGender.isEmpty{
             let otherVCObj = CompleteProfileVC(nibName: enumViewControllerIdentifier.completeProfileVC.rawValue, bundle: nil)
@@ -48,24 +49,26 @@ class ChooseGenderVC: UIViewController {
     }
     
     @IBAction func chooseGenderBtnAction(_ sender: UIButton) {
-        if sender.tag == one{
-            self.femaleBgView.backgroundColor = primaryColorWithAlpha
-            self.femaleBgView.layer.borderColor = primaryColor.cgColor
-            self.femaleLbl.textColor = UIColor.white
-
-            self.maleBgView.backgroundColor = UIColor.white
-            self.maleBgView.layer.borderColor = UIColor.lightGray.cgColor
-            self.maleLbl.textColor = UIColor.lightGray
-            
-            self.selectedGender = gender.female.rawValue
-        }else{
-            self.maleBgView.backgroundColor = primaryColorWithAlpha
+        
+        if sender.tag == zero{
             self.maleBgView.layer.borderColor = primaryColor.cgColor
+            self.maleBgView.backgroundColor = primaryColorWithAlpha
             self.maleLbl.textColor = UIColor.white
-
+            
+            self.femaleBgView.layer.borderColor =  UIColor.gray.cgColor
             self.femaleBgView.backgroundColor = UIColor.white
-            self.femaleBgView.layer.borderColor = UIColor.lightGray.cgColor
-            self.femaleLbl.textColor = UIColor.lightGray
+            self.femaleLbl.textColor = UIColor.gray
+            
+            self.selectedGender = gender.male.rawValue
+        }else{
+            self.femaleBgView.layer.borderColor = primaryColor.cgColor
+            self.femaleBgView.backgroundColor = primaryColorWithAlpha
+            self.femaleLbl.textColor = UIColor.white
+            
+            self.maleBgView.layer.borderColor =  UIColor.gray.cgColor
+            self.maleBgView.backgroundColor = UIColor.white
+            self.maleLbl.textColor = UIColor.gray
+            
             self.selectedGender = gender.male.rawValue
         }
     }

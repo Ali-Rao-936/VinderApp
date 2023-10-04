@@ -41,6 +41,11 @@
             <point key="canvasLocation" x="341.98473282442745" y="6.6901408450704229"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="Xgv-K9-uBc">
+            <size key="intrinsicContentSize" width="375" height="145"/>
+        </designable>
+    </designables>
     <resources>
         <image name="setUpProfileBgImg" width="375" height="145"/>
     </resources>

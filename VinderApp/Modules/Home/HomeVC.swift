@@ -77,7 +77,7 @@ class HomeVC: UIViewController, EventsTableViewCellProtocol, VinderUserAboutInfo
         
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
 //        otherVCObj.selectedEventId = selectedEventId
-        otherVCObj.isJoinEvent = true
+        otherVCObj.eventType = eventType.joinEvent.rawValue
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     

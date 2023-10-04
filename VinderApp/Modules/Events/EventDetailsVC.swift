@@ -8,6 +8,12 @@
 import UIKit
 import CoreLocation
 
+enum eventType : Int{    
+    case joinEvent = 1
+    case alreadyJoined = 2
+    case pastEvent = 3
+}
+
 class EventDetailsVC: UIViewController {
 
     // MARK: - Outlets & Properties
@@ -26,7 +32,7 @@ class EventDetailsVC: UIViewController {
     let viewModel = EventsViewModel(apiService: EventsWebServices())
     
     var selectedEventId = Int()
-    var isJoinEvent = Bool()
+    var eventType = Int()
 
     // MARK: - View life cycle
 

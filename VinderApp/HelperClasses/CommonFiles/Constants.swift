@@ -42,6 +42,12 @@ let appVersion = 1.0
 
 // MARK: - Others
 
+// Text field length
+let generalTextFieldLength = 40
+let emailTextFieldLength = 60
+let referralTextFieldLength = 12
+
+
 // Screen sizes
 let iPhone_8Plus_Height:CGFloat = 736
 let iPhone_X_Height:CGFloat = 812

@@ -102,6 +102,7 @@ class UpdateBasicProfileInfoVC: UIViewController {
         
         print("dict......", dict)
         
+        
         print("dict......", age , "sakdjlsak", selectedAge)
 
         let dict2 = ["name": name, "phone_number": phoneNumber, "gender" : selectedGender]
