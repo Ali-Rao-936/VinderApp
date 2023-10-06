@@ -22,7 +22,8 @@ class HomeVC: UIViewController, EventsTableViewCellProtocol, VinderUserAboutInfo
     // MARK: - Outlets & Properties
     
     @IBOutlet weak var usersListTableView: UITableView!
-    
+    @IBOutlet weak var profileImgView: UIImageView!
+
     var userEvents = [2,0,3]
 
     var usersList = [UpdatedUserList]()
@@ -41,6 +42,10 @@ class HomeVC: UIViewController, EventsTableViewCellProtocol, VinderUserAboutInfo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        // UI Setup
+        let user = UserDefaultsToStoreUserInfo.getUser()
+        self.profileImgView.sd_setImage(with: URL(string: user?.profileImg ?? emptyStr), placeholderImage: UIImage(named: "smallDefaultUserProfileImg"), options: .allowInvalidSSLCertificates, completed: nil)
+
         self.navigationController?.navigationBar.isHidden = true
     }
     
@@ -57,7 +62,7 @@ class HomeVC: UIViewController, EventsTableViewCellProtocol, VinderUserAboutInfo
         self.usersListTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
         
         // Network call
-        self.getUsersList()
+        self.getUsersList(subUrl: enumForAPIsEndPoints.getUsersList.rawValue)
     }
     
     // MARK: - Button Actions
@@ -98,11 +103,11 @@ class HomeVC: UIViewController, EventsTableViewCellProtocol, VinderUserAboutInfo
     
     // MARK: - Networking
 
-    private func getUsersList() {
+    private func getUsersList(subUrl: String) {
        
        self.activityIndicatorStart()
 
-        viewModel.getUsersList()
+        viewModel.getUsersList(subUrl: subUrl)
         
        viewModel.showAlertClosure = {
            msg in
@@ -150,7 +155,15 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 //            return 3 // event
 //        }
         
-        return self.usersList[section].events.count + 1
+        return self.usersList[section].events.count + 1 + 1 // userInfo in header+ about cell + eventsList
+        
+    
+        
+        
+        
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -21,16 +21,21 @@ class UpdateBasicProfileInfoVC: UIViewController {
     @IBOutlet weak var maleBgView: UIView!
     @IBOutlet weak var femaleBgView: UIView!
     @IBOutlet weak var profileImgView: UIImageView!
+    fileprivate let pickerView = ToolbarPickerView()
 
     let imagePicker = UIImagePickerController()
     let viewModel = ProfileAndSettingsViewModel(apiService: ProfileAndSettingsWebServices())
     var selectedGender = String()
-    var selectedAge : Int?
-    var selectedLocation: Int?
-    
+    var selectedAge = zero
+    var selectedLocation = String()
+    var selectedLocationId = zero
+
     var latitude = String()
     var longitude = String()
-    
+    var locationsArr = [Locations]()
+
+    let authViewModel = AuthViewModel(apiService: AuthWebServices())
+
     // MARK: - View life cycle
 
     override func viewDidLoad() {
@@ -43,14 +48,56 @@ class UpdateBasicProfileInfoVC: UIViewController {
     // MARK: - Methods
     
     func initialSetup(){
+        
+        self.locationTextField.inputView = self.pickerView
+        self.locationTextField.inputAccessoryView = self.pickerView.toolbar
+
+        self.pickerView.dataSource = self
+        self.pickerView.delegate = self
+        self.pickerView.toolbarDelegate = self
+        self.pickerView.reloadAllComponents()
+        
+        self.ageTextField.datePicker(target: self, doneAction: #selector(doneAction), cancelAction: #selector(cancelAction), datePickerMode: .date)
+        hideKeyboardWhenTappedAround() // Hide keyboard
+        
+        self.addKeyboardobserversOnScreen() // add key board observers
+
+        self.showDataOnScreen()
+        // Network call
+        self.getHomeAPI()
+    }
+    
+    func showDataOnScreen(){
         // UI setup
         let user = UserDefaultsToStoreUserInfo.getUser()
         self.fullNameTextField.text = user?.name ?? emptyStr
         self.emailTextField.text = user?.email ?? emptyStr
         self.phoneNumberTextField.text = user?.phoneNumber ?? emptyStr
+        
         self.selectedGender = user?.gender ?? emptyStr
-//        self.selectedAge = user?.age
-//        self.selectedLocation = user?.locationId
+        if selectedGender == gender.male.rawValue{
+            self.maleGenderSelected()
+        }else{
+            self.femaleGenderSelected()
+        }
+        let age = user?.age ?? 0
+        if age != zero{
+            self.ageTextField.text = "\(age)"
+            self.selectedAge = age
+        }
+        self.selectedLocation = user?.locationName ?? emptyStr
+        self.locationTextField.text = user?.locationName ?? emptyStr
+        self.selectedLocationId = user?.locationId ?? 0
+
+        self.profileImgView.sd_setImage(with: URL(string: user?.profileImg ?? emptyStr), placeholderImage: UIImage(named: "smallDefaultUserProfileImg"), options: .allowInvalidSSLCertificates, completed: nil)
+    }
+    
+    func addKeyboardobserversOnScreen(){
+        // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+
+        // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func updateUserInfoLocally(user: UserModel){
@@ -58,6 +105,61 @@ class UpdateBasicProfileInfoVC: UIViewController {
 
         UserDefaultsToStoreUserInfo.updateUserDetails(user: updatedUser)
     }
+    
+    @objc
+    func cancelAction() {
+        self.view.resignFirstResponder()
+    }
+    
+    @objc
+    func doneAction(textField: UITextField) { // 2023-10-15 , // 03:30:00
+        if let datePickerView = self.ageTextField.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateString = dateFormatter.string(from: datePickerView.date)
+ 
+            let age = getAgeFromDOF(date: dateString)
+            self.ageTextField.text = "\(age)"
+            self.selectedAge = age
+            self.ageTextField.resignFirstResponder()
+        }
+    }
+    
+    func getAgeFromDOF(date: String) -> Int{
+
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "YYYY-MM-dd"
+        let dateOfBirth = dateFormater.date(from: date)
+
+        let calender = Calendar.current
+
+        let dateComponent = calender.dateComponents([.year, .month, .day], from:
+        dateOfBirth!, to: Date())
+
+        return dateComponent.year!
+    }
+    
+    // MARK: - Keyboard notifications methods
+    
+    // Method to show keyboard
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        guard ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil else {
+           // if keyboard size is not available for some reason, dont do anything
+           return
+        }
+      // move the root view up by the distance of keyboard height
+      self.view.frame.origin.y = 0 - 100 // keyboardSize.height
+    }
+    
+    // Method to hide keyboard
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+      // move back the root view origin to zero
+      self.view.frame.origin.y = 0
+    }
+    
+
     
     // MARK: - Button Actions
     
@@ -74,43 +176,54 @@ class UpdateBasicProfileInfoVC: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func chooseGenderBtnAction(_ sender: Any) {
+    @IBAction func chooseGenderBtnAction(_ sender: UIButton) {
         
+        if sender.tag == zero{
+            self.maleGenderSelected()
+        }else{
+            self.femaleGenderSelected()
+        }
     }
     
-    @IBAction func chooseAgeBtnAction(_ sender: Any) {
+    func maleGenderSelected(){
+        self.maleBgView.layer.borderColor = primaryColor.cgColor
+        self.maleBgView.backgroundColor = primaryColorWithAlpha
+        self.maleLbl.textColor = UIColor.white
+        
+        self.femaleBgView.layer.borderColor =  UIColor.gray.cgColor
+        self.femaleBgView.backgroundColor = UIColor.white
+        self.femaleLbl.textColor = UIColor.gray
+        
+        self.selectedGender = gender.male.rawValue
+    }
+    
+    func femaleGenderSelected(){
+        self.femaleBgView.layer.borderColor = primaryColor.cgColor
+        self.femaleBgView.backgroundColor = primaryColorWithAlpha
+        self.femaleLbl.textColor = UIColor.white
+        
+        self.maleBgView.layer.borderColor =  UIColor.gray.cgColor
+        self.maleBgView.backgroundColor = UIColor.white
+        self.maleLbl.textColor = UIColor.gray
+        
+        self.selectedGender = gender.female.rawValue
     }
 
-    @IBAction func chooseLocationBtnAction(_ sender: Any) {
-    }
-
+//    var selectedGender = String()
     @IBAction func saveInfoBtnAction(_ sender: Any) {
-        let user = UserDefaultsToStoreUserInfo.getUser()
         let name = CommonFxns.trimString(string: self.fullNameTextField.text ?? emptyStr)
         let phoneNumber = CommonFxns.trimString(string: self.phoneNumberTextField.text ?? emptyStr)
-        var age : Int!; var location = Int()
-        
-//        if selectedAge != nil && selectedAge != zero{
-//            age = selectedAge!
-//        }
-//
-//        if selectedLocation != nil && selectedLocation != zero{
-//            location = selectedLocation!
-//        }
-        
-        let dict = UpdateProfileRequest(name: name, phoneNumber: phoneNumber, loginPurpose: user?.loginPurpose ?? emptyStr, gender: selectedGender, age: age, locationId: location, about: user?.about ?? emptyStr, latitude: user?.latitude ?? emptyStr, longitude: user?.longitude ?? emptyStr).toDictionary()
-        
-        print("dict......", dict)
-        
-        
-        print("dict......", age , "sakdjlsak", selectedAge)
 
-        let dict2 = ["name": name, "phone_number": phoneNumber, "gender" : selectedGender]
-        self.updateProfileInfo(dict: dict2)
         
-//        if let dict = ["name": name, "gender" : selectedGender] as? [String: Any]{
-//
-//        }
+        let dict = ["name": name, "phone_number": phoneNumber, "gender" : self.selectedGender, "age" : self.selectedAge, "location_id": selectedLocationId] as [String : Any]
+        print("dict....", dict)
+        if selectedAge != 0 && selectedLocationId != zero && !selectedGender.isEmpty{
+            let dict = ["name": name, "phone_number": phoneNumber, "gender" : self.selectedGender, "age" : self.selectedAge, "location_id": selectedLocationId] as [String : Any]
+            print(dict)
+            self.updateProfileInfo(dict: dict)
+        }else{
+            CommonFxns.showAlert(self, message: AlertMessages.ALL_DATA_REQUIRED, title: AlertMessages.ALERT_TITLE)
+        }
     }
     
     
@@ -131,9 +244,10 @@ class UpdateBasicProfileInfoVC: UIViewController {
 
         viewModel.didFinishFetch = { data in
             print("uploadProfilePic did finsh...", data)
-            
-            if let dataDict = data["data"] as? [String: Any]{
-            }
+                    
+            let user = UserModel(with: data)
+            self.updateUserInfoLocally(user: user)
+      
             self.activityIndicatorStop()
         }
     }
@@ -161,6 +275,33 @@ class UpdateBasicProfileInfoVC: UIViewController {
             }
             self.activityIndicatorStop()
         }
+    }
+    
+    private func getHomeAPI() {
+       
+       self.activityIndicatorStart()
+        
+        authViewModel.getAPI(url: enumForAPIsEndPoints.homeAPI.rawValue)
+        authViewModel.showAlertClosure = {
+           msg in
+           print("msg....", msg)
+           CommonFxns.showAlert(self, message: msg, title:"Alert")
+           self.activityIndicatorStop()
+       }
+       
+        authViewModel.didFinishFetch = { data in
+           print("data...", data)
+  
+            let countries = data["countries"] as? [[String: Any]] ?? []
+            var locations = [Locations]()
+            for item in countries{
+                let country = Locations(with: item)
+                locations.append(country)
+            }
+            self.locationsArr = locations
+            self.activityIndicatorStop()
+            self.pickerView.reloadAllComponents()
+       }
     }
     
     // MARK: - UI Setup
@@ -202,5 +343,45 @@ extension UpdateBasicProfileInfoVC: UIImagePickerControllerDelegate, UINavigatio
 
         self.profileImgView.image = image
         self.uploadProfilePic(image: image)
+    }
+}
+
+extension UpdateBasicProfileInfoVC: UIPickerViewDataSource, UIPickerViewDelegate {
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.locationsArr.count
+    }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.locationsArr[row].name
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if self.locationsArr.count > 0{
+            self.locationTextField.text = self.locationsArr[row].name
+            self.selectedLocationId = self.locationsArr[row].id ?? 0
+        }
+    }
+}
+
+extension UpdateBasicProfileInfoVC: ToolbarPickerViewDelegate {
+
+    func didTapDone() {
+        if self.locationsArr.count > 0{
+            let row = self.pickerView.selectedRow(inComponent: 0)
+            self.pickerView.selectRow(row, inComponent: 0, animated: false)
+            self.locationTextField.text = self.locationsArr[row].name
+            self.selectedLocationId = self.locationsArr[row].id ?? 0
+        }
+        self.locationTextField.resignFirstResponder()
+    }
+
+    func didTapCancel() {
+        self.locationTextField.resignFirstResponder()
     }
 }

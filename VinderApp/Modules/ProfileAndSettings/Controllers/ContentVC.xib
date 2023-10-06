@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentVC" customModule="VinderApp" customModuleProvider="target">
             <connections>
+                <outlet property="contentLbl" destination="8Em-kM-uim" id="gDO-NC-CRz"/>
                 <outlet property="titleLbl" destination="k8d-d9-FAt" id="QxU-ix-WqJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -61,16 +62,16 @@
                         <constraint firstItem="k8d-d9-FAt" firstAttribute="leading" secondItem="PdU-Q2-0cs" secondAttribute="trailing" constant="13" id="n4A-tO-4JF"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sra-6w-fLT">
-                    <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sra-6w-fLT">
+                    <rect key="frame" x="17" y="103" width="359" height="715"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4X-it-Pnm">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="70"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Em-kM-uim">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="20"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Em-kM-uim">
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="m7Q-02-gMp"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="m7Q-02-gMp"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="16"/>
                                     <color key="textColor" name="headingColor"/>
@@ -104,9 +105,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sra-6w-fLT" secondAttribute="bottom" id="5Hw-D2-8Ls"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DOj-6Y-qDY" secondAttribute="trailing" constant="28" id="PVr-Fb-XT2"/>
                 <constraint firstItem="DOj-6Y-qDY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eIV-4E-FWm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sra-6w-fLT" secondAttribute="trailing" id="goY-hl-eAj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sra-6w-fLT" secondAttribute="trailing" constant="17" id="goY-hl-eAj"/>
                 <constraint firstItem="DOj-6Y-qDY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="oFn-ND-la3"/>
-                <constraint firstItem="sra-6w-fLT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p7c-ni-bbi"/>
+                <constraint firstItem="sra-6w-fLT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="p7c-ni-bbi"/>
                 <constraint firstItem="sra-6w-fLT" firstAttribute="top" secondItem="DOj-6Y-qDY" secondAttribute="bottom" id="ykq-am-xvu"/>
             </constraints>
             <point key="canvasLocation" x="127.48091603053435" y="-11.267605633802818"/>

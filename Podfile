@@ -12,6 +12,7 @@ target 'VinderApp' do
   pod 'NVActivityIndicatorView'
   pod 'SwiftyJSON'
   pod 'TagListView', '~> 1.0'
+  pod 'LocationPicker'
   
   target 'VinderAppTests' do
     inherit! :search_paths

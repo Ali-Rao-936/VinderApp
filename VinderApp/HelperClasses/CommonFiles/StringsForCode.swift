@@ -70,6 +70,7 @@ enum enumViewControllerIdentifier: String {
     case verifyOtpVC = "VerifyOtpVC"
     case updatePasswordVC = "UpdatePasswordVC"
 
+    case otherUserProfileVC = "OtherUserProfileVC"
     case contentVC = "ContentVC"
 
     case exploreEventsVC = "ExploreEventsVC"
@@ -77,8 +78,16 @@ enum enumViewControllerIdentifier: String {
     case createEventVC = "CreateEventVC"
     case inviteFriendsVC = "InviteFriendsVC"
     case mapViewVC = "MapViewVC"
-
+    case remarksVC = "RemarksVC"
     case initialVC = "InitialVC"
+}
+
+enum enumToGetStaticContent: String {
+    
+    case termsAndConditions = "TC"
+    case aboutUs = "US"
+    case support = "SC"
+    case privacyPolicy = "PP"
 }
 
 enum enumForCodingKeys: String {
@@ -109,15 +118,22 @@ enum enumForAPIsEndPoints: String {
     case deleteAccount = "delete/account"
     
     case homeAPI = "home"
+    case getContent = "getContent?content_type="
+
+    case getAllInterestsList = "sports/interest/list"
+
     // Interest
 //    case removeInterest = "/user/sports/interest/create"
     case getUserInterestsList = "user/sports/interest/list"
-    case getAllInterestsList = "sports/interest/list"
+    case rateApp = "user/rate/app"
 
     // Events
     case createEvent = "user/events/add"
     case joinEvent = "user/events/join"
     case eventsList = "event/list"
+    case myEvents = "user/events/list?page=2&event_id=1" // user/events/list?page=2&event_id=1
+    case upcomingEvents = "user/events/list?upcoming"
+    case pastEvents = "user/events/list?past"
     
     // User Actions
     case likeUser = "user/like"

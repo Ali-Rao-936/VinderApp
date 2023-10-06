@@ -19,6 +19,7 @@ let cancelStr = "Cancel"
 let forgotPasswordAPISuccessMsg = "Your Request has been submitted. Please check your Email and reset the password."
 let profileUpdateSuccess = "Your profile has been updated successfully."
 let passwordUpdateSuccess = "Your account password is updated successfully. please logout and login again."
+let feedbackSubmittedSuccessfully = "Your feedback has been submitted sucessfully!"
 
 let locationStr = "Location"
 let addEventSuccess = "Event has been created successfully"
@@ -42,6 +43,7 @@ struct AlertMessages {
     static let DELETE_ACCOUNT = "Are you sure you want to Delete your account?"
     static let PROFILE_INFO_UPDATED = "Your profile info has been updated successfully!"
     static let CHOOSE_INTERESTS = "Please choose some Interests to find more matches."
+    static let CHOOSE_EVENT_IMAGE = "Please choose Event image for better understanding."
 
 }
 

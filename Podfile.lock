@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - LocationPicker (1.4.2)
   - MBProgressHUD (1.2.0)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
+  - LocationPicker
   - MBProgressHUD
   - NVActivityIndicatorView
   - SDWebImage
@@ -21,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - LocationPicker
     - MBProgressHUD
     - NVActivityIndicatorView
     - SDWebImage
@@ -29,12 +32,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  LocationPicker: 9af49409ec3ca13fdf4bf6b39e1a3c7dec029f4a
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: 0eb2f9e71233a377485c136842d31df3e0d1a08d
+PODFILE CHECKSUM: 14a0afae3bb3696353425584ace80f080bcf3631
 
 COCOAPODS: 1.12.1

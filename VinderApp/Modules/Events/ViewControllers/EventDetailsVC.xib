@@ -20,10 +20,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailsVC" customModule="VinderApp" customModuleProvider="target">
             <connections>
+                <outlet property="eventCategoryBtn" destination="Yl4-cS-4Y6" id="rH9-ut-orK"/>
                 <outlet property="eventCreateByUserLbl" destination="oA0-Da-Et9" id="BGk-7i-Umg"/>
                 <outlet property="eventDateLbl" destination="dNd-S0-gy4" id="H1C-c6-0FK"/>
                 <outlet property="eventDescLbl" destination="2Q6-et-e9m" id="R2N-PT-MV0"/>
                 <outlet property="eventImagesCollectionView" destination="dxH-Z3-Mvc" id="PIe-VF-P2k"/>
+                <outlet property="eventImgView" destination="pVm-Iv-fQy" id="r4m-Ym-GQK"/>
                 <outlet property="eventJoineesLbl" destination="tmJ-Sk-EjQ" id="kXX-JG-7Hf"/>
                 <outlet property="eventLocationLbl" destination="FCy-HW-L8j" id="Ghn-Yf-eSs"/>
                 <outlet property="eventNameLbl" destination="s7u-IP-1qe" id="naz-kI-cJt"/>

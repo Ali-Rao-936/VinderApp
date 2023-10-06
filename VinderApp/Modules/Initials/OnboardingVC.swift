@@ -9,6 +9,8 @@ import UIKit
 
 class OnboardingVC: UIViewController, UIScrollViewDelegate {
     
+    // MARK: - Outlets & Properties
+    
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var skipBtn: UIButton!
@@ -23,6 +25,8 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
     var descs = ["Swipe through profiles of fellow sports lovers in your area. Whether you're into basketball, soccer, tennis or hockey.", "Instead of the usual discuss, why not suggest a soccer, a tennis match, or attending a live sports event together?","Share your favorite sports moments, discuss upcoming games, or simply get to know each other better."]
 
     var imgs = ["onBoardImg-1","onBoardImg-2","onBoardImg-3"]
+
+    // MARK: - View life cycle
 
     // get dynamic width and height of scrollview and save it
     override func viewDidLayoutSubviews() {
@@ -58,11 +62,6 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
             imageView.frame = CGRect(x:0,y:10, width:self.view.frame.width-10, height:self.scrollView.frame.height-20)
             imageView.contentMode = .scaleAspectFit
             imageView.center = CGPoint(x:scrollWidth/2,y: scrollHeight/2 - 10)
-          
-//            let txt1 = UILabel.init(frame: CGRect(x:32,y:imageView.frame.maxY+30,width:scrollWidth-64,height:30))
-//            txt1.textAlignment = .center
-//            txt1.font = UIFont.boldSystemFont(ofSize: 18.0)
-//            txt1.text = headings[index]
 
             self.titleLbl.text = self.headings[index]
             self.descLbl.text = self.descs[index]
@@ -91,7 +90,8 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
         self.navigationController?.navigationBar.isHidden = true
     }
 
-    //indicator
+    // MARK: - Button Actions
+
     @IBAction func pageChanged(_ sender: Any) {
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
     }
@@ -102,6 +102,8 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
         self.navigationController?.pushViewController(otherVCObj!, animated: true)
     }
     
+    // MARK: - Methods
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         setIndiactorForCurrentPage()
     }
@@ -109,8 +111,6 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
     func setIndiactorForCurrentPage()  {
         let page = (scrollView?.contentOffset.x)!/scrollWidth
         pageControl?.currentPage = Int(page)
-        
-        print("page....",page)
         self.descLbl.text = self.descs[Int(page)]
         self.titleLbl.text = self.headings[Int(page)]
     }

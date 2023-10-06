@@ -11,9 +11,12 @@ class MatchesCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets & Properties
 //
-//    @IBOutlet weak var ratingLbl: UILabel!
-//    @IBOutlet weak var usernameLbl: UILabel!
-    
+    @IBOutlet weak var usernameLbl: UILabel!
+    @IBOutlet weak var userImgView: UIImageView!
+    @IBOutlet weak var userLevelLbl: UILabel!
+    @IBOutlet weak var userLocationLbl: UILabel!
+    @IBOutlet weak var locationIcon: UIImageView!
+
     static let identifier = "MatchesCollectionViewCell"
     static func nib() -> UINib{
         return UINib(nibName: "MatchesCollectionViewCell", bundle: nil)

@@ -7,21 +7,18 @@
 
 import UIKit
 
-protocol TagsCollectionViewCellProtocol{
-    func chooseSportBtnSelected(cell: TagsCollectionViewCell)
-}
-
 class TagsCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Outlets & Properties
 
-    @IBOutlet weak var tagBtn : UIButton!
-    
+    @IBOutlet weak var tagView : UIView!
+    @IBOutlet weak var tagImgView : UIImageView!
+    @IBOutlet weak var tagLbl : UILabel!
+
     static let identifier = "TagsCollectionViewCell"
     static func nib() -> UINib{
         return UINib(nibName: "TagsCollectionViewCell", bundle: nil)
     }
-    var delegate: TagsCollectionViewCellProtocol?
 
     // MARK: - Methods
     
@@ -32,8 +29,6 @@ class TagsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Button Actions
     
-    @IBAction func chooseSportBtnSelected(_ sender: Any) {
-        self.delegate?.chooseSportBtnSelected(cell: self)
-    }
+
 
 }

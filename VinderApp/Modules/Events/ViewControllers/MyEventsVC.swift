@@ -21,6 +21,25 @@ class MyEventsVC: UIViewController {
     let viewModel = EventsViewModel(apiService: EventsWebServices())
     var firstTime = true
     
+    lazy var refreshControl: UIRefreshControl = {
+            let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action:
+                         #selector(MyEventsVC.handleRefresh(_:)),
+                                     for: UIControl.Event.valueChanged)
+            refreshControl.tintColor = UIColor.red
+            
+            return refreshControl
+        }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+
+        if segmentControl.selectedSegmentIndex == 0{
+            self.getEventsList(subUrl: enumForAPIsEndPoints.upcomingEvents.rawValue, upcomingEvent: true)
+        }else{
+            self.getEventsList(subUrl: enumForAPIsEndPoints.pastEvents.rawValue, upcomingEvent: true)
+        }
+    }
+    
     // MARK: - View life cycle
 
     override func viewDidLoad() {
@@ -33,13 +52,18 @@ class MyEventsVC: UIViewController {
     // MARK: - Methods
     
     func initialSetup(){
+        hideKeyboardWhenTappedAround() // hide keyboard
+        
+        self.myEventsCollectionView.alwaysBounceVertical = true
+        self.myEventsCollectionView.addSubview(self.refreshControl)
+
         // Register tableView cells
         self.myEventsCollectionView.register(EventsCollectionViewCell.nib(), forCellWithReuseIdentifier: EventsCollectionViewCell.identifier)
 
         // Initial Setup
         self.events = self.upcomingEventsList
         // Network call
-        self.getEventsList(subUrl: "events/upcoming", upcomingEvent: true)
+        self.getEventsList(subUrl: enumForAPIsEndPoints.upcomingEvents.rawValue, upcomingEvent: true)
     }
     
     // MARK: - Button Actions
@@ -53,7 +77,7 @@ class MyEventsVC: UIViewController {
             self.events = self.upcomingEventsList
         }else{
             if firstTime{
-                self.getEventsList(subUrl: "events/past", upcomingEvent: false)
+                self.getEventsList(subUrl: enumForAPIsEndPoints.pastEvents.rawValue, upcomingEvent: false)
                 self.firstTime = false
             }
             self.events = self.pastEventsList
@@ -91,10 +115,11 @@ class MyEventsVC: UIViewController {
             msg in
             CommonFxns.showAlert(self, message: msg, title: AlertMessages.ERROR_TITLE)
             self.activityIndicatorStop()
+            self.refreshControl.endRefreshing()
         }
     
         viewModel.didFinishFetchforList = { data in
-        
+            self.refreshControl.endRefreshing()
             var eventsList = [EventModel]()
             for item in data {
                 let event = EventModel(with: item)
@@ -164,6 +189,16 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         }else{
             listCell.completedEventView.isHidden = false
         }
+        listCell.noOfPeopleJoinedLbl.text = "\(dict.attendeesCount) People joined"
+        listCell.eventCreatedByUserLbl.text = dict.creator.name ?? emptyStr
+        // 2023-10-26
+        let date = CommonFxns.changeDateToFormat(date: dict.date ?? emptyStr, format: "dd MMM", currentFormat: "yyyy-mm-dd")
+        print(date)
+        listCell.dateTimeLbl.text = "\(date), \(dict.time ?? emptyStr)"
+        
+        let imgrUrl = dict.bannerImage?.threeX ?? emptyStr
+        listCell.eventImgView.sd_setImage(with: URL(string: imgrUrl), placeholderImage:UIImage(named: "defaultEventImg"), options: .allowInvalidSSLCertificates, completed: nil)
+        
         return listCell
     }
 

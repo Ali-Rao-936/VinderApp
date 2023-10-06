@@ -73,6 +73,7 @@ class ChooseInterestsVC: UIViewController {
     
     // MARK: - Networking
 
+    
     private func getInterestsList() {
        
        self.activityIndicatorStart()

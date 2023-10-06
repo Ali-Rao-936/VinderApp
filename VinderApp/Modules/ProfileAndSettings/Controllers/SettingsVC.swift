@@ -55,8 +55,7 @@ class SettingsVC: UIViewController {
         
         self.otherSettionsList.append(contentsOf: [SettingsOptions(title: enumForSettingsOptions.privacyPolicy.rawValue, titleImg: enumForSettingsImages.privacyPolicy.rawValue, showSwitch: false),
                                       SettingsOptions(title: enumForSettingsOptions.termsAndConditions.rawValue, titleImg: enumForSettingsImages.termsAndConditions.rawValue, showSwitch: false),
-                                      SettingsOptions(title: enumForSettingsOptions.givefeedback.rawValue, titleImg: enumForSettingsImages.givefeedback.rawValue, showSwitch: false),
-                                      SettingsOptions(title: enumForSettingsOptions.rateUs.rawValue, titleImg: enumForSettingsImages.rateUs.rawValue, showSwitch: false)])
+                                      SettingsOptions(title: enumForSettingsOptions.givefeedback.rawValue, titleImg: enumForSettingsImages.givefeedback.rawValue, showSwitch: false)])
 
 //        self.accountSettionsList.append()
         self.settingOptionsArr.append(accountSettionsList)
@@ -164,17 +163,26 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             
         case enumForSettingsOptions.privacyPolicy.rawValue:
             let otherVCObj = ContentVC(nibName: enumViewControllerIdentifier.contentVC.rawValue, bundle: nil)
-            otherVCObj.contentType = enumForSettingsOptions.privacyPolicy.rawValue
+            otherVCObj.contentType = enumToGetStaticContent.privacyPolicy.rawValue
+            otherVCObj.heading = enumForSettingsOptions.privacyPolicy.rawValue
             self.navigationController?.pushViewController(otherVCObj, animated: true)
             
         case enumForSettingsOptions.termsAndConditions.rawValue:
             let otherVCObj = ContentVC(nibName: enumViewControllerIdentifier.contentVC.rawValue, bundle: nil)
-            otherVCObj.contentType = enumForSettingsOptions.termsAndConditions.rawValue
+            otherVCObj.contentType = enumToGetStaticContent.termsAndConditions.rawValue
+            otherVCObj.heading = enumForSettingsOptions.termsAndConditions.rawValue
             self.navigationController?.pushViewController(otherVCObj, animated: true)
+            
         case enumForSettingsOptions.helpandSupport.rawValue:
             let otherVCObj = ContentVC(nibName: enumViewControllerIdentifier.contentVC.rawValue, bundle: nil)
-            otherVCObj.contentType = enumForSettingsOptions.helpandSupport.rawValue
+            otherVCObj.contentType = enumToGetStaticContent.support.rawValue
+            otherVCObj.heading = enumForSettingsOptions.helpandSupport.rawValue
             self.navigationController?.pushViewController(otherVCObj, animated: true)
+            
+        case enumForSettingsOptions.givefeedback.rawValue:
+            let otherVCObj = RemarksVC(nibName: enumViewControllerIdentifier.remarksVC.rawValue, bundle: nil)
+            self.navigationController?.pushViewController(otherVCObj, animated: true)
+            
         default:
             break
         }

@@ -20,7 +20,7 @@ class TabBarVC: UITabBarController,UITabBarControllerDelegate {
         tabBar.selectedImageTintColor = UIColor.systemYellow
         tabBar.backgroundColor = primaryColor
         tabBar.isTranslucent = true
-        tabBar.tintColor = UIColor.yellow
+        tabBar.tintColor = UIColor.systemYellow
 
          let tabBarAppearance = UITabBarAppearance()
          tabBarAppearance.configureWithTransparentBackground()

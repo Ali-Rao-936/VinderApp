@@ -55,6 +55,8 @@ class ProfileVC: UIViewController {
         self.fullNameLbl.text = user?.name
         self.locationLbl.text = user?.locationName ?? locationStr
         
+        self.profileImgView.sd_setImage(with: URL(string: user?.profileImg ?? emptyStr), placeholderImage: UIImage(named: "smallDefaultUserProfileImg"), options: .allowInvalidSSLCertificates, completed: nil)
+
         self.aboutDescLbl.text = user?.about
     }
     
@@ -80,7 +82,6 @@ class ProfileVC: UIViewController {
         alertController.addAction(saveAction)
         present(alertController, animated: true, completion: nil)
     }
-    
     
     func updateUserInfoLocally(user: UserModel){
         let updatedUser = UserModel(userId: user.userId ?? zero, name: user.name ?? emptyStr, email: user.email ?? emptyStr, about: user.about ?? emptyStr, age: user.age ?? zero, profileImg: user.profileImg ?? emptyStr, phoneNumber: user.phoneNumber ?? emptyStr, gender: user.gender ?? emptyStr, allowNotifications: user.allowNotifications ?? zero, loginPurpose: user.loginPurpose ?? emptyStr, locationId: user.locationId ?? zero, locationName: user.locationName ?? emptyStr, latitude: user.latitude ?? emptyStr, longitude: user.longitude ?? emptyStr, islocationTurnOn: user.islocationTurnOn ?? zero, level: user.level ?? zero, prefferedLanguage: user.prefferedLanguage ?? emptyStr, isBlock: user.isBlock ?? zero, isDeleted: user.isDeleted ?? zero, accessToken: user.accessToken ?? emptyStr, signUpVia: user.signUpVia ?? emptyStr, loginVia: user.loginVia ?? emptyStr, otpVerified: user.otpVerifed ?? zero, sportsInterests: user.sportsInterests ?? []).toAnyObject() as! [String: Any]

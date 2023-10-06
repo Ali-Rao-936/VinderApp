@@ -40,10 +40,10 @@ class HomeViewModel {
 
     // MARK: - Network call
     
-    func getUsersList() {
+    func getUsersList(subUrl: String) {
     
         print("getUsersList....")
-        self.apiService?.getUsersList(subUrl: enumForAPIsEndPoints.getUsersList.rawValue, completion: { data, succeeded, error in
+        self.apiService?.getUsersList(subUrl: subUrl, completion: { data, succeeded, error in
             if succeeded {
                 print("succeeded....", succeeded)
                 guard let tempData = data else{

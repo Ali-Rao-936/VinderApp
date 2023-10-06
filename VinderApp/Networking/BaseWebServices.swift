@@ -80,16 +80,19 @@ class BaseWebService: NSObject {
     }
     
   
-    public func uploadImageWithInfo(url: String, img: UIImage, method : Alamofire.HTTPMethod, parameters: Parameters?, header: HTTPHeaders?, onSuccess success: @escaping (DataResponse<Any>) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
+    public func uploadImageWithInfo(parameters: [String:Any]?, url: String, img: UIImage, method : Alamofire.HTTPMethod, header: HTTPHeaders?, onSuccess success: @escaping (DataResponse<Any>) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
         let imgData = img.jpegData(compressionQuality: 0.2)!
 
         let timestamp = NSDate().timeIntervalSince1970 // just for some random name.
 
        Alamofire.upload(multipartFormData: { multipartFormData in
                multipartFormData.append(imgData, withName: "profile_img",fileName: "\(timestamp).jpg", mimeType: "image/jpg")
-//               for (key, value) in parameters {
-//                       multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
-//                   } //Optional for extra parameters
+           if parameters != nil{
+               for (key, value) in parameters! {
+                   multipartFormData.append((value as AnyObject).data(using:String.Encoding.utf8.rawValue)!, withName: key)
+                   } // Optional for extra parameters
+           }
+
            },
                         to:url, method: method, headers:CommonFxns.getAuthenticationToken())
        { (result) in
@@ -126,6 +129,71 @@ class BaseWebService: NSObject {
                                }
                            }
                        }
+                   }
+               }
+
+           case .failure(let encodingError):
+               print("FAILURE RESPONSE: \(encodingError.localizedDescription)")
+           }
+       }
+    }
+    
+    public func uploadEventImageWithInfo(parameters: [String:Any]?, url: String, img: UIImage, method : Alamofire.HTTPMethod, header: HTTPHeaders?, onSuccess success: @escaping (DataResponse<Any>) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
+        let imgData = img.jpegData(compressionQuality: 0.2)!
+
+        print("url.....", url)
+        let timestamp = NSDate().timeIntervalSince1970 // just for some random name.
+
+       Alamofire.upload(multipartFormData: { multipartFormData in
+               multipartFormData.append(imgData, withName: "banner",fileName: "\(timestamp).jpg", mimeType: "image/jpg")
+           
+           
+           if parameters != nil{
+               for (key, value) in parameters! {
+                   
+                   multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                    print(key, value)
+                } // Optional for extra parameters
+           }
+
+           },
+                        to:url, method: method, headers:CommonFxns.getAuthenticationToken())
+       { (result) in
+           switch result {
+           case .success(let upload, _, _):
+
+               upload.uploadProgress(closure: { (progress) in
+                   print("Upload Progress: \(progress.fractionCompleted)")
+               })
+
+               upload.responseJSON { response in
+                    print("Upload response:  ", response.result.value)
+                   
+                   if let value: AnyObject = response.result.value as AnyObject? {
+                       if let statusCode = response.response?.statusCode as? Int { // value["statusCode"] as? Int{
+                           
+                           print("Status code.....", statusCode , value )
+                           if (statusCode  >= 200 && statusCode <= 299){
+                               DispatchQueue.main.async(execute: {
+                                   do {
+                                       let jsonResponse = try JSON.init(data: response.data!)
+                                       print("JSON RESPONSE: \(jsonResponse)")
+                                   } catch {
+                                       print("JSONSerialization error:", error)
+                                   }
+                                   success(response)
+                               })
+                           }else if statusCode == 401{
+//                               CommonFxns.logOutAccount()
+                           }else{
+                               if let msg =  value["message"] as? String{
+                                   CommonFxns.showAlertOnWindowlevel(message: msg, title: AlertMessages.ALERT_TITLE)
+                                   print("message...", msg)
+                               }
+                           }
+                       }
+                   }else{
+                       CommonFxns.showAlertOnWindowlevel(message: AlertMessages.CAST_ERROR, title: AlertMessages.ALERT_TITLE)
                    }
                }
 

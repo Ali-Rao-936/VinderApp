@@ -27,12 +27,15 @@ class EventDetailsVC: UIViewController {
     @IBOutlet weak var eventDateLbl: UILabel!
     @IBOutlet weak var eventTimeLbl: UILabel!
     @IBOutlet weak var eventPriceLbl: UILabel!
+    @IBOutlet weak var eventImgView: UIImageView!
+    @IBOutlet weak var eventCategoryBtn: UIButton!
     @IBOutlet weak var eventImagesCollectionView: UICollectionView!
 
     let viewModel = EventsViewModel(apiService: EventsWebServices())
     
     var selectedEventId = Int()
     var eventType = Int()
+    var isAttendingEvent = false
 
     // MARK: - View life cycle
 
@@ -50,16 +53,21 @@ class EventDetailsVC: UIViewController {
     // MARK: - Methods
     
     func initialSetup(){
+        hideKeyboardWhenTappedAround() // hide keyboard
         // Register CollectionView cell
         self.eventImagesCollectionView.register(EventImagesCollectionViewCell.nib(), forCellWithReuseIdentifier: EventImagesCollectionViewCell.identifier)
     }
     
-    var isAttendingEvent = false
     func showDataOnScreen(event: EventModel){
         self.eventNameLbl.text = event.name
-        self.eventDateLbl.text = event.date
+        self.eventDateLbl.text = CommonFxns.changeDateToFormat(date: event.date ?? emptyStr, format: "dd MMM", currentFormat: "yyyy-mm-dd")
         self.eventTimeLbl.text = event.time
+        self.eventCreateByUserLbl.text = "by \(String(describing: event.creator.name))"
         self.eventDescLbl.text = event.description
+        self.eventJoineesLbl.text = "\(event.attendeesCount) people joined"
+        let imgrUrl = event.bannerImage?.threeX ?? emptyStr
+        self.eventImgView.sd_setImage(with: URL(string: imgrUrl), placeholderImage:UIImage(named: "defaultEventImg"), options: .allowInvalidSSLCertificates, completed: nil)
+        
         if event.isPaid == "0"{
             self.eventPriceLbl.text = "Free"
         }else{
@@ -76,6 +84,8 @@ class EventDetailsVC: UIViewController {
         }else{
             self.joinEventBtn.setTitle("Join Event  ", for: .normal)
         }
+        
+        
     }
     
     // MARK: - Button Actions
@@ -108,6 +118,8 @@ class EventDetailsVC: UIViewController {
         viewModel.didFinishFetch = { data in
         
             print("data...", data)
+
+            
             let event = EventModel(with: data)
             
             print("event...", event)
@@ -116,6 +128,11 @@ class EventDetailsVC: UIViewController {
 
             self.getAddressFromLatLon(pdblLatitude: String(event.latitude ?? 0.0), withLongitude: String(event.longitude ?? 0.0))
             
+            if let interestData = data["interest"] as? [String: Any]{
+                let interest = SportsInterests(with: interestData)
+                self.eventCategoryBtn.setTitle(interest.name ?? emptyStr, for: .normal)
+            }
+
 //            address.trimmingCharacters(in: CharacterSet.newlines)
             self.activityIndicatorStop()
         }
@@ -124,7 +141,7 @@ class EventDetailsVC: UIViewController {
     private func joinEvent(dict: [String: Any], subUrl: String) {
         self.activityIndicatorStart()
 
-        viewModel.joinEvent(params: dict, subUrl: subUrl)
+        viewModel.postEvent(params: dict, subUrl: subUrl)
  
         viewModel.showAlertClosure = {
             msg in

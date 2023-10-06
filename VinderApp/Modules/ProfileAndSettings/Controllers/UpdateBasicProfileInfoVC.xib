@@ -22,12 +22,12 @@
             <connections>
                 <outlet property="ageTextField" destination="MAc-0K-iOY" id="iL9-2v-LZy"/>
                 <outlet property="emailTextField" destination="qBl-lh-ygI" id="G0F-2Q-ft3"/>
-                <outlet property="femaleBgView" destination="bnQ-zZ-VfN" id="CMs-na-cSF"/>
+                <outlet property="femaleBgView" destination="YzX-Rc-0T0" id="vaC-Jb-iZq"/>
                 <outlet property="femaleLbl" destination="b5B-xH-ZcE" id="bpy-F4-nnp"/>
                 <outlet property="fullNameTextField" destination="y6u-qG-7B6" id="ZgN-vW-SAh"/>
                 <outlet property="locationTextField" destination="kqD-lI-7QM" id="H1c-Oh-ZoS"/>
-                <outlet property="maleBgView" destination="fN4-Rd-8DA" id="MGJ-bM-8ga"/>
-                <outlet property="maleLbl" destination="mS4-Ap-OpV" id="pgW-4L-rmY"/>
+                <outlet property="maleBgView" destination="e1K-SA-ifa" id="mJA-Wc-VnU"/>
+                <outlet property="maleLbl" destination="mS4-Ap-OpV" id="Yyl-yX-vaH"/>
                 <outlet property="phoneNumberTextField" destination="fo0-HH-2Tu" id="ruS-HT-6gh"/>
                 <outlet property="profileImgView" destination="aFQ-xc-AhJ" id="Irn-HS-fd6"/>
                 <outlet property="view" destination="v7A-FM-Pmv" id="HVi-Mk-NzQ"/>
@@ -394,24 +394,6 @@
                                         <action selector="updateImageBtnAction:" destination="-1" eventType="touchUpInside" id="lYc-QT-tiH"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXh-1X-W6B">
-                                    <rect key="frame" x="17" y="571.33333333333337" width="339" height="49.666666666666629"/>
-                                    <color key="tintColor" name="headingColor"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="dropDownIcon"/>
-                                    <connections>
-                                        <action selector="chooseLocationBtnAction:" destination="-1" eventType="touchUpInside" id="Qub-C4-m1a"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zn-7n-vCg">
-                                    <rect key="frame" x="17" y="482.33333333333337" width="339" height="49.666666666666629"/>
-                                    <color key="tintColor" name="headingColor"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="dropDownIcon"/>
-                                    <connections>
-                                        <action selector="chooseAgeBtnAction:" destination="-1" eventType="touchUpInside" id="oZB-5e-lqq"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN4-Rd-8DA" userLabel="male">
                                     <rect key="frame" x="17" y="390" width="169.66666666666666" height="53"/>
                                     <color key="tintColor" name="headingColor"/>
@@ -433,17 +415,11 @@
                             <constraints>
                                 <constraint firstItem="fN4-Rd-8DA" firstAttribute="trailing" secondItem="e1K-SA-ifa" secondAttribute="trailing" id="3ax-OP-jEQ"/>
                                 <constraint firstItem="fN4-Rd-8DA" firstAttribute="top" secondItem="e1K-SA-ifa" secondAttribute="top" id="9C8-9n-dK3"/>
-                                <constraint firstItem="SXh-1X-W6B" firstAttribute="bottom" secondItem="V1v-Fa-9e4" secondAttribute="bottom" id="AoS-jH-gcq"/>
                                 <constraint firstItem="I6B-za-0UH" firstAttribute="top" secondItem="aFQ-xc-AhJ" secondAttribute="top" id="C1W-Bb-Bat"/>
                                 <constraint firstItem="bnQ-zZ-VfN" firstAttribute="top" secondItem="YzX-Rc-0T0" secondAttribute="top" id="CTl-8b-Tel"/>
-                                <constraint firstItem="9zn-7n-vCg" firstAttribute="leading" secondItem="MAc-0K-iOY" secondAttribute="leading" id="DvC-BP-YTe"/>
                                 <constraint firstItem="I6B-za-0UH" firstAttribute="bottom" secondItem="aFQ-xc-AhJ" secondAttribute="bottom" id="HB3-aO-x0U"/>
                                 <constraint firstItem="bnQ-zZ-VfN" firstAttribute="trailing" secondItem="YzX-Rc-0T0" secondAttribute="trailing" id="ILi-WW-IgZ"/>
                                 <constraint firstItem="aFQ-xc-AhJ" firstAttribute="leading" secondItem="lQg-79-A3R" secondAttribute="leading" constant="17" id="Jku-oo-i91"/>
-                                <constraint firstItem="SXh-1X-W6B" firstAttribute="trailing" secondItem="V1v-Fa-9e4" secondAttribute="trailing" constant="-20" id="Rix-sA-Xca"/>
-                                <constraint firstItem="9zn-7n-vCg" firstAttribute="top" secondItem="MAc-0K-iOY" secondAttribute="top" id="TaY-FX-n21"/>
-                                <constraint firstItem="9zn-7n-vCg" firstAttribute="trailing" secondItem="MAc-0K-iOY" secondAttribute="trailing" constant="-20" id="Tcy-va-BdQ"/>
-                                <constraint firstItem="SXh-1X-W6B" firstAttribute="leading" secondItem="V1v-Fa-9e4" secondAttribute="leading" id="Xhg-NA-loh"/>
                                 <constraint firstAttribute="trailing" secondItem="3eZ-ex-2Xl" secondAttribute="trailing" id="Z7F-7p-uEB"/>
                                 <constraint firstItem="aFQ-xc-AhJ" firstAttribute="top" secondItem="lQg-79-A3R" secondAttribute="top" constant="15" id="ZL0-zb-Nd3"/>
                                 <constraint firstItem="fN4-Rd-8DA" firstAttribute="bottom" secondItem="e1K-SA-ifa" secondAttribute="bottom" id="buB-WM-4bh"/>
@@ -452,8 +428,6 @@
                                 <constraint firstItem="bnQ-zZ-VfN" firstAttribute="leading" secondItem="YzX-Rc-0T0" secondAttribute="leading" id="dgN-f5-dqw"/>
                                 <constraint firstItem="3eZ-ex-2Xl" firstAttribute="centerY" secondItem="aFQ-xc-AhJ" secondAttribute="centerY" id="eAr-Gk-JcZ"/>
                                 <constraint firstItem="oO3-9p-4hW" firstAttribute="leading" secondItem="lQg-79-A3R" secondAttribute="leading" constant="17" id="faG-bW-QCt"/>
-                                <constraint firstItem="9zn-7n-vCg" firstAttribute="bottom" secondItem="MAc-0K-iOY" secondAttribute="bottom" id="gmx-TA-6ZO"/>
-                                <constraint firstItem="SXh-1X-W6B" firstAttribute="top" secondItem="kqD-lI-7QM" secondAttribute="top" id="iV9-98-ntR"/>
                                 <constraint firstItem="I6B-za-0UH" firstAttribute="leading" secondItem="lQg-79-A3R" secondAttribute="leading" id="jbg-FT-Grw"/>
                                 <constraint firstItem="3eZ-ex-2Xl" firstAttribute="leading" secondItem="aFQ-xc-AhJ" secondAttribute="trailing" constant="30" id="tas-qt-mA7"/>
                                 <constraint firstAttribute="trailing" secondItem="I6B-za-0UH" secondAttribute="trailing" id="uce-wN-bb9"/>
@@ -545,7 +519,6 @@
     </designables>
     <resources>
         <image name="backIcon" width="24" height="24"/>
-        <image name="dropDownIcon" width="24" height="24"/>
         <image name="femaleImg" width="80" height="80"/>
         <image name="maleImg" width="80" height="80"/>
         <image name="smallDefaultUserProfileImg" width="64" height="64"/>

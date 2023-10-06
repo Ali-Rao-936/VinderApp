@@ -150,7 +150,6 @@ class CompleteProfileVC: UIViewController {
             CommonFxns.showAlert(self, message: AlertMessages.ALL_DATA_REQUIRED, title: AlertMessages.ALERT_TITLE)
         }
     }
-
     
     @IBAction func chooseGoalBtnAction(_ sender: UIButton) {
         if sender.tag == one{

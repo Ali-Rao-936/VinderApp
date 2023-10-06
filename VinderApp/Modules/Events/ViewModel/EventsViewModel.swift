@@ -99,10 +99,10 @@ class EventsViewModel {
         })
     }
     
-    func createEvent(params: [String: Any], subUrl: String) {
+    func uploadEventImage(params: [String: Any]?, image: UIImage, subUrl: String) {
     
         print("createEvent....")
-        self.apiService?.postEventAPIs(parameters: params, subUrl: subUrl, completion: { data, succeeded, error in
+        self.apiService?.uploadEventImageAPI(params: params, image: image, subUrl: subUrl, completion: { data, succeeded, error in
             if succeeded {
                 print("succeeded....", succeeded)
                 guard let tempData = data else{
@@ -120,7 +120,7 @@ class EventsViewModel {
         })
     }
     
-    func joinEvent(params: [String: Any], subUrl: String) {
+    func postEvent(params: [String: Any], subUrl: String) {
     
         print("joinEvent....")
         self.apiService?.postEventAPIs(parameters: params, subUrl: subUrl, completion: { data, succeeded, error in

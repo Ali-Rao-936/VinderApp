@@ -34,6 +34,7 @@ class ExploreEventsVC: UIViewController, ExploreEventsTableViewCellProtocol, Eve
     // MARK: - Methods
     
     func initialSetup(){
+        hideKeyboardWhenTappedAround() // hide keyboard
         // Register tableView cells
         self.eventsListTableView.register(EventsTableViewCell.nib(), forCellReuseIdentifier: EventsTableViewCell.identifier)
         self.eventsListTableView.register(ExploreEventsTableViewCell.nib(), forCellReuseIdentifier: ExploreEventsTableViewCell.identifier)
@@ -233,3 +234,4 @@ extension ExploreEventsVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 
+// 130

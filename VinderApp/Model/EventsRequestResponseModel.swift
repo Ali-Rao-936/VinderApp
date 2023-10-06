@@ -17,10 +17,11 @@ struct CreateEventRequest{
 //    var banner : String?
     var isPaid : Int?
     var address : String?
-    var invitees : [Int]?
+//    var invitees : [Int]?
     var description : String?
+    var interestId : Int?
 
-    init(name: String?,description: String, locationId: Int, address: String, date: String, time: String, isPaid: Int, latitude: Double?, longitude: Double?, invitees : [Int] ){
+    init(name: String?,description: String, locationId: Int, address: String, date: String, time: String, isPaid: Int, latitude: Double?, longitude: Double?,interestId: Int ){
         self.name = name
         self.description = description
         self.address = address
@@ -29,9 +30,10 @@ struct CreateEventRequest{
         self.locationId = locationId
         self.isPaid = isPaid
         self.address = address
-        self.invitees = invitees
+//        self.invitees = invitees
         self.latitude = latitude
         self.longitude = longitude
+        self.interestId = interestId
     }
     // photo[0], banner
     func toDictionary()->[String:Any]{
@@ -44,7 +46,8 @@ struct CreateEventRequest{
                                  "time_column": time ?? emptyStr,
                                  "latitude": latitude ?? 0.0,
                                  "longitude": longitude ?? 0.0,
-                                 "invitee": invitees ?? []]
+//                                 "invitee": invitees ?? []
+                                 "interest_id": interestId ?? 0.0]
         return dict
     }
 }

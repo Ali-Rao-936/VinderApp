@@ -30,6 +30,7 @@ class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
     // MARK: - Methods
     
     func initialSetup(){
+        hideKeyboardWhenTappedAround() // hide keyboard
         self.updateView(tag: 0) // Container view Setup
     }
     
@@ -44,10 +45,7 @@ class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
     }
 
     // MARK: - Button Actions
-    
-    @IBAction func backBtnAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
+
     
     @IBAction func searchBtnAction(_ sender: Any) {
         

@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -439,6 +440,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="tabMenu-1" id="ber-Hr-sc3"/>
                     <connections>
+                        <outlet property="profileImgView" destination="gE1-Cl-pUb" id="cWH-Ie-Uhh"/>
                         <outlet property="usersListTableView" destination="NrW-u5-Va5" id="rLW-MO-Nuk"/>
                     </connections>
                 </viewController>
@@ -1294,10 +1296,140 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
                     <view key="view" contentMode="scaleToFill" id="jln-hY-WCC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signInBg" translatesAutoresizingMaskIntoConstraints="NO" id="ai8-57-fK3" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-35" width="393" height="180"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="34"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kpr-3C-PcD">
+                                <rect key="frame" x="28" y="161" width="337" height="36"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.54901960780000003" blue="0.3411764706" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="LJZ-fh-opF"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Explore"/>
+                                    <segment title="My Match"/>
+                                </segments>
+                                <color key="tintColor" name="primaryColor"/>
+                                <color key="selectedSegmentTintColor" name="primaryColor"/>
+                                <connections>
+                                    <action selector="segmentControlValuechanged:" destination="hLD-XR-LGL" eventType="valueChanged" id="LzP-zu-CG2"/>
+                                    <action selector="segmentControlValuechanged:" destination="biF-Tl-eKf" eventType="valueChanged" id="k6m-ls-Pe0"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6e-cU-xmb" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
+                                <rect key="frame" x="17" y="79" width="359" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhL-Ix-asv" customClass="UITextFieldCustomClass" customModule="VinderApp" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="5" width="286" height="40"/>
+                                        <color key="textColor" name="headingColor"/>
+                                        <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" name="disableBtnColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalInset">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="x7H-Rs-4gw" id="cOq-ss-Zfw"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvl-HM-dF0">
+                                        <rect key="frame" x="296" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="1iA-m1-Bfq"/>
+                                        </constraints>
+                                        <color key="tintColor" name="disableBtnColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="searchIcon"/>
+                                        <connections>
+                                            <action selector="searchBtnAction:" destination="biF-Tl-eKf" eventType="touchUpInside" id="ELi-wv-1v7"/>
+                                            <action selector="searchBtnAction:" destination="hLD-XR-LGL" eventType="touchUpInside" id="uRT-A1-ysE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BhL-Ix-asv" firstAttribute="leading" secondItem="h6e-cU-xmb" secondAttribute="leading" constant="10" id="1MA-tU-VBx"/>
+                                    <constraint firstAttribute="height" constant="50" id="Aax-tg-nLb"/>
+                                    <constraint firstItem="BhL-Ix-asv" firstAttribute="top" secondItem="h6e-cU-xmb" secondAttribute="top" constant="5" id="Erz-sW-qij"/>
+                                    <constraint firstItem="uvl-HM-dF0" firstAttribute="leading" secondItem="BhL-Ix-asv" secondAttribute="trailing" id="GbV-Je-ZcQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="BhL-Ix-asv" secondAttribute="bottom" constant="5" id="aiJ-gQ-vpp"/>
+                                    <constraint firstItem="uvl-HM-dF0" firstAttribute="top" secondItem="h6e-cU-xmb" secondAttribute="top" id="bUO-Y8-2gb"/>
+                                    <constraint firstAttribute="bottom" secondItem="uvl-HM-dF0" secondAttribute="bottom" id="lTg-Xv-3qv"/>
+                                    <constraint firstAttribute="trailing" secondItem="uvl-HM-dF0" secondAttribute="trailing" constant="13" id="uiZ-1p-6gq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-9J-7rJ">
+                                <rect key="frame" x="27.999999999999993" y="206" width="118.33333333333331" height="21.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                                <color key="textColor" name="headingColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wB7-y6-suC">
+                                <rect key="frame" x="17" y="246" width="359" height="523"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B8w-GP-3tl">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yIk-ml-dIc">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qHJ-a7-fEK">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="biF-Tl-eKf" id="Fn1-oN-G5F"/>
+                                    <outlet property="delegate" destination="biF-Tl-eKf" id="hP5-07-tqz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y3x-C0-A46"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wB7-y6-suC" firstAttribute="top" secondItem="Kpr-3C-PcD" secondAttribute="bottom" constant="50" id="0DU-1S-RX5"/>
+                            <constraint firstItem="pyN-9J-7rJ" firstAttribute="top" secondItem="Kpr-3C-PcD" secondAttribute="bottom" constant="10" id="1F5-NF-gWE"/>
+                            <constraint firstItem="Y3x-C0-A46" firstAttribute="bottom" secondItem="wB7-y6-suC" secondAttribute="bottom" id="1Nw-m1-Yon"/>
+                            <constraint firstItem="Y3x-C0-A46" firstAttribute="trailing" secondItem="Kpr-3C-PcD" secondAttribute="trailing" constant="28" id="Aoq-qp-1IR"/>
+                            <constraint firstItem="Y3x-C0-A46" firstAttribute="trailing" secondItem="wB7-y6-suC" secondAttribute="trailing" constant="17" id="Bnw-OT-4um"/>
+                            <constraint firstItem="wB7-y6-suC" firstAttribute="leading" secondItem="Y3x-C0-A46" secondAttribute="leading" constant="17" id="EP3-1V-OCB"/>
+                            <constraint firstItem="h6e-cU-xmb" firstAttribute="bottom" secondItem="ai8-57-fK3" secondAttribute="bottom" constant="-16" id="H8G-cY-vcO"/>
+                            <constraint firstItem="h6e-cU-xmb" firstAttribute="leading" secondItem="Y3x-C0-A46" secondAttribute="leading" constant="17" id="J8t-cV-iDN"/>
+                            <constraint firstItem="pyN-9J-7rJ" firstAttribute="leading" secondItem="Y3x-C0-A46" secondAttribute="leading" constant="28" id="PKH-s5-LUy"/>
+                            <constraint firstItem="ai8-57-fK3" firstAttribute="top" secondItem="jln-hY-WCC" secondAttribute="top" constant="-35" id="ade-hl-51r"/>
+                            <constraint firstItem="Y3x-C0-A46" firstAttribute="trailing" secondItem="h6e-cU-xmb" secondAttribute="trailing" constant="17" id="clB-tA-Qzs"/>
+                            <constraint firstItem="ai8-57-fK3" firstAttribute="leading" secondItem="Y3x-C0-A46" secondAttribute="leading" id="cv5-tb-8Jb"/>
+                            <constraint firstItem="Kpr-3C-PcD" firstAttribute="leading" secondItem="Y3x-C0-A46" secondAttribute="leading" constant="28" id="h8s-yI-kJI"/>
+                            <constraint firstAttribute="trailing" secondItem="ai8-57-fK3" secondAttribute="trailing" id="xwg-NR-lV9"/>
+                            <constraint firstItem="Kpr-3C-PcD" firstAttribute="top" secondItem="ai8-57-fK3" secondAttribute="bottom" constant="16" id="zeh-pb-OhV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="tabMenu-2" id="IVW-hL-bH9"/>
+                    <connections>
+                        <outlet property="headingLbl" destination="pyN-9J-7rJ" id="fEk-gH-8r2"/>
+                        <outlet property="matchesCollectionView" destination="wB7-y6-suC" id="yMC-xx-pp6"/>
+                        <outlet property="segmentControl" destination="Kpr-3C-PcD" id="G7l-DY-wYx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuO-EL-SM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1747,6 +1879,9 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
         <designable name="BJj-T3-7vc">
             <size key="intrinsicContentSize" width="375" height="180"/>
         </designable>
+        <designable name="BhL-Ix-asv">
+            <size key="intrinsicContentSize" width="70" height="21"/>
+        </designable>
         <designable name="EcN-2I-SbL">
             <size key="intrinsicContentSize" width="251.33333333333334" height="41"/>
         </designable>
@@ -1791,6 +1926,9 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
         </designable>
         <designable name="Zk0-fz-6l0">
             <size key="intrinsicContentSize" width="107.66666666666667" height="20"/>
+        </designable>
+        <designable name="ai8-57-fK3">
+            <size key="intrinsicContentSize" width="375" height="180"/>
         </designable>
         <designable name="dai-OU-bl1">
             <size key="intrinsicContentSize" width="134" height="34"/>

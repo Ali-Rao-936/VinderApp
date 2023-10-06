@@ -20,13 +20,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateEventVC" customModule="VinderApp" customModuleProvider="target">
             <connections>
+                <outlet property="addEventImgView" destination="ORp-p4-oIb" id="c25-QC-wGg"/>
+                <outlet property="addresstxtField" destination="uZB-fv-9Sr" id="F7T-e9-1T9"/>
                 <outlet property="endEventDateTextField" destination="zYP-Cg-I2b" id="zcE-eY-wkE"/>
                 <outlet property="endEventTimeTextField" destination="VN1-9j-kHk" id="gWW-aD-sDX"/>
                 <outlet property="eventDescTxtView" destination="I3e-Gb-ylr" id="wdV-mB-JV7"/>
                 <outlet property="eventTitleTextField" destination="ldJ-oX-sG2" id="rKc-dg-xcB"/>
+                <outlet property="locationTxtField" destination="DKs-Ug-q2e" id="Yle-if-znR"/>
                 <outlet property="sportsCategoryCollectionView" destination="VDh-gq-4oR" id="Tgc-g7-lt6"/>
                 <outlet property="startEventDateTextField" destination="4AP-vh-eXl" id="Ddg-ns-EWG"/>
                 <outlet property="startEventTimeTextField" destination="R3A-ao-Fmi" id="XdY-5X-dKb"/>
+                <outlet property="successView" destination="eDG-67-WwN" id="VSv-9w-NI6"/>
                 <outlet property="view" destination="ta5-dC-O5s" id="eOn-RU-Oxw"/>
             </connections>
         </placeholder>
@@ -141,7 +145,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadEventImg" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-p4-oIb" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="27" width="359" height="95"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="95" id="Fzd-Tc-K8S"/>
+                                                        <constraint firstAttribute="height" constant="95" id="ZLQ-wn-4Tu"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -461,7 +465,7 @@
                                         <action selector="endEventTimeBtnAction:" destination="-1" eventType="touchUpInside" id="yrD-V0-mb7"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Oi-swg" userLabel="location">
+                                <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Oi-swg" userLabel="location">
                                     <rect key="frame" x="17" y="711.66666666666663" width="339" height="49.666666666666629"/>
                                     <color key="tintColor" name="headingColor"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -508,14 +512,14 @@
                                     <color key="textColor" name="headingColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yZ-9P-bK8" userLabel="addEventImage">
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yZ-9P-bK8" userLabel="addEventImage">
                                     <rect key="frame" x="17" y="387.33333333333331" width="359" height="95"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="addEventImgBtnAction:" destination="-1" eventType="touchUpInside" id="8u6-Vl-2ff"/>
                                     </connections>
                                 </button>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-gq-4oR">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-gq-4oR">
                                     <rect key="frame" x="17" y="92.333333333333343" width="359" height="36"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -658,7 +662,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyO-rE-0Jd">
                             <rect key="frame" x="39.333333333333343" y="213" width="314.33333333333326" height="426"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="amD-nI-TdY">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successImg" translatesAutoresizingMaskIntoConstraints="NO" id="amD-nI-TdY">
                                     <rect key="frame" x="107.33333333333331" y="0.0" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="6OR-EA-fsK"/>
@@ -817,6 +821,7 @@
         <image name="dropDownIcon" width="24" height="24"/>
         <image name="forwardArrowIcon" width="24" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="successImg" width="100.33333587646484" height="100"/>
         <image name="uploadEventImg" width="340" height="95"/>
         <namedColor name="disableBtnColor">
             <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
