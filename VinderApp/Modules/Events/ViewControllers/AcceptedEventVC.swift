@@ -1,5 +1,5 @@
 //
-//  CreateEventVC.swift
+//  AcceptedEventVC.swift
 //  VinderApp
 //
 //  Created by iOS Dev on 18/10/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateEventVC: UIViewController {
+class AcceptedEventVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
