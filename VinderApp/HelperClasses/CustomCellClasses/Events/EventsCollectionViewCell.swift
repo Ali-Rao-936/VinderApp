@@ -7,11 +7,6 @@
 
 import UIKit
 
-//protocol EventsCollectionViewCellprotocol {
-//    func joinBtnSelected(cell: EventsCollectionViewCell)
-//    func viewBtnSelected(cell: EventsCollectionViewCell)
-//}
-
 class EventsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets & Properties
@@ -23,13 +18,13 @@ class EventsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventCreatedByUserLbl: UILabel!
     @IBOutlet weak var noOfPeopleJoinedLbl: UILabel!
     @IBOutlet weak var dateTimeLbl: UILabel!
-    @IBOutlet weak var completedEventView: UIView!
-
+    @IBOutlet weak var completedEventView: UIViewCustomClass!
+    @IBOutlet weak var hotEventView: UIView!
+    
     static let identifier = "EventsCollectionViewCell"
     static func nib() -> UINib{
         return UINib(nibName: "EventsCollectionViewCell", bundle: nil)
     }
-//    var delegate: EventsCollectionViewCellprotocol?
 
     // MARK: - Methods
     

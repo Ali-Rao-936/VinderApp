@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+// MARK: - Events List
+struct UserSportsInterestModel: Decodable {
+    let response: UserSportsInterestList?
+}
+
+struct UserSportsInterestList: Decodable {
+    let messages: [String]?
+    let data: [SportsInterest]?
+}

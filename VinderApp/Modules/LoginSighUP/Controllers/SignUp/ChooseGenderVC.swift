@@ -23,14 +23,6 @@ class ChooseGenderVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Initial Setup
-        self.initialSetup()
-    }
-    
-    // MARK: - Methods
-    
-    func initialSetup(){
-        
     }
     
     // MARK: - Button Actions

@@ -11,10 +11,12 @@ class TagsCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Outlets & Properties
 
-    @IBOutlet weak var tagView : UIView!
+    @IBOutlet weak var selectedView : UIView!
+    @IBOutlet weak var deselectedView : UIView!
     @IBOutlet weak var tagImgView : UIImageView!
     @IBOutlet weak var tagLbl : UILabel!
-
+    @IBOutlet weak var cancelBtn : UIButton!
+    
     static let identifier = "TagsCollectionViewCell"
     static func nib() -> UINib{
         return UINib(nibName: "TagsCollectionViewCell", bundle: nil)
@@ -26,9 +28,5 @@ class TagsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    // MARK: - Button Actions
-    
-
 
 }

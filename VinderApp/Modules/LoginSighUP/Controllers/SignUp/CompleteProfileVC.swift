@@ -193,7 +193,6 @@ extension CompleteProfileVC: UIPickerViewDataSource, UIPickerViewDelegate {
 extension CompleteProfileVC: ToolbarPickerViewDelegate {
 
     func didTapDone() {
-        
         if self.locationsArr.count > 0{
             let row = self.pickerView.selectedRow(inComponent: 0)
             self.pickerView.selectRow(row, inComponent: 0, animated: false)

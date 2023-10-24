@@ -114,7 +114,7 @@ class ProfileVC: UIViewController {
         
     private func getProfielInfoAPI() {
         self.activityIndicatorStart()
-
+ 
         viewModel.getProfileInfo()
  
         viewModel.showAlertClosure = {
@@ -143,7 +143,6 @@ class ProfileVC: UIViewController {
         }
     }
 
-    
     private func updateProfileAPI(params: [String:Any]) {
         self.activityIndicatorStart()
 

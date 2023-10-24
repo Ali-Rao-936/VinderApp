@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ProfileImageSelection : NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImagePicker : NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let picker = UIImagePickerController()
     var imagePick: ((_ chosenImage : UIImage) -> Void)?
     var flag : Bool?

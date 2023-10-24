@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,13 +24,13 @@
                 <outlet property="eventCreateByUserLbl" destination="oA0-Da-Et9" id="BGk-7i-Umg"/>
                 <outlet property="eventDateLbl" destination="dNd-S0-gy4" id="H1C-c6-0FK"/>
                 <outlet property="eventDescLbl" destination="2Q6-et-e9m" id="R2N-PT-MV0"/>
-                <outlet property="eventImagesCollectionView" destination="dxH-Z3-Mvc" id="PIe-VF-P2k"/>
                 <outlet property="eventImgView" destination="pVm-Iv-fQy" id="r4m-Ym-GQK"/>
                 <outlet property="eventJoineesLbl" destination="tmJ-Sk-EjQ" id="kXX-JG-7Hf"/>
                 <outlet property="eventLocationLbl" destination="FCy-HW-L8j" id="Ghn-Yf-eSs"/>
                 <outlet property="eventNameLbl" destination="s7u-IP-1qe" id="naz-kI-cJt"/>
                 <outlet property="eventPriceLbl" destination="cnQ-Aa-nGW" id="puj-vN-BpC"/>
                 <outlet property="eventTimeLbl" destination="Sc8-6g-zw2" id="7lS-Ue-0dV"/>
+                <outlet property="inviteBtn" destination="278-eW-9ih" id="8vU-Wo-eTY"/>
                 <outlet property="joinEventBtn" destination="2oT-cb-7EY" id="mNj-0o-uny"/>
                 <outlet property="view" destination="Ffe-qC-ZFQ" id="xac-fU-L2i"/>
             </connections>
@@ -41,7 +41,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setUpProfileBgImg" translatesAutoresizingMaskIntoConstraints="NO" id="pVm-Iv-fQy">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="208.66666666666666"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="255.66666666666666"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-ly-JeH">
                     <rect key="frame" x="28" y="59" width="345" height="44"/>
@@ -59,7 +59,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkt-H5-Vvk" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                            <rect key="frame" x="53" y="11.666666666666671" width="39" height="21"/>
+                            <rect key="frame" x="53" y="11.33333333333333" width="39" height="21.666666666666671"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
                             <color key="textColor" name="whiteColor"/>
@@ -77,10 +77,10 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhO-Wk-tdE">
-                    <rect key="frame" x="0.0" y="174.66666666666669" width="393" height="643.33333333333326"/>
+                    <rect key="frame" x="0.0" y="221.66666666666669" width="393" height="596.33333333333326"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDh-Qy-eCE" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="588"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="596.33333333333337"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-tx-2Cg">
                                     <rect key="frame" x="17" y="20" width="359" height="36"/>
@@ -121,7 +121,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA0-Da-Et9" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                    <rect key="frame" x="17" y="61.000000000000007" width="65.666666666666671" height="19.333333333333336"/>
+                                    <rect key="frame" x="17" y="61.000000000000036" width="65.666666666666671" height="19.333333333333336"/>
                                     <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
                                     <color key="textColor" name="headingColor"/>
                                     <nil key="highlightedColor"/>
@@ -162,7 +162,7 @@
                                     <rect key="frame" x="140" y="90.333333333333343" width="113" height="76"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-S0-gy4" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                            <rect key="frame" x="10" y="36" width="100" height="14"/>
+                                            <rect key="frame" x="10" y="36" width="100" height="14.666666666666664"/>
                                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="12"/>
                                             <color key="textColor" name="headingColor"/>
                                             <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc8-6g-zw2" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                            <rect key="frame" x="10" y="52" width="100" height="12"/>
+                                            <rect key="frame" x="10" y="52.666666666666686" width="100" height="12"/>
                                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="10"/>
                                             <color key="textColor" name="disableBtnColor"/>
                                             <nil key="highlightedColor"/>
@@ -203,7 +203,7 @@
                                     <rect key="frame" x="263" y="90.333333333333343" width="113" height="76"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnQ-Aa-nGW" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                            <rect key="frame" x="9.9999999999999964" y="36" width="48.666666666666657" height="14"/>
+                                            <rect key="frame" x="9.9999999999999964" y="36" width="48.666666666666657" height="14.666666666666664"/>
                                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="12"/>
                                             <color key="textColor" name="headingColor"/>
                                             <nil key="highlightedColor"/>
@@ -216,7 +216,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to join" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oet-AE-Nry" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                            <rect key="frame" x="10" y="52" width="100" height="12"/>
+                                            <rect key="frame" x="10" y="52.666666666666686" width="100" height="12"/>
                                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="10"/>
                                             <color key="textColor" name="disableBtnColor"/>
                                             <nil key="highlightedColor"/>
@@ -250,40 +250,17 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XER-hq-4Vi" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                    <rect key="frame" x="17" y="288.33333333333337" width="124" height="18.666666666666686"/>
+                                    <rect key="frame" x="17" y="288.33333333333337" width="124" height="19.333333333333314"/>
                                     <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
                                     <color key="textColor" name="headingColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event descroption ....." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q6-et-e9m" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                    <rect key="frame" x="17" y="319" width="359" height="19.333333333333314"/>
+                                    <rect key="frame" x="17" y="319.66666666666674" width="359" height="19.333333333333314"/>
                                     <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
                                     <color key="textColor" systemColor="systemGrayColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdp-tp-Fc1" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                    <rect key="frame" x="17" y="362.33333333333337" width="359" height="18.666666666666686"/>
-                                    <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
-                                    <color key="textColor" name="headingColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dxH-Z3-Mvc">
-                                    <rect key="frame" x="17" y="393" width="359" height="95"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="95" id="7cR-LV-BUn"/>
-                                    </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mvv-Ao-h8R">
-                                        <size key="itemSize" width="128" height="128"/>
-                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </collectionViewFlowLayout>
-                                    <connections>
-                                        <outlet property="dataSource" destination="-1" id="y8T-sV-C7V"/>
-                                        <outlet property="delegate" destination="-1" id="OfW-No-Jd8"/>
-                                    </connections>
-                                </collectionView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9j-CS-SB8">
                                     <rect key="frame" x="17" y="203.33333333333334" width="359" height="67.000000000000028"/>
                                     <subviews>
@@ -372,31 +349,24 @@
                                 <constraint firstAttribute="trailing" secondItem="Ax1-tx-2Cg" secondAttribute="trailing" constant="17" id="5FS-F3-sDL"/>
                                 <constraint firstAttribute="trailing" secondItem="l8e-jW-Sch" secondAttribute="trailing" constant="17" id="5Ng-wO-8EC"/>
                                 <constraint firstAttribute="trailing" secondItem="2Q6-et-e9m" secondAttribute="trailing" constant="17" id="6Vt-7U-IYp"/>
-                                <constraint firstAttribute="trailing" secondItem="dxH-Z3-Mvc" secondAttribute="trailing" constant="17" id="7L6-rd-pKK"/>
                                 <constraint firstItem="oA0-Da-Et9" firstAttribute="top" secondItem="Ax1-tx-2Cg" secondAttribute="bottom" constant="5" id="CNs-EK-0pB"/>
                                 <constraint firstItem="oA0-Da-Et9" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="EVq-i0-NSm"/>
-                                <constraint firstAttribute="trailing" secondItem="Kdp-tp-Fc1" secondAttribute="trailing" constant="17" id="GgW-1t-Vde"/>
-                                <constraint firstItem="dxH-Z3-Mvc" firstAttribute="top" secondItem="Kdp-tp-Fc1" secondAttribute="bottom" constant="12" id="H2b-NN-GUz"/>
                                 <constraint firstItem="XER-hq-4Vi" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="HXH-fI-X2U"/>
                                 <constraint firstItem="Ax1-tx-2Cg" firstAttribute="top" secondItem="DDh-Qy-eCE" secondAttribute="top" constant="20" id="Jp2-B7-FqD"/>
                                 <constraint firstItem="XER-hq-4Vi" firstAttribute="top" secondItem="S9j-CS-SB8" secondAttribute="bottom" constant="18" id="K0x-gZ-0ey"/>
-                                <constraint firstAttribute="bottom" secondItem="dxH-Z3-Mvc" secondAttribute="bottom" constant="100" id="Qtk-S6-FbA"/>
                                 <constraint firstItem="2Q6-et-e9m" firstAttribute="top" secondItem="XER-hq-4Vi" secondAttribute="bottom" constant="12" id="RQw-ku-Q6V"/>
-                                <constraint firstItem="dxH-Z3-Mvc" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="SFh-by-UfY"/>
                                 <constraint firstAttribute="trailing" secondItem="S9j-CS-SB8" secondAttribute="trailing" constant="17" id="Ugy-OJ-ZxU"/>
                                 <constraint firstItem="l8e-jW-Sch" firstAttribute="leading" secondItem="tb0-70-ibu" secondAttribute="trailing" constant="10" id="VkP-eg-tbS"/>
                                 <constraint firstItem="S9j-CS-SB8" firstAttribute="top" secondItem="Weq-dB-MDI" secondAttribute="bottom" constant="18" id="XmU-jI-F6B"/>
                                 <constraint firstItem="zTB-29-YKU" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="YIN-iX-aW4"/>
                                 <constraint firstItem="tb0-70-ibu" firstAttribute="top" secondItem="zTB-29-YKU" secondAttribute="top" id="b6a-FZ-8vz"/>
                                 <constraint firstItem="S9j-CS-SB8" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="b7v-Of-VZa"/>
-                                <constraint firstItem="Kdp-tp-Fc1" firstAttribute="top" secondItem="2Q6-et-e9m" secondAttribute="bottom" constant="24" id="fRM-Uo-h6A"/>
                                 <constraint firstItem="Ax1-tx-2Cg" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="fjz-gq-G7x"/>
                                 <constraint firstItem="l8e-jW-Sch" firstAttribute="width" secondItem="zTB-29-YKU" secondAttribute="width" id="hX1-VC-d6g"/>
                                 <constraint firstItem="tb0-70-ibu" firstAttribute="width" secondItem="zTB-29-YKU" secondAttribute="width" id="ihk-m3-OGp"/>
                                 <constraint firstItem="tb0-70-ibu" firstAttribute="leading" secondItem="zTB-29-YKU" secondAttribute="trailing" constant="10" id="k7q-U4-dNW"/>
                                 <constraint firstItem="Weq-dB-MDI" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="kTr-8b-Eob"/>
                                 <constraint firstItem="l8e-jW-Sch" firstAttribute="top" secondItem="zTB-29-YKU" secondAttribute="top" id="pme-ds-dlc"/>
-                                <constraint firstItem="Kdp-tp-Fc1" firstAttribute="leading" secondItem="DDh-Qy-eCE" secondAttribute="leading" constant="17" id="qjX-PN-cRP"/>
                                 <constraint firstAttribute="trailing" secondItem="Weq-dB-MDI" secondAttribute="trailing" constant="17" id="wLD-1i-Dfn"/>
                                 <constraint firstItem="Weq-dB-MDI" firstAttribute="top" secondItem="zTB-29-YKU" secondAttribute="bottom" constant="18" id="xW8-KC-osy"/>
                             </constraints>
@@ -419,31 +389,59 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="PXf-nu-qqo"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="RNE-8O-w0I"/>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oT-cb-7EY" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
-                    <rect key="frame" x="76.666666666666686" y="772" width="240" height="60"/>
-                    <color key="backgroundColor" name="primaryColor"/>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zcp-uA-IKV">
+                    <rect key="frame" x="76.666666666666686" y="762" width="240" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oT-cb-7EY" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
+                            <color key="backgroundColor" name="primaryColor"/>
+                            <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                            <color key="tintColor" name="whiteColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Join Event  " image="forwardArrowIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="joinEventBtnAction:" destination="-1" eventType="touchUpInside" id="2wM-Gm-ldm"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="278-eW-9ih" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
+                            <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                            <color key="tintColor" name="primaryColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Invite Others  " image="forwardArrowIcon">
+                                <color key="titleColor" name="primaryColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="primaryColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="inviteBtnAction:" destination="-1" eventType="touchUpInside" id="r7R-T2-gJ4"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="IFv-Fh-FEJ"/>
-                        <constraint firstAttribute="width" constant="240" id="uja-ch-zVQ"/>
+                        <constraint firstAttribute="height" constant="60" id="eN5-Tu-OQW"/>
+                        <constraint firstAttribute="width" constant="240" id="jea-CD-fsS"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
-                    <color key="tintColor" name="whiteColor"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Join Event  " image="forwardArrowIcon"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="30"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="joinEventBtnAction:" destination="-1" eventType="touchUpInside" id="2wM-Gm-ldm"/>
-                    </connections>
-                </button>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="r0A-cu-8XM"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="pVm-Iv-fQy" firstAttribute="height" secondItem="Ffe-qC-ZFQ" secondAttribute="height" multiplier="0.245" id="5IW-Gw-Sup"/>
+                <constraint firstItem="pVm-Iv-fQy" firstAttribute="height" secondItem="Ffe-qC-ZFQ" secondAttribute="height" multiplier="0.3" id="5IW-Gw-Sup"/>
                 <constraint firstItem="JhO-Wk-tdE" firstAttribute="leading" secondItem="r0A-cu-8XM" secondAttribute="leading" id="6pF-AJ-5gs"/>
                 <constraint firstItem="pVm-Iv-fQy" firstAttribute="top" secondItem="Ffe-qC-ZFQ" secondAttribute="top" id="DDQ-MC-guf"/>
                 <constraint firstItem="JhO-Wk-tdE" firstAttribute="width" secondItem="Ffe-qC-ZFQ" secondAttribute="width" id="PGS-Tl-vAJ"/>
@@ -451,17 +449,20 @@
                 <constraint firstAttribute="trailing" secondItem="BmQ-ly-JeH" secondAttribute="trailing" constant="20" id="Wt2-0S-Nlk"/>
                 <constraint firstItem="JhO-Wk-tdE" firstAttribute="trailing" secondItem="r0A-cu-8XM" secondAttribute="trailing" id="cAy-Qg-xPK"/>
                 <constraint firstItem="pVm-Iv-fQy" firstAttribute="leading" secondItem="r0A-cu-8XM" secondAttribute="leading" id="d67-J7-CXf"/>
-                <constraint firstItem="2oT-cb-7EY" firstAttribute="centerX" secondItem="Ffe-qC-ZFQ" secondAttribute="centerX" id="iC0-kX-ZE5"/>
                 <constraint firstAttribute="trailing" secondItem="pVm-Iv-fQy" secondAttribute="trailing" id="jyw-bG-gWE"/>
                 <constraint firstItem="BmQ-ly-JeH" firstAttribute="leading" secondItem="r0A-cu-8XM" secondAttribute="leading" constant="28" id="loY-Ba-mkC"/>
                 <constraint firstItem="r0A-cu-8XM" firstAttribute="bottom" secondItem="JhO-Wk-tdE" secondAttribute="bottom" id="nvJ-pB-EJh"/>
-                <constraint firstAttribute="bottom" secondItem="2oT-cb-7EY" secondAttribute="bottom" constant="20" id="u8o-mS-i7B"/>
+                <constraint firstAttribute="bottom" secondItem="Zcp-uA-IKV" secondAttribute="bottom" constant="30" id="sW1-az-2HA"/>
+                <constraint firstItem="Zcp-uA-IKV" firstAttribute="centerX" secondItem="JhO-Wk-tdE" secondAttribute="centerX" id="shh-II-Lo6"/>
                 <constraint firstItem="JhO-Wk-tdE" firstAttribute="top" secondItem="pVm-Iv-fQy" secondAttribute="bottom" constant="-34" id="v3H-q4-kJT"/>
             </constraints>
             <point key="canvasLocation" x="116.79389312977099" y="-11.971830985915494"/>
         </view>
     </objects>
     <designables>
+        <designable name="278-eW-9ih">
+            <size key="intrinsicContentSize" width="136" height="24"/>
+        </designable>
         <designable name="2Q6-et-e9m">
             <size key="intrinsicContentSize" width="148.66666666666666" height="19.333333333333332"/>
         </designable>
@@ -476,9 +477,6 @@
         </designable>
         <designable name="HD4-Hh-LyT">
             <size key="intrinsicContentSize" width="84" height="19.333333333333332"/>
-        </designable>
-        <designable name="Kdp-tp-Fc1">
-            <size key="intrinsicContentSize" width="53" height="19.333333333333332"/>
         </designable>
         <designable name="Oet-AE-Nry">
             <size key="intrinsicContentSize" width="27" height="12"/>
@@ -544,7 +542,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

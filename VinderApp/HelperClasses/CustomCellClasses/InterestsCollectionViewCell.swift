@@ -10,8 +10,7 @@ import UIKit
 class InterestsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets & Properties
-//    
-//    @IBOutlet weak var ratingLbl: UILabel!
+    
     @IBOutlet weak var interestNameLbl: UILabel!
     @IBOutlet weak var interestImgView: UIImageView!
     @IBOutlet weak var bgView: UIView!

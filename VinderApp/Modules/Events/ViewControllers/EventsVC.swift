@@ -28,7 +28,6 @@ class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
     }
     
     // MARK: - Methods
-    
     func initialSetup(){
         hideKeyboardWhenTappedAround() // hide keyboard
         self.updateView(tag: 0) // Container view Setup
@@ -46,9 +45,7 @@ class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
 
     // MARK: - Button Actions
 
-    
     @IBAction func searchBtnAction(_ sender: Any) {
-        
     }
     
     @IBAction func segmentControlValuechanged(_ sender: UISegmentedControl) {
@@ -65,13 +62,13 @@ class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
     func joinBtnSleceted(cell: ExploreEventsTableViewCell) {
         print("Joiiin btn ...")
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-        otherVCObj.eventType = eventType.joinEvent.rawValue
+      //  otherVCObj.eventType = EventType.joinEvent.rawValue
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     
     func viewBtnSleceted(cell: ExploreEventsTableViewCell) {
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-        otherVCObj.eventType = eventType.alreadyJoined.rawValue
+     //   otherVCObj.eventType = EventType.alreadyJoined.rawValue
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
         

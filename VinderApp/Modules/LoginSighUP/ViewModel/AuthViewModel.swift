@@ -246,7 +246,6 @@ class AuthViewModel {
     }
     
     func resendOtpAPI(token: String) {
-    
         print("resendOtpAPI....")
         self.apiService?.resendOtpAPI(token: token, completion: { data, succeeded, error in
             if succeeded {
@@ -282,7 +281,6 @@ class AuthViewModel {
             }
         })
     }
-
 }
 
 

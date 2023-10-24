@@ -9,26 +9,13 @@ import UIKit
 
 class InitialVC: UIViewController {
 
-    // MARK: - Outlets & Properties
-    
-//    @IBOutlet weak var teamImgView: UIImageView!
-//    var selectedIndexRow = Int()
-    
     // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Initial Setup
-        self.initialSetup()
     }
-    
-    // MARK: - Methods
-    
-    func initialSetup(){
-        
-    }
-    
+
     // MARK: - Button Actions
     
     @IBAction func backBtnAction(_ sender: Any) {
@@ -45,11 +32,7 @@ class InitialVC: UIViewController {
     }
     
     @IBAction func createAccountBtnAction(_ sender: Any) {
-//
-//        let otherVCObj = CompleteProfileVC(nibName: enumViewControllerIdentifier.completeProfileVC.rawValue, bundle: nil)
-//        self.navigationController?.pushViewController(otherVCObj, animated: true)
-//        
-//        
+
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let signUpVcObj = mainStoryboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.createAccountVC.rawValue) as! CreateAccountVC
         self.navigationController?.pushViewController(signUpVcObj, animated: true)

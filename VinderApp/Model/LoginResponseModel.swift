@@ -177,7 +177,6 @@ struct SportInterests: Codable {
 
 
 struct SportsInterests: Codable {
-
     let id: Int? // 1
     let name: String? // 2
     let imgUrls: ImageUrls? // 3

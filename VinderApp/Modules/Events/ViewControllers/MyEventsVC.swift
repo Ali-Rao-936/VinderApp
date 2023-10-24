@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JJFloatingActionButton
 
 class MyEventsVC: UIViewController {
 
@@ -14,31 +15,36 @@ class MyEventsVC: UIViewController {
     @IBOutlet weak var myEventsCollectionView: UICollectionView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    var upcomingEventsList = [EventModel]()
-    var pastEventsList = [EventModel] ()
-    var events = [EventModel] ()
+    var upcomingEventsList = [Event]()
+    var pastEventsList = [Event] ()
+    var events = [Event]()
 
-    let viewModel = EventsViewModel(apiService: EventsWebServices())
+    var upcomingEventViewModel: EventViewModel?
+    var pastEventViewModel: EventViewModel?
+    
     var firstTime = true
+    var eventType: EventType?
+    fileprivate let addEventButton = JJFloatingActionButton()
     
-    lazy var refreshControl: UIRefreshControl = {
-            let refreshControl = UIRefreshControl()
-            refreshControl.addTarget(self, action:
-                         #selector(MyEventsVC.handleRefresh(_:)),
-                                     for: UIControl.Event.valueChanged)
-            refreshControl.tintColor = UIColor.red
-            
-            return refreshControl
-        }()
+    //    lazy var refreshControl: UIRefreshControl = {
+//            let refreshControl = UIRefreshControl()
+//            refreshControl.addTarget(self, action:
+//                         #selector(MyEventsVC.handleRefresh(_:)),
+//                                     for: UIControl.Event.valueChanged)
+//            refreshControl.tintColor = UIColor.red
+//            
+//            return refreshControl
+//        }()
     
-    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-
-        if segmentControl.selectedSegmentIndex == 0{
-            self.getEventsList(subUrl: enumForAPIsEndPoints.upcomingEvents.rawValue, upcomingEvent: true)
-        }else{
-            self.getEventsList(subUrl: enumForAPIsEndPoints.pastEvents.rawValue, upcomingEvent: true)
-        }
-    }
+  
+//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+//
+//        if segmentControl.selectedSegmentIndex == 0{
+//            self.getEventsList(subUrl: enumForAPIsEndPoints.upcomingEvents.rawValue, upcomingEvent: true)
+//        }else{
+//            self.getEventsList(subUrl: enumForAPIsEndPoints.pastEvents.rawValue, upcomingEvent: true)
+//        }
+//    }
     
     // MARK: - View life cycle
 
@@ -46,110 +52,119 @@ class MyEventsVC: UIViewController {
         super.viewDidLoad()
 
         // Initial Setup
-        self.initialSetup()
+        initialSetup()
+        callToViewModelForUIUpdate()
+    }
+   
+    //MARK:- View setup
+    func callToViewModelForUIUpdate() {
+       
+            upcomingEventViewModel = EventViewModel(eventType: .upcoming)
+            pastEventViewModel = EventViewModel(eventType: .past)
+            
+            CommonFxns.showProgress()
+            self.upcomingEventViewModel?.bindViewModelToController = {
+                self.updateDataSource()
+            }
+            
+            self.pastEventViewModel?.bindViewModelToController = {
+                self.updateDataSource()
+            }
+    }
+    
+    func updateDataSource() {
+        self.upcomingEventsList = upcomingEventViewModel?.eventList?.data ?? []
+        self.events = upcomingEventsList // default upcoming events displayed
+        self.pastEventsList = pastEventViewModel?.eventList?.data ?? []
+        myEventsCollectionView.reloadData()
     }
     
     // MARK: - Methods
     
     func initialSetup(){
-        hideKeyboardWhenTappedAround() // hide keyboard
-        
-        self.myEventsCollectionView.alwaysBounceVertical = true
-        self.myEventsCollectionView.addSubview(self.refreshControl)
-
         // Register tableView cells
         self.myEventsCollectionView.register(EventsCollectionViewCell.nib(), forCellWithReuseIdentifier: EventsCollectionViewCell.identifier)
 
-        // Initial Setup
-        self.events = self.upcomingEventsList
-        // Network call
-        self.getEventsList(subUrl: enumForAPIsEndPoints.upcomingEvents.rawValue, upcomingEvent: true)
+        addEventButton.addItem(title: "Create Event", image: #imageLiteral(resourceName: "addEvent")) { item in
+            let otherVCObj = CreateEventVC(nibName: enumViewControllerIdentifier.createEventVC.rawValue, bundle: nil)
+            self.navigationController?.pushViewController(otherVCObj, animated: true)
+        }
+
+        addEventButton.addItem(title: "Accepted Event", image: #imageLiteral(resourceName: "joinedEvent")) { item in
+            let otherVCObj = AcceptedEventVC(nibName: enumViewControllerIdentifier.acceptedEventVC.rawValue, bundle: nil)
+            self.navigationController?.pushViewController(otherVCObj, animated: true)
+        }
+
+//        addEventButton.addItem(title: "Balloon", image: #imageLiteral(resourceName: "Baloon")) { item in
+//           
+//        }
+
+        addEventButton.display(inViewController: self)
     }
     
     // MARK: - Button Actions
     
-    @IBAction func backBtnAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
+//    @IBAction func backBtnAction(_ sender: Any) {
+//        self.navigationController?.popViewController(animated: true)
+//    }
+//    
+    @IBAction func segmentControlValueChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
             self.events = self.upcomingEventsList
+            eventType = .upcoming
         }else{
-            if firstTime{
-                self.getEventsList(subUrl: enumForAPIsEndPoints.pastEvents.rawValue, upcomingEvent: false)
-                self.firstTime = false
-            }
             self.events = self.pastEventsList
+            eventType = .past
         }
         self.myEventsCollectionView.reloadData()
     }
-    
-    // Actions
-//
-//    func joinBtnSelected(cell: EventsCollectionViewCell) {
-//        print("joinBtnSelected....")
-//
-//        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-//        otherVCObj.eventType = eventType.joinEvent.rawValue
-//        self.navigationController?.pushViewController(otherVCObj, animated: true)
-//    }
-//
-//    func viewBtnSelected(cell: EventsCollectionViewCell) {
-//        print("View Btn Sleected....")
-//
-//        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-//        otherVCObj.eventType = eventType.alreadyJoined.rawValue
-//        self.navigationController?.pushViewController(otherVCObj, animated: true)
-//
-//    }
-    
+
     // MARK: - Networking
         
-    private func getEventsList(subUrl: String, upcomingEvent: Bool) {
-        self.activityIndicatorStart()
+//    private func getEventsList(subUrl: String, upcomingEvent: Bool) {
+//        self.activityIndicatorStart()
+//
+//        viewModel.getEventsList(subUrl: subUrl)
+// 
+//        viewModel.showAlertClosure = {
+//            msg in
+//            CommonFxns.showAlert(self, message: msg, title: AlertMessages.ERROR_TITLE)
+//            self.activityIndicatorStop()
+//            self.refreshControl.endRefreshing()
+//        }
+//    
+//        viewModel.didFinishFetchforList = { data in
+//            self.refreshControl.endRefreshing()
+//            var eventsList = [EventModel]()
+//            for item in data {
+//                let event = EventModel(with: item)
+//                eventsList.append(event)
+//                print(event.name ?? emptyStr)
+//            }
+//
+//            if upcomingEvent{
+//                self.upcomingEventsList = eventsList
+//                self.events = self.upcomingEventsList
+//            }else{
+//                self.pastEventsList = eventsList
+//                self.events = self.pastEventsList
+//            }
+//            self.myEventsCollectionView.reloadData()
+//            self.activityIndicatorStop()
+//        }
+//    }
 
-        viewModel.getEventsList(subUrl: subUrl)
- 
-        viewModel.showAlertClosure = {
-            msg in
-            CommonFxns.showAlert(self, message: msg, title: AlertMessages.ERROR_TITLE)
-            self.activityIndicatorStop()
-            self.refreshControl.endRefreshing()
-        }
-    
-        viewModel.didFinishFetchforList = { data in
-            self.refreshControl.endRefreshing()
-            var eventsList = [EventModel]()
-            for item in data {
-                let event = EventModel(with: item)
-                eventsList.append(event)
-                print(event.name ?? emptyStr)
-            }
-
-            if upcomingEvent{
-                self.upcomingEventsList = eventsList
-                self.events = self.upcomingEventsList
-            }else{
-                self.pastEventsList = eventsList
-                self.events = self.pastEventsList
-            }
-            self.myEventsCollectionView.reloadData()
-            self.activityIndicatorStop()
-        }
-    }
-
-    // MARK: - UI Setup
-    
-    // Code for show activity indicator view
-    private func activityIndicatorStart() {
-        CommonFxns.showProgress()
-    }
-    
-    // Code for stop activity indicator view
-    private func activityIndicatorStop() {
-        CommonFxns.dismissProgress()
-    }
+//    // MARK: - UI Setup
+//    
+//    // Code for show activity indicator view
+//    private func activityIndicatorStart() {
+//        CommonFxns.showProgress()
+//    }
+//    
+//    // Code for stop activity indicator view
+//    private func activityIndicatorStop() {
+//        CommonFxns.dismissProgress()
+//    }
 
 }
 
@@ -160,12 +175,6 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return self.events.count
-//        switch self.segmentControl.selectedSegmentIndex {
-//        case 0:
-//            return self.upcomingEventsList.count
-//        default:
-//            return self.pastEventsList.count
-//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -175,7 +184,6 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         guard let listCell = self.myEventsCollectionView.dequeueReusableCell(withReuseIdentifier: EventsCollectionViewCell.identifier, for: indexPath) as? EventsCollectionViewCell else{
             return cell
         }
-//        listCell.delegate = self
 
         listCell.joinBtn.isHidden = true
         listCell.viewBtn.isHidden = false
@@ -184,19 +192,21 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         
         listCell.eventNameLbl.text = dict.name
         listCell.eventCreatedByUserLbl.text = String(dict.userId ?? zero)
+        
+        listCell.hotEventView.isHidden = true
         if segmentControl.selectedSegmentIndex == 0{
             listCell.completedEventView.isHidden = true
         }else{
             listCell.completedEventView.isHidden = false
         }
-        listCell.noOfPeopleJoinedLbl.text = "\(dict.attendeesCount) People joined"
-        listCell.eventCreatedByUserLbl.text = dict.creator.name ?? emptyStr
+        listCell.noOfPeopleJoinedLbl.text = "\(dict.peopleJoinedCount ?? 0) People joined"
+        listCell.eventCreatedByUserLbl.text = dict.creator?.name ?? emptyStr
         // 2023-10-26
         let date = CommonFxns.changeDateToFormat(date: dict.date ?? emptyStr, format: "dd MMM", currentFormat: "yyyy-mm-dd")
         print(date)
         listCell.dateTimeLbl.text = "\(date), \(dict.time ?? emptyStr)"
         
-        let imgrUrl = dict.bannerImage?.threeX ?? emptyStr
+        let imgrUrl = dict.bannerImage?.image ?? emptyStr
         listCell.eventImgView.sd_setImage(with: URL(string: imgrUrl), placeholderImage:UIImage(named: "defaultEventImg"), options: .allowInvalidSSLCertificates, completed: nil)
         
         return listCell
@@ -214,8 +224,7 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         
         let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
         otherVCObj.selectedEventId = selectedEventId ?? zero
-        
-        otherVCObj.eventType = eventType.alreadyJoined.rawValue
+        otherVCObj.eventType = self.eventType
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     

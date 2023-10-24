@@ -80,21 +80,6 @@ class TabBarVC: UITabBarController,UITabBarControllerDelegate {
 
     override func viewDidLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
-//        tabBar.frame.size.height = 95
-//        tabBar.frame.origin.y = view.frame.height - 95
-        
-//
-//        if UIDevice().screenType == .iPhones_6_6s_7_8 || UIDevice().screenType == .iPhones_5_5s_5c_SE || UIDevice().screenType == .iPhones_4_4S{
-//            tabBar.frame.size.height = 100
-//            tabBar.frame.origin.y = view.frame.height - 60
-//        }
-//        if  size == false {
-//
-//            tabBar.frame.size.height = 100
-//            tabBar.frame.origin.y = view.frame.height - 60
-//
-//        }
     }
 
       func setupUI() {

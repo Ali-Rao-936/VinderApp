@@ -70,12 +70,13 @@ enum enumViewControllerIdentifier: String {
     case verifyOtpVC = "VerifyOtpVC"
     case updatePasswordVC = "UpdatePasswordVC"
 
-    case otherUserProfileVC = "OtherUserProfileVC"
+    case userDetailVC = "UserDetailVC"
     case contentVC = "ContentVC"
 
     case exploreEventsVC = "ExploreEventsVC"
     case myEventsVC = "MyEventsVC"
     case createEventVC = "CreateEventVC"
+    case acceptedEventVC = "AcceptedEventVC"
     case inviteFriendsVC = "InviteFriendsVC"
     case mapViewVC = "MapViewVC"
     case remarksVC = "RemarksVC"

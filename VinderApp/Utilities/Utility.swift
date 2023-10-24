@@ -13,19 +13,19 @@ struct Constant {
 }
 
 struct APIURL {
-    static let BaseURL = "https://libertysports.xyz/app8/api/v1/"
-    static let HistoryBaseURL = "https://libertysports.xyz/tgsh/"
-    static let MidURL = "app8/api/v1/sportscore/data/"
-    static let MatchList = BaseURL + "sportscore/data/match"
-    static let TournamentList = HistoryBaseURL + "worldcups.php"
-    // "http://192.168.2.91/history/worldcups.php"
-    static let NewsList = BaseURL + "news/data"
-    static let ManagerList = BaseURL + "sportscore/data/manager"
-    static let SeasonList = BaseURL + "sportscore/data/season"
-    static let TeamList = BaseURL + "sportscore/data/team"
-    static let LeagueList = BaseURL + "sportscore/data/league"
-    static let BannerBaseURL = "https://api996.com/"
-    static let BannerList = BannerBaseURL + "api/v1/banner/com.tennis.sports"
+    static let BaseURL = "http://45.76.178.21:5070/api/"
+    static let AllUserList = BaseURL + "listuser"
+    static let LikedUser = BaseURL + "user/like"
+    static let MatchUsersList = BaseURL + "user/mymatch/list"
+    static let NearUsersList = BaseURL + "listuser"
+    static let EventList = BaseURL + "event/list"
+    static let UpcomingEventList = BaseURL + "events/upcoming"
+    static let PastEventList = BaseURL + "events/past"
+    static let JoinEvent = BaseURL + "user/events/join"
+    static let AcceptedEventList = BaseURL + "user/event/attending/list"
+    static let SportsInterestList = BaseURL + "user/sports/interest/list"
+    static let CreateEvent = "user/events/add"
+//    static let BannerList = BannerBaseURL + "api/v1/banner/com.tennis.sports"
 }
 
 class Utility {
@@ -41,60 +41,42 @@ class Utility {
 }
 
 
-class ManageLocalization {
-    
-    static var deviceLang = ""
-    class func changeLanguage(lanuageKey : String, OnComplete : @escaping (Bool)-> Void){
-        
-        
-        //   UserInfo.sharedInstance.saveWithKeyWithSingleItem(item: lanuageKey, key: self.DEFAULT_LANGUAGE)
-        Constant.defaults.setValue(lanuageKey, forKeyPath: "Language")
-        Constant.defaults.synchronize()
-        OnComplete(true)
-    }
-    
-    class func getdeviceLangBundle()-> Bundle{
-        // To get Language of device ...
-        var path : String = String()
-        
-        let bundleLang = ["en", "zh-Hans", "id", "vi-VN"]
-        
-        let strActiveLanguage = Constant.defaults.string(forKey: "Language") ?? "en"
-        if bundleLang.contains(strActiveLanguage) {
-            path = Bundle.main.path(forResource: strActiveLanguage, ofType: "lproj") ?? ""
-        }
-        else {
-            changeLanguage(lanuageKey: Language.English.rawValue) { (_) in }
-            path = Bundle.main.path(forResource: Language.English.rawValue, ofType: "lproj") ?? ""
-        }
-        return Bundle(path: path)!
-    }
-    
-    class func getLocalizedString(key:String)-> String {
-        return NSLocalizedString(key, tableName: nil, bundle: getdeviceLangBundle(), value: "", comment: "")
-    }
-}
+//class ManageLocalization {
+//    
+//    static var deviceLang = ""
+//    class func changeLanguage(lanuageKey : String, OnComplete : @escaping (Bool)-> Void){
+//        
+//        
+//        //   UserInfo.sharedInstance.saveWithKeyWithSingleItem(item: lanuageKey, key: self.DEFAULT_LANGUAGE)
+//        Constant.defaults.setValue(lanuageKey, forKeyPath: "Language")
+//        Constant.defaults.synchronize()
+//        OnComplete(true)
+//    }
+//    
+//    class func getdeviceLangBundle()-> Bundle{
+//        // To get Language of device ...
+//        var path : String = String()
+//        
+//        let bundleLang = ["en", "zh-Hans", "id", "vi-VN"]
+//        
+//        let strActiveLanguage = Constant.defaults.string(forKey: "Language") ?? "en"
+//        if bundleLang.contains(strActiveLanguage) {
+//            path = Bundle.main.path(forResource: strActiveLanguage, ofType: "lproj") ?? ""
+//        }
+//        else {
+//            changeLanguage(lanuageKey: Language.English.rawValue) { (_) in }
+//            path = Bundle.main.path(forResource: Language.English.rawValue, ofType: "lproj") ?? ""
+//        }
+//        return Bundle(path: path)!
+//    }
+//    
+//    class func getLocalizedString(key:String)-> String {
+//        return NSLocalizedString(key, tableName: nil, bundle: getdeviceLangBundle(), value: "", comment: "")
+//    }
+//}
 
 extension UIViewController {
-    
-    func getDate(day: DayModel)-> String {
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) ?? Date()
-        let tommorrow = Calendar.current.date(byAdding: .day, value: +1, to: Date()) ?? Date()
-        
-        switch day {
-        case .Today:
-            return dateFormatter.string(from: date)
-            
-        case .Yesterday:
-            return dateFormatter.string(from: yesterday)
-            
-        case .Tomorrow:
-            return dateFormatter.string(from: tommorrow)
-        }
-    }
+
    
 }
 
@@ -106,12 +88,12 @@ extension String {
 
 extension UITabBarController {
     
-    func changeTitleLanguage() {
-        self.tabBar.items?[0].title = ManageLocalization.getLocalizedString(key: "home")
-        self.tabBar.items?[1].title = ManageLocalization.getLocalizedString(key: "tour")
-        self.tabBar.items?[2].title = ManageLocalization.getLocalizedString(key: "stats")
-        self.tabBar.items?[3].title = ManageLocalization.getLocalizedString(key: "news")
-        self.tabBar.items?[4].title = ManageLocalization.getLocalizedString(key: "game_on")
-    }
+//    func changeTitleLanguage() {
+//        self.tabBar.items?[0].title = ManageLocalization.getLocalizedString(key: "home")
+//        self.tabBar.items?[1].title = ManageLocalization.getLocalizedString(key: "tour")
+//        self.tabBar.items?[2].title = ManageLocalization.getLocalizedString(key: "stats")
+//        self.tabBar.items?[3].title = ManageLocalization.getLocalizedString(key: "news")
+//        self.tabBar.items?[4].title = ManageLocalization.getLocalizedString(key: "game_on")
+//    }
 }
 

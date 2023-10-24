@@ -115,29 +115,29 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOT-yF-LyK" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                    <rect key="frame" x="149" y="212.5" width="116.5" height="28"/>
+                    <rect key="frame" x="149" y="212.5" width="116.5" height="29"/>
                     <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="24"/>
                     <color key="textColor" name="headingColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Pr0-GT-Brm">
-                    <rect key="frame" x="171" y="245" width="15" height="18"/>
+                    <rect key="frame" x="172.5" y="246" width="15" height="18"/>
                     <color key="tintColor" systemColor="systemYellowColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="15" id="S72-kR-ZMA"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGW-RH-L5p" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                    <rect key="frame" x="191" y="245.5" width="54.5" height="17"/>
+                    <rect key="frame" x="192.5" y="246.5" width="52" height="17"/>
                     <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="14"/>
                     <color key="textColor" name="disableBtnColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5s-88-fEg">
-                    <rect key="frame" x="17" y="273" width="380" height="579"/>
+                    <rect key="frame" x="17" y="274" width="380" height="578"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVU-fv-1sE">
-                            <rect key="frame" x="0.0" y="0.0" width="380" height="580"/>
+                            <rect key="frame" x="0.0" y="0.0" width="380" height="579"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfA-We-vT8" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="10" width="380" height="143"/>
@@ -269,7 +269,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Weu-t6-KUH" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="311" width="380" height="259"/>
+                                    <rect key="frame" x="0.0" y="311" width="380" height="258"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtE-9p-UhI" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
                                             <rect key="frame" x="10" y="20" width="360" height="30"/>
@@ -291,7 +291,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rXA-s5-VLA">
-                                            <rect key="frame" x="10" y="71" width="360" height="178"/>
+                                            <rect key="frame" x="10" y="71" width="360" height="177"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <connections>
                                                 <outlet property="dataSource" destination="-1" id="ENv-AF-i2c"/>
@@ -384,28 +384,28 @@
             <size key="intrinsicContentSize" width="360" height="45"/>
         </designable>
         <designable name="BKk-Kf-iFI">
-            <size key="intrinsicContentSize" width="54" height="23.5"/>
+            <size key="intrinsicContentSize" width="55" height="24"/>
         </designable>
         <designable name="TMK-Ek-8Ih">
-            <size key="intrinsicContentSize" width="77" height="23.5"/>
+            <size key="intrinsicContentSize" width="76" height="24"/>
         </designable>
         <designable name="hFM-6l-ZaM">
-            <size key="intrinsicContentSize" width="218" height="19"/>
+            <size key="intrinsicContentSize" width="208" height="19.5"/>
         </designable>
         <designable name="mtE-9p-UhI">
-            <size key="intrinsicContentSize" width="60.5" height="23.5"/>
+            <size key="intrinsicContentSize" width="59" height="24"/>
         </designable>
         <designable name="qKY-dc-dq3">
             <size key="intrinsicContentSize" width="340" height="431"/>
         </designable>
         <designable name="sfR-vV-buo">
-            <size key="intrinsicContentSize" width="8.5" height="17.5"/>
+            <size key="intrinsicContentSize" width="9.5" height="18"/>
         </designable>
         <designable name="tOT-yF-LyK">
-            <size key="intrinsicContentSize" width="116.5" height="28"/>
+            <size key="intrinsicContentSize" width="116.5" height="29"/>
         </designable>
         <designable name="yGW-RH-L5p">
-            <size key="intrinsicContentSize" width="54.5" height="16.5"/>
+            <size key="intrinsicContentSize" width="52" height="17"/>
         </designable>
     </designables>
     <resources>

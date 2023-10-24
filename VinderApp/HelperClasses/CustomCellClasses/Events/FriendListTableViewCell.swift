@@ -8,7 +8,23 @@
 import UIKit
 
 class FriendListTableViewCell: UITableViewCell {
-
+    // MARK: - Outlets & Properties
+    
+  //  @IBOutlet weak var joinBtn: UIButton!
+    @IBOutlet weak var photoImgView: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var levelLbl: UILabel!
+    @IBOutlet weak var locationLbl: UILabel!
+   // @IBOutlet weak var noOfPeopleJoinedLbl: UILabel!
+    @IBOutlet weak var selectedView: UIViewCustomClass!
+    
+    static let identifier = "FriendListTableViewCell"
+    static func nib() -> UINib{
+        return UINib(nibName: "FriendListTableViewCell", bundle: nil)
+    }
+    
+    // MARK: - Methods
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +35,4 @@ class FriendListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

@@ -6,14 +6,16 @@ target 'VinderApp' do
   use_frameworks!
 
   # Pods for VinderApp
-	pod 'Alamofire', '~> 4.9.1'
+	pod 'Alamofire', '4.0'
 	pod 'MBProgressHUD'
   pod 'SDWebImage'
   pod 'NVActivityIndicatorView'
   pod 'SwiftyJSON'
   pod 'TagListView', '~> 1.0'
   pod 'LocationPicker'
-  
+  pod "Koloda"
+  pod 'JJFloatingActionButton'
+
   target 'VinderAppTests' do
     inherit! :search_paths
     # Pods for testing
@@ -24,3 +26,15 @@ target 'VinderApp' do
   end
 
 end
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+
+            end
+        end
+    end
+end
+

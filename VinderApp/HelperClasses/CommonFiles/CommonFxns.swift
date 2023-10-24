@@ -13,21 +13,20 @@ import SwiftyJSON
 import MBProgressHUD
 
 class CommonFxns: NSObject {
-
+    
     static var globalHud:MBProgressHUD?
     
-   
-//    // Method to LogOut from App and clear all the saved data
-//    class func directLogOut(){
-//        
-//        let domain = Bundle.main.bundleIdentifier!
-//        UserDefaults.standard.removePersistentDomain(forName: domain)
-//        UserDefaults.standard.synchronize()
-//        print(Array(UserDefaults.standard.dictionaryRepresentation().keys).count)
-//        
-//        CommonFxns.logOutAndPopToInitialVC()
-//    }
-
+    //    // Method to LogOut from App and clear all the saved data
+    //    class func directLogOut(){
+    //
+    //        let domain = Bundle.main.bundleIdentifier!
+    //        UserDefaults.standard.removePersistentDomain(forName: domain)
+    //        UserDefaults.standard.synchronize()
+    //        print(Array(UserDefaults.standard.dictionaryRepresentation().keys).count)
+    //
+    //        CommonFxns.logOutAndPopToInitialVC()
+    //    }
+    
     // Method to check internet connectivity
     class func isInternetAvailable() -> Bool{
         var zeroAddress = sockaddr_in()
@@ -74,8 +73,8 @@ class CommonFxns: NSObject {
         guard let window = UIApplication.shared.windows.first else { return }
         window.rootViewController?.present(alert, animated: true)
         
-//        appDelegate.window?.rootViewController?.present(alert, animated: true)
-//        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+        //        appDelegate.window?.rootViewController?.present(alert, animated: true)
+        //        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
     }
     
     
@@ -89,10 +88,11 @@ class CommonFxns: NSObject {
     
     // Public method to fetch header for API calls
     class func getAuthenticationToken() -> [String: String]{
-        let token  = userDefault.value(forKey: USER_DEFAULT_token_Key) as? String ?? emptyStr
-        
+       //     let token  = userDefault.value(forKey: USER_DEFAULT_token_Key) as? String ?? emptyStr
+        let token = "60|qhBeilhnNC15e19dG1TkdJIxxyXmEpEK48NZhHZEa927cd04"
         let headers = [
-            "Authorization" : String(format: "Bearer \(token)")
+            "Authorization" : String(format: "Bearer \(token)"),
+             "Content-Type" : "application/json"
         ]
         return headers
     }
@@ -104,7 +104,7 @@ class CommonFxns: NSObject {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
-    
+    // multipart/form-data; boundary=<calculated when request is sent>
     // Method to check password Validations
     class func isValidPwd(str:String)->Bool{
         var valid = true
@@ -124,8 +124,8 @@ class CommonFxns: NSObject {
     class func trimString(string:String) -> String{
         return string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
-
-
+    
+    
     class func setImage(imageView:UIImageView,urlString:String?,placeHolder:UIImage?){
         imageView.sd_setImage(with: URL(string: urlString ?? ""), placeholderImage:placeHolder, options: .allowInvalidSSLCertificates, completed: nil)
     }
@@ -167,12 +167,12 @@ class CommonFxns: NSObject {
         
         let storyboard = UIStoryboard(name:enumStoryBoard.main.rawValue, bundle: nil)
         let loginViewController = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as! InitialVC
-
+        
         guard let window = UIApplication.shared.windows.first else {
             return
         }
         
-
+        
         if let rootViewController = window.rootViewController {
             rootViewController.children.forEach {
                 $0.willMove(toParent: nil)
@@ -210,7 +210,7 @@ class CommonFxns: NSObject {
     class func getJsonObject(strJson:String) -> JSON{
         if let data = strJson.data(using: .utf8) {
             if let jsonObject = try? JSON(data: data) {
-               return jsonObject
+                return jsonObject
             }
         }
         return JSON()
@@ -230,21 +230,21 @@ class CommonFxns: NSObject {
     
     // Show activity Indicator
     class func showProgress()->Void{
-        globalHud?.removeFromSuperViewOnHide = true
-        globalHud?.hide(animated: false)
-        
-//        let window:UIWindow = UIApplication.shared.windows.last { $0.isKeyWindow }
-
-        let window:UIWindow = (UIApplication.shared.keyWindow?.windowScene?.windows.first)!
-        globalHud = MBProgressHUD.showAdded(to: window, animated: true)
-        globalHud?.bezelView.color = UIColor.clear // Your backgroundcolor
-        globalHud?.bezelView.style = .solidColor
+        DispatchQueue.main.async {
+            globalHud?.removeFromSuperViewOnHide = true
+            globalHud?.hide(animated: false)
+            let window:UIWindow = (UIApplication.shared.keyWindow?.windowScene?.windows.first)!
+            globalHud = MBProgressHUD.showAdded(to: window, animated: true)
+            globalHud?.bezelView.color = UIColor.clear // Your backgroundcolor
+            globalHud?.bezelView.style = .solidColor
+        }
     }
     
     // Hide activity Indicator
-   class func dismissProgress()->Void{
-       globalHud?.hide(animated: true)
-       
+    class func dismissProgress()->Void{
+        DispatchQueue.main.async {
+            globalHud?.hide(animated: true)
+        }
     }
 }
 

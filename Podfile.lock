@@ -1,18 +1,24 @@
 PODS:
-  - Alamofire (4.9.1)
+  - Alamofire (4.0.0)
+  - JJFloatingActionButton (2.5.0)
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
   - LocationPicker (1.4.2)
   - MBProgressHUD (1.2.0)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
-  - SDWebImage (5.18.1):
-    - SDWebImage/Core (= 5.18.1)
-  - SDWebImage/Core (5.18.1)
+  - pop (1.0.12)
+  - SDWebImage (5.18.3):
+    - SDWebImage/Core (= 5.18.3)
+  - SDWebImage/Core (5.18.3)
   - SwiftyJSON (5.0.1)
   - TagListView (1.4.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.9.1)
+  - Alamofire (= 4.0)
+  - JJFloatingActionButton
+  - Koloda
   - LocationPicker
   - MBProgressHUD
   - NVActivityIndicatorView
@@ -23,22 +29,28 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - JJFloatingActionButton
+    - Koloda
     - LocationPicker
     - MBProgressHUD
     - NVActivityIndicatorView
+    - pop
     - SDWebImage
     - SwiftyJSON
     - TagListView
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   LocationPicker: 9af49409ec3ca13fdf4bf6b39e1a3c7dec029f4a
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
-  SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SDWebImage: 96e0c18ef14010b7485210e92fac888587ebb958
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: 14a0afae3bb3696353425584ace80f080bcf3631
+PODFILE CHECKSUM: 447239744e34851977232011457936b5ff701df1
 
 COCOAPODS: 1.12.1

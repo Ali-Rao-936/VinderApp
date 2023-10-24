@@ -10,7 +10,7 @@ import LocationPicker
 import CoreLocation
 import MapKit
 
-class CreateEventVC: UIViewController {
+class CreateEventVC1: UIViewController {
     
     // MARK: - Outlets & Properties
     
@@ -58,24 +58,11 @@ class CreateEventVC: UIViewController {
         // Register tableView cells
         self.sportsCategoryCollectionView.register(TagsCollectionViewCell.nib(), forCellWithReuseIdentifier: TagsCollectionViewCell.identifier)
         self.sportsCategoryCollectionView.allowsMultipleSelection = false
-        self.startEventDateTextField.datePicker(target: self,
-                                  doneAction: #selector(doneAction1),
-                                  cancelAction: #selector(cancelAction),
-                                                datePickerMode: .date)
-        self.startEventTimeTextField.datePicker(target: self,
-                                                doneAction: #selector(doneAction2),
-                                  cancelAction: #selector(cancelAction),
-                                                datePickerMode: .time)
         
-        self.endEventDateTextField.datePicker(target: self,
-                                  doneAction: #selector(doneAction3),
-                                  cancelAction: #selector(cancelAction),
-                                                datePickerMode: .date)
-        
-        self.endEventTimeTextField.datePicker(target: self,
-                                  doneAction: #selector(doneAction4),
-                                  cancelAction: #selector(cancelAction),
-                                                datePickerMode: .time)
+     //   self.startEventDateTextField.datePicker(target: self, doneAction: #selector(doneAction1), datePickerMode: .date)
+    //    self.startEventTimeTextField.datePicker(target: self, doneAction: #selector(doneAction2), datePickerMode: .time)
+    //    self.endEventDateTextField.datePicker(target: self, doneAction: #selector(doneAction3), datePickerMode: .date)
+    //    self.endEventTimeTextField.datePicker(target: self, doneAction: #selector(doneAction4), datePickerMode: .time)
         
         self.locationTxtField.inputView = self.pickerView
         self.locationTxtField.inputAccessoryView = self.pickerView.toolbar
@@ -414,7 +401,7 @@ class CreateEventVC: UIViewController {
 
 // MARK: - CollectionView Delegates & Datasource
 
-extension CreateEventVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CreateEventVC1: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.allSportsInterestsList.count
@@ -434,10 +421,10 @@ extension CreateEventVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         listCell.tagImgView.sd_setImage(with: URL(string: dict.imgUrls?.threeX ?? emptyStr), placeholderImage: nil, options: .allowInvalidSSLCertificates, completed: nil)
                 
         if indexPath.row != self.selectedCellRow{
-            listCell.tagView.layer.borderColor = UIColor.gray.cgColor
+          //  listCell.tagView.layer.borderColor = UIColor.gray.cgColor
             listCell.tagLbl.textColor = UIColor.gray
         }else{
-            listCell.tagView.layer.borderColor = primaryColor.cgColor
+        //    listCell.tagView.layer.borderColor = primaryColor.cgColor
             listCell.tagLbl.textColor = primaryColor
         }
         return listCell
@@ -451,7 +438,7 @@ extension CreateEventVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? TagsCollectionViewCell{
     
-            cell.tagView.layer.borderColor = primaryColor.cgColor
+         //   cell.tagView.layer.borderColor = primaryColor.cgColor
             cell.tagLbl.textColor = primaryColor
         }
         self.selectedCellRow = indexPath.row
@@ -460,13 +447,13 @@ extension CreateEventVC: UICollectionViewDelegate, UICollectionViewDataSource, U
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? TagsCollectionViewCell{
-            cell.tagView.layer.borderColor = UIColor.gray.cgColor
+         //   cell.tagView.layer.borderColor = UIColor.gray.cgColor
             cell.tagLbl.textColor = UIColor.gray
         }
     }
 }
 
-extension CreateEventVC: UIPickerViewDataSource, UIPickerViewDelegate {
+extension CreateEventVC1: UIPickerViewDataSource, UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.locationsArr.count
@@ -488,7 +475,7 @@ extension CreateEventVC: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 }
 
-extension CreateEventVC: ToolbarPickerViewDelegate {
+extension CreateEventVC1: ToolbarPickerViewDelegate {
 
     func didTapDone() {
         
@@ -507,7 +494,7 @@ extension CreateEventVC: ToolbarPickerViewDelegate {
     }
 }
 
-extension CreateEventVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension CreateEventVC1: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: - Choose and Upload video
     

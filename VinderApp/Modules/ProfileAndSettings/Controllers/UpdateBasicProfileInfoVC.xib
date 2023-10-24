@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -102,7 +102,7 @@
                                     <color key="textColor" name="primaryColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallDefaultUserProfileImg" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-xc-AhJ" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallDefaultUserProfileImg" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-xc-AhJ" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
                                     <rect key="frame" x="17" y="15" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="8SW-AW-1TX"/>
@@ -481,7 +481,7 @@
             <size key="intrinsicContentSize" width="54.333333333333336" height="19.333333333333332"/>
         </designable>
         <designable name="MAc-0K-iOY">
-            <size key="intrinsicContentSize" width="170" height="21"/>
+            <size key="intrinsicContentSize" width="130" height="21"/>
         </designable>
         <designable name="Wde-sh-xvj">
             <size key="intrinsicContentSize" width="76.333333333333329" height="21.666666666666668"/>
@@ -496,25 +496,25 @@
             <size key="intrinsicContentSize" width="55.333333333333336" height="20.666666666666668"/>
         </designable>
         <designable name="fo0-HH-2Tu">
-            <size key="intrinsicContentSize" width="145" height="21"/>
+            <size key="intrinsicContentSize" width="104.66666666666667" height="21"/>
         </designable>
         <designable name="gA4-do-ZnM">
             <size key="intrinsicContentSize" width="70" height="19.333333333333332"/>
         </designable>
         <designable name="kqD-lI-7QM">
-            <size key="intrinsicContentSize" width="151" height="21"/>
+            <size key="intrinsicContentSize" width="110.66666666666667" height="21"/>
         </designable>
         <designable name="mS4-Ap-OpV">
             <size key="intrinsicContentSize" width="38.333333333333336" height="20.666666666666668"/>
         </designable>
         <designable name="qBl-lh-ygI">
-            <size key="intrinsicContentSize" width="78.666666666666671" height="21"/>
+            <size key="intrinsicContentSize" width="38.666666666666664" height="21"/>
         </designable>
         <designable name="tNv-QR-OJu">
             <size key="intrinsicContentSize" width="39.666666666666664" height="19.333333333333332"/>
         </designable>
         <designable name="y6u-qG-7B6">
-            <size key="intrinsicContentSize" width="109" height="21"/>
+            <size key="intrinsicContentSize" width="69" height="21"/>
         </designable>
     </designables>
     <resources>

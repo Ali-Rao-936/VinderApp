@@ -7,33 +7,43 @@
 
 import Foundation
 // MARK: - Users List
-struct UserListModel: Decodable {
-    let response: UserList
+struct UserListModel: Codable {
+    let response: UserList?
 }
 
-struct UserList: Decodable {
-    let messages: [String]
-    let data: [User]
+struct UserList: Codable {
+    let messages: [String]?
+    let data: [User]?
 }
 
 // MARK: - UserData
-struct UserDetailModel: Decodable {
+struct UserDetailModel: Codable {
     let response: UserDetailResponse
 }
 
-struct UserDetailResponse: Decodable {
-    let messages: [String]
-    let data: User
+struct UserDetailResponse: Codable {
+    let messages: [String]?
+    let data: User?
 }
 
-struct User: Decodable {
-    let id, level: Int?
+// MARK: - LikedUser
+struct LikedUserModel: Codable {
+    let response: LikedUser?
+}
+
+struct LikedUser: Codable {
+    let messages: String?
+    let data: User?
+}
+
+struct User: Codable {
+    let id, level, likedTo: Int?
     let name, about: String?
     let email: String?
     let location: String?
     let profileImg: String?
     let sportsInterest: [SportsInterest]?
-    let eventList: [EventList]?
+    let eventList: [Event]?
         
     enum CodingKeys: String, CodingKey {
         case id, name, email, about, level
@@ -41,10 +51,11 @@ struct User: Decodable {
         case profileImg = "profile_img"
         case sportsInterest = "sports_interest"
         case eventList = "myevents"
+        case likedTo = "liked_to"
     }
 }
 
-struct SportsInterest: Decodable {
+struct SportsInterest: Codable {
     let id: Int?
     let name: String?
     let sportImage: ImageURLS?
@@ -55,22 +66,7 @@ struct SportsInterest: Decodable {
     }
 }
 
-struct EventList: Decodable {
-    let id: Int?
-    let name, description: String?
-    let peopleJoinedCount: Int?
-    let date, time: String?
-    let bannerImage: ImageURLS?
-    
-    enum CodingKeys: String, CodingKey {
-        case id, name, description, date
-        case peopleJoinedCount = "attendees_count"
-        case time = "time_column"
-        case bannerImage = "banner_image"
-    }
-}
-
-struct ImageURLS: Decodable {
+struct ImageURLS: Codable {
     let image: String?
     
     enum CodingKeys: String, CodingKey {

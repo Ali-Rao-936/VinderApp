@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -35,12 +35,11 @@
                     <color key="tintColor" name="primaryColor"/>
                     <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <action selector="segmentControlValuechanged:" destination="-1" eventType="touchUpInside" id="Kld-za-zAQ"/>
-                        <action selector="segmentValueChanged:" destination="-1" eventType="valueChanged" id="oK1-6e-7fX"/>
+                        <action selector="segmentControlValueChanged:" destination="-1" eventType="valueChanged" id="OaT-XF-976"/>
                     </connections>
                 </segmentedControl>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-wE-P3U">
-                    <rect key="frame" x="0.0" y="93" width="414" height="769"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-wE-P3U">
+                    <rect key="frame" x="10" y="103" width="394" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vij-2h-SFm">
                         <size key="itemSize" width="128" height="128"/>
@@ -57,11 +56,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Ttb-wE-P3U" firstAttribute="top" secondItem="70r-zt-cmA" secondAttribute="bottom" id="RMg-xn-QT0"/>
-                <constraint firstItem="Ttb-wE-P3U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TTt-fe-qfe"/>
+                <constraint firstItem="Ttb-wE-P3U" firstAttribute="top" secondItem="70r-zt-cmA" secondAttribute="bottom" constant="10" id="RMg-xn-QT0"/>
+                <constraint firstItem="Ttb-wE-P3U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="TTt-fe-qfe"/>
                 <constraint firstItem="70r-zt-cmA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZcY-vS-1c9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="70r-zt-cmA" secondAttribute="trailing" id="acj-4t-BIl"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ttb-wE-P3U" secondAttribute="trailing" id="lbK-bO-ppu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ttb-wE-P3U" secondAttribute="trailing" constant="10" id="lbK-bO-ppu"/>
                 <constraint firstItem="70r-zt-cmA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="oCo-mo-ibJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ttb-wE-P3U" secondAttribute="bottom" id="ubl-9K-Xc8"/>
             </constraints>

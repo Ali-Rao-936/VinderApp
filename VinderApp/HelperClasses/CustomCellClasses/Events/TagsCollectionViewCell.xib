@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TagsCollectionViewCell" customModule="VinderApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="217" height="70"/>
+            <rect key="frame" x="0.0" y="0.0" width="201" height="55"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="217" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="201" height="55"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWX-Wz-vBJ" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="5" width="217" height="60"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <rect key="frame" x="0.0" y="5" width="201" height="45"/>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.5490196078431373" blue="0.3411764705882353" alpha="0.12210352891156463" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="18"/>
@@ -29,46 +28,81 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                 <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="primaryColor"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calenderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wku-Rw-LLm" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                        <rect key="frame" x="20" y="25" width="20" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="0xQ-8a-SP7"/>
-                            <constraint firstAttribute="width" constant="20" id="mD9-uT-eAT"/>
-                        </constraints>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1q-e6-fis" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="5" width="201" height="45"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="disableBtnColor"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-j0-Opv">
-                        <rect key="frame" x="50" y="0.0" width="157" height="70"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                        <color key="textColor" name="disableBtnColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="839-8t-VxS">
+                        <rect key="frame" x="10" y="5" width="181" height="45"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calenderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wku-Rw-LLm" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="12.666666666666668" width="20" height="20.000000000000004"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="aMk-Hk-10c"/>
+                                    <constraint firstAttribute="height" constant="20" id="ymE-AG-yRZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-j0-Opv">
+                                <rect key="frame" x="30" y="0.0" width="151" height="45"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" name="disableBtnColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfJ-4m-LEJ">
+                                <rect key="frame" x="181" y="12.666666666666668" width="20" height="20.000000000000004"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="QVw-fF-d3g"/>
+                                    <constraint firstAttribute="height" constant="20" id="yhA-f7-zgh"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cancel"/>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="tWX-Wz-vBJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="3fJ-VK-gP4"/>
-                <constraint firstAttribute="trailing" secondItem="3nV-j0-Opv" secondAttribute="trailing" constant="10" id="3uI-FD-INY"/>
-                <constraint firstAttribute="bottom" secondItem="3nV-j0-Opv" secondAttribute="bottom" id="8zf-c3-ri0"/>
+                <constraint firstItem="s1q-e6-fis" firstAttribute="leading" secondItem="tWX-Wz-vBJ" secondAttribute="leading" id="5v9-Ur-63e"/>
+                <constraint firstItem="s1q-e6-fis" firstAttribute="trailing" secondItem="tWX-Wz-vBJ" secondAttribute="trailing" id="Aay-r6-5c4"/>
+                <constraint firstItem="s1q-e6-fis" firstAttribute="bottom" secondItem="tWX-Wz-vBJ" secondAttribute="bottom" id="IH5-dl-nch"/>
+                <constraint firstAttribute="bottom" secondItem="839-8t-VxS" secondAttribute="bottom" constant="5" id="IYs-FX-ykd"/>
                 <constraint firstItem="tWX-Wz-vBJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RnR-8k-Hda"/>
-                <constraint firstItem="3nV-j0-Opv" firstAttribute="leading" secondItem="Wku-Rw-LLm" secondAttribute="trailing" constant="10" id="eui-zT-a4U"/>
-                <constraint firstItem="3nV-j0-Opv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ggF-Jk-g78"/>
+                <constraint firstItem="839-8t-VxS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="YFK-bp-cid"/>
+                <constraint firstItem="839-8t-VxS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ava-0d-G6K"/>
+                <constraint firstItem="s1q-e6-fis" firstAttribute="top" secondItem="tWX-Wz-vBJ" secondAttribute="top" id="fup-UF-m4r"/>
                 <constraint firstAttribute="trailing" secondItem="tWX-Wz-vBJ" secondAttribute="trailing" id="hMb-Q1-G6h"/>
                 <constraint firstAttribute="bottom" secondItem="tWX-Wz-vBJ" secondAttribute="bottom" constant="5" id="hPj-Jy-2WH"/>
-                <constraint firstItem="Wku-Rw-LLm" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="jfC-x1-zx9"/>
-                <constraint firstItem="Wku-Rw-LLm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="oac-BO-kCX"/>
+                <constraint firstAttribute="trailing" secondItem="839-8t-VxS" secondAttribute="trailing" constant="10" id="uYB-H7-Mu2"/>
             </constraints>
-            <size key="customSize" width="217" height="70"/>
+            <size key="customSize" width="201" height="55"/>
             <connections>
+                <outlet property="cancelBtn" destination="rfJ-4m-LEJ" id="QOQ-6m-2vl"/>
+                <outlet property="deselectedView" destination="s1q-e6-fis" id="mnM-2p-ZO7"/>
+                <outlet property="selectedView" destination="tWX-Wz-vBJ" id="T9S-wK-gsr"/>
                 <outlet property="tagImgView" destination="Wku-Rw-LLm" id="e2H-Yn-osL"/>
                 <outlet property="tagLbl" destination="3nV-j0-Opv" id="JTd-ay-QbF"/>
-                <outlet property="tagView" destination="tWX-Wz-vBJ" id="q08-xV-e2L"/>
             </connections>
-            <point key="canvasLocation" x="258.77862595419845" y="-25.35211267605634"/>
+            <point key="canvasLocation" x="246.56488549618319" y="-30.633802816901412"/>
         </collectionViewCell>
     </objects>
     <designables>
@@ -78,11 +112,12 @@
     </designables>
     <resources>
         <image name="calenderIcon" width="16" height="16"/>
+        <image name="cancel" width="24" height="24"/>
         <namedColor name="disableBtnColor">
             <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="primaryColor">
+            <color red="0.18799999356269836" green="0.54900002479553223" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

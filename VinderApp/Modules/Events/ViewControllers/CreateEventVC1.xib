@@ -18,9 +18,8 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateEventVC" customModule="VinderApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateEventVC1" customModule="VinderApp" customModuleProvider="target">
             <connections>
-                <outlet property="addEventImgView" destination="ORp-p4-oIb" id="c25-QC-wGg"/>
                 <outlet property="addresstxtField" destination="uZB-fv-9Sr" id="F7T-e9-1T9"/>
                 <outlet property="endEventDateTextField" destination="zYP-Cg-I2b" id="zcE-eY-wkE"/>
                 <outlet property="endEventTimeTextField" destination="VN1-9j-kHk" id="gWW-aD-sDX"/>

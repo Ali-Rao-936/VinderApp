@@ -9,11 +9,6 @@ import UIKit
 
 class MainChatVC: UIViewController {
 
-    // MARK: - Outlets & Properties
-    
-//    @IBOutlet weak var teamImgView: UIImageView!
-//    var selectedIndexRow = Int()
-    
     // MARK: - View life cycle
 
     override func viewDidLoad() {

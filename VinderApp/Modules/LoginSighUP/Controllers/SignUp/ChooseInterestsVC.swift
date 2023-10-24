@@ -53,26 +53,17 @@ class ChooseInterestsVC: UIViewController {
     @IBAction func nextBtnAction(_ sender: Any) {
         if self.selectedIds.count > 0{
             
-            
             var dict = [String: Any]()
-        
             for i in self.selectedIds.indices{
-        
-                print(self.selectedIds[i])
-                print("sport_id[\(i)]")
-        
                 dict["sport_id[\(i)]"] = self.selectedIds[i]
             }
             self.updateProfileInfo(params: dict)
         }else{
             CommonFxns.showAlert(self, message: AlertMessages.CHOOSE_INTERESTS, title: AlertMessages.ERROR_TITLE)
         }
-//        let dict = []
-//        self.updateProfileAPI(params: <#T##[String : Any]#>)
     }
     
     // MARK: - Networking
-
     
     private func getInterestsList() {
        
@@ -104,29 +95,6 @@ class ChooseInterestsVC: UIViewController {
        }
     }
     
-//    private func updateSportsInterests(params: [Int]) {
-//        self.activityIndicatorStart()
-//
-//        viewModel.updateSportsInterests(parameters: params)
-//
-//        viewModel.showAlertClosure = {
-//            msg in
-//            CommonFxns.showAlert(self, message: msg, title: AlertMessages.ERROR_TITLE)
-//            self.activityIndicatorStop()
-//        }
-//
-//        viewModel.didFinishFetch = { data in
-//            self.activityIndicatorStop()
-//            print("data...", data)
-////
-//            let user = UserModel(with: data)
-//            self.updateUserInfoLocally(user: user)
-//
-//            self.navigationController?.popViewController(animated: true)
-//
-//        }
-//    }
-    
     private func updateProfileInfo(params: [String: Any]) {
         self.activityIndicatorStart()
 
@@ -149,20 +117,6 @@ class ChooseInterestsVC: UIViewController {
                 let signUpVcObj = mainStoryboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.tabBarVC.rawValue) as! TabBarVC
                 self.navigationController?.pushViewController(signUpVcObj, animated: true)
             }
-//
-//            if let sportsInterests = data["sports_interest"] as? [[String:Any]]{
-//                var sports = [[String:Any]]()
-//                for item in sportsInterests{
-//                    let interest = SportsInterests(with: item)
-//                    print(interest.name ?? emptyStr)
-//                    sports.append(interest.toAnyObject() as? [String : Any] ?? [:])
-//                }
-//                userDefault.set(sports, forKey: USER_DEFAULT_imageUrl_Key)
-//            }
-//
-//            let user = UserModel(with: data)
-//            self.updateUserInfoLocally(user: user)
-            
         }
     }
 
@@ -170,21 +124,16 @@ class ChooseInterestsVC: UIViewController {
 
     private func activityIndicatorStart() {
        // Code for show activity indicator view
-//        self.loader.startAnimating()
        CommonFxns.showProgress()
     }
 
     private func activityIndicatorStop() {
        // Code for stop activity indicator view
-//        self.loader.stopAnimating()
        CommonFxns.dismissProgress()
     }
     
 
 }
-
-
-//
 
 // MARK: - CollectionView Delegates & Datasource
 
@@ -218,10 +167,6 @@ extension ChooseInterestsVC: UICollectionViewDelegate, UICollectionViewDataSourc
             listCell.bgView.layer.borderColor = UIColor.lightGray.cgColor
             listCell.bgView.backgroundColor = UIColor.white
         }
-//        playerCell.usernameLbl.text = dict.name
-//        playerCell.cityLbl.text = dict.teamName
-//        playerCell.userImg.sd_setImage(with: URL( string:dict.photo))
-
         return listCell
     }
 
@@ -239,12 +184,6 @@ extension ChooseInterestsVC: UICollectionViewDelegate, UICollectionViewDataSourc
         if let selectedIdIndex = selectedIds.enumerated().filter({ $0.element == id }).map({ $0.offset }).first{
             print("selectedIdIndex...", selectedIdIndex)
             self.selectedIds.remove(at: selectedIdIndex)
-
-//            if selectedIdIndex != nil{
-//                self.selectedIds.append(id)
-//            }else{
-//                self.selectedIds.remove(at: selectedIdIndex)
-//            }
         }else{
             self.selectedIds.append(id)
         }

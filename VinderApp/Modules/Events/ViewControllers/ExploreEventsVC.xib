@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yz8-7i-jSq">
-                    <rect key="frame" x="0.0" y="59" width="393" height="729"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yz8-7i-jSq">
+                    <rect key="frame" x="10" y="59" width="373" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Bxa-tN-RC8"/>
@@ -32,10 +32,10 @@
             <viewLayoutGuide key="safeArea" id="vpz-7N-vNt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="yz8-7i-jSq" firstAttribute="leading" secondItem="vpz-7N-vNt" secondAttribute="leading" id="IuX-6L-dqT"/>
-                <constraint firstItem="vpz-7N-vNt" firstAttribute="bottom" secondItem="yz8-7i-jSq" secondAttribute="bottom" constant="30" id="PBh-kf-e0H"/>
+                <constraint firstItem="yz8-7i-jSq" firstAttribute="leading" secondItem="vpz-7N-vNt" secondAttribute="leading" constant="10" id="IuX-6L-dqT"/>
+                <constraint firstItem="vpz-7N-vNt" firstAttribute="bottom" secondItem="yz8-7i-jSq" secondAttribute="bottom" id="PBh-kf-e0H"/>
                 <constraint firstItem="yz8-7i-jSq" firstAttribute="top" secondItem="vpz-7N-vNt" secondAttribute="top" id="oux-ga-B6Y"/>
-                <constraint firstItem="vpz-7N-vNt" firstAttribute="trailing" secondItem="yz8-7i-jSq" secondAttribute="trailing" id="yZF-cd-lFs"/>
+                <constraint firstItem="vpz-7N-vNt" firstAttribute="trailing" secondItem="yz8-7i-jSq" secondAttribute="trailing" constant="10" id="yZF-cd-lFs"/>
             </constraints>
             <point key="canvasLocation" x="891" y="-32"/>
         </view>

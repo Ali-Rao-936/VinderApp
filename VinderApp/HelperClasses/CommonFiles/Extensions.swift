@@ -32,47 +32,34 @@ extension UIView {
 
 
 extension UITextField {
-    func datePicker<T>(target: T,
-                       doneAction: Selector,
-                       cancelAction: Selector,
-                       datePickerMode: UIDatePicker.Mode = .date) {
+    func addInputViewDatePicker(target: Any, selector: Selector, datePickerMode: UIDatePicker.Mode = .date, fromNowDate: Bool? = true) {
         let screenWidth = UIScreen.main.bounds.width
         
-        func buttonItem(withSystemItemStyle style: UIBarButtonItem.SystemItem) -> UIBarButtonItem {
-            let buttonTarget = style == .flexibleSpace ? nil : target
-            let action: Selector? = {
-                switch style {
-                case .cancel:
-                    return cancelAction
-                case .done:
-                    return doneAction
-                default:
-                    return nil
-                }
-            }()
-            
-            let barButtonItem = UIBarButtonItem(barButtonSystemItem: style,
-                                                target: buttonTarget,
-                                                action: action)
-            
-            return barButtonItem
+        //Add DatePicker as inputView
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 216))
+        if fromNowDate ?? true {
+            datePicker.minimumDate = Date()
         }
-        
-        let datePicker = UIDatePicker(frame: CGRect(x: 0,
-                                                    y: 0,
-                                                    width: screenWidth,
-                                                    height: 216))
+    
         datePicker.datePickerMode = datePickerMode
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
         self.inputView = datePicker
         
-        let toolBar = UIToolbar(frame: CGRect(x: 0,
-                                              y: 0,
-                                              width: screenWidth,
-                                              height: 44))
-        toolBar.setItems([buttonItem(withSystemItemStyle: .cancel),
-                          buttonItem(withSystemItemStyle: .flexibleSpace),
-                          buttonItem(withSystemItemStyle: .done)],
-                         animated: true)
+        //Add Tool Bar as input AccessoryView
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 44))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelBarButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPressed))
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: target, action: selector)
+        toolBar.setItems([cancelBarButton, flexibleSpace, doneBarButton], animated: false)
+        
         self.inputAccessoryView = toolBar
+    }
+    
+    @objc func cancelPressed() {
+        self.resignFirstResponder()
     }
 }

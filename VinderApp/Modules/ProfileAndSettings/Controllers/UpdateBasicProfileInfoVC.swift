@@ -57,7 +57,7 @@ class UpdateBasicProfileInfoVC: UIViewController {
         self.pickerView.toolbarDelegate = self
         self.pickerView.reloadAllComponents()
         
-        self.ageTextField.datePicker(target: self, doneAction: #selector(doneAction), cancelAction: #selector(cancelAction), datePickerMode: .date)
+        self.ageTextField.addInputViewDatePicker(target: self, selector: #selector(doneAction), fromNowDate: false)
         hideKeyboardWhenTappedAround() // Hide keyboard
         
         self.addKeyboardobserversOnScreen() // add key board observers
@@ -316,7 +316,6 @@ class UpdateBasicProfileInfoVC: UIViewController {
         // Code for stop activity indicator view
         CommonFxns.dismissProgress()
     }
-    
 
 }
 
@@ -330,13 +329,6 @@ extension UpdateBasicProfileInfoVC: UIImagePickerControllerDelegate, UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
-//        dismiss(animated: true, completion: nil)
-//        guard let movieUrl = info[.mediaURL] as? URL else { return }
-//
-//        print("movieUrl....", movieUrl)
-//        self.uploadVideo(videoUrl: movieUrl)
-//
-//
         picker.dismiss(animated: true, completion: nil)
 
         guard let image = info[.editedImage] as? UIImage else { return }

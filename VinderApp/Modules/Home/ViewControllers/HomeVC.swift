@@ -9,12 +9,13 @@ import UIKit
 import Koloda
 import SDWebImage
 
+var arrayOfUsers = [User]()
 class HomeVC: UIViewController {
-
+    
     @IBOutlet weak var cardView: KolodaView!
     @IBOutlet weak var viewContainerForButtons: UIView!
     
-    var arrayOfUsers = [User]()
+    
     let viewModel = UserViewModel(userType: .allUsers)
     
     override func viewDidLoad() {
@@ -41,7 +42,7 @@ class HomeVC: UIViewController {
     }
     
     func updateDataSource() {
-        self.arrayOfUsers = viewModel.userList.data ?? []
+        arrayOfUsers = viewModel.userList.data ?? []
         viewContainerForButtons.isHidden = false
         cardView.reloadData()
     }

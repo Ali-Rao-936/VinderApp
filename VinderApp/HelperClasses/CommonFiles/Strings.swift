@@ -114,3 +114,21 @@ enum enumForAppSettingsHeaderTitles: String{
     case languages = "Languages"
     case security = "Security"
 }
+
+enum UserType {
+    case allUsers
+    case nearUsers
+    case myMatchUsers
+    case likedUser
+    case userDetail
+}
+
+enum EventType {
+    case allEvents
+    case hotEvents
+    case upcoming
+    case past
+    case eventDetail
+    case joinEvent
+    case acceptedEvent
+}
