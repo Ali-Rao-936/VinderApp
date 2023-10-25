@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
+class EventsVC: UIViewController {
 
     // MARK: - Outlets & Properties
     
@@ -50,13 +50,6 @@ class EventsVC: UIViewController, EventsVCTableViewHeaderProtocol {
     
     @IBAction func segmentControlValuechanged(_ sender: UISegmentedControl) {
         self.updateView(tag: sender.selectedSegmentIndex)
-    }
-    
-    // Actions
-    func createEventBtnSelected(header: EventsVCTableViewHeader) {
-        print("create Event....")
-        let otherVCObj = CreateEventVC(nibName: enumViewControllerIdentifier.createEventVC.rawValue, bundle: nil)
-        self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     
     func joinBtnSleceted(cell: ExploreEventsTableViewCell) {

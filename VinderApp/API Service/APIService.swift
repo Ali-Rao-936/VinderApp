@@ -24,7 +24,9 @@ struct Media {
         self.key = key
         self.mimeType = "image/jpeg"
         self.filename = "imagefile.jpg"
-        guard let data = image.jpegData(compressionQuality: 0.7) else { return nil }
+        guard let data = image.jpegData(compressionQuality: 0.5) else { return nil }
+        var imageSize: Int = data.count
+        print("actual size of image in KB: %f ", Double(imageSize) / 1000.0)
         self.data = data
     }
 }
@@ -70,11 +72,17 @@ class APIService: NSObject {
         let boundary = generateBoundary()
         //set content type
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        let token = "60|qhBeilhnNC15e19dG1TkdJIxxyXmEpEK48NZhHZEa927cd04"
+        
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         //call createDataBody method
+        print(parameters, mediaImage, boundary)
         let dataBody = createDataBody(withParameters: parameters, media: [mediaImage], boundary: boundary)
         request.httpBody = dataBody
         
         session.dataTask(with: request) { (data, response, error) in
+            print(data, response, error)
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
                 return
@@ -86,16 +94,25 @@ class APIService: NSObject {
         }.resume()
     }
 }
+
 func createDataBody(withParameters params: Parameters?, media: [Media]?, boundary: String) -> Data {
     let lineBreak = "\r\n"
     var body = Data()
     if let parameters = params {
+        
         for (key, value) in parameters {
             body.append("--\(boundary + lineBreak)")
-            body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
-            
-         //   if value 
-            body.append("\(value as! String + lineBreak)")
+            body.append("Content-Disposition: form-data; name=\" \(key)\"\(lineBreak + lineBreak)")
+            body.append("\(value as AnyObject)\(lineBreak)")
+//            if value is NSArray {
+//                if let array = value as? [Any] {
+//                    for value in array {
+//                        body.append("\(value)\(lineBreak)")
+//                    }
+//                }
+//            }else {
+//                body.append("\(value)\(lineBreak)")
+//            }
         }
     }
     if let media = media {

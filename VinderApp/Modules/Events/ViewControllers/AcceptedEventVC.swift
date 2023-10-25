@@ -53,7 +53,7 @@ extension AcceptedEventVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
         let dict = self.eventArray[indexPath.row]
-        allEventsCell.joinBtn.isHidden = true
+        allEventsCell.viewBtn.isHidden = true
         allEventsCell.eventNameLbl.text = dict.name?.capitalized
         allEventsCell.eventCreatedByUserLbl.text = String(dict.userId ?? zero)
         allEventsCell.noOfPeopleJoinedLbl.text = "\(dict.peopleJoinedCount ?? 0) People joined"
@@ -71,10 +71,10 @@ extension AcceptedEventVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let otherVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
-    //    otherVCObj.eventType = EventType.joinEvent.rawValue
-        otherVCObj.selectedEventId = self.eventArray[indexPath.row].eventId ?? 0
-        self.navigationController?.pushViewController(otherVCObj, animated: true)
+        let eventDetailVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
+        eventDetailVCObj.eventType = .acceptedEvent
+        eventDetailVCObj.selectedEventId = self.eventArray[indexPath.row].eventId ?? 0
+        self.navigationController?.pushViewController(eventDetailVCObj, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

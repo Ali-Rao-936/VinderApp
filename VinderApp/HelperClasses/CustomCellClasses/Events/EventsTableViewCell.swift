@@ -7,15 +7,11 @@
 
 import UIKit
 
-protocol EventsTableViewCellProtocol {
-    func joinBtnSelected(cell: EventsTableViewCell)
-}
-
 class EventsTableViewCell: UITableViewCell {
     
     // MARK: - Outlets & Properties
     
-    @IBOutlet weak var joinBtn: UIButton!
+    @IBOutlet weak var viewBtn: UIButton!
     @IBOutlet weak var eventImgView: UIImageView!
     @IBOutlet weak var eventNameLbl: UILabel!
     @IBOutlet weak var eventCreatedByUserLbl: UILabel!
@@ -26,10 +22,8 @@ class EventsTableViewCell: UITableViewCell {
     static func nib() -> UINib{
         return UINib(nibName: "EventsTableViewCell", bundle: nil)
     }
-    var delegate: EventsTableViewCellProtocol?
 
     // MARK: - Methods
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,11 +34,5 @@ class EventsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    // MARK: - Button Actions
-    
-    @IBAction func joinBtnSelected(_ sender: Any) {
-        self.delegate?.joinBtnSelected(cell: self)
-    }
-    
+  
 }

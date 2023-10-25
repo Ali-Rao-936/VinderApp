@@ -130,5 +130,6 @@ enum EventType {
     case past
     case eventDetail
     case joinEvent
+    case inviteEvent
     case acceptedEvent
 }

@@ -103,8 +103,8 @@ class CreateEventVC: UIViewController {
     }
     
     func updateUser() {
-        var message = eventViewModel?.eventDetail.messages?.first
-        if eventViewModel?.eventDetail.code == 200 {
+        var message = eventViewModel?.eventDetail?.messages?.first
+        if eventViewModel?.eventDetail?.code == 200 {
             successView.isHidden = false
         }
         print("The create Event--> \(message ?? "FAILURE")")
@@ -169,6 +169,7 @@ class CreateEventVC: UIViewController {
     
     @IBAction func inviteFriendBtnAction(_ sender: Any) {
         let inviteFriendVCObj = InviteFriendsVC(nibName: enumViewControllerIdentifier.inviteFriendsVC.rawValue, bundle: nil)
+        inviteFriendVCObj.isInvitationWhileCreatingEvent = true
         invitedFriendList.removeAll()
         inviteFriendVCObj.callBack = getInvitedFriendList
         self.present(inviteFriendVCObj, animated: true)
@@ -204,6 +205,8 @@ class CreateEventVC: UIViewController {
             for index in 0..<invitedFriendList.count {
                 invitedFriendListIDArray.append(invitedFriendList[index].id ?? 0)
             }
+        }else {
+            invitedFriendListIDArray = []
         }
         
         eventRequest = 

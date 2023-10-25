@@ -39,7 +39,7 @@
                     </connections>
                 </segmentedControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-wE-P3U">
-                    <rect key="frame" x="10" y="103" width="394" height="759"/>
+                    <rect key="frame" x="0.0" y="103" width="404" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vij-2h-SFm">
                         <size key="itemSize" width="128" height="128"/>
@@ -57,7 +57,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Ttb-wE-P3U" firstAttribute="top" secondItem="70r-zt-cmA" secondAttribute="bottom" constant="10" id="RMg-xn-QT0"/>
-                <constraint firstItem="Ttb-wE-P3U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="TTt-fe-qfe"/>
+                <constraint firstItem="Ttb-wE-P3U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TTt-fe-qfe"/>
                 <constraint firstItem="70r-zt-cmA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZcY-vS-1c9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="70r-zt-cmA" secondAttribute="trailing" id="acj-4t-BIl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ttb-wE-P3U" secondAttribute="trailing" constant="10" id="lbK-bO-ppu"/>

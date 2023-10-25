@@ -30,10 +30,10 @@ class EventViewModel {
     init(eventType: EventType, eventID: Int? = 0) {
         switch eventType {
         case .allEvents:
-            url = APIURL.EventList
+            url = APIURL.EventList + "?skip_my_joined_event=true&pagination=false"
             callFuncToGetEvents()
         case .hotEvents:
-            url = APIURL.EventList
+            url = APIURL.HotEventList + "?skip_my_joined_event=true&pagination=false"
             callFuncToGetEvents()
         case .upcoming:
             url = APIURL.UpcomingEventList
@@ -47,6 +47,9 @@ class EventViewModel {
         case .joinEvent:
             url = APIURL.JoinEvent
             callFuncToPostJoinEvent(eventID: eventID ?? 0)
+        case .inviteEvent:
+            url = APIURL.InviteEvent
+            callFuncToGetEvents()
         case .acceptedEvent:
             url = APIURL.AcceptedEventList + "?per_page=100"
             callFuncToGetEvents()
@@ -54,7 +57,7 @@ class EventViewModel {
     }
     
     init(eventRequest: Event, eventImage: UIImage) {
-        callFuncToCreateEvent(eventRequest: eventRequest, eventImage: eventImage)
+       callFuncToCreateEvent(eventRequest: eventRequest, eventImage: eventImage)
     }
     
     // uploadImageToServer
@@ -80,7 +83,7 @@ class EventViewModel {
                 CommonFxns.dismissProgress()
                 switch result {
                 case .success(let result): self.eventDetail = result.response
-                    //   print("RESPONSE---> \(String(describing: self.userList))")
+                       print("Event detail RESPONSE---> \(String(describing: self.eventDetail))")
                 case .failure(let error): print(error.localizedDescription)
                 }
             }
@@ -104,13 +107,14 @@ class EventViewModel {
     }
     
     func callFuncToCreateEvent(eventRequest: Event, eventImage: UIImage) {
-        self.apiService.uploadImageToServer(url: APIURL.CreateEvent, parameters: eventRequest.dictionary, image: ["photo" : eventImage]) { (result: Result<EventDetailModel,Error>) in
+        self.apiService.uploadImageToServer(url: APIURL.CreateEvent, parameters: eventRequest.dictionary, image: ["banner" : eventImage]) { (result: Result<EventDetailModel,Error>) in
             
             DispatchQueue.main.async {
                 CommonFxns.dismissProgress()
                 switch result {
                 case .success(let result): self.eventDetail = result.response
-                       print("RESPONSE---> \(String(describing: self.eventDetail))")
+                     //  print("RESPONSE---> \(String(describing: self.eventDetail))")
+                    print("RESPONSE ERROR---> \(String(describing: result.error))")
                 case .failure(let error): print(error.localizedDescription)
                 }
             }

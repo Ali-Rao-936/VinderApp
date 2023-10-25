@@ -17,12 +17,13 @@ class InviteFriendsVC: UIViewController {
     var pastEventsList = [Event]()
     var events = [Event]()
     
-    let viewModel = UserViewModel(userType: .allUsers)
-   // var arrayOfUsers = [User]()
+    var viewModel: EventViewModel!
+    // var arrayOfUsers = [User]()
     var firstTime = true
     var arrayOfSelectedIndex: [IndexPath] = []
     var callBack: ((_ selectedIndex: [IndexPath])-> Void)?
-   
+    var isInvitationWhileCreatingEvent: Bool = false
+    
     // MARK: - View life cycle
     
     override func viewDidLoad() {
@@ -33,24 +34,48 @@ class InviteFriendsVC: UIViewController {
     // MARK: - Methods
     func initialSetup(){
         // Register tableView cells
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.friendListTableView.register(FriendListTableViewCell.nib(), forCellReuseIdentifier: FriendListTableViewCell.identifier)
         friendListTableView.reloadData()
     }
-   
+    
+    func callToViewModelForUIUpdate() {
+        viewModel = EventViewModel(eventType: .inviteEvent)
+        viewModel?.bindViewModelToController = { [self] in
+            let message = viewModel?.eventList.messages?.first ?? ""
+            CommonFxns.showAlert(self, message: message, title: "")
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func updateDataSource() {
+        if viewModel.eventList.code == 200 {
+            
+        }
+    }
     
     // MARK: - Button Actions
     @IBAction func backBtnAction(_ sender: Any) {
+        if self.presentingViewController != nil {
+            self.dismiss(animated: true)
+        }else {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         callBack?(arrayOfSelectedIndex)
-        self.dismiss(animated: true)
     }
     
     @IBAction func inviteBtnAction(_ sender: Any) {
-       // self.navigationController?.popViewController(animated: true)
+        // self.navigationController?.popViewController(animated: true)
+        callToViewModelForUIUpdate()
     }
 }
 
 extension InviteFriendsVC: UITableViewDataSource, UITableViewDelegate {
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfUsers.count
     }
@@ -84,11 +109,11 @@ extension InviteFriendsVC: UITableViewDataSource, UITableViewDelegate {
             cell?.selectedView.isHidden = true
         }else {
             arrayOfSelectedIndex.append(indexPath)
-           
+            
             cell?.selectedView.isHidden = false
         }
         
-        if arrayOfSelectedIndex.isEmpty {
+        if arrayOfSelectedIndex.isEmpty || isInvitationWhileCreatingEvent {
             inviteButton.isHidden = true
         }else {
             inviteButton.isHidden = false

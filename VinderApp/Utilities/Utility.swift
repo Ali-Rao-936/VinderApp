@@ -19,13 +19,14 @@ struct APIURL {
     static let MatchUsersList = BaseURL + "user/mymatch/list"
     static let NearUsersList = BaseURL + "listuser"
     static let EventList = BaseURL + "event/list"
+    static let HotEventList = BaseURL + "events/hot"
     static let UpcomingEventList = BaseURL + "events/upcoming"
     static let PastEventList = BaseURL + "events/past"
     static let JoinEvent = BaseURL + "user/events/join"
     static let AcceptedEventList = BaseURL + "user/event/attending/list"
     static let SportsInterestList = BaseURL + "user/sports/interest/list"
-    static let CreateEvent = "user/events/add"
-//    static let BannerList = BannerBaseURL + "api/v1/banner/com.tennis.sports"
+    static let CreateEvent = BaseURL + "user/events/add"
+    static let InviteEvent = BaseURL + "user/events/invite"
 }
 
 class Utility {

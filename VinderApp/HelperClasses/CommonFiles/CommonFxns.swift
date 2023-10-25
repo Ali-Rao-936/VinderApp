@@ -87,7 +87,7 @@ class CommonFxns: NSObject {
     }
     
     // Public method to fetch header for API calls
-    class func getAuthenticationToken() -> [String: String]{
+    class func getAuthenticationToken() -> [String: String] {
        //     let token  = userDefault.value(forKey: USER_DEFAULT_token_Key) as? String ?? emptyStr
         let token = "60|qhBeilhnNC15e19dG1TkdJIxxyXmEpEK48NZhHZEa927cd04"
         let headers = [

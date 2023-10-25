@@ -37,7 +37,8 @@ class EventDetailsVC: UIViewController {
     var eventType: EventType?
     var isAttendingEvent = false
     var event: Event?
-    
+    var callBack : (()-> Void)?
+   
     // MARK: - View life cycle
 
     override func viewDidLoad() {
@@ -87,10 +88,13 @@ class EventDetailsVC: UIViewController {
         }
    
      //   self.isAttendingEvent = event.attending ?? false
-        if self.eventType == .upcoming {
+        if self.eventType == .upcoming { //User created Upcoming match, so no option of JOIN, only he can invite others
             self.joinEventBtn.isHidden = true
             self.inviteBtn.isHidden = false
-        }else{ // past, hot and All event
+        }else if self.eventType == .past || self.eventType == .acceptedEvent {
+            self.joinEventBtn.isHidden = true
+            self.inviteBtn.isHidden = true
+        }else { // hot and All event
             self.joinEventBtn.isHidden = false
             self.inviteBtn.isHidden = true
         }
@@ -144,9 +148,10 @@ class EventDetailsVC: UIViewController {
         CommonFxns.showProgress()
         
         viewModel = EventViewModel(eventType: .joinEvent, eventID: selectedEventId)
-        viewModel?.bindViewModelToController = {
-            let message = self.viewModel?.eventDetail.messages?.first ?? "Success"
+        viewModel?.bindViewModelToController = { [self] in
+            let message = viewModel?.eventDetail.messages?.first ?? "Success"
             CommonFxns.showAlert(self, message: message, title: "")
+            callBack?()
         }
         self.navigationController?.popViewController(animated: true)
         

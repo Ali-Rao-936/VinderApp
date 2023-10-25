@@ -31,10 +31,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWB-Fp-gKO" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                        <rect key="frame" x="5" y="5" width="404" height="224"/>
+                        <rect key="frame" x="17" y="5" width="390" height="224"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultEventImg" translatesAutoresizingMaskIntoConstraints="NO" id="MMy-JS-4Nt" customClass="UIImageViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="404" height="138"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="CuN-3d-8MA"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omx-jD-Spo">
-                                <rect key="frame" x="0.0" y="127" width="404" height="12"/>
+                                <rect key="frame" x="0.0" y="127" width="390" height="12"/>
                                 <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="6LV-Bc-dUp"/>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH2-yX-Hz2">
-                                <rect key="frame" x="8" y="154" width="388" height="19.333333333333343"/>
+                                <rect key="frame" x="8" y="154" width="374" height="19.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -114,37 +114,12 @@
                                 <color key="textColor" name="disableBtnColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roz-rF-wnD" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                <rect key="frame" x="331" y="153" width="60" height="30"/>
-                                <color key="backgroundColor" name="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="uv9-ni-Csd"/>
-                                    <constraint firstAttribute="height" constant="30" id="xGG-Pa-WNi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="12"/>
-                                <color key="tintColor" name="primaryColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="View" image="forwardArrowIcon">
-                                    <color key="titleColor" name="primaryColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="primaryColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="viewBtnSelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="9yc-mn-Qr7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-3A-Hj1" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                <rect key="frame" x="331" y="153" width="60" height="30"/>
+                                <rect key="frame" x="317" y="153" width="60" height="30"/>
                                 <color key="backgroundColor" name="headingColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KaT-vp-Bet"/>
                                     <constraint firstAttribute="width" constant="60" id="SqG-Ki-gpC"/>
@@ -152,7 +127,7 @@
                                 <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="12"/>
                                 <color key="tintColor" name="whiteColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Join" image="forwardArrowIcon">
+                                <state key="normal" title="View" image="forwardArrowIcon">
                                     <color key="titleColor" name="whiteColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -160,9 +135,6 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="joinBtnSelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dT3-dS-Vm3"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRb-3e-A9Z">
                                 <rect key="frame" x="7.9999999999999982" y="184.33333333333334" width="16.333333333333329" height="17"/>
@@ -193,7 +165,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLR-nC-OM4">
-                                <rect key="frame" x="334" y="0.0" width="70" height="50"/>
+                                <rect key="frame" x="320" y="0.0" width="70" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hot" translatesAutoresizingMaskIntoConstraints="NO" id="7qT-Xb-O1F">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
@@ -224,10 +196,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-mN-KOQ" customClass="UIViewCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="404" height="224"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="224"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itu-v5-qe9" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="224"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="224"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="whiteColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="26"/>
@@ -251,16 +223,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="roz-rF-wnD" firstAttribute="trailing" secondItem="Obe-3A-Hj1" secondAttribute="trailing" id="0fE-rx-Do3"/>
                             <constraint firstItem="Omx-jD-Spo" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" id="1K7-Y0-SnB"/>
                             <constraint firstAttribute="trailing" secondItem="GLR-nC-OM4" secondAttribute="trailing" id="7Pi-kV-pUt"/>
                             <constraint firstItem="6wa-kf-5Ly" firstAttribute="centerY" secondItem="Xm3-mY-CV6" secondAttribute="centerY" id="7u7-xI-Xtb"/>
                             <constraint firstItem="i0R-mN-KOQ" firstAttribute="top" secondItem="UWB-Fp-gKO" secondAttribute="top" id="Buv-Sb-Iph"/>
                             <constraint firstItem="Obe-3A-Hj1" firstAttribute="top" secondItem="MMy-JS-4Nt" secondAttribute="bottom" constant="15" id="DR5-wB-2Ze"/>
-                            <constraint firstItem="roz-rF-wnD" firstAttribute="top" secondItem="Obe-3A-Hj1" secondAttribute="top" id="G9w-Wx-M0y"/>
                             <constraint firstItem="MMy-JS-4Nt" firstAttribute="top" secondItem="UWB-Fp-gKO" secondAttribute="top" id="JnT-wQ-AXL"/>
                             <constraint firstItem="43y-IU-FH6" firstAttribute="leading" secondItem="LhD-5D-xmn" secondAttribute="leading" constant="15" id="OMR-qf-kOX"/>
-                            <constraint firstItem="roz-rF-wnD" firstAttribute="leading" secondItem="Obe-3A-Hj1" secondAttribute="leading" id="Qm1-vN-Xtx"/>
                             <constraint firstItem="MMy-JS-4Nt" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" id="R32-H2-0cO"/>
                             <constraint firstItem="Ccm-ih-Fps" firstAttribute="top" secondItem="xH2-yX-Hz2" secondAttribute="bottom" constant="8" id="UYU-Gu-xDQ"/>
                             <constraint firstItem="awv-Zb-jfT" firstAttribute="top" secondItem="UWB-Fp-gKO" secondAttribute="top" constant="10" id="VDL-Q6-p5I"/>
@@ -279,7 +248,6 @@
                             <constraint firstItem="i0R-mN-KOQ" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" id="liy-F5-QCc"/>
                             <constraint firstAttribute="bottom" secondItem="i0R-mN-KOQ" secondAttribute="bottom" id="nq7-7P-KXQ"/>
                             <constraint firstAttribute="trailing" secondItem="Omx-jD-Spo" secondAttribute="trailing" id="o7X-w9-EbW"/>
-                            <constraint firstItem="roz-rF-wnD" firstAttribute="bottom" secondItem="Obe-3A-Hj1" secondAttribute="bottom" id="osr-TN-kKF"/>
                             <constraint firstItem="xH2-yX-Hz2" firstAttribute="leading" secondItem="UWB-Fp-gKO" secondAttribute="leading" constant="8" id="pJK-pi-Knx"/>
                             <constraint firstItem="GLR-nC-OM4" firstAttribute="top" secondItem="UWB-Fp-gKO" secondAttribute="top" id="q4S-hV-cfN"/>
                             <constraint firstAttribute="trailing" secondItem="i0R-mN-KOQ" secondAttribute="trailing" id="rcO-ID-HD8"/>
@@ -309,9 +277,9 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="UWB-Fp-gKO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="7kS-0l-BXm"/>
+                <constraint firstItem="UWB-Fp-gKO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="17" id="7kS-0l-BXm"/>
                 <constraint firstAttribute="bottom" secondItem="UWB-Fp-gKO" secondAttribute="bottom" constant="5" id="Ugz-XW-5br"/>
-                <constraint firstAttribute="trailing" secondItem="UWB-Fp-gKO" secondAttribute="trailing" constant="5" id="k9i-Hd-GuF"/>
+                <constraint firstAttribute="trailing" secondItem="UWB-Fp-gKO" secondAttribute="trailing" constant="7" id="k9i-Hd-GuF"/>
                 <constraint firstItem="UWB-Fp-gKO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="q2u-tX-Acj"/>
             </constraints>
             <size key="customSize" width="414" height="234"/>
@@ -322,9 +290,8 @@
                 <outlet property="eventImgView" destination="MMy-JS-4Nt" id="rHa-Cf-UrT"/>
                 <outlet property="eventNameLbl" destination="xH2-yX-Hz2" id="TF9-vH-WWy"/>
                 <outlet property="hotEventView" destination="GLR-nC-OM4" id="g9H-MR-CFB"/>
-                <outlet property="joinBtn" destination="Obe-3A-Hj1" id="N9t-NM-T1I"/>
                 <outlet property="noOfPeopleJoinedLbl" destination="6wa-kf-5Ly" id="XPX-1m-l1u"/>
-                <outlet property="viewBtn" destination="roz-rF-wnD" id="EGO-tF-bZ0"/>
+                <outlet property="viewBtn" destination="Obe-3A-Hj1" id="n0m-ju-MCE"/>
             </connections>
             <point key="canvasLocation" x="395.41984732824426" y="59.859154929577471"/>
         </collectionViewCell>
@@ -343,16 +310,13 @@
             <size key="intrinsicContentSize" width="340" height="200"/>
         </designable>
         <designable name="Obe-3A-Hj1">
-            <size key="intrinsicContentSize" width="45" height="24"/>
+            <size key="intrinsicContentSize" width="51" height="24"/>
         </designable>
         <designable name="awv-Zb-jfT">
             <size key="intrinsicContentSize" width="22.666666666666668" height="23.333333333333332"/>
         </designable>
         <designable name="itu-v5-qe9">
             <size key="intrinsicContentSize" width="65.666666666666671" height="31"/>
-        </designable>
-        <designable name="roz-rF-wnD">
-            <size key="intrinsicContentSize" width="51" height="24"/>
         </designable>
     </designables>
     <resources>
@@ -365,9 +329,6 @@
         </namedColor>
         <namedColor name="headingColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryColor">
-            <color red="0.18799999356269836" green="0.54900002479553223" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="whiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

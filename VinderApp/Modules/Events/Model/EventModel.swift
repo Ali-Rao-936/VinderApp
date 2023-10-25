@@ -61,11 +61,13 @@ struct EventListModel: Codable {
 struct EventList: Codable {
     let messages: [String]?
     let data: [Event]?
+    let code: Int?
 }
 
 // MARK: - Event Detail
 struct EventDetailModel: Codable {
     let response: EventDetail?
+    let error: ErrorResponse?
 }
 
 struct EventDetail: Codable {
@@ -74,6 +76,24 @@ struct EventDetail: Codable {
     let code: Int?
 }
 
+struct ErrorResponse: Codable {
+    let code: Int?
+    let messages: [String]?
+}
+
+//"error": {
+//        "code": 406,
+//        "messages": [
+//            "Name required",
+//            "validation.required",
+//            "validation.required",
+//            "The is paid is required and must be 0,1",
+//            "The address is required with max length of of 255",
+//            "The latitude is required",
+//            "The longitude is required",
+//            "The interest id is required"
+//        ]
+//    }
 struct Event: Codable {
     var eventId, userId, locationId: Int?
     var address, date, time: String?

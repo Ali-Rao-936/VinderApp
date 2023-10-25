@@ -25,27 +25,7 @@ class MyEventsVC: UIViewController {
     var firstTime = true
     var eventType: EventType?
     fileprivate let addEventButton = JJFloatingActionButton()
-    
-    //    lazy var refreshControl: UIRefreshControl = {
-//            let refreshControl = UIRefreshControl()
-//            refreshControl.addTarget(self, action:
-//                         #selector(MyEventsVC.handleRefresh(_:)),
-//                                     for: UIControl.Event.valueChanged)
-//            refreshControl.tintColor = UIColor.red
-//            
-//            return refreshControl
-//        }()
-    
-  
-//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-//
-//        if segmentControl.selectedSegmentIndex == 0{
-//            self.getEventsList(subUrl: enumForAPIsEndPoints.upcomingEvents.rawValue, upcomingEvent: true)
-//        }else{
-//            self.getEventsList(subUrl: enumForAPIsEndPoints.pastEvents.rawValue, upcomingEvent: true)
-//        }
-//    }
-    
+
     // MARK: - View life cycle
 
     override func viewDidLoad() {
@@ -58,7 +38,7 @@ class MyEventsVC: UIViewController {
    
     //MARK:- View setup
     func callToViewModelForUIUpdate() {
-       
+            eventType = .upcoming
             upcomingEventViewModel = EventViewModel(eventType: .upcoming)
             pastEventViewModel = EventViewModel(eventType: .past)
             
@@ -94,12 +74,18 @@ class MyEventsVC: UIViewController {
             let otherVCObj = AcceptedEventVC(nibName: enumViewControllerIdentifier.acceptedEventVC.rawValue, bundle: nil)
             self.navigationController?.pushViewController(otherVCObj, animated: true)
         }
-
-//        addEventButton.addItem(title: "Balloon", image: #imageLiteral(resourceName: "Baloon")) { item in
-//           
-//        }
-
         addEventButton.display(inViewController: self)
+    }
+    
+    func showEventDetails(eventType: EventType, index: Int) {
+        let eventDetailVCObj = EventDetailsVC(nibName: enumViewControllerIdentifier.eventDetailsVC.rawValue, bundle: nil)
+        eventDetailVCObj.eventType = eventType
+        if eventType == .upcoming {
+            eventDetailVCObj.selectedEventId = self.upcomingEventsList[index].eventId ?? 0
+        }else { // Past Events
+            eventDetailVCObj.selectedEventId = self.pastEventsList[index].eventId ?? 0
+        }
+        self.navigationController?.pushViewController(eventDetailVCObj, animated: true)
     }
     
     // MARK: - Button Actions
@@ -109,7 +95,7 @@ class MyEventsVC: UIViewController {
 //    }
 //    
     @IBAction func segmentControlValueChanged(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
+        if sender.selectedSegmentIndex == 0 {
             self.events = self.upcomingEventsList
             eventType = .upcoming
         }else{
@@ -185,26 +171,27 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
             return cell
         }
 
-        listCell.joinBtn.isHidden = true
-        listCell.viewBtn.isHidden = false
-        
         let dict = self.events[indexPath.row]
         
         listCell.eventNameLbl.text = dict.name
         listCell.eventCreatedByUserLbl.text = String(dict.userId ?? zero)
         
         listCell.hotEventView.isHidden = true
-        if segmentControl.selectedSegmentIndex == 0{
+      
+        if segmentControl.selectedSegmentIndex == 0 { // Upcoming
             listCell.completedEventView.isHidden = true
-        }else{
+        }else { // Past
             listCell.completedEventView.isHidden = false
         }
+        
         listCell.noOfPeopleJoinedLbl.text = "\(dict.peopleJoinedCount ?? 0) People joined"
         listCell.eventCreatedByUserLbl.text = dict.creator?.name ?? emptyStr
         // 2023-10-26
         let date = CommonFxns.changeDateToFormat(date: dict.date ?? emptyStr, format: "dd MMM", currentFormat: "yyyy-mm-dd")
         print(date)
         listCell.dateTimeLbl.text = "\(date), \(dict.time ?? emptyStr)"
+        listCell.viewBtn.tag = indexPath.row
+        listCell.viewBtn.addTarget(self, action:#selector(viewEvent(sender:)) , for: .touchUpInside)
         
         let imgrUrl = dict.bannerImage?.image ?? emptyStr
         listCell.eventImgView.sd_setImage(with: URL(string: imgrUrl), placeholderImage:UIImage(named: "defaultEventImg"), options: .allowInvalidSSLCertificates, completed: nil)
@@ -228,4 +215,12 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     
+    @objc func viewEvent(sender: UIButton) {
+        if segmentControl.selectedSegmentIndex == 0 { //Upcoming
+            showEventDetails(eventType: .upcoming, index: sender.tag)
+        }else { //Past
+            showEventDetails(eventType: .past, index: sender.tag)
+        }
+        
+    }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ExploreEventsTableViewCellProtocol {
-    func joinBtnSleceted(cell: ExploreEventsTableViewCell, row: Int)
+    func viewEventSleceted(eventType: EventType, row: Int)
 }
 
 class ExploreEventsTableViewCell: UITableViewCell {
@@ -71,7 +71,7 @@ extension ExploreEventsTableViewCell: UICollectionViewDelegate, UICollectionView
         guard let listCell = self.hotEventsCollectionView.dequeueReusableCell(withReuseIdentifier: EventsCollectionViewCell.identifier, for: indexPath) as? EventsCollectionViewCell else{
             return cell
         }
-        listCell.joinBtn.tag = indexPath.row
+        listCell.viewBtn.tag = indexPath.row
         listCell.completedEventView.isHidden = true
         listCell.hotEventView.isHidden = false
         let dict = self.eventsList[indexPath.row]
@@ -79,6 +79,8 @@ extension ExploreEventsTableViewCell: UICollectionViewDelegate, UICollectionView
         listCell.eventCreatedByUserLbl.text = String(dict.userId ?? zero)
         listCell.noOfPeopleJoinedLbl.text = "\(dict.peopleJoinedCount ?? 0) People joined"
         listCell.eventCreatedByUserLbl.text = dict.creator?.name ?? emptyStr
+        listCell.viewBtn.tag = indexPath.row
+        listCell.viewBtn.addTarget(self, action:#selector(viewEvent(sender:)) , for: .touchUpInside)
         // 2023-10-26
         let date = CommonFxns.changeDateToFormat(date: dict.date ?? emptyStr, format: "dd MMM", currentFormat: "yyyy-mm-dd")
         print(date)
@@ -96,9 +98,11 @@ extension ExploreEventsTableViewCell: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         print("didSelectItemAt")
-        self.delegate?.joinBtnSleceted(cell: self, row: indexPath.row)
+        self.delegate?.viewEventSleceted(eventType: .hotEvents, row: indexPath.row)
     }
     
+    @objc func viewEvent(sender: UIButton) {
+        self.delegate?.viewEventSleceted(eventType: .hotEvents, row: sender.tag)
+    }
 }

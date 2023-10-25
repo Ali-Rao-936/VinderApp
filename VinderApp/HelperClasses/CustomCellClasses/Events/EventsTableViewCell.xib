@@ -109,7 +109,7 @@
                                 <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="12"/>
                                 <color key="tintColor" name="whiteColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Join" image="forwardArrowIcon">
+                                <state key="normal" title="View" image="forwardArrowIcon">
                                     <color key="titleColor" name="whiteColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -117,9 +117,6 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="joinBtnSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JP1-WI-WYn"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5I8-4l-z19">
                                 <rect key="frame" x="115" y="30" width="15.333333333333343" height="17"/>
@@ -205,8 +202,8 @@
                 <outlet property="eventCreatedByUserLbl" destination="Nu1-fk-NL7" id="1Eo-At-dbA"/>
                 <outlet property="eventImgView" destination="QcN-eo-QMe" id="m6L-U1-Rdd"/>
                 <outlet property="eventNameLbl" destination="DFt-ka-YTH" id="zJ1-gy-LA2"/>
-                <outlet property="joinBtn" destination="TnF-iu-fmj" id="hna-6h-B7w"/>
                 <outlet property="noOfPeopleJoinedLbl" destination="EN7-uj-a8u" id="AVk-Hu-sSW"/>
+                <outlet property="viewBtn" destination="TnF-iu-fmj" id="nB4-dc-myi"/>
             </connections>
             <point key="canvasLocation" x="246.56488549618319" y="-22.183098591549296"/>
         </tableViewCell>
@@ -216,7 +213,7 @@
             <size key="intrinsicContentSize" width="340" height="200"/>
         </designable>
         <designable name="TnF-iu-fmj">
-            <size key="intrinsicContentSize" width="45" height="24"/>
+            <size key="intrinsicContentSize" width="51" height="24"/>
         </designable>
         <designable name="eez-B3-G1P">
             <size key="intrinsicContentSize" width="64" height="64"/>
