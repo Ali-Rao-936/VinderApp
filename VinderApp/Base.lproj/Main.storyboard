@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5qO-bw-oiN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5qO-bw-oiN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -2087,7 +2087,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="105.33333333333333" height="19.333333333333332"/>
         </designable>
         <designable name="3Da-1Z-qpv">
-            <size key="intrinsicContentSize" width="78.666666666666671" height="21"/>
+            <size key="intrinsicContentSize" width="38.666666666666664" height="21"/>
         </designable>
         <designable name="4YM-yp-ySp">
             <size key="intrinsicContentSize" width="134" height="34"/>
@@ -2102,7 +2102,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="68.333333333333329" height="19.333333333333332"/>
         </designable>
         <designable name="7bp-6k-c8o">
-            <size key="intrinsicContentSize" width="78.666666666666671" height="21"/>
+            <size key="intrinsicContentSize" width="38.666666666666664" height="21"/>
         </designable>
         <designable name="7nK-it-u5k">
             <size key="intrinsicContentSize" width="185" height="34"/>
@@ -2111,10 +2111,10 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="269.33333333333331" height="41"/>
         </designable>
         <designable name="9il-sd-q2n">
-            <size key="intrinsicContentSize" width="70" height="21"/>
+            <size key="intrinsicContentSize" width="50" height="21"/>
         </designable>
         <designable name="AFG-GE-Q1I">
-            <size key="intrinsicContentSize" width="78.666666666666671" height="21"/>
+            <size key="intrinsicContentSize" width="38.666666666666664" height="21"/>
         </designable>
         <designable name="BJj-T3-7vc">
             <size key="intrinsicContentSize" width="375" height="180"/>
@@ -2123,7 +2123,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="19.333333333333332" height="19.333333333333332"/>
         </designable>
         <designable name="BhL-Ix-asv">
-            <size key="intrinsicContentSize" width="70" height="21"/>
+            <size key="intrinsicContentSize" width="50" height="21"/>
         </designable>
         <designable name="DvX-50-8zU">
             <size key="intrinsicContentSize" width="23.666666666666668" height="23.666666666666668"/>
@@ -2156,7 +2156,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="375" height="180"/>
         </designable>
         <designable name="NtT-mg-Frd">
-            <size key="intrinsicContentSize" width="107.33333333333333" height="21"/>
+            <size key="intrinsicContentSize" width="67.333333333333329" height="21"/>
         </designable>
         <designable name="R1M-oM-vCx">
             <size key="intrinsicContentSize" width="195" height="34"/>
@@ -2171,7 +2171,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="39.666666666666664" height="19.333333333333332"/>
         </designable>
         <designable name="Zk0-fz-6l0">
-            <size key="intrinsicContentSize" width="107.66666666666667" height="20"/>
+            <size key="intrinsicContentSize" width="67.666666666666671" height="20"/>
         </designable>
         <designable name="ai8-57-fK3">
             <size key="intrinsicContentSize" width="375" height="180"/>
@@ -2192,7 +2192,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="373" height="812"/>
         </designable>
         <designable name="g9S-f9-V16">
-            <size key="intrinsicContentSize" width="107.66666666666667" height="20"/>
+            <size key="intrinsicContentSize" width="67.666666666666671" height="20"/>
         </designable>
         <designable name="gE1-Cl-pUb">
             <size key="intrinsicContentSize" width="64" height="64"/>
@@ -2204,7 +2204,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="119" height="24"/>
         </designable>
         <designable name="jsO-C1-bqT">
-            <size key="intrinsicContentSize" width="168.33333333333334" height="20"/>
+            <size key="intrinsicContentSize" width="128.33333333333334" height="20"/>
         </designable>
         <designable name="kwb-tV-8jI">
             <size key="intrinsicContentSize" width="64" height="64"/>
@@ -2228,7 +2228,7 @@ EENvbnRpbnVlIHdpdGggRmFjZWJvb2s
             <size key="intrinsicContentSize" width="76" height="24"/>
         </designable>
         <designable name="zKT-AG-x8T">
-            <size key="intrinsicContentSize" width="145" height="21"/>
+            <size key="intrinsicContentSize" width="104.66666666666667" height="21"/>
         </designable>
     </designables>
     <color key="tintColor" name="whiteColor"/>
