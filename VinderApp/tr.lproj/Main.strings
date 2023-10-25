@@ -1,0 +1,171 @@
+
+/* Class = "UILabel"; text = "Swipe through profiles of fellow sports lovers in your area. Whether you're into basketball, soccer, tennis or hockey."; ObjectID = "0lq-su-nBI"; */
+"0lq-su-nBI.text" = "Swipe through profiles of fellow sports lovers in your area. Whether you're into basketball, soccer, tennis or hockey.";
+
+/* Class = "UIButton"; normalTitle = "Create Account  "; ObjectID = "0zb-Y8-ahH"; */
+"0zb-Y8-ahH.normalTitle" = "Create Account  ";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "18a-k8-93z"; */
+"18a-k8-93z.text" = "Sign In";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "2lG-9u-2ql"; */
+"2lG-9u-2ql.text" = "Phone Number";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "3Da-1Z-qpv"; */
+"3Da-1Z-qpv.placeholder" = "Email";
+
+/* Class = "UITabBarItem"; title = "Chats"; ObjectID = "3y0-WR-cw1"; */
+"3y0-WR-cw1.title" = "Chats";
+
+/* Class = "UIButton"; normalTitle = "Login with Email"; ObjectID = "4YM-yp-ySp"; */
+"4YM-yp-ySp.normalTitle" = "Login with Email";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "4wl-xH-k8L"; */
+"4wl-xH-k8L.text" = "Confirm Password";
+
+/* Class = "UIButton"; normalTitle = "Forgot password?"; ObjectID = "5MW-aR-dFF"; */
+"5MW-aR-dFF.normalTitle" = "Forgot password?";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "5xg-Zz-wbO"; */
+"5xg-Zz-wbO.text" = "Password";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "7bp-6k-c8o"; */
+"7bp-6k-c8o.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Continue with Google  "; ObjectID = "7nK-it-u5k"; */
+"7nK-it-u5k.normalTitle" = "Continue with Google  ";
+
+/* Class = "UILabel"; text = "Discover Matches"; ObjectID = "8SE-4J-sIq"; */
+"8SE-4J-sIq.text" = "Discover Matches";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "9il-sd-q2n"; */
+"9il-sd-q2n.placeholder" = "Search";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "AFG-GE-Q1I"; */
+"AFG-GE-Q1I.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "BhL-Ix-asv"; */
+"BhL-Ix-asv.placeholder" = "Search";
+
+/* Class = "UILabel"; text = "Vinder"; ObjectID = "CFe-66-8pF"; */
+"CFe-66-8pF.text" = "Vinder";
+
+/* Class = "UILabel"; text = "Please come tommorrow to get more users."; ObjectID = "Dvk-23-O2r"; */
+"Dvk-23-O2r.text" = "Please come tommorrow to get more users.";
+
+/* Class = "UILabel"; text = "Forgot Password"; ObjectID = "EcN-2I-SbL"; */
+"EcN-2I-SbL.text" = "Forgot Password";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "FOa-x5-xOi"; */
+"FOa-x5-xOi.text" = "Title";
+
+/* Class = "UILabel"; text = "Vinder"; ObjectID = "Gez-ju-SgN"; */
+"Gez-ju-SgN.text" = "Vinder";
+
+/* Class = "UITabBarItem"; title = "Explore"; ObjectID = "IVW-hL-bH9"; */
+"IVW-hL-bH9.title" = "Explore";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "IoP-JI-W8W"; */
+"IoP-JI-W8W.text" = "Email";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "IuA-BT-hTY"; */
+"IuA-BT-hTY.text" = "Password";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "KLC-3z-itW"; */
+"KLC-3z-itW.text" = "Sign In";
+
+/* Class = "UISegmentedControl"; Kpr-3C-PcD.segmentTitles[0] = "Explore"; ObjectID = "Kpr-3C-PcD"; */
+"Kpr-3C-PcD.segmentTitles[0]" = "Explore";
+
+/* Class = "UISegmentedControl"; Kpr-3C-PcD.segmentTitles[1] = "My Match"; ObjectID = "Kpr-3C-PcD"; */
+"Kpr-3C-PcD.segmentTitles[1]" = "My Match";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "Kpw-7W-K97"; */
+"Kpw-7W-K97.normalTitle" = "Create Account";
+
+/* Class = "UIButton"; normalTitle = "Continue with Apple"; ObjectID = "L4w-I3-fch"; */
+"L4w-I3-fch.normalTitle" = "Continue with Apple";
+
+/* Class = "UILabel"; text = "Vinder"; ObjectID = "MX7-QI-S13"; */
+"MX7-QI-S13.text" = "Vinder";
+
+/* Class = "UILabel"; text = "New Vinder user?"; ObjectID = "Mp2-zm-3GE"; */
+"Mp2-zm-3GE.text" = "New Vinder user?";
+
+/* Class = "UITextField"; placeholder = "Full name"; ObjectID = "NtT-mg-Frd"; */
+"NtT-mg-Frd.placeholder" = "Full name";
+
+/* Class = "UIButton"; normalTitle = "Continue with Facebook"; ObjectID = "R1M-oM-vCx"; */
+"R1M-oM-vCx.normalTitle" = "Continue with Facebook";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Tvb-KO-czR"; */
+"Tvb-KO-czR.text" = "Email";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "WEc-Me-ocE"; */
+"WEc-Me-ocE.text" = "Subtitle";
+
+/* Class = "UISegmentedControl"; WxO-ME-pcn.segmentTitles[0] = "Explore"; ObjectID = "WxO-ME-pcn"; */
+"WxO-ME-pcn.segmentTitles[0]" = "Explore";
+
+/* Class = "UISegmentedControl"; WxO-ME-pcn.segmentTitles[1] = "My Events"; ObjectID = "WxO-ME-pcn"; */
+"WxO-ME-pcn.segmentTitles[1]" = "My Events";
+
+/* Class = "UILabel"; text = "Vinder"; ObjectID = "Xym-k5-3iv"; */
+"Xym-k5-3iv.text" = "Vinder";
+
+/* Class = "UITabBarItem"; title = "Events"; ObjectID = "YXZ-Fb-OHd"; */
+"YXZ-Fb-OHd.title" = "Events";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Zk0-fz-6l0"; */
+"Zk0-fz-6l0.placeholder" = "Password";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "ber-Hr-sc3"; */
+"ber-Hr-sc3.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Login with Email"; ObjectID = "dai-OU-bl1"; */
+"dai-OU-bl1.normalTitle" = "Login with Email";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "dpv-0a-ue7"; */
+"dpv-0a-ue7.text" = "Sign up";
+
+/* Class = "UILabel"; text = "Already have an account? "; ObjectID = "eq7-MA-NCh"; */
+"eq7-MA-NCh.text" = "Already have an account? ";
+
+/* Class = "UILabel"; text = "Create Account"; ObjectID = "etc-6i-vPu"; */
+"etc-6i-vPu.text" = "Create Account";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "g9S-f9-V16"; */
+"g9S-f9-V16.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Full name"; ObjectID = "gZU-YR-Uo2"; */
+"gZU-YR-Uo2.text" = "Full name";
+
+/* Class = "UIButton"; normalTitle = "Send code  "; ObjectID = "isw-8U-R4r"; */
+"isw-8U-R4r.normalTitle" = "Send code  ";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "jsO-C1-bqT"; */
+"jsO-C1-bqT.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "loa-zg-yPF"; */
+"loa-zg-yPF.text" = "Sign In";
+
+/* Class = "UILabel"; text = "Users near you"; ObjectID = "pyN-9J-7rJ"; */
+"pyN-9J-7rJ.text" = "Users near you";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "qAA-WR-tHB"; */
+"qAA-WR-tHB.normalTitle" = "Skip";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "rX4-rP-ghI"; */
+"rX4-rP-ghI.text" = "Email";
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "tSP-iP-vVp"; */
+"tSP-iP-vVp.text" = "Don't have an account?";
+
+/* Class = "UIButton"; normalTitle = "Login  "; ObjectID = "yBs-JT-9bR"; */
+"yBs-JT-9bR.normalTitle" = "Login  ";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "zKT-AG-x8T"; */
+"zKT-AG-x8T.placeholder" = "Phone Number";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "zro-hV-Wi7"; */
+"zro-hV-Wi7.title" = "Home";

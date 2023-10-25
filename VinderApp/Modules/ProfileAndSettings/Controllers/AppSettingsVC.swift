@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MOLH
 
 struct appSettingsOtpions{
     let name : String
@@ -24,9 +25,9 @@ class AppSettingsVC: UIViewController {
     @IBOutlet weak var settingsTableView: UITableView!
     
     var languagesListDict = [appSettingsOtpions(name: enumForLanguages.english.rawValue, flag: enumForLanguageFlags.english.rawValue),
-                             appSettingsOtpions(name: enumForLanguages.english.rawValue, flag: enumForLanguageFlags.english.rawValue),
-                             appSettingsOtpions(name: enumForLanguages.english.rawValue, flag: enumForLanguageFlags.english.rawValue),
-                             appSettingsOtpions(name: enumForLanguages.english.rawValue, flag: enumForLanguageFlags.english.rawValue)]
+                             appSettingsOtpions(name: enumForLanguages.chinese.rawValue, flag: enumForLanguageFlags.english.rawValue),
+                             appSettingsOtpions(name: enumForLanguages.Polish.rawValue, flag: enumForLanguageFlags.english.rawValue),
+                             appSettingsOtpions(name: enumForLanguages.Turkish.rawValue, flag: enumForLanguageFlags.english.rawValue)]
     
     var appSettingsList = [appSettingsOtpions(name: enumForAppSettingsOptions.changePwd.rawValue, flag: enumForAppSettingsImages.changePwd.rawValue),
                            appSettingsOtpions(name: enumForAppSettingsOptions.deleteaccount.rawValue, flag: enumForAppSettingsImages.deleteaccount.rawValue)]
@@ -158,6 +159,7 @@ extension AppSettingsVC: UITableViewDelegate, UITableViewDataSource{
         if indexPath.section == 0{
             listCell.permissionSwitch.isHidden = false
             listCell.forwardImgView.isHidden = true
+            
         }else{
             listCell.permissionSwitch.isHidden = true
             listCell.forwardImgView.isHidden = false
@@ -185,6 +187,19 @@ extension AppSettingsVC: UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.section == zero{
             // Update Language.....
+            
+             let listCell = self.settingsTableView.dequeueReusableCell(withIdentifier: AppSettingsTableViewCell.identifier , for: indexPath) as? AppSettingsTableViewCell 
+            
+            listCell?.langSwitch.isOn = true
+            if indexPath.row == 0 {
+                MOLHLanguage.setAppleLAnguageTo("en")
+                MOLH.reset()
+            }
+            else{
+                MOLHLanguage.setAppleLAnguageTo("zh-Hans")
+                MOLH.reset()
+            }
+            
         }else{
             switch dict.name {
             case enumForAppSettingsOptions.deleteaccount.rawValue:

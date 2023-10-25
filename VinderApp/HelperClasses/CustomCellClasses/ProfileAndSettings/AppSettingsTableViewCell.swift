@@ -6,15 +6,19 @@
 //
 
 import UIKit
+import MOLH
 
 class AppSettingsTableViewCell: UITableViewCell {
 
     // MARK: - Outlets & Properties
 
+    @IBOutlet var langSwitch: UISwitch!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var titleImgView: UIImageView!
     @IBOutlet weak var permissionSwitch: UISwitch!
     @IBOutlet weak var forwardImgView: UIImageView!
+    
+    var position = 0
 
     static let identifier = "AppSettingsTableViewCell"
     static func nib() -> UINib{
@@ -35,7 +39,7 @@ class AppSettingsTableViewCell: UITableViewCell {
     }
     
     @IBAction func switchValueChanged(_ sender: Any) {
-        
+     
     }
     
 }

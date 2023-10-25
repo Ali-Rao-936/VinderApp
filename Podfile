@@ -15,6 +15,7 @@ target 'VinderApp' do
   pod 'LocationPicker'
   pod 'Koloda'
   pod 'JJFloatingActionButton'
+  pod 'MOLH'
 
   target 'VinderAppTests' do
     inherit! :search_paths

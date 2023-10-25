@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "3Fe-2q-3yb"; */
+"3Fe-2q-3yb.text" = "Location";
+
+/* Class = "UIButton"; normalTitle = " Edit"; ObjectID = "9cj-PW-Bi6"; */
+"9cj-PW-Bi6.normalTitle" = " Edit";
+
+/* Class = "UILabel"; text = "Tell us something about you...."; ObjectID = "BxD-pw-U7L"; */
+"BxD-pw-U7L.text" = "Tell us something about you....";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "FwZ-7X-4Ss"; */
+"FwZ-7X-4Ss.text" = "0";
+
+/* Class = "UILabel"; text = "Interests"; ObjectID = "NEF-cz-CP9"; */
+"NEF-cz-CP9.text" = "Interests";
+
+/* Class = "UIButton"; normalTitle = " Edit"; ObjectID = "ZGM-th-juG"; */
+"ZGM-th-juG.normalTitle" = " Edit";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "diD-FS-No8"; */
+"diD-FS-No8.text" = "About";
+
+/* Class = "UILabel"; text = "User name"; ObjectID = "q4Q-kU-yO6"; */
+"q4Q-kU-yO6.text" = "User name";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "ya4-C6-OfG"; */
+"ya4-C6-OfG.text" = "Profile";

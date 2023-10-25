@@ -89,7 +89,6 @@
 		6ACA31062AB9A6C80022EF21 /* MainChatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31042AB9A6C80022EF21 /* MainChatVC.xib */; };
 		6ACA31092AB9A6D40022EF21 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31072AB9A6D40022EF21 /* EventsVC.swift */; };
 		6ACA310E2AB9A73F0022EF21 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA310C2AB9A73F0022EF21 /* ProfileVC.swift */; };
-		6ACA310F2AB9A73F0022EF21 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA310D2AB9A73F0022EF21 /* ProfileVC.xib */; };
 		6ACA31122AB9A7AD0022EF21 /* ChooseInterestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31102AB9A7AD0022EF21 /* ChooseInterestsVC.swift */; };
 		6ACA31132AB9A7AD0022EF21 /* ChooseInterestsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31112AB9A7AD0022EF21 /* ChooseInterestsVC.xib */; };
 		6ACA31172AB9A7EA0022EF21 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31152AB9A7EA0022EF21 /* CreateAccountVC.swift */; };
@@ -102,7 +101,6 @@
 		6ACA312C2AB9AA5E0022EF21 /* CreateEventVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA312A2AB9AA5E0022EF21 /* CreateEventVC1.swift */; };
 		6ACA312D2AB9AA5E0022EF21 /* CreateEventVC1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA312B2AB9AA5E0022EF21 /* CreateEventVC1.xib */; };
 		6ACA31302AB9AA750022EF21 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */; };
-		6ACA31312AB9AA750022EF21 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA312F2AB9AA750022EF21 /* SettingsVC.xib */; };
 		6ACA31342AB9AD2A0022EF21 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */; };
 		6ACA31352AB9AD2A0022EF21 /* ContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */; };
 		6ACA31382AB9AD390022EF21 /* AppSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */; };
@@ -139,7 +137,6 @@
 		6AD1B19E2AD7C263009CBF5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD1B19D2AD7C263009CBF5B /* SnapKit */; };
 		6AD1B1A02AD7DDFC009CBF5B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD1B19F2AD7DDFC009CBF5B /* UserModel.swift */; };
 		6AD45C392AB97C07000E9A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C382AB97C07000E9A6C /* AppDelegate.swift */; };
-		6AD45C3B2AB97C07000E9A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C3A2AB97C07000E9A6C /* SceneDelegate.swift */; };
 		6AD45C402AB97C07000E9A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD45C3E2AB97C07000E9A6C /* Main.storyboard */; };
 		6AD45C432AB97C07000E9A6C /* VinderApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD45C412AB97C07000E9A6C /* VinderApp.xcdatamodeld */; };
 		6AD45C452AB97C08000E9A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD45C442AB97C08000E9A6C /* Assets.xcassets */; };
@@ -156,6 +153,8 @@
 		A393FBCBC68A22A692ABB9EC /* Pods_VinderApp_VinderAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3717FCB99C98FFAD7458A /* Pods_VinderApp_VinderAppUITests.framework */; };
 		E9D7AA742AE8E80D0087E85C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AA722AE8E80D0087E85C /* AboutViewController.swift */; };
 		E9D7AA752AE8E80D0087E85C /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AA732AE8E80D0087E85C /* AboutViewController.xib */; };
+		E9D7AA7C2AE9403E0087E85C /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AA7E2AE9403E0087E85C /* ProfileVC.xib */; };
+		E9D7AA852AE940A20087E85C /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AA872AE940A20087E85C /* SettingsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,7 +273,6 @@
 		6ACA31042AB9A6C80022EF21 /* MainChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChatVC.xib; sourceTree = "<group>"; };
 		6ACA31072AB9A6D40022EF21 /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
 		6ACA310C2AB9A73F0022EF21 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		6ACA310D2AB9A73F0022EF21 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		6ACA31102AB9A7AD0022EF21 /* ChooseInterestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseInterestsVC.swift; sourceTree = "<group>"; };
 		6ACA31112AB9A7AD0022EF21 /* ChooseInterestsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseInterestsVC.xib; sourceTree = "<group>"; };
 		6ACA31152AB9A7EA0022EF21 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
@@ -287,7 +285,6 @@
 		6ACA312A2AB9AA5E0022EF21 /* CreateEventVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventVC1.swift; sourceTree = "<group>"; };
 		6ACA312B2AB9AA5E0022EF21 /* CreateEventVC1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventVC1.xib; sourceTree = "<group>"; };
 		6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		6ACA312F2AB9AA750022EF21 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
 		6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentVC.xib; sourceTree = "<group>"; };
 		6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsVC.swift; sourceTree = "<group>"; };
@@ -324,7 +321,6 @@
 		6AD1B19F2AD7DDFC009CBF5B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		6AD45C352AB97C07000E9A6C /* VinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD45C382AB97C07000E9A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AD45C3A2AB97C07000E9A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6AD45C3F2AB97C07000E9A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AD45C422AB97C07000E9A6C /* VinderApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VinderApp.xcdatamodel; sourceTree = "<group>"; };
 		6AD45C442AB97C08000E9A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -347,6 +343,20 @@
 		9E9986F6BD76C8F5B748D36C /* Pods-VinderApp-VinderAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderApp-VinderAppUITests.release.xcconfig"; path = "Target Support Files/Pods-VinderApp-VinderAppUITests/Pods-VinderApp-VinderAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E9D7AA722AE8E80D0087E85C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E9D7AA732AE8E80D0087E85C /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		E9D7AA762AE93FF00087E85C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		E9D7AA772AE93FF00087E85C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E9D7AA782AE940190087E85C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		E9D7AA792AE940190087E85C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E9D7AA7A2AE940220087E85C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		E9D7AA7B2AE940220087E85C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E9D7AA7D2AE9403E0087E85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileVC.xib; sourceTree = "<group>"; };
+		E9D7AA862AE940A20087E85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SettingsVC.xib; sourceTree = "<group>"; };
+		E9D7AA892AE940A60087E85C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SettingsVC.strings"; sourceTree = "<group>"; };
+		E9D7AA8B2AE940A60087E85C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/SettingsVC.strings; sourceTree = "<group>"; };
+		E9D7AA8D2AE940A70087E85C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/SettingsVC.strings; sourceTree = "<group>"; };
+		E9D7AA8F2AE940B10087E85C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ProfileVC.strings"; sourceTree = "<group>"; };
+		E9D7AA912AE940B10087E85C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/ProfileVC.strings; sourceTree = "<group>"; };
+		E9D7AA932AE940B20087E85C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ProfileVC.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,9 +532,9 @@
 			isa = PBXGroup;
 			children = (
 				6ACA310C2AB9A73F0022EF21 /* ProfileVC.swift */,
-				6ACA310D2AB9A73F0022EF21 /* ProfileVC.xib */,
+				E9D7AA7E2AE9403E0087E85C /* ProfileVC.xib */,
 				6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */,
-				6ACA312F2AB9AA750022EF21 /* SettingsVC.xib */,
+				E9D7AA872AE940A20087E85C /* SettingsVC.xib */,
 				6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */,
 				6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */,
 				6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */,
@@ -791,7 +801,6 @@
 				6ACA30F52AB9A4B90022EF21 /* Networking */,
 				6AD45C6B2AB97D6F000E9A6C /* Modules */,
 				6AD45C382AB97C07000E9A6C /* AppDelegate.swift */,
-				6AD45C3A2AB97C07000E9A6C /* SceneDelegate.swift */,
 				6AD45C3E2AB97C07000E9A6C /* Main.storyboard */,
 				6AD45C442AB97C08000E9A6C /* Assets.xcassets */,
 				6AD45C462AB97C08000E9A6C /* LaunchScreen.storyboard */,
@@ -1005,6 +1014,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				pl,
+				tr,
 			);
 			mainGroup = 6AD45C2C2AB97C07000E9A6C;
 			packageReferences = (
@@ -1072,9 +1084,9 @@
 				6ACA31292AB9AA4B0022EF21 /* EventDetailsVC.xib in Resources */,
 				6A90161D2ABACC240072ACF2 /* InterestsCollectionViewCell.xib in Resources */,
 				6ACA31392AB9AD390022EF21 /* AppSettingsVC.xib in Resources */,
-				6ACA31312AB9AA750022EF21 /* SettingsVC.xib in Resources */,
+				E9D7AA852AE940A20087E85C /* SettingsVC.xib in Resources */,
 				6AD45C452AB97C08000E9A6C /* Assets.xcassets in Resources */,
-				6ACA310F2AB9A73F0022EF21 /* ProfileVC.xib in Resources */,
+				E9D7AA7C2AE9403E0087E85C /* ProfileVC.xib in Resources */,
 				6AD45C402AB97C07000E9A6C /* Main.storyboard in Resources */,
 				6AAA32592ABC4F9600F65DB9 /* ExploreEventsTableViewCell.xib in Resources */,
 				6ACA312D2AB9AA5E0022EF21 /* CreateEventVC1.xib in Resources */,
@@ -1258,7 +1270,6 @@
 				6A5D07F32ACAABC80012771F /* EventsViewModel.swift in Sources */,
 				6A9E60F72AC156A0005F1733 /* BaseNavigation.swift in Sources */,
 				6ACA312C2AB9AA5E0022EF21 /* CreateEventVC1.swift in Sources */,
-				6AD45C3B2AB97C07000E9A6C /* SceneDelegate.swift in Sources */,
 				6A90A2E92AC2C96A00317CE9 /* Extensions.swift in Sources */,
 				6A0AEE9A2ABC7911005EEABA /* MyEventsVC.swift in Sources */,
 				6ABB8C122AE290A900C6C8BE /* LocationSearchTable.swift in Sources */,
@@ -1335,6 +1346,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				6AD45C3F2AB97C07000E9A6C /* Base */,
+				E9D7AA762AE93FF00087E85C /* zh-Hans */,
+				E9D7AA782AE940190087E85C /* pl */,
+				E9D7AA7A2AE940220087E85C /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1343,8 +1357,33 @@
 			isa = PBXVariantGroup;
 			children = (
 				6AD45C472AB97C08000E9A6C /* Base */,
+				E9D7AA772AE93FF00087E85C /* zh-Hans */,
+				E9D7AA792AE940190087E85C /* pl */,
+				E9D7AA7B2AE940220087E85C /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E9D7AA7E2AE9403E0087E85C /* ProfileVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9D7AA7D2AE9403E0087E85C /* Base */,
+				E9D7AA8F2AE940B10087E85C /* zh-Hans */,
+				E9D7AA912AE940B10087E85C /* pl */,
+				E9D7AA932AE940B20087E85C /* tr */,
+			);
+			name = ProfileVC.xib;
+			sourceTree = "<group>";
+		};
+		E9D7AA872AE940A20087E85C /* SettingsVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9D7AA862AE940A20087E85C /* Base */,
+				E9D7AA892AE940A60087E85C /* zh-Hans */,
+				E9D7AA8B2AE940A60087E85C /* pl */,
+				E9D7AA8D2AE940A70087E85C /* tr */,
+			);
+			name = SettingsVC.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1354,6 +1393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1414,6 +1454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

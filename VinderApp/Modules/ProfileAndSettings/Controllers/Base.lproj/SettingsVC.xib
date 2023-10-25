@@ -109,10 +109,10 @@
     </objects>
     <designables>
         <designable name="31o-58-unv">
-            <size key="intrinsicContentSize" width="66.333333333333329" height="21"/>
+            <size key="intrinsicContentSize" width="66" height="21.666666666666668"/>
         </designable>
         <designable name="uMc-co-IEU">
-            <size key="intrinsicContentSize" width="57" height="33"/>
+            <size key="intrinsicContentSize" width="55" height="34"/>
         </designable>
     </designables>
     <resources>

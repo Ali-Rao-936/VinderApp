@@ -5,6 +5,7 @@ PODS:
     - pop (~> 1.0)
   - LocationPicker (1.4.2)
   - MBProgressHUD (1.2.0)
+  - MOLH (1.4.3)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - Koloda
   - LocationPicker
   - MBProgressHUD
+  - MOLH
   - NVActivityIndicatorView
   - SDWebImage
   - SwiftyJSON
@@ -33,6 +35,7 @@ SPEC REPOS:
     - Koloda
     - LocationPicker
     - MBProgressHUD
+    - MOLH
     - NVActivityIndicatorView
     - pop
     - SDWebImage
@@ -45,12 +48,13 @@ SPEC CHECKSUMS:
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   LocationPicker: 9af49409ec3ca13fdf4bf6b39e1a3c7dec029f4a
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SDWebImage: 96e0c18ef14010b7485210e92fac888587ebb958
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: 6d64c7ca643b8e89cef80134a8af23dce6f311c5
+PODFILE CHECKSUM: fa68b26ab9d6d3bd49a06b2541b6cce2e665db69
 
 COCOAPODS: 1.11.3

@@ -90,8 +90,8 @@ enum enumForSettingsImages: String {
 enum enumForLanguages: String{
     case english = "English"
     case chinese = "Standard Chinese"
-    case vietnamese = "Vietnamese"
-    case indonesian = "Indonesian"
+    case Polish = "Polish"
+    case Turkish = "Turkish"
 }
 
 enum enumForLanguageFlags: String{
