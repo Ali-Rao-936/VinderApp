@@ -697,7 +697,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6U-oq-Roe" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                            <rect key="frame" x="60" y="11.666666666666671" width="104" height="21"/>
+                            <rect key="frame" x="60" y="11.33333333333333" width="105" height="21.666666666666671"/>
                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
                             <color key="textColor" name="headingColor"/>
                             <nil key="highlightedColor"/>
@@ -728,13 +728,13 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Created!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMd-Yn-KLP">
-                                    <rect key="frame" x="56.666666666666671" y="124" width="198.66666666666663" height="35"/>
+                                    <rect key="frame" x="56.333333333333329" y="124" width="199.33333333333337" height="36"/>
                                     <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="30"/>
                                     <color key="textColor" name="headingColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your event has been created, check in schedule section for reminder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyQ-6y-gik">
-                                    <rect key="frame" x="0.0" y="179" width="312" height="37.333333333333343"/>
+                                    <rect key="frame" x="0.0" y="180" width="312" height="38.666666666666657"/>
                                     <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="16"/>
                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -803,25 +803,25 @@
             <size key="intrinsicContentSize" width="150" height="34"/>
         </designable>
         <designable name="9iN-EY-RgG">
-            <size key="intrinsicContentSize" width="85.333333333333329" height="18"/>
+            <size key="intrinsicContentSize" width="81.666666666666671" height="18.666666666666668"/>
         </designable>
         <designable name="Bg7-oo-QYw">
             <size key="intrinsicContentSize" width="214.66666666666666" height="15.666666666666666"/>
         </designable>
         <designable name="Oks-kH-RZV">
-            <size key="intrinsicContentSize" width="115" height="33"/>
+            <size key="intrinsicContentSize" width="116" height="34"/>
         </designable>
         <designable name="OxQ-B0-jLN">
-            <size key="intrinsicContentSize" width="85.333333333333329" height="18"/>
+            <size key="intrinsicContentSize" width="81.666666666666671" height="18.666666666666668"/>
         </designable>
         <designable name="TbW-oQ-UB9">
-            <size key="intrinsicContentSize" width="102" height="18"/>
+            <size key="intrinsicContentSize" width="105.66666666666667" height="18.666666666666668"/>
         </designable>
         <designable name="Vsf-dk-Acf">
-            <size key="intrinsicContentSize" width="102" height="18"/>
+            <size key="intrinsicContentSize" width="105.66666666666667" height="18.666666666666668"/>
         </designable>
         <designable name="YdV-ae-FeF">
-            <size key="intrinsicContentSize" width="143" height="24"/>
+            <size key="intrinsicContentSize" width="142" height="24"/>
         </designable>
         <designable name="fYV-T4-xf3">
             <size key="intrinsicContentSize" width="163" height="34"/>
@@ -833,7 +833,7 @@
             <size key="intrinsicContentSize" width="340" height="95"/>
         </designable>
         <designable name="t6U-oq-Roe">
-            <size key="intrinsicContentSize" width="104" height="21"/>
+            <size key="intrinsicContentSize" width="105" height="21.666666666666668"/>
         </designable>
     </designables>
     <resources>

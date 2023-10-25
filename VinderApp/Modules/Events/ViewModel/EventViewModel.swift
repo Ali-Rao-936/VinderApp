@@ -56,8 +56,8 @@ class EventViewModel {
         }
     }
     
-    init(eventRequest: Event, eventImage: UIImage) {
-       callFuncToCreateEvent(eventRequest: eventRequest, eventImage: eventImage)
+    init(parameters: [String:Any], eventImage: UIImage) {
+       callFuncToCreateEvent(parameters: parameters, eventImage: eventImage)
     }
     
     // uploadImageToServer
@@ -106,8 +106,8 @@ class EventViewModel {
         }
     }
     
-    func callFuncToCreateEvent(eventRequest: Event, eventImage: UIImage) {
-        self.apiService.uploadImageToServer(url: APIURL.CreateEvent, parameters: eventRequest.dictionary, image: ["banner" : eventImage]) { (result: Result<EventDetailModel,Error>) in
+    func callFuncToCreateEvent(parameters: [String:Any], eventImage: UIImage) {
+        self.apiService.uploadImageToServer(url: APIURL.CreateEvent, parameters: parameters, image: ["banner" : eventImage]) { (result: Result<EventDetailModel,Error>) in
             
             DispatchQueue.main.async {
                 CommonFxns.dismissProgress()

@@ -122,7 +122,7 @@ struct Event: Codable {
         case peopleJoinedCount = "attendees_count"
     }
     
-    init(name:String, description:String, interestId:Int, latitude:Double, longitude:Double, date:String, time:String, address: String, isPaid: Int, price: Float, invitee: [Int]) {
+    init(name:String, description:String, interestId:Int, latitude:Double, longitude:Double, date:String, time:String, address: String, isPaid: Int, price: Float) {
         self.name = name
         self.description = description
         self.interestId = interestId
@@ -133,7 +133,6 @@ struct Event: Codable {
         self.address = address
         self.isPaid = isPaid
         self.price = price
-        self.invitee = invitee
     }
 }
 

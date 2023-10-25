@@ -40,6 +40,7 @@ class CreateEventVC: UIViewController {
     var longitude = Double()
     var eventViewModel: EventViewModel?
     var eventImage: UIImage? = nil
+    var callBackFromEventCreated: (()-> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,8 +95,8 @@ class CreateEventVC: UIViewController {
         friendCollectionView.reloadData()
     }
     
-    func callToViewModelToCreateEvent(request: Event, eventImage: UIImage) {
-        eventViewModel = EventViewModel(eventRequest: request, eventImage: eventImage)
+    func callToViewModelToCreateEvent(params: [String:Any], eventImage: UIImage) {
+        eventViewModel = EventViewModel(parameters: params, eventImage: eventImage)
         CommonFxns.showProgress()
         self.eventViewModel?.bindViewModelToController = {
             self.updateUser()
@@ -179,16 +180,14 @@ class CreateEventVC: UIViewController {
         if sender.selectedSegmentIndex == 0 {
             priceView.isHidden = true
             isPaid = 0
-            price = 0.0
         }else {
             priceView.isHidden = false
             isPaid = 1
-            let priceString = Int(priceTextField.text ?? "0")
-            price = Float(priceString ?? 0)
         }
     }
     
     @IBAction func eventCreatedBtnAction(_ sender: Any) {
+        callBackFromEventCreated?()
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -198,7 +197,8 @@ class CreateEventVC: UIViewController {
         let address = CommonFxns.trimString(string: self.address)
         let date = self.startEventDateTextField.text ?? emptyStr
         let time = self.startEventTimeTextField.text ?? emptyStr
-
+        var priceString = priceTextField.text ?? "0"
+        price = Float(priceString) ?? 0.0
         let interestId = sportsInterestList[self.selectedCellRow].id ?? 0
         
         if !invitedFriendList.isEmpty {
@@ -210,13 +210,18 @@ class CreateEventVC: UIViewController {
         }
         
         eventRequest = 
-        Event(name: name, description: desc, interestId: interestId, latitude: latitude, longitude: longitude, date: date, time: time, address: address, isPaid: isPaid, price: price, invitee: invitedFriendListIDArray)
+        Event(name: name, description: desc, interestId: interestId, latitude: latitude, longitude: longitude, date: date, time: time, address: address, isPaid: isPaid, price: price)
+        var dict = eventRequest.dictionary
+        for i in self.invitedFriendListIDArray.indices {
+            dict["invitee[\(i)]"] = self.invitedFriendListIDArray[i]
+        }
         
+    // invitee: invitedFriendListIDArray
         if name.isEmpty || desc.isEmpty || interestId == 0 || address.isEmpty || date.isEmpty || time.isEmpty || (isPaid == 1 && price == 0.0) {
             CommonFxns.showAlert(self, message: AlertMessages.ALL_DATA_REQUIRED, title: AlertMessages.ALERT_TITLE)
-        }else{
+        }else {
             if eventImage != nil {
-                callToViewModelToCreateEvent(request: eventRequest, eventImage: eventImage!)
+                callToViewModelToCreateEvent(params: dict, eventImage: eventImage!)
             }else {
                 CommonFxns.showAlert(self, message: AlertMessages.CHOOSE_EVENT_IMAGE, title: AlertMessages.ALERT_TITLE)
             }
@@ -283,7 +288,7 @@ extension CreateEventVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     @objc func deselectUser(sender: UIButton) {
-        
+
         invitedFriendList.remove(at: sender.tag)
         self.friendCollectionView.performBatchUpdates({
             self.friendCollectionView.deleteItems(at: [IndexPath(item: sender.tag, section: 0)])

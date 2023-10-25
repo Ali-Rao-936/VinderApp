@@ -59,15 +59,20 @@ class MyEventsVC: UIViewController {
         myEventsCollectionView.reloadData()
     }
     
+    func reloadEvents() {
+        callToViewModelForUIUpdate()
+    }
+    
     // MARK: - Methods
     
     func initialSetup(){
         // Register tableView cells
         self.myEventsCollectionView.register(EventsCollectionViewCell.nib(), forCellWithReuseIdentifier: EventsCollectionViewCell.identifier)
 
-        addEventButton.addItem(title: "Create Event", image: #imageLiteral(resourceName: "addEvent")) { item in
+        addEventButton.addItem(title: "Create Event", image: #imageLiteral(resourceName: "addEvent")) { [weak self] item in
             let otherVCObj = CreateEventVC(nibName: enumViewControllerIdentifier.createEventVC.rawValue, bundle: nil)
-            self.navigationController?.pushViewController(otherVCObj, animated: true)
+            otherVCObj.callBackFromEventCreated = self?.reloadEvents
+            self?.navigationController?.pushViewController(otherVCObj, animated: true)
         }
 
         addEventButton.addItem(title: "Accepted Event", image: #imageLiteral(resourceName: "joinedEvent")) { item in
