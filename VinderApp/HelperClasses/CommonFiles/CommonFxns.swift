@@ -92,7 +92,8 @@ class CommonFxns: NSObject {
         let token = "60|qhBeilhnNC15e19dG1TkdJIxxyXmEpEK48NZhHZEa927cd04"
         let headers = [
             "Authorization" : String(format: "Bearer \(token)"),
-             "Content-Type" : "application/json"
+           "Content-Type" : "application/json",
+           //  "Content-Type" : "multipart/form-data; boundary=<calculated when request is sent>"
         ]
         return headers
     }

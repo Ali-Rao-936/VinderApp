@@ -13,7 +13,7 @@ target 'VinderApp' do
   pod 'SwiftyJSON'
   pod 'TagListView', '~> 1.0'
   pod 'LocationPicker'
-  pod "Koloda"
+  pod 'Koloda'
   pod 'JJFloatingActionButton'
 
   target 'VinderAppTests' do

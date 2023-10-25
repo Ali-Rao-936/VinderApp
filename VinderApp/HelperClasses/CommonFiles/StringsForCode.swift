@@ -56,6 +56,7 @@ enum enumViewControllerIdentifier: String {
     case homeVC = "HomeVC"
     case profileVC = "ProfileVC"
     case settingsVC = "SettingsVC"
+    case AboutViewController = "AboutViewController"
     case appSettingsVC = "AppSettingsVC"
     case eventsVC = "EventsVC"
     case eventDetailsVC = "EventDetailsVC"

@@ -48,14 +48,10 @@ class UserDefaultsToStoreUserInfo: NSObject {
     }
     
     class func updateUserDetails(user: [String: Any]){
-        
-        print("userr before....",user)
-
         var userObject = userDefault.value(forKey: USER_DEFAULT_userInfo_Key) as? [String:Any]
         userObject?[USER_DEFAULT_userDetails_Key] = user
         
         userDefault.set(userObject, forKey: USER_DEFAULT_userInfo_Key)
-        print("userr after....", UserDefaultsToStoreUserInfo.getUser())
     }
     
     

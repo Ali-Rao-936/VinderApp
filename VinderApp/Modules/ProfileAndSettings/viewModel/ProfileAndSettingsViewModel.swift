@@ -77,147 +77,123 @@ class ProfileAndSettingsViewModel {
     
     func getProfileInfo() {
     
-        print("getProfileInfo....")
+
         self.apiService?.getUserProfileInfo(completion: { data, succeeded, error in
             if succeeded {
-                print("succeeded....", succeeded)
+           
                 guard let tempData = data else{
                     self.showAlertClosure?(error.description)
                     return
                 }
-                print("tempData....", tempData)
+           
                 if let response = tempData["response"] as? [String: Any]{
                     self.getProfileResponse = response["data"] as? [String : AnyObject]
                 }
             } else {
                 self.showAlertClosure?(error.description)
-                print("error description....", error.description)
             }
         })
     }
     
     func updateUserProfile(parameters: [String: Any]) {
     
-        print("updateUserProfile....")
+   
         self.apiService?.updateProfileAPI(parameters: parameters, completion: { data, succeeded, error in
             if succeeded {
-                print("succeeded....", succeeded)
                 guard let tempData = data else{
                     self.showAlertClosure?(error.description)
                     return
                 }
-                print("tempData....", tempData)
+           
                 if let response = tempData["response"] as? [String: Any]{
                     self.updateProfileResponse = response["data"] as? [String : AnyObject]
                 }
             } else {
                 self.showAlertClosure?(error.description)
-                print("error description....", error.description)
             }
         })
     }
     
     func updateSportsInterests(parameters: [Int]) {
     
-        print("updateSportsInterests....")
         self.apiService?.updateSportsInterests(parameters: parameters, completion: { data, succeeded, error in
             if succeeded {
-                print("succeeded....", succeeded)
                 guard let tempData = data else{
                     self.showAlertClosure?(error.description)
                     return
                 }
-                print("tempData....", tempData)
                 if let response = tempData["response"] as? [String: Any]{
                     self.updateSportsInterestsResponse = response["data"] as? [[String : AnyObject]]
                 }
             } else {
                 self.showAlertClosure?(error.description)
-                print("error description....", error.description)
             }
         })
     }
     
     func uploadUserProfilePhoto(image: UIImage) {
     
-        print("uploadUserProfilePhoto....")
         self.apiService?.uploadProfilePicture(image: image, completion: { data, succeeded, error in
             if succeeded {
-                print("succeeded....", succeeded)
                 guard let tempData = data else{
                     self.showAlertClosure?(error.description)
                     return
                 }
-                print("tempData....", tempData)
                 if let response = tempData["response"] as? [String: Any]{
                     self.updateProfileResponse = response["data"] as? [String : AnyObject]
                 }
             } else {
                 self.showAlertClosure?(error.description)
-                print("error description....", error.description)
             }
         })
     }
     
     func getInterestsList() {
     
-        print("getInterestsList....")
         self.apiService?.getInterestsList(completion: { data, succeeded, error in
             if succeeded {
-                print("succeeded....", succeeded)
                 guard let tempData = data else{
                     self.showAlertClosure?(error.description)
                     return
                 }
-                print("tempData....", tempData)
                 if let response = tempData["response"] as? [String: Any]{
                     self.getAllSportsInterestsResponse = response["data"] as? [[String : AnyObject]]
                 }
             } else {
                 self.showAlertClosure?(error.description)
-                print("error description....", error.description)
             }
         })
     }
     
     func giveFeedback(params: [String: Any]) {
-    
-        print("getFeedback....")
         self.apiService?.giveFeedback(params: params, completion: { data, succeeded, error in
             if succeeded {
-                print("succeeded....", succeeded)
                 guard let tempData = data else{
                     self.showAlertClosure?(error.description)
                     return
                 }
-                print("tempData....", tempData)
                 if let response = tempData["response"] as? [String: Any]{
                     self.giveFeedbackResponse = response["data"] as? [String : AnyObject]
                 }
             } else {
                 self.showAlertClosure?(error.description)
-                print("error description....", error.description)
             }
         })
     }
     
     func getContent(subUrl: String) {
     
-        print("getContent....")
         self.apiService?.getStaticContent(subUrl: subUrl, completion: { data, succeeded, error in
             if succeeded {
-                print("succeeded....", succeeded)
                 guard let tempData = data else{
                     self.showAlertClosure?(error.description)
                     return
                 }
-                print("tempData....", tempData)
                 if let response = tempData["response"] as? [String: Any]{
                     self.getStaticContent = response["data"] as? [String : AnyObject]
                 }
             } else {
                 self.showAlertClosure?(error.description)
-                print("error description....", error.description)
             }
         })
     }

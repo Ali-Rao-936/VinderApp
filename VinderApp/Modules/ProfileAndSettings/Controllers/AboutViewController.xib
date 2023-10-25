@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Urbanist-Medium.ttf">
+            <string>Urbanist-Medium</string>
+        </array>
+        <array key="Urbanist-SemiBold.ttf">
+            <string>Urbanist-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="VinderApp" customModuleProvider="target">
+            <connections>
+                <outlet property="txtAbout" destination="S6w-C8-vV4" id="ASs-cR-g78"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRV-Nb-zyz">
+                    <rect key="frame" x="28" y="59" width="329" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cus-gR-LYQ">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="vDV-oY-Nf1"/>
+                            </constraints>
+                            <color key="tintColor" name="headingColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="backIcon"/>
+                            <connections>
+                                <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="r0y-kk-Hyk"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLN-2d-oBB" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
+                            <rect key="frame" x="53" y="11.666666666666671" width="49.333333333333343" height="21"/>
+                            <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
+                            <color key="textColor" name="headingColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="cus-gR-LYQ" firstAttribute="leading" secondItem="FRV-Nb-zyz" secondAttribute="leading" id="4rz-5F-m1x"/>
+                        <constraint firstItem="cus-gR-LYQ" firstAttribute="top" secondItem="FRV-Nb-zyz" secondAttribute="top" id="h2e-eT-OYc"/>
+                        <constraint firstItem="jLN-2d-oBB" firstAttribute="centerY" secondItem="cus-gR-LYQ" secondAttribute="centerY" id="ks6-Ve-Lsl"/>
+                        <constraint firstItem="jLN-2d-oBB" firstAttribute="leading" secondItem="cus-gR-LYQ" secondAttribute="trailing" constant="13" id="tbA-37-d0y"/>
+                        <constraint firstAttribute="height" constant="44" id="w8g-Et-Sxg"/>
+                        <constraint firstAttribute="bottom" secondItem="cus-gR-LYQ" secondAttribute="bottom" id="yVd-CW-Tur"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="gjgjhv jvjv  jhj mnvj mnb sdfkjshf jhev hejrg kegr qyriqrq3irq3r qiurtqr iqert " borderStyle="roundedRect" placeholder="Please tell us something about you.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-C8-vV4">
+                    <rect key="frame" x="14" y="238.66666666666663" width="347" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="iAJ-cO-xk8"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYM-qt-9ah" customClass="UIButtonCustomClass" customModule="VinderApp" customModuleProvider="target">
+                    <rect key="frame" x="107.66666666666669" y="478.66666666666669" width="160" height="50.000000000000057"/>
+                    <color key="backgroundColor" name="secondaryBtnBgColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="SYF-Or-rug"/>
+                        <constraint firstAttribute="width" constant="160" id="wn8-cn-zi6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Update">
+                        <color key="titleColor" name="whiteColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnUpdate:" destination="-1" eventType="touchUpInside" id="tit-6w-S2T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zYM-qt-9ah" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0Eq-pK-4qR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FRV-Nb-zyz" secondAttribute="trailing" constant="18" id="33V-ui-0Xw"/>
+                <constraint firstItem="zYM-qt-9ah" firstAttribute="top" secondItem="S6w-C8-vV4" secondAttribute="bottom" constant="50" id="DQO-Pj-kah"/>
+                <constraint firstItem="S6w-C8-vV4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="Los-gG-Pqc"/>
+                <constraint firstItem="FRV-Nb-zyz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RsZ-Dm-O6H"/>
+                <constraint firstItem="FRV-Nb-zyz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="Viz-Ka-d7H"/>
+                <constraint firstItem="S6w-C8-vV4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nlm-Uv-BQw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S6w-C8-vV4" secondAttribute="trailing" constant="14" id="rXG-tG-Zc3"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="jLN-2d-oBB">
+            <size key="intrinsicContentSize" width="48.666666666666664" height="21"/>
+        </designable>
+        <designable name="zYM-qt-9ah">
+            <size key="intrinsicContentSize" width="60" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="backIcon" width="24" height="24"/>
+        <namedColor name="headingColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryBtnBgColor">
+            <color red="1" green="0.35699999332427979" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

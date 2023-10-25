@@ -23,8 +23,10 @@ class BaseWebService: NSObject {
         
 //        let newUrl = baseUrl + url
         if CommonFxns.isInternetAvailable(){
+            Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+            }
 
-            Alamofire.request(url, method: method, parameters: params, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
+            Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { response in
                 // sucesss block
                 switch response.result {
                 case .success:
@@ -36,7 +38,7 @@ class BaseWebService: NSObject {
                                 DispatchQueue.main.async(execute: {
                                     do {
                                         let jsonResponse = try JSON.init(data: response.data!)
-                                        print("JSON RESPONSE: \(jsonResponse)")
+                                        //print("JSON RESPONSE: \(jsonResponse)")
                                     } catch {
                                         print("JSONSerialization error:", error)
                                     }
@@ -46,7 +48,7 @@ class BaseWebService: NSObject {
                                 // Show alert on window level
                                 if let errorObj = value["error"] as? [String:Any]{
                                     if let error = errorObj["messages"] as? [String]{
-                                        print("error...", error)
+                                        print("error...webservice", error)
                                         
                                         CommonFxns.showAlertOnWindowlevel(message: error[0] , title: AlertMessages.ERROR_TITLE)
                                     }else if let error = errorObj["messages"] as? NSDictionary{
@@ -79,11 +81,83 @@ class BaseWebService: NSObject {
         }
     }
     
+    func uploadInterestList(url: String, method : HTTPMethod, params: [String: String], header: HTTPHeaders?, onSuccess success: @escaping (DataResponse<Any>) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
+        //   let parameters = ["mobile": mobilenumberTextfield.text!]
+        
+        Alamofire.upload(multipartFormData: { (multiFormData) in
+            for (key, value) in params {
+                multiFormData.append(Data(value.utf8), withName: key)
+            }
+        }, to: url, method: method, headers:CommonFxns.getAuthenticationToken()){ (result) in
+            switch result {
+            case .success(let response, _, _):
+                response.responseJSON { res in
+                    print("response is :\(res)")
+                    if let statusCode = res.response?.statusCode as? Int {//value[enumForCodingKeys.status.rawValue] as? Int{
+                        
+                        if statusCode == 200{ //(statusCode  >= 200 && statusCode <= 299) || statusCode == 404 || statusCode == 400 {
+                            DispatchQueue.main.async(execute: {
+                                success(res)
+                            })
+                        }else{
+                            // Show alert on window level
+                            if let value: AnyObject = res.result.value as AnyObject? {
+                                if let errorObj = value["error"] as? [String:Any]{
+                                    if let error = errorObj["messages"] as? [String]{
+                                        print("error...webservice", error)
+                                        
+                                        CommonFxns.showAlertOnWindowlevel(message: error[0] , title: AlertMessages.ERROR_TITLE)
+                                    }else if let error = errorObj["messages"] as? NSDictionary{
+                                        print(error.allValues.first ?? "")
+                                        if let errStr = error.allValues.first as? [String]{
+                                            CommonFxns.showAlertOnWindowlevel(message: errStr[0], title: AlertMessages.ERROR_TITLE)
+                                        }else{
+                                            CommonFxns.showAlertOnWindowlevel(message: "Incompatible information", title: AlertMessages.ERROR_TITLE)
+                                        }
+                                    }else{
+                                        CommonFxns.showAlertOnWindowlevel(message: "Incompatible information", title: AlertMessages.ERROR_TITLE)
+                                    }
+                                }
+                                CommonFxns.dismissProgress()
+                            }else{
+                                CommonFxns.dismissProgress()
+                            }
+                        }
+                    }
+                }
+                
+            case .failure(let error):
+                print("FAILURE RESPONSE: \(error.localizedDescription)")
+                if error._code == NSURLErrorTimedOut{
+                    CommonFxns.dismissProgress()
+                }
+                CommonFxns.dismissProgress()
+                
+            }
+        }
+    }
+        
+//        Alamofire.upload(multipartFormData: { (multiFormData) in
+//            for (key, value) in parameters {
+//                multiFormData.append(Data(value.utf8), withName: key)
+//            }
+//        }, to: registerApi).responseJSON { response in
+//            switch response.result {
+//            case .success(let JSON):
+//                print("response is :\(response)")
+//
+//            case .failure(_):
+//                print("fail")
+//            }
+//        }
+ //   }
+    
   
     public func uploadImageWithInfo(parameters: [String:Any]?, url: String, img: UIImage, method : Alamofire.HTTPMethod, header: HTTPHeaders?, onSuccess success: @escaping (DataResponse<Any>) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
         let imgData = img.jpegData(compressionQuality: 0.2)!
 
         let timestamp = NSDate().timeIntervalSince1970 // just for some random name.
+        
 
        Alamofire.upload(multipartFormData: { multipartFormData in
                multipartFormData.append(imgData, withName: "profile_img",fileName: "\(timestamp).jpg", mimeType: "image/jpg")
@@ -104,7 +178,6 @@ class BaseWebService: NSObject {
                })
 
                upload.responseJSON { response in
-                    print("Upload response:  ", response.result.value)
                    
                    if let value: AnyObject = response.result.value as AnyObject? {
                        if let statusCode = response.response?.statusCode as? Int { // value["statusCode"] as? Int{
@@ -167,7 +240,6 @@ class BaseWebService: NSObject {
                })
 
                upload.responseJSON { response in
-                    print("Upload response:  ", response.result.value)
                    
                    if let value: AnyObject = response.result.value as AnyObject? {
                        if let statusCode = response.response?.statusCode as? Int { // value["statusCode"] as? Int{
@@ -177,7 +249,6 @@ class BaseWebService: NSObject {
                                DispatchQueue.main.async(execute: {
                                    do {
                                        let jsonResponse = try JSON.init(data: response.data!)
-                                       print("JSON RESPONSE: \(jsonResponse)")
                                    } catch {
                                        print("JSONSerialization error:", error)
                                    }
