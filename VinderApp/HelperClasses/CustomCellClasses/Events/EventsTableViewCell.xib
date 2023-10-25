@@ -137,7 +137,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Joined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-uj-a8u">
-                                <rect key="frame" x="182" y="61.333333333333329" width="44" height="14"/>
+                                <rect key="frame" x="182" y="61.333333333333329" width="46.333333333333343" height="14"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="12"/>
                                 <color key="textColor" name="disableBtnColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,7 +213,7 @@
             <size key="intrinsicContentSize" width="340" height="200"/>
         </designable>
         <designable name="TnF-iu-fmj">
-            <size key="intrinsicContentSize" width="51" height="24"/>
+            <size key="intrinsicContentSize" width="50" height="24"/>
         </designable>
         <designable name="eez-B3-G1P">
             <size key="intrinsicContentSize" width="64" height="64"/>

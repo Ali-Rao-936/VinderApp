@@ -43,7 +43,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6s-TP-mya" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                            <rect key="frame" x="53" y="11.666666666666671" width="106" height="21"/>
+                            <rect key="frame" x="53" y="11.666666666666671" width="108" height="21"/>
                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
                             <color key="textColor" name="headingColor"/>
                             <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2J-py-rLV" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                    <rect key="frame" x="101.00000000000001" y="168.33333333333334" width="191.33333333333337" height="53"/>
+                    <rect key="frame" x="100.66666666666669" y="169" width="192" height="51.333333333333343"/>
                     <string key="text">Invite friends to join
 your events</string>
                     <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="22"/>
@@ -130,13 +130,13 @@ your events</string>
     </objects>
     <designables>
         <designable name="A2J-py-rLV">
-            <size key="intrinsicContentSize" width="191.33333333333334" height="53"/>
+            <size key="intrinsicContentSize" width="192" height="51.333333333333336"/>
         </designable>
         <designable name="LDY-Pq-JXL">
             <size key="intrinsicContentSize" width="115" height="24"/>
         </designable>
         <designable name="Y6s-TP-mya">
-            <size key="intrinsicContentSize" width="106" height="21.666666666666668"/>
+            <size key="intrinsicContentSize" width="108" height="21"/>
         </designable>
         <designable name="sdu-T1-JCF">
             <size key="intrinsicContentSize" width="375" height="180"/>
