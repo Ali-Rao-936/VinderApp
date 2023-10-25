@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -45,7 +45,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSr-7h-2k4" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                            <rect key="frame" x="53" y="11.666666666666671" width="118" height="21"/>
+                            <rect key="frame" x="52.999999999999993" y="11.666666666666671" width="116.33333333333331" height="21"/>
                             <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="18"/>
                             <color key="textColor" name="headingColor"/>
                             <nil key="highlightedColor"/>
@@ -101,7 +101,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-M4-dDE" customClass="UILabelCustomClass" customModule="VinderApp" customModuleProvider="target">
-                    <rect key="frame" x="30" y="123.66666666666667" width="62" height="19.333333333333329"/>
+                    <rect key="frame" x="29.999999999999996" y="123.66666666666667" width="63.666666666666657" height="19.333333333333329"/>
                     <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
                     <color key="textColor" name="headingColor"/>
                     <nil key="highlightedColor"/>
@@ -128,13 +128,13 @@
     </objects>
     <designables>
         <designable name="BNV-Tr-1JW">
-            <size key="intrinsicContentSize" width="58" height="34"/>
+            <size key="intrinsicContentSize" width="58" height="33"/>
         </designable>
         <designable name="G8H-M4-dDE">
-            <size key="intrinsicContentSize" width="62" height="19.333333333333332"/>
+            <size key="intrinsicContentSize" width="63.666666666666664" height="18.666666666666668"/>
         </designable>
         <designable name="TSr-7h-2k4">
-            <size key="intrinsicContentSize" width="118" height="21.666666666666668"/>
+            <size key="intrinsicContentSize" width="116.33333333333333" height="21"/>
         </designable>
     </designables>
     <resources>

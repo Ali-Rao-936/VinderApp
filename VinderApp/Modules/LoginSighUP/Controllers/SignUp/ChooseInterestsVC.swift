@@ -79,7 +79,6 @@ class ChooseInterestsVC: UIViewController {
        }
        
        viewModel.didFinishFetchforList = { data in
-           print("data...", data)
            
            self.activityIndicatorStop()
            
@@ -98,7 +97,8 @@ class ChooseInterestsVC: UIViewController {
     private func updateProfileInfo(params: [String: Any]) {
         self.activityIndicatorStart()
 
-        viewModel.updateUserProfile(parameters: params)
+        viewModel.updateSportsInterests(parameters: self.selectedIds)
+     //   viewModel.updateUserProfile(parameters: params)
  
         viewModel.showAlertClosure = {
             msg in
@@ -106,9 +106,8 @@ class ChooseInterestsVC: UIViewController {
             self.activityIndicatorStop()
         }
     
-        viewModel.didFinishFetch = { data in
+        viewModel.didFinishFetchforList = { data in
             self.activityIndicatorStop()
-            print("data...", data)
             
             if !self.comingFromCompleteProfileVC{
                 self.navigationController?.popViewController(animated: true)
@@ -172,7 +171,6 @@ extension ChooseInterestsVC: UICollectionViewDelegate, UICollectionViewDataSourc
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        print("size.....")
         let width = (self.interestsCollectionView.frame.width/3)-30
         return CGSize(width: width, height: width+14)
     }
@@ -182,12 +180,12 @@ extension ChooseInterestsVC: UICollectionViewDelegate, UICollectionViewDataSourc
         let id = self.allSportsInterestsList[indexPath.row].id ?? zero
         
         if let selectedIdIndex = selectedIds.enumerated().filter({ $0.element == id }).map({ $0.offset }).first{
-            print("selectedIdIndex...", selectedIdIndex)
+           
             self.selectedIds.remove(at: selectedIdIndex)
         }else{
             self.selectedIds.append(id)
+            print("selectedIdIndexesSize...", self.selectedIds.count)
         }
-        print("selected ids...", self.selectedIds)
 
         self.interestsCollectionView.reloadData()
     }

@@ -42,6 +42,7 @@ struct AlertMessages {
     static let LOGOUT_USER = "Are you sure you want to logout?"
     static let DELETE_ACCOUNT = "Are you sure you want to Delete your account?"
     static let PROFILE_INFO_UPDATED = "Your profile info has been updated successfully!"
+    static let PROFILE_ABOUT_UPDATED = "Your profile description has been updated successfully!"
     static let CHOOSE_INTERESTS = "Please choose some Interests to find more matches."
     static let CHOOSE_EVENT_IMAGE = "Please choose Event image for better understanding."
 

@@ -20,6 +20,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var tagsListView: TagListView!
 
     let viewModel = ProfileAndSettingsViewModel(apiService: ProfileAndSettingsWebServices())
+    var selectedInterestsIds = [Int]()
     
     // MARK: - View life cycle
 
@@ -51,7 +52,6 @@ class ProfileVC: UIViewController {
         
         // UI Setup
         let user = UserDefaultsToStoreUserInfo.getUser()
-        print("user...", user)
         self.fullNameLbl.text = user?.name
         self.locationLbl.text = user?.locationName ?? locationStr
         
@@ -60,28 +60,28 @@ class ProfileVC: UIViewController {
         self.aboutDescLbl.text = user?.about
     }
     
-    func showPopUpToEditAboutDesc(){
-        let alertController = UIAlertController(title: "Edit your profile description", message: "Say something about you so that other people can understand you better.", preferredStyle: .alert)
-
-        alertController.addTextField { (textField) in
-            // configure the properties of the text field
-            textField.placeholder = "Describe yourself..."
-        }
-
-        // add the buttons/actions to the view controller
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let saveAction = UIAlertAction(title: "Update", style: .default) { _ in
-
-            // this code runs when the user hits the "save" button
-            let aboutDesc = alertController.textFields![0].text ?? emptyStr
-
-            let dict = ["about" : aboutDesc]
-            self.updateProfileAPI(params: dict)
-        }
-        alertController.addAction(cancelAction)
-        alertController.addAction(saveAction)
-        present(alertController, animated: true, completion: nil)
-    }
+//    func showPopUpToEditAboutDesc(){
+//        let alertController = UIAlertController(title: "Edit your profile description", message: "Say something about you so that other people can understand you better.", preferredStyle: .alert)
+//
+//        alertController.addTextField { (textField) in
+//            // configure the properties of the text field
+//            textField.placeholder = "Describe yourself..."
+//        }
+//
+//        // add the buttons/actions to the view controller
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        let saveAction = UIAlertAction(title: "Update", style: .default) { _ in
+//
+//            // this code runs when the user hits the "save" button
+//            let aboutDesc = alertController.textFields![0].text ?? emptyStr
+//
+//            let dict = ["about" : aboutDesc]
+//            self.updateProfileAPI(params: dict)
+//        }
+//        alertController.addAction(cancelAction)
+//        alertController.addAction(saveAction)
+//        present(alertController, animated: true, completion: nil)
+//    }
     
     func updateUserInfoLocally(user: UserModel){
         let updatedUser = UserModel(userId: user.userId ?? zero, name: user.name ?? emptyStr, email: user.email ?? emptyStr, about: user.about ?? emptyStr, age: user.age ?? zero, profileImg: user.profileImg ?? emptyStr, phoneNumber: user.phoneNumber ?? emptyStr, gender: user.gender ?? emptyStr, allowNotifications: user.allowNotifications ?? zero, loginPurpose: user.loginPurpose ?? emptyStr, locationId: user.locationId ?? zero, locationName: user.locationName ?? emptyStr, latitude: user.latitude ?? emptyStr, longitude: user.longitude ?? emptyStr, islocationTurnOn: user.islocationTurnOn ?? zero, level: user.level ?? zero, prefferedLanguage: user.prefferedLanguage ?? emptyStr, isBlock: user.isBlock ?? zero, isDeleted: user.isDeleted ?? zero, accessToken: user.accessToken ?? emptyStr, signUpVia: user.signUpVia ?? emptyStr, loginVia: user.loginVia ?? emptyStr, otpVerified: user.otpVerifed ?? zero, sportsInterests: user.sportsInterests ?? []).toAnyObject() as! [String: Any]
@@ -101,12 +101,16 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func editAboutDescBtnAction(_ sender: Any) {
-        self.showPopUpToEditAboutDesc()
+     //   self.showPopUpToEditAboutDesc()
+        let otherVCObj = AboutViewController(nibName: enumViewControllerIdentifier.AboutViewController.rawValue, bundle: nil)
+        otherVCObj.aboutText = aboutDescLbl.text
+        self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
 
     @IBAction func editInterestsBtnAction(_ sender: Any) {
         let otherVCObj = ChooseInterestsVC(nibName: enumViewControllerIdentifier.chooseInterestsVC.rawValue, bundle: nil)
         otherVCObj.comingFromCompleteProfileVC = false
+        otherVCObj.selectedIds = self.selectedInterestsIds
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     
@@ -127,16 +131,17 @@ class ProfileVC: UIViewController {
             self.activityIndicatorStop()
                     
             if let sportsInterests = data["sports_interest"] as? [[String:Any]]{
+                self.tagsListView.removeAllTags()
                 for item in sportsInterests{
                     let interest = SportsInterests(with: item)
                     print(interest.name ?? emptyStr)
                     self.tagsListView.addTag(interest.name ?? emptyStr)
+                    self.selectedInterestsIds.append(interest.id ?? -1)
                 }
 //                self.tagsListView.addTag()
             }
             let user = UserModel(with: data)
                 
-            print("user...", user)
             self.updateUserInfoLocally(user: user)
 
             self.showInfoOnScreen()
@@ -156,7 +161,6 @@ class ProfileVC: UIViewController {
     
         viewModel.didFinishFetch = { data in
             self.activityIndicatorStop()
-            print("data...", data)
             let user = UserModel(with: data)
             self.updateUserInfoLocally(user: user)
             self.showInfoOnScreen()
