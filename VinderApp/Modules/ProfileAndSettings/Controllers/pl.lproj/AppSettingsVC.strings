@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; configuration.title = "Save"; ObjectID = "bN3-RI-1pp"; */
+"bN3-RI-1pp.configuration.title" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bN3-RI-1pp"; */
+"bN3-RI-1pp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "App Settings"; ObjectID = "rC7-D2-Gxu"; */
+"rC7-D2-Gxu.text" = "App Settings";
