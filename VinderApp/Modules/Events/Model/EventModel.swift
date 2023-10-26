@@ -16,7 +16,7 @@ extension Encodable {
     }
 }
 
-struct JoinEventRequest: Codable {
+struct JoinOrInviteEventRequest: Codable {
     var eventId: Int?
 
 //    var dictionary: [String: Any] {

@@ -3,4 +3,86 @@
    uuid = "E3BEA4BD-B422-42AA-8A3C-3145320E87FF"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFAD5F50-4BD9-4CDE-BDC3-12FB7EB87CB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/HelperClasses/CommonFiles/CommonFxns.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "changeDateToFormat(date:format:currentFormat:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE9F1658-E90C-47B9-AF17-467C126CF758"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/HelperClasses/CommonFiles/CommonFxns.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "changeDateToFormat(date:format:currentFormat:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5024626-ADB1-46A1-A321-4CDC46A16A5B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VinderApp/HelperClasses/CommonFiles/CommonFxns.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "changeDateToFormat(date:format:currentFormat:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5024626-ADB1-46A1-A321-4CDC46A16A5B - a119c30480af6dc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static VinderApp.CommonFxns.changeDateToFormat(date: Swift.String, format: Swift.String, currentFormat: Swift.String) -&gt; Swift.String"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/C%20Drive/Vinder%20App/VinderApp/VinderApp/HelperClasses/CommonFiles/CommonFxns.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "225"
+                  endingLineNumber = "225"
+                  offsetFromSymbolStart = "752">
+               </Location>
+               <Location
+                  uuid = "F5024626-ADB1-46A1-A321-4CDC46A16A5B - a119c30480af6dc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static VinderApp.CommonFxns.changeDateToFormat(date: Swift.String, format: Swift.String, currentFormat: Swift.String) -&gt; Swift.String"
+                  moduleName = "VinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/C%20Drive/Vinder%20App/VinderApp/VinderApp/HelperClasses/CommonFiles/CommonFxns.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "225"
+                  endingLineNumber = "225"
+                  offsetFromSymbolStart = "836">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

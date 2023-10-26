@@ -45,8 +45,13 @@ class EventDetailsVC: UIViewController {
         super.viewDidLoad()
 
         // Initial Setup
-    
+        self.initialSetup()
         callToViewModelForUIUpdate()
+    }
+    
+    // MARK: - Methods
+    func initialSetup() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: - Methods
@@ -112,6 +117,7 @@ class EventDetailsVC: UIViewController {
 
     @IBAction func inviteBtnAction(_ sender: Any) {
         let otherVCObj = InviteFriendsVC(nibName: enumViewControllerIdentifier.inviteFriendsVC.rawValue, bundle: nil)
+        otherVCObj.eventId = selectedEventId
         self.navigationController?.pushViewController(otherVCObj, animated: true)
     }
     // MARK: - Networking

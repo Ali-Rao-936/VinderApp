@@ -141,7 +141,7 @@ extension ExploreEventsVC: UITableViewDelegate, UITableViewDataSource {
             allEventsCell.noOfPeopleJoinedLbl.text = "\(dict.peopleJoinedCount ?? 0) People joined"
             allEventsCell.eventCreatedByUserLbl.text = dict.creator?.name ?? emptyStr
             // 2023-10-26
-            let date = CommonFxns.changeDateToFormat(date: dict.date ?? emptyStr, format: "dd MMM", currentFormat: "yyyy-mm-dd")
+            let date = CommonFxns.changeDateToFormat(date: dict.date ?? emptyStr, format: "dd MM", currentFormat: "yyyy-mm-dd")
             print(date)
             allEventsCell.dateTimeLbl.text = "\(date), \(dict.time ?? emptyStr)"
             allEventsCell.viewBtn.tag = indexPath.row

@@ -21,6 +21,8 @@
 		6A4840992AD558D600DE15FA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4840982AD558D600DE15FA /* Utility.swift */; };
 		6A48409E2AD5662D00DE15FA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48409D2AD5662C00DE15FA /* UserViewModel.swift */; };
 		6A5D07F32ACAABC80012771F /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D07F22ACAABC80012771F /* EventsViewModel.swift */; };
+		6A841EC22AE94C0C00B41141 /* ContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A841EC42AE94C0C00B41141 /* ContentVC.xib */; };
+		6A841ECB2AE94C2A00B41141 /* AppSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A841ECD2AE94C2A00B41141 /* AppSettingsVC.xib */; };
 		6A8E97232AD42AC400C03B43 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E97212AD42AC400C03B43 /* FriendListTableViewCell.swift */; };
 		6A8E97242AD42AC400C03B43 /* FriendListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8E97222AD42AC400C03B43 /* FriendListTableViewCell.xib */; };
 		6A9016182ABAC68E0072ACF2 /* ChooseGenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9016162ABAC68E0072ACF2 /* ChooseGenderVC.swift */; };
@@ -102,9 +104,7 @@
 		6ACA312D2AB9AA5E0022EF21 /* CreateEventVC1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA312B2AB9AA5E0022EF21 /* CreateEventVC1.xib */; };
 		6ACA31302AB9AA750022EF21 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */; };
 		6ACA31342AB9AD2A0022EF21 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */; };
-		6ACA31352AB9AD2A0022EF21 /* ContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */; };
 		6ACA31382AB9AD390022EF21 /* AppSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */; };
-		6ACA31392AB9AD390022EF21 /* AppSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA31372AB9AD390022EF21 /* AppSettingsVC.xib */; };
 		6ACA313E2AB9AD8B0022EF21 /* UserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA313C2AB9AD8B0022EF21 /* UserDetailVC.swift */; };
 		6ACA313F2AB9AD8B0022EF21 /* UserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA313D2AB9AD8B0022EF21 /* UserDetailVC.xib */; };
 		6ACA318E2AB9AEDB0022EF21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA31772AB9AEDB0022EF21 /* Constants.swift */; };
@@ -205,6 +205,14 @@
 		6A4840982AD558D600DE15FA /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		6A48409D2AD5662C00DE15FA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		6A5D07F22ACAABC80012771F /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		6A841EC32AE94C0C00B41141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ContentVC.xib; sourceTree = "<group>"; };
+		6A841EC62AE94C1200B41141 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ContentVC.strings"; sourceTree = "<group>"; };
+		6A841EC82AE94C1300B41141 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/ContentVC.strings; sourceTree = "<group>"; };
+		6A841ECA2AE94C1400B41141 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ContentVC.strings; sourceTree = "<group>"; };
+		6A841ECC2AE94C2A00B41141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppSettingsVC.xib; sourceTree = "<group>"; };
+		6A841ECF2AE94C2F00B41141 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppSettingsVC.strings"; sourceTree = "<group>"; };
+		6A841ED12AE94C3000B41141 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/AppSettingsVC.strings; sourceTree = "<group>"; };
+		6A841ED32AE94C3100B41141 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/AppSettingsVC.strings; sourceTree = "<group>"; };
 		6A8E97212AD42AC400C03B43 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
 		6A8E97222AD42AC400C03B43 /* FriendListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListTableViewCell.xib; sourceTree = "<group>"; };
 		6A9016162ABAC68E0072ACF2 /* ChooseGenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGenderVC.swift; sourceTree = "<group>"; };
@@ -286,9 +294,7 @@
 		6ACA312B2AB9AA5E0022EF21 /* CreateEventVC1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventVC1.xib; sourceTree = "<group>"; };
 		6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
-		6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentVC.xib; sourceTree = "<group>"; };
 		6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsVC.swift; sourceTree = "<group>"; };
-		6ACA31372AB9AD390022EF21 /* AppSettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsVC.xib; sourceTree = "<group>"; };
 		6ACA313C2AB9AD8B0022EF21 /* UserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVC.swift; sourceTree = "<group>"; };
 		6ACA313D2AB9AD8B0022EF21 /* UserDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailVC.xib; sourceTree = "<group>"; };
 		6ACA31772AB9AEDB0022EF21 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -536,9 +542,9 @@
 				6ACA312E2AB9AA750022EF21 /* SettingsVC.swift */,
 				E9D7AA872AE940A20087E85C /* SettingsVC.xib */,
 				6ACA31322AB9AD2A0022EF21 /* ContentVC.swift */,
-				6ACA31332AB9AD2A0022EF21 /* ContentVC.xib */,
+				6A841EC42AE94C0C00B41141 /* ContentVC.xib */,
 				6ACA31362AB9AD390022EF21 /* AppSettingsVC.swift */,
-				6ACA31372AB9AD390022EF21 /* AppSettingsVC.xib */,
+				6A841ECD2AE94C2A00B41141 /* AppSettingsVC.xib */,
 				6A9016222ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.swift */,
 				6A9016232ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.xib */,
 				6A9B124A2ABF20A400D6FF12 /* UpdatePasswordVC.swift */,
@@ -1067,7 +1073,7 @@
 				6A9016252ABAD72F0072ACF2 /* UpdateBasicProfileInfoVC.xib in Resources */,
 				6A9016372ABB02E90072ACF2 /* VinderUserInfoTableViewHeader.xib in Resources */,
 				6ACA31252AB9A89C0022EF21 /* CompleteProfileVC.xib in Resources */,
-				6ACA31352AB9AD2A0022EF21 /* ContentVC.xib in Resources */,
+				6A841EC22AE94C0C00B41141 /* ContentVC.xib in Resources */,
 				6ACDF5482ADFC67D006B6601 /* AcceptedEventVC.xib in Resources */,
 				6AA9A1E32AC83B7300EBDD03 /* EventImagesCollectionViewCell.xib in Resources */,
 				6AD45C482AB97C08000E9A6C /* LaunchScreen.storyboard in Resources */,
@@ -1083,7 +1089,7 @@
 				6ACA311C2AB9A8030022EF21 /* VerifyOtpVC.xib in Resources */,
 				6ACA31292AB9AA4B0022EF21 /* EventDetailsVC.xib in Resources */,
 				6A90161D2ABACC240072ACF2 /* InterestsCollectionViewCell.xib in Resources */,
-				6ACA31392AB9AD390022EF21 /* AppSettingsVC.xib in Resources */,
+				6A841ECB2AE94C2A00B41141 /* AppSettingsVC.xib in Resources */,
 				E9D7AA852AE940A20087E85C /* SettingsVC.xib in Resources */,
 				6AD45C452AB97C08000E9A6C /* Assets.xcassets in Resources */,
 				E9D7AA7C2AE9403E0087E85C /* ProfileVC.xib in Resources */,
@@ -1342,6 +1348,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6A841EC42AE94C0C00B41141 /* ContentVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A841EC32AE94C0C00B41141 /* Base */,
+				6A841EC62AE94C1200B41141 /* zh-Hans */,
+				6A841EC82AE94C1300B41141 /* pl */,
+				6A841ECA2AE94C1400B41141 /* tr */,
+			);
+			name = ContentVC.xib;
+			sourceTree = "<group>";
+		};
+		6A841ECD2AE94C2A00B41141 /* AppSettingsVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A841ECC2AE94C2A00B41141 /* Base */,
+				6A841ECF2AE94C2F00B41141 /* zh-Hans */,
+				6A841ED12AE94C3000B41141 /* pl */,
+				6A841ED32AE94C3100B41141 /* tr */,
+			);
+			name = AppSettingsVC.xib;
+			sourceTree = "<group>";
+		};
 		6AD45C3E2AB97C07000E9A6C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

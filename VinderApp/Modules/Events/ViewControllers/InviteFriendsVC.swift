@@ -21,8 +21,10 @@ class InviteFriendsVC: UIViewController {
     // var arrayOfUsers = [User]()
     var firstTime = true
     var arrayOfSelectedIndex: [IndexPath] = []
+    var invitedFriendListIDArray = [Int]()
     var callBack: ((_ selectedIndex: [IndexPath])-> Void)?
     var isInvitationWhileCreatingEvent: Bool = false
+    var eventId = Int()
     
     // MARK: - View life cycle
     
@@ -40,19 +42,24 @@ class InviteFriendsVC: UIViewController {
     }
     
     func callToViewModelForUIUpdate() {
-        viewModel = EventViewModel(eventType: .inviteEvent)
+        var dict = JoinOrInviteEventRequest(eventId: eventId).dictionary
+        for i in self.invitedFriendListIDArray.indices {
+            dict["invitee[\(i)]"] = self.invitedFriendListIDArray[i]
+        }
+        
+        viewModel = EventViewModel(eventType: .inviteEvent, parameters: dict)
         viewModel?.bindViewModelToController = { [self] in
-            let message = viewModel?.eventList.messages?.first ?? ""
+            let message = viewModel?.inviteResponse.messages?.first ?? ""
             CommonFxns.showAlert(self, message: message, title: "")
         }
         self.navigationController?.popViewController(animated: true)
     }
     
-    func updateDataSource() {
-        if viewModel.eventList.code == 200 {
-            
-        }
-    }
+//    func updateDataSource() {
+//        if viewModel.eventList.code == 200 {
+//            
+//        }
+//    }
     
     // MARK: - Button Actions
     @IBAction func backBtnAction(_ sender: Any) {
@@ -105,11 +112,11 @@ extension InviteFriendsVC: UITableViewDataSource, UITableViewDelegate {
         
         if arrayOfSelectedIndex.contains(indexPath) {
             arrayOfSelectedIndex = arrayOfSelectedIndex.filter { $0 != indexPath}
-            
+            invitedFriendListIDArray = invitedFriendListIDArray.filter{ $0 != arrayOfUsers[indexPath.row].id}
             cell?.selectedView.isHidden = true
         }else {
             arrayOfSelectedIndex.append(indexPath)
-            
+            invitedFriendListIDArray.append(arrayOfUsers[indexPath.row].id ?? 0)
             cell?.selectedView.isHidden = false
         }
         

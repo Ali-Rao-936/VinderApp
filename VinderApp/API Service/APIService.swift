@@ -35,6 +35,7 @@ class APIService: NSObject {
     //  var language = Constant.defaults.string(forKey: "Language") ?? "en"
     typealias Parameters = [String : Any]
     let session = URLSession.shared
+    var mediaImage: Media!
     
     func request<T: Decodable>(_ type: T.Type, url: String, httpMethod: HTTPMethodType ,params: Parameters? = [:], completion: @escaping (Result<T, Error>) -> Void) {
         
@@ -62,9 +63,11 @@ class APIService: NSObject {
         }.resume()
     }
     
-    func uploadImageToServer<T: Decodable>(url: String, parameters: [String:Any], image: [String:Any], completion: @escaping (Result<T, Error>) -> Void) {
+    func uploadImageToServer<T: Decodable>(url: String, parameters: [String:Any], image: [String:Any]? = nil, completion: @escaping (Result<T, Error>) -> Void) {
         
-        guard let mediaImage = Media(withImage: image.values.first as! UIImage, forKey: image.keys.first ?? "") else { return }
+        if image != nil {
+            mediaImage = Media(withImage: image?.values.first as! UIImage, forKey: image?.keys.first ?? "")
+        }
         guard let url = URL(string: url) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethodType.post.rawValue
@@ -78,8 +81,14 @@ class APIService: NSObject {
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         //call createDataBody method
         print(parameters, mediaImage, boundary)
-        let dataBody = createDataBody(withParameters: parameters, media: [mediaImage], boundary: boundary)
-        request.httpBody = dataBody
+        
+        if image != nil {
+            let dataBody = createDataBody(withParameters: parameters, media: [mediaImage], boundary: boundary)
+            request.httpBody = dataBody
+        }else {
+            let dataBody = createDataBody(withParameters: parameters, boundary: boundary)
+            request.httpBody = dataBody
+        }
         
         session.dataTask(with: request) { (data, response, error) in
             print(data, response, error)
@@ -95,7 +104,7 @@ class APIService: NSObject {
     }
 }
 
-func createDataBody(withParameters params: Parameters?, media: [Media]?, boundary: String) -> Data {
+func createDataBody(withParameters params: Parameters?, media: [Media]? = nil, boundary: String) -> Data {
     let lineBreak = "\r\n"
     var body = Data()
     if let parameters = params {

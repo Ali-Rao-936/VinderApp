@@ -25,6 +25,12 @@ class EventViewModel {
         }
     }
     
+    private(set) var inviteResponse: UserList! {
+        didSet {
+            self.bindViewModelToController()
+        }
+    }
+    
     var bindViewModelToController : (() -> ()) = {}
     
     init(eventType: EventType, eventID: Int? = 0) {
@@ -56,8 +62,16 @@ class EventViewModel {
         }
     }
     
-    init(parameters: [String:Any], eventImage: UIImage) {
-       callFuncToCreateEvent(parameters: parameters, eventImage: eventImage)
+    init(eventType: EventType, parameters: [String:Any], eventImage: UIImage? = nil) {
+        switch eventType {
+        case .allEvents:
+            callFuncToCreateEvent(parameters: parameters, eventImage: eventImage ?? UIImage())
+        case .inviteEvent:
+            callFuncToInviteEvent(parameters: parameters)
+        default:
+            break
+        }
+        
     }
     
     // uploadImageToServer
@@ -91,7 +105,7 @@ class EventViewModel {
     }
     
     func callFuncToPostJoinEvent(eventID: Int) {
-        let params = JoinEventRequest(eventId: eventID).dictionary
+        let params = JoinOrInviteEventRequest(eventId: eventID).dictionary
       //  let params = ["event_id": eventID]
         self.apiService.request(EventDetailModel.self, url: self.url, httpMethod: HTTPMethodType.post, params: params) { (result: Result<EventDetailModel,Error>) in
             
@@ -115,6 +129,21 @@ class EventViewModel {
                 case .success(let result): self.eventDetail = result.response
                      //  print("RESPONSE---> \(String(describing: self.eventDetail))")
                     print("RESPONSE ERROR---> \(String(describing: result.error))")
+                case .failure(let error): print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func callFuncToInviteEvent(parameters: [String:Any]) {
+        self.apiService.uploadImageToServer(url: APIURL.InviteEvent, parameters: parameters) { (result: Result<UserListModel,Error>) in
+            
+            DispatchQueue.main.async {
+                CommonFxns.dismissProgress()
+                switch result {
+                case .success(let result): self.inviteResponse = result.response
+                       print("RESPONSE INVITE---> \(String(describing: self.inviteResponse))")
+                 //   print("RESPONSE ERROR---> \(String(describing: result.error))")
                 case .failure(let error): print(error.localizedDescription)
                 }
             }

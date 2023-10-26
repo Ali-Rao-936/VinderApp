@@ -221,12 +221,9 @@ class CommonFxns: NSObject {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = currentFormat
         let date = dateFormatter.date(from: date) ?? Date()
-        
         dateFormatter.dateFormat = format
-        
         return dateFormatter.string(from: date)
     }
-    
     
     
     // Show activity Indicator

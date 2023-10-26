@@ -58,6 +58,7 @@ class CreateEventVC: UIViewController {
     
     // MARK: - Methods
     func initialSetup() {
+        hideKeyboardWhenTappedAround() // Hide keyboard
         self.sportsCollectionView.register(TagsCollectionViewCell.nib(), forCellWithReuseIdentifier: TagsCollectionViewCell.identifier)
         self.startEventDateTextField.addInputViewDatePicker(target: self, selector: #selector(startDateDoneAction))
         self.startEventTimeTextField.addInputViewDatePicker(target: self, selector: #selector(startTimeDoneAction), datePickerMode: .time)
@@ -96,7 +97,7 @@ class CreateEventVC: UIViewController {
     }
     
     func callToViewModelToCreateEvent(params: [String:Any], eventImage: UIImage) {
-        eventViewModel = EventViewModel(parameters: params, eventImage: eventImage)
+        eventViewModel = EventViewModel(eventType: .allEvents, parameters: params, eventImage: eventImage)
         CommonFxns.showProgress()
         self.eventViewModel?.bindViewModelToController = {
             self.updateUser()
@@ -198,7 +199,7 @@ class CreateEventVC: UIViewController {
         let date = self.startEventDateTextField.text ?? emptyStr
         let time = self.startEventTimeTextField.text ?? emptyStr
         var priceString = priceTextField.text ?? "0"
-        price = Float(priceString) ?? 0.0
+        price = Float(priceString)!
         let interestId = sportsInterestList[self.selectedCellRow].id ?? 0
         
         if !invitedFriendList.isEmpty {

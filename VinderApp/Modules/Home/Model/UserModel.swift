@@ -12,6 +12,7 @@ struct UserListModel: Codable {
 }
 
 struct UserList: Codable {
+    let code: Int?
     let messages: [String]?
     let data: [User]?
 }

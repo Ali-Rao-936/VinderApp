@@ -24,6 +24,7 @@ class AcceptedEventVC: UIViewController {
     
     func initialSetup(){
         // Register tableView cells
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.eventsListTableView.register(EventsTableViewCell.nib(), forCellReuseIdentifier: EventsTableViewCell.identifier)
     }
     //MARK:- View setup
@@ -39,6 +40,11 @@ class AcceptedEventVC: UIViewController {
     func updateDataSource() {
         self.eventArray = acceptedEventViewModel?.eventList?.data ?? []
         eventsListTableView.reloadData()
+    }
+    
+    // MARK: - Button Actions
+    @IBAction func backBtnAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -78,7 +84,7 @@ extension AcceptedEventVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return 130 // all events
+        return 130 // all events
     }
     
 }

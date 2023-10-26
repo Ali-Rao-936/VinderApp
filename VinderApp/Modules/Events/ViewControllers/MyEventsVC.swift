@@ -179,8 +179,6 @@ extension MyEventsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         let dict = self.events[indexPath.row]
         
         listCell.eventNameLbl.text = dict.name
-        listCell.eventCreatedByUserLbl.text = String(dict.userId ?? zero)
-        
         listCell.hotEventView.isHidden = true
       
         if segmentControl.selectedSegmentIndex == 0 { // Upcoming
